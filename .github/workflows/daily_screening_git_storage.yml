@@ -14,6 +14,10 @@ on:
         type: boolean
         default: false
 
+concurrency:
+  group: daily-screening
+  cancel-in-progress: false
+
 jobs:
   screen-stocks:
     runs-on: ubuntu-latest
@@ -26,7 +30,7 @@ jobs:
       - name: Checkout code
         uses: actions/checkout@v4
         with:
-          fetch-depth: 1  # Shallow clone for speed
+          fetch-depth: 0  # Full history so the cache commit can rebase onto latest main
 
       - name: Get current date
         id: date
@@ -146,32 +150,45 @@ jobs:
             echo "No metadata file found"
           fi
 
-      - name: Commit updated fundamental cache
+      - name: Commit and push updated fundamental cache
         id: commit
         run: |
           git config --local user.email "github-actions[bot]@users.noreply.github.com"
           git config --local user.name "github-actions[bot]"
 
-          # Add fundamental cache directory
           git add data/fundamentals_cache/
 
-          # Check if there are changes
           if git diff --staged --quiet; then
             echo "No fundamental cache changes to commit"
             echo "has_changes=false" >> $GITHUB_OUTPUT
-          else
-            CHANGED_FILES=$(git diff --staged --name-only | wc -l)
-            echo "Committing $CHANGED_FILES updated fundamental files"
-            git commit -m "chore: update fundamental cache ($CHANGED_FILES stocks) - ${{ steps.date.outputs.date }}"
-            echo "has_changes=true" >> $GITHUB_OUTPUT
+            exit 0
           fi
 
-      - name: Push changes
-        if: steps.commit.outputs.has_changes == 'true'
-        uses: ad-m/github-push-action@v0.8.0
-        with:
-          github_token: ${{ secrets.GITHUB_TOKEN }}
-          branch: ${{ github.ref }}
+          CHANGED_FILES=$(git diff --staged --name-only | wc -l)
+          echo "Committing $CHANGED_FILES updated fundamental files"
+          git commit -m "chore: update fundamental cache ($CHANGED_FILES stocks) - ${{ steps.date.outputs.date }}"
+          echo "has_changes=true" >> $GITHUB_OUTPUT
+
+          # Robust push: main can move during the ~1h scan (your own pushes or an
+          # overlapping run), so a plain push may be rejected as non-fast-forward.
+          # Rebase our cache commit onto the latest main and retry a few times.
+          BRANCH="${GITHUB_REF#refs/heads/}"
+          for attempt in 1 2 3 4 5; do
+            if git push origin "HEAD:${BRANCH}"; then
+              echo "Pushed on attempt $attempt"
+              exit 0
+            fi
+            echo "Push rejected (attempt $attempt); rebasing onto latest origin/${BRANCH}"
+            git fetch origin "${BRANCH}"
+            if ! git rebase "origin/${BRANCH}"; then
+              git rebase --abort || true
+              echo "Rebase hit a conflict; aborting"
+              exit 1
+            fi
+            sleep $(( (RANDOM % 6) + 3 ))
+          done
+          echo "Push failed after 5 attempts"
+          exit 1
 
       - name: Upload screening results
         if: always()
