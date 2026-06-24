@@ -187,7 +187,7 @@ If needed, revert to old workflow:
 mv .github/workflows/daily_screening_git_storage.yml .github/workflows/daily_screening_git_storage.yml.disabled
 
 # Re-enable old workflow
-git checkout origin/main -- .github/workflows/daily_screening.yml
+git checkout origin/main -- .github/workflows/daily_screening_git_storage.yml
 
 # Commit and push
 git commit -m "chore: rollback to original workflow"

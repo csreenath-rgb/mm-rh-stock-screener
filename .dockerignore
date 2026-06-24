@@ -1,0 +1,30 @@
+# Keep the build context (and image) small and reproducible.
+.git
+.gitignore
+.github
+**/__pycache__/
+*.pyc
+*.pyo
+*.pyd
+.pytest_cache/
+.venv/
+venv/
+env/
+*.egg-info/
+
+# Local secrets and editor cruft - never bake into the image.
+.env
+.env.*
+!.env.example
+.DS_Store
+*.log
+
+# Docs and assets are not needed at runtime.
+docs/
+assets/
+*.md
+
+# Scan outputs and logs are produced at runtime / mounted as a volume.
+data/daily_scans/
+data/logs/
+data/results/

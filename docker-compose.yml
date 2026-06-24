@@ -1,0 +1,42 @@
+# Convenience wrapper for running the screener in its own container.
+#
+#   Build once:        docker compose build
+#   Full daily scan:   docker compose run --rm screener
+#   Quick test (100):  docker compose run --rm test
+#   Notification test: docker compose run --rm notify-test
+#
+# On a remote box (e.g. Strix Halo) you can skip building and pull a published
+# image instead by setting IMAGE, e.g.:
+#   IMAGE=ghcr.io/csreenath-rgb/mm-rh-stock-screener:latest docker compose run --rm screener
+
+services:
+  # Full conservative scan with Git-based fundamental caching.
+  screener:
+    build: .
+    image: ${IMAGE:-mm-rh-stock-screener:latest}
+    env_file:
+      - .env
+    volumes:
+      - ./data:/app/data
+    command: ["--conservative", "--git-storage"]
+
+  # Fast 100-stock smoke test (no notifications by default).
+  test:
+    build: .
+    image: ${IMAGE:-mm-rh-stock-screener:latest}
+    env_file:
+      - .env
+    volumes:
+      - ./data:/app/data
+    command: ["--test-mode", "--git-storage", "--no-notify"]
+
+  # Verify email + Telegram credentials without running a scan.
+  notify-test:
+    build: .
+    image: ${IMAGE:-mm-rh-stock-screener:latest}
+    env_file:
+      - .env
+    volumes:
+      - ./data:/app/data
+    entrypoint: ["python", "scripts/test_notifications.py"]
+    command: []

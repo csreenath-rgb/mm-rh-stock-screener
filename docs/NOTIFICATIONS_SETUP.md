@@ -96,17 +96,17 @@ Add these secrets:
 
 ### Step 2: Push Workflow File
 
-The workflow file is already created at `.github/workflows/daily_screening.yml`
+The workflow file is already created at `.github/workflows/daily_screening_git_storage.yml`
 
 ```bash
-git add .github/workflows/daily_screening.yml
+git add .github/workflows/daily_screening_git_storage.yml
 git commit -m "Add automated screening workflow"
 git push
 ```
 
 ### Step 3: Configure Schedule
 
-Edit `.github/workflows/daily_screening.yml`:
+Edit `.github/workflows/daily_screening_git_storage.yml`:
 
 ```yaml
 on:
@@ -381,3 +381,78 @@ After setup:
 5. ✅ Customize email/Slack formatting (optional)
 
 Ready to automate your stock screening!
+
+
+---
+
+## Telegram Notifications
+
+The daily full-market scan (`run_optimized_scan.py`) sends a short **summary
+message** plus the **full report as an attached document** to Telegram. It uses
+the Telegram Bot HTTP API via the `requests` library - no extra dependency.
+
+### Step 1 - Create a bot and get the token
+
+1. In Telegram, open a chat with **@BotFather**.
+2. Send `/newbot` and follow the prompts (give it a name and a username).
+3. BotFather replies with a token like `123456789:AAExampleTokenString`.
+
+### Step 2 - Get your chat ID
+
+1. Send any message (e.g. "hi") to your new bot so it can see you.
+2. In a browser, open: `https://api.telegram.org/bot<YOUR_TOKEN>/getUpdates`
+3. Find `"chat":{"id":123456789,...}` - that number is your `TELEGRAM_CHAT_ID`.
+   (For a group, add the bot to the group and use the negative group id.)
+
+### Step 3 - Configure environment variables
+
+In `.env` (local / Docker) or as GitHub Actions secrets:
+
+```bash
+TELEGRAM_BOT_TOKEN=123456789:AAExampleTokenString
+TELEGRAM_CHAT_ID=123456789
+```
+
+### Step 4 - Test it
+
+```bash
+# Local
+python scripts/test_notifications.py
+
+# Docker
+docker compose run --rm notify-test
+```
+
+You should receive a test message and a small attached file.
+
+### How it behaves in the daily scan
+
+- Notifications fire automatically at the end of a scan **only if** the
+  credentials are present. No credentials = silently skipped.
+- Each channel (email, Telegram) is isolated: if one fails, the scan still
+  finishes and the other channel still sends.
+- Disable notifications for a run with `--no-notify`.
+- Telegram messages over 4,096 characters are split automatically; the full
+  report always arrives as an attached `.txt` file.
+
+---
+
+## GitHub Actions Secrets (for the automated daily run)
+
+Set these under **Settings -> Secrets and variables -> Actions -> New repository
+secret** in your fork:
+
+| Secret | Required | Purpose |
+| --- | --- | --- |
+| `EMAIL_FROM` | for email | Gmail sender address |
+| `EMAIL_PASSWORD` | for email | Gmail **app-specific** password (not your login password) |
+| `EMAIL_TO` | for email | Recipient address(es), comma-separated |
+| `EMAIL_SMTP_SERVER` | optional | Defaults to `smtp.gmail.com` |
+| `EMAIL_SMTP_PORT` | optional | Defaults to `587` |
+| `TELEGRAM_BOT_TOKEN` | for Telegram | Bot token from @BotFather |
+| `TELEGRAM_CHAT_ID` | for Telegram | Your numeric chat id |
+
+> Gmail requires 2-Step Verification enabled, then an **App Password**
+> (Google Account -> Security -> App passwords). The normal account password
+> will not authenticate over SMTP.
+nticate over SMTP.

@@ -277,7 +277,7 @@ def save_report(results, buy_signals, sell_signals, spy_analysis, breadth, outpu
     logger.info(f"Report saved: {filepath}")
     print(report_text)
 
-    return filepath
+    return filepath, report_text
 
 
 def main():
@@ -293,6 +293,8 @@ def main():
     parser.add_argument('--min-volume', type=int, default=100000, help='Min volume')
     parser.add_argument('--use-fmp', action='store_true', help='Use FMP for enhanced fundamentals on buy signals')
     parser.add_argument('--git-storage', action='store_true', help='Use Git-based storage for fundamentals (recommended)')
+    parser.add_argument('--no-notify', action='store_true', help='Disable email/Telegram notifications even if credentials are set')
+    parser.add_argument('--notify-top-n', type=int, default=10, help='Top tickers per side in notification summary (default: 10)')
 
     args = parser.parse_args()
 
@@ -413,7 +415,28 @@ def main():
         sell_signals = sorted(sell_signals, key=lambda x: x['score'], reverse=True)
 
         # Report
-        save_report(results, buy_signals, sell_signals, spy_analysis, breadth)
+        report_path, _report_text = save_report(
+            results, buy_signals, sell_signals, spy_analysis, breadth
+        )
+
+        # Notifications (email / Telegram). Each channel runs only if its
+        # credentials are configured, and a failure never aborts the scan.
+        if not args.no_notify:
+            try:
+                from src.notifications.dispatch import send_all
+
+                notify_results = send_all(
+                    report_path=str(report_path),
+                    buy_signals=buy_signals,
+                    sell_signals=sell_signals,
+                    spy_analysis=spy_analysis,
+                    breadth=breadth,
+                    top_n=args.notify_top_n,
+                )
+                if notify_results:
+                    logger.info(f"Notifications: {notify_results}")
+            except Exception as e:
+                logger.error(f"Notification dispatch failed (scan results are saved): {e}")
 
         # Show FMP usage if enabled
         if args.use_fmp:

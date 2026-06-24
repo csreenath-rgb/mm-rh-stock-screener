@@ -19,7 +19,8 @@ jobs:
     runs-on: ubuntu-latest
 
     permissions:
-      contents: write  # Required to commit fundamental cache
+      contents: write   # Required to commit fundamental cache
+      packages: write   # Required to push the Docker image to GHCR
 
     steps:
       - name: Checkout code
@@ -54,24 +55,41 @@ jobs:
             echo "cached_stocks=0" >> $GITHUB_OUTPUT
           fi
 
-      - name: Set up Python
-        uses: actions/setup-python@v5
+      - name: Set up Docker Buildx
+        uses: docker/setup-buildx-action@v3
+
+      - name: Log in to GitHub Container Registry
+        uses: docker/login-action@v3
         with:
-          python-version: '3.11'
-          cache: 'pip'
+          registry: ghcr.io
+          username: ${{ github.actor }}
+          password: ${{ secrets.GITHUB_TOKEN }}
 
-      - name: Install dependencies
-        run: |
-          python -m pip install --upgrade pip
-          pip install -r requirements.txt
+      - name: Compute lowercase image name
+        id: img
+        run: echo "name=ghcr.io/$(echo '${{ github.repository }}' | tr '[:upper:]' '[:lower:]')" >> $GITHUB_OUTPUT
 
-      - name: Run optimized stock screening
+      - name: Build and push Docker image
+        uses: docker/build-push-action@v6
+        with:
+          context: .
+          push: true
+          tags: |
+            ${{ steps.img.outputs.name }}:latest
+            ${{ steps.img.outputs.name }}:${{ steps.date.outputs.date }}
+          cache-from: type=gha
+          cache-to: type=gha,mode=max
+
+      - name: Run optimized stock screening (in container)
         env:
+          IMAGE: ${{ steps.img.outputs.name }}:latest
           EMAIL_FROM: ${{ secrets.EMAIL_FROM }}
           EMAIL_PASSWORD: ${{ secrets.EMAIL_PASSWORD }}
           EMAIL_TO: ${{ secrets.EMAIL_TO }}
           EMAIL_SMTP_SERVER: ${{ secrets.EMAIL_SMTP_SERVER || 'smtp.gmail.com' }}
           EMAIL_SMTP_PORT: ${{ secrets.EMAIL_SMTP_PORT || '587' }}
+          TELEGRAM_BOT_TOKEN: ${{ secrets.TELEGRAM_BOT_TOKEN }}
+          TELEGRAM_CHAT_ID: ${{ secrets.TELEGRAM_CHAT_ID }}
           FORCE_FULL_REFRESH: ${{ github.event.inputs.force_full_refresh || 'false' }}
           CACHED_STOCKS: ${{ steps.cache-check.outputs.cached_stocks }}
         run: |
@@ -79,15 +97,23 @@ jobs:
           echo "  - Fresh price data for all stocks (1 year history)"
           echo "  - Smart fundamental refresh (earnings-aware)"
           echo "  - Cached fundamentals: $CACHED_STOCKS stocks"
+          echo "  - Runtime: Docker image $IMAGE"
           echo ""
 
-          # Create output directories
-          mkdir -p data/daily_scans
-          mkdir -p data/logs
+          # Create output directories on the host (bind-mounted into the container)
+          mkdir -p data/daily_scans data/logs
 
-          # Conservative mode to avoid rate limits
-          # --git-storage flag enables Git-based fundamental storage
-          python run_optimized_scan.py --conservative --git-storage
+          # Run the scan inside the freshly built image. Mount the repo's data/
+          # so the committed fundamental cache is read and updated in place, and
+          # run as the runner's UID so committed files are owned correctly.
+          docker run --rm \
+            --user "$(id -u):$(id -g)" \
+            -e EMAIL_FROM -e EMAIL_PASSWORD -e EMAIL_TO \
+            -e EMAIL_SMTP_SERVER -e EMAIL_SMTP_PORT \
+            -e TELEGRAM_BOT_TOKEN -e TELEGRAM_CHAT_ID \
+            -e HOME=/tmp \
+            -v "$PWD/data:/app/data" \
+            "$IMAGE" --conservative --git-storage
 
       - name: Show fundamental refresh stats
         if: always()

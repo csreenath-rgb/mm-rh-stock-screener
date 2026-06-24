@@ -1,0 +1,4 @@
+# Optional dependency for read-only Robinhood position management.
+# Install only if you use manage_positions.py / automated_position_report.py:
+#     pip install -r requirements-robinhood.txt
+robin-stocks>=3.0.0

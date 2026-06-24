@@ -29,7 +29,7 @@ Successfully implemented a comprehensive notification and scheduling system with
    - Command-line interface
    - Configuration via environment variables
 
-4. **.github/workflows/daily_screening.yml**
+4. **.github/workflows/daily_screening_git_storage.yml**
    - GitHub Actions workflow
    - Runs at 8am EST on weekdays
    - Manual trigger capability
@@ -259,7 +259,7 @@ stock-screener/
 │   │   └── scheduler.py           # Automation
 ├── .github/
 │   └── workflows/
-│       └── daily_screening.yml    # GitHub Actions
+│       └── daily_screening_git_storage.yml    # GitHub Actions
 ├── requirements.txt               # Updated with requests, slack-sdk
 ├── .env.example                   # Updated with notification config
 ├── NOTIFICATIONS_SETUP.md         # Setup guide

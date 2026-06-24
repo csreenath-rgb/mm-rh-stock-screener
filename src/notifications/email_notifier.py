@@ -7,6 +7,8 @@ import logging
 import os
 import smtplib
 from datetime import datetime
+from email import encoders
+from email.mime.base import MIMEBase
 from email.mime.multipart import MIMEMultipart
 from email.mime.text import MIMEText
 from typing import Dict, List, Optional
@@ -266,6 +268,77 @@ class EmailNotifier:
 </html>
 """
         return html
+
+    def send_report(
+        self,
+        subject: str,
+        body_text: str,
+        attachment_path: Optional[str] = None,
+        body_html: Optional[str] = None,
+    ) -> bool:
+        """Send a free-form report email with an optional file attachment.
+
+        This is used by the full-market scan, whose output is a plain-text
+        report rather than a DataFrame. The full report is attached as a
+        .txt file and a summary is shown in the email body.
+
+        Args:
+            subject: Email subject line.
+            body_text: Plain-text email body (e.g. a scan summary).
+            attachment_path: Optional path to a file to attach.
+            body_html: Optional HTML body; falls back to plain text only.
+
+        Returns:
+            True if the email was sent successfully, False otherwise.
+        """
+        if not self.email_from or not self.email_password or not self.email_to:
+            logger.error("Email configuration incomplete. Check environment variables.")
+            return False
+
+        try:
+            msg = MIMEMultipart("mixed")
+            msg["From"] = self.email_from
+            msg["To"] = self.email_to
+            msg["Subject"] = subject
+
+            alt = MIMEMultipart("alternative")
+            alt.attach(MIMEText(body_text, "plain"))
+            if body_html:
+                alt.attach(MIMEText(body_html, "html"))
+            msg.attach(alt)
+
+            if attachment_path and os.path.exists(attachment_path):
+                with open(attachment_path, "rb") as fh:
+                    part = MIMEBase("application", "octet-stream")
+                    part.set_payload(fh.read())
+                encoders.encode_base64(part)
+                filename = os.path.basename(attachment_path)
+                part.add_header(
+                    "Content-Disposition", f'attachment; filename="{filename}"'
+                )
+                msg.attach(part)
+            elif attachment_path:
+                logger.warning("Attachment not found, sending without it: %s", attachment_path)
+
+            logger.info(f"Connecting to SMTP server: {self.smtp_server}:{self.smtp_port}")
+            with smtplib.SMTP(self.smtp_server, self.smtp_port) as server:
+                server.starttls()
+                server.login(self.email_from, self.email_password)
+                recipients = [r.strip() for r in self.email_to.split(",")]
+                server.sendmail(self.email_from, recipients, msg.as_string())
+
+            logger.info(f"✓ Report email sent successfully to {self.email_to}")
+            return True
+
+        except smtplib.SMTPAuthenticationError:
+            logger.error("SMTP authentication failed. Check email credentials.")
+            return False
+        except smtplib.SMTPException as e:
+            logger.error(f"SMTP error: {e}")
+            return False
+        except Exception as e:
+            logger.error(f"Failed to send report email: {e}")
+            return False
 
     def send_screening_results(
         self,

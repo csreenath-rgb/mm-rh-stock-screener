@@ -63,7 +63,7 @@ The workflow is currently set to run at **8:00 AM EST (1:00 PM UTC)** on weekday
 
 To change the schedule:
 
-1. Edit `.github/workflows/daily_screening.yml`
+1. Edit `.github/workflows/daily_screening_git_storage.yml`
 2. Modify the cron expression on line 6:
 
 ```yaml

@@ -199,8 +199,8 @@ Total: 7 files, 28 KB
 2. **Deploy GitHub Actions workflow**:
    ```bash
    # Option 1: Replace existing
-   mv .github/workflows/daily_screening.yml .github/workflows/daily_screening_old.yml
-   mv .github/workflows/daily_screening_git_storage.yml .github/workflows/daily_screening.yml
+   mv .github/workflows/daily_screening_git_storage.yml .github/workflows/daily_screening_old.yml
+   mv .github/workflows/daily_screening_git_storage.yml .github/workflows/daily_screening_git_storage.yml
 
    # Option 2: Keep both (manual trigger new one)
    # No changes needed
