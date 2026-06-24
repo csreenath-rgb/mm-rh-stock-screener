@@ -76,6 +76,7 @@ class OptimizedBatchProcessor:
         self.request_times = []
         self.error_count = 0
         self.filtered_count = 0  # Stocks that didn't pass filters (not errors)
+        self.fundamentals_unavailable = 0  # Phase 1/2 stocks with no usable cached fundamentals
         self.total_requests = 0
         self.consecutive_errors = 0
         self.backoff_delay = 0.0  # Additional delay when errors detected
@@ -299,6 +300,9 @@ class OptimizedBatchProcessor:
                 else:
                     quarterly_data = fetch_quarterly_financials(ticker)
                 fundamental_analysis = analyze_fundamentals_for_signal(quarterly_data)
+                if not fundamental_analysis.get('fundamentals_available', True):
+                    self.fundamentals_unavailable += 1
+                    logger.debug(f"{ticker}: fundamentals unavailable (cached metrics all None)")
 
             return {
                 'ticker': ticker,
@@ -473,6 +477,7 @@ class OptimizedBatchProcessor:
         logger.info(f"Processed: {len(tickers)} tickers")
         logger.info(f"Analyzed: {len(all_analyses)} stocks")
         logger.info(f"Filtered: {self.filtered_count} ({self.filtered_count / max(self.total_requests, 1) * 100:.1f}%)")
+        logger.info(f"Fundamentals unavailable (Phase 1/2, all-None cache): {self.fundamentals_unavailable}")
         logger.info(f"Actual rate: {actual_rate:.2f} TPS")
         logger.info(f"Error rate: {self.error_count / max(self.total_requests, 1) * 100:.1f}%")
 
@@ -505,7 +510,8 @@ class OptimizedBatchProcessor:
             'total_analyzed': len(all_analyses),
             'processing_time_seconds': total_time,
             'actual_tps': actual_rate,
-            'error_rate': self.error_count / max(self.total_requests, 1)
+            'error_rate': self.error_count / max(self.total_requests, 1),
+            'fundamentals_unavailable': self.fundamentals_unavailable
         }
 
     def clear_progress(self):

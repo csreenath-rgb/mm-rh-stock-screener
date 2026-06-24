@@ -337,13 +337,30 @@ def analyze_fundamentals_for_signal(quarterly_data: Dict) -> Dict[str, any]:
             'eps_trend': 'unknown',
             'inventory_signal': 'unknown',
             'supports_breakout': False,
-            'penalty_points': 10
+            'penalty_points': 10,
+            'fundamentals_available': False
         }
 
-    revenue_yoy = quarterly_data.get('revenue_yoy_change', 0)
-    revenue_qoq = quarterly_data.get('revenue_qoq_change', 0)
-    eps_yoy = quarterly_data.get('eps_yoy_change', 0)
-    inv_change = quarterly_data.get('inventory_qoq_change', 0)
+    # NOTE: .get(key, 0) only applies the default when the key is MISSING. Cached
+    # fundamentals frequently store these keys with an explicit None (the metric
+    # could not be computed), and None passed into the numeric comparisons below
+    # raised 'TypeError: > not supported between NoneType and int', which silently
+    # dropped ~10% of Phase 1/2 stocks. Coerce None -> 0 so missing metrics are
+    # treated as neutral rather than crashing the whole stock's analysis.
+    revenue_yoy = quarterly_data.get('revenue_yoy_change')
+    revenue_qoq = quarterly_data.get('revenue_qoq_change')
+    eps_yoy = quarterly_data.get('eps_yoy_change')
+    inv_change = quarterly_data.get('inventory_qoq_change')
+    # A stock whose cached metrics are ALL None has no usable fundamentals.
+    fundamentals_available = any(
+        quarterly_data.get(k) is not None
+        for k in ('revenue_yoy_change', 'revenue_qoq_change', 'eps_yoy_change', 'inventory_qoq_change')
+    )
+    revenue_yoy = revenue_yoy if revenue_yoy is not None else 0
+    eps_yoy = eps_yoy if eps_yoy is not None else 0
+    inv_change = inv_change if inv_change is not None else 0
+    # revenue_qoq is allowed to stay None; it is handled by an explicit
+    # 'is not None' check below.
 
     # Assess trends
     if revenue_yoy > 10:
@@ -405,5 +422,6 @@ def analyze_fundamentals_for_signal(quarterly_data: Dict) -> Dict[str, any]:
         'eps_trend': eps_trend,
         'inventory_signal': inventory_signal,
         'supports_breakout': supports_breakout,
-        'penalty_points': penalty
+        'penalty_points': penalty,
+        'fundamentals_available': fundamentals_available
     }

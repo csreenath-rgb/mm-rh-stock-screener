@@ -60,6 +60,7 @@ def save_report(results, buy_signals, sell_signals, spy_analysis, breadth, outpu
     output.append("-"*80)
     output.append(f"Total Universe: {results['total_processed']:,} stocks")
     output.append(f"Analyzed: {results['total_analyzed']:,} stocks")
+    output.append(f"Fundamentals Unavailable (all-None cache): {results.get('fundamentals_unavailable', 0):,} stocks")
     output.append(f"Processing Time: {results['processing_time_seconds']/60:.1f} minutes")
     output.append(f"Actual TPS: {results['actual_tps']:.2f}")
 
