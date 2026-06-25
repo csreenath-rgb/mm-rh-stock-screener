@@ -101,10 +101,16 @@ with st.sidebar:
         min_price = st.number_input("Min price", value=5.0, step=1.0)
         min_volume = st.number_input("Min volume", value=100000, step=10000)
         notify = st.checkbox("Send email/Telegram alerts", value=False)
+        allow_heavy = st.checkbox(
+            "Allow heavy scans (All / Russell 1000)",
+            value=False,
+            help="Enable only on a high-memory host (local / your own server). "
+                 "These need lots of RAM and several minutes; they will crash free Cloud hosting.",
+        )
 
     # Memory-safety guard for limited hosting (e.g. Streamlit Cloud ~1 GB RAM)
     n_custom = len(universe_selector.parse_custom(custom_tickers)) if universe == "custom" else None
-    safety_level, safety_msg = assess_scan_safety(universe, n_custom)
+    safety_level, safety_msg = assess_scan_safety(universe, n_custom, allow_heavy=allow_heavy)
     if safety_level == "block":
         st.error(safety_msg)
     elif safety_level == "warn":
@@ -116,7 +122,7 @@ with st.sidebar:
     hist_choice = st.selectbox("History", ["(latest)"] + history, format_func=lambda p: p.split("/")[-1].split("\\")[-1])
 
 # ---------------- Main panel ----------------
-cached_only = is_cached_only(universe)
+cached_only = is_cached_only(universe, allow_heavy=allow_heavy)
 
 if cached_only:
     st.markdown(
@@ -138,12 +144,12 @@ elif run_clicked and safety_level != "block":
 report = None
 try:
     if cached_only:
+        # Show ONLY this universe's own cached file — never a different universe's scan.
         cached_file = DAILY_SCANS / f"latest_{universe}.json"
-        if not cached_file.exists():
-            cached_file = LATEST_JSON  # fall back to the rolling latest
         report = report_io.load_report_json(str(cached_file)) if cached_file.exists() else None
         if report is None:
-            st.info("No cached scan committed yet — the daily scheduled job will populate this.")
+            st.info(f"No cached **{label}** scan yet. Trigger the daily GitHub Actions "
+                    f"workflow with universe = `{universe}` to populate it.")
     elif hist_choice and hist_choice != "(latest)":
         report = report_io.load_report_json(hist_choice)
     elif LATEST_JSON.exists():

@@ -64,6 +64,8 @@ streamlit run dashboard/app.py
 docker compose up dashboard      # then open http://localhost:8501
 ```
 
+**All US stocks** and **Russell 1000** are cached-only by default (too big for the ~1 GB free Cloud tier) — the dashboard shows their last *scheduled* result. To run them live on a high-memory host (local / your own server), tick **Advanced → Allow heavy scans**. A cached view shows only that universe's own committed file; if none exists yet, it says so rather than showing another universe's scan.
+
 Notifications are **off by default** in the dashboard (interactive runs shouldn't spam
 your email/Telegram); tick the box under Advanced to enable them for a run. Use the
 **History** dropdown to re-open past scans.

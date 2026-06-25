@@ -28,6 +28,7 @@ _INDEX_LEVELS = {
 def assess_scan_safety(
     universe: str,
     n_tickers: Optional[int] = None,
+    allow_heavy: bool = False,
     custom_block_over: int = CUSTOM_BLOCK_OVER,
     custom_warn_over: int = CUSTOM_WARN_OVER,
 ) -> Tuple[str, str]:
@@ -48,7 +49,11 @@ def assess_scan_safety(
             return ("warn", f"{n} tickers may be slow or memory-heavy on free hosting.")
         return ("ok", "")
 
-    return _INDEX_LEVELS.get(key, ("ok", ""))
+    level, msg = _INDEX_LEVELS.get(key, ("ok", ""))
+    if allow_heavy and level == "block":
+        return ("warn", "Heavy scan enabled — this needs lots of RAM and several "
+                        "minutes; only do this locally / on a high-memory host, not free Cloud.")
+    return (level, msg)
 
 
 # Universes too large to ever run on-demand in limited hosting — the dashboard
@@ -56,6 +61,12 @@ def assess_scan_safety(
 CACHED_ONLY = {"all", "russell1000"}
 
 
-def is_cached_only(universe: str) -> bool:
-    """True if this universe must be shown from cache, never run on demand."""
+def is_cached_only(universe: str, allow_heavy: bool = False) -> bool:
+    """True if this universe must be shown from cache, never run on demand.
+
+    allow_heavy (set on local/high-memory hosts) makes the large universes
+    runnable instead of cached-only.
+    """
+    if allow_heavy:
+        return False
     return (universe or "").strip().lower() in CACHED_ONLY

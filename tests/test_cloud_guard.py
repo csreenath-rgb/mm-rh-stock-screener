@@ -48,3 +48,19 @@ def test_is_cached_only():
 def test_russell1000_is_cached_only_and_blocked():
     assert g.is_cached_only("russell1000") is True
     assert g.assess_scan_safety("russell1000")[0] == "block"
+
+
+def test_allow_heavy_unblocks_large_universes():
+    # Default: heavy universes are blocked / cached-only.
+    assert g.assess_scan_safety("russell1000")[0] == "block"
+    assert g.assess_scan_safety("all")[0] == "block"
+    assert g.is_cached_only("russell1000") is True
+    assert g.is_cached_only("all") is True
+    # With allow_heavy (local/high-memory): runnable (warn) and not cached-only.
+    assert g.assess_scan_safety("russell1000", allow_heavy=True)[0] == "warn"
+    assert g.assess_scan_safety("all", allow_heavy=True)[0] == "warn"
+    assert g.is_cached_only("russell1000", allow_heavy=True) is False
+    assert g.is_cached_only("all", allow_heavy=True) is False
+    # sp500 stays a warning either way; dow stays ok.
+    assert g.assess_scan_safety("sp500", allow_heavy=True)[0] == "warn"
+    assert g.assess_scan_safety("dow", allow_heavy=True)[0] == "ok"
