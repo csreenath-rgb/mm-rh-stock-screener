@@ -12,7 +12,7 @@ on:
         description: 'Which universe to scan'
         required: false
         type: choice
-        options: [all, sp500, nasdaq100, dow]
+        options: [all, sp500, nasdaq100, dow, russell1000]
         default: all
       force_full_refresh:
         description: 'Force refresh all fundamentals (ignore cache)'
@@ -167,7 +167,7 @@ jobs:
           git add data/fundamentals_cache/
           # Also commit the latest scan report so the Streamlit Cloud dashboard
           # always shows fresh daily results (rolling files only; no history bloat).
-          git add data/daily_scans/latest_optimized_scan.json data/daily_scans/latest_optimized_scan.txt 2>/dev/null || true
+          git add data/daily_scans/latest_*.json data/daily_scans/latest_optimized_scan.txt 2>/dev/null || true
 
           if git diff --staged --quiet; then
             echo "No fundamental cache changes to commit"

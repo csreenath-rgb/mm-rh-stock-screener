@@ -46,7 +46,7 @@ def test_write_universe_csv_roundtrips_through_selector(tmp_path):
 
 
 def test_expected_indices_known():
-    assert set(ur.EXPECTED_COUNTS) == {"sp500", "nasdaq100", "dow"}
+    assert set(ur.EXPECTED_COUNTS) == {"sp500", "nasdaq100", "dow", "russell1000"}
 
 
 def test_fetch_index_sends_user_agent_and_parses(monkeypatch):
@@ -70,4 +70,44 @@ def test_fetch_index_sends_user_agent_and_parses(monkeypatch):
     out = ur.fetch_index("dow")
     assert out == ["AAPL", "MSFT"]
     assert captured["headers"].get("User-Agent")  # non-empty UA sent
-    assert captured["url"] == ur.SOURCES["dow"]
+    assert captured["url"] == ur.SOURCES["dow"][1]
+
+
+ISHARES_CSV = '''iShares Russell 1000 ETF
+Fund Holdings as of,"Jun 24, 2026"
+ ,
+Ticker,Name,Sector,Asset Class,Weight (%)
+"AAPL","APPLE INC","Information Technology","Equity","6.5"
+"MSFT","MICROSOFT CORP","Information Technology","Equity","6.0"
+"BRKB","BERKSHIRE HATHAWAY INC CLASS B","Financials","Equity","1.5"
+"USD","US DOLLAR","Cash and/or Derivatives","Cash","0.1"
+'''
+
+
+def test_extract_ishares_symbols_filters_cash_and_fixes_class_shares():
+    out = ur.extract_ishares_symbols(ISHARES_CSV)
+    assert out == ["AAPL", "MSFT", "BRK-B"]   # cash row dropped, BRKB -> BRK-B
+
+
+def test_russell1000_in_expected_counts():
+    assert "russell1000" in ur.EXPECTED_COUNTS
+
+
+def test_refresh_all_isolates_per_index_failures(tmp_path, monkeypatch):
+    # sp500/nasdaq100/dow succeed; russell1000 (iShares) raises — others must still write.
+    good = {"sp500": ["T%d" % i for i in range(500)],
+            "nasdaq100": ["N%d" % i for i in range(100)],
+            "dow": ["D%d" % i for i in range(30)]}
+
+    def fake_fetch(name, timeout=30):
+        if name == "russell1000":
+            raise RuntimeError("iShares 403")
+        return good[name]
+
+    monkeypatch.setattr(ur, "fetch_index", fake_fetch)
+    results = ur.refresh_all(universes_dir=tmp_path)
+
+    assert results["sp500"] == 500 and results["dow"] == 30
+    assert isinstance(results["russell1000"], str) and "FAIL" in results["russell1000"].upper()
+    assert (tmp_path / "sp500.csv").exists() and (tmp_path / "dow.csv").exists()
+    assert not (tmp_path / "russell1000.csv").exists()

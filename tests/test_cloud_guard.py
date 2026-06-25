@@ -43,3 +43,8 @@ def test_is_cached_only():
     assert g.is_cached_only("sp500") is False
     assert g.is_cached_only("dow") is False
     assert g.is_cached_only("custom") is False
+
+
+def test_russell1000_is_cached_only_and_blocked():
+    assert g.is_cached_only("russell1000") is True
+    assert g.assess_scan_safety("russell1000")[0] == "block"

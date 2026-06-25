@@ -79,3 +79,8 @@ def test_get_universe_all_uses_injected_fetcher():
 def test_available_universes_lists_all_choices():
     names = set(us.available_universes())
     assert {"all", "sp500", "nasdaq100", "dow", "custom"} <= names
+
+
+def test_russell1000_is_a_valid_universe():
+    assert "russell1000" in us.available_universes()
+    assert "russell1000" in us.INDEX_FILES

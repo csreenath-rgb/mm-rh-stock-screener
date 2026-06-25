@@ -75,3 +75,17 @@ your email/Telegram); tick the box under Advanced to enable them for a run. Use 
 
 Manually triggering the workflow now offers a **universe** dropdown
 (all / sp500 / nasdaq100 / dow). The scheduled daily run stays on `all`.
+
+## Russell 1000
+
+Russell 1000 (`--universe russell1000`, ~1,000 stocks) is sourced from the **iShares
+Russell 1000 ETF (IWB) holdings CSV** (Wikipedia doesn't list its constituents), via
+the same `scripts/refresh_universes.py` / refresh workflow. A few class-share tickers
+(e.g. `BRKB`→`BRK-B`) are reconciled to yfinance format; add more in
+`ISHARES_FIXUPS` if needed.
+
+Because ~1,000 stocks exceed the free Streamlit Cloud memory limit, Russell 1000
+(like **All US stocks**) is **cached-only** in the dashboard: it shows the most recent
+scheduled/dispatched scan (committed `data/daily_scans/latest_russell1000.json`) with a
+bold "cached — not on-demand" disclaimer, and never runs live. To refresh its cached
+result, trigger the daily workflow with `universe = russell1000`.
