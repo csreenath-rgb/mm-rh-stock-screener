@@ -70,6 +70,9 @@ Notifications are **off by default** in the dashboard (interactive runs shouldn'
 your email/Telegram); tick the box under Advanced to enable them for a run. Use the
 **History** dropdown to re-open past scans.
 
+While a scan runs, the dashboard streams **live progress** (`⏳ Progress: 42/503 …` with a rate and ETA) instead of a silent spinner, so a long run never looks frozen. The progress comes from the scanner's own log lines, read as they arrive.
+
+
 > The full `all` scan takes 30–40 min and is best left to the scheduled GitHub Actions
 > job; the dashboard is ideal for the fast index/custom universes.
 
