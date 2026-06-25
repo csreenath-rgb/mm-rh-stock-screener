@@ -21,6 +21,7 @@ sys.path.insert(0, str(REPO_ROOT))
 
 from src.screening import report_io  # noqa: E402
 from src.screening.cloud_guard import assess_scan_safety, is_cached_only  # noqa: E402
+from src.screening.scan_cmd import build_scan_cmd, progress_message  # noqa: E402
 from src.data import universe_selector  # noqa: E402
 
 DAILY_SCANS = REPO_ROOT / "data" / "daily_scans"
@@ -44,15 +45,28 @@ st.set_page_config(page_title="MM-RH Stock Screener", layout="wide")
 st.title("📈 MM-RH Stock Screener")
 
 
-def run_scan(universe, tickers, speed_flags, min_price, min_volume, notify):
-    cmd = [sys.executable, "run_optimized_scan.py", "--universe", universe,
-           "--git-storage", "--min-price", str(min_price), "--min-volume", str(min_volume)]
-    cmd += speed_flags
-    if universe == "custom":
-        cmd += ["--tickers", tickers]
-    if not notify:
-        cmd += ["--no-notify"]
-    return subprocess.run(cmd, cwd=str(REPO_ROOT), capture_output=True, text=True)
+def run_scan(universe, tickers, speed_flags, min_price, min_volume, notify, status_box=None):
+    """Run the scan as a subprocess, streaming live progress to ``status_box``.
+
+    Returns ``(returncode, tail)`` where ``tail`` is the last chunk of output
+    (for error display). The scan logs ``Progress: X/N ...`` lines as it works;
+    we surface them live so a long scan never looks frozen. stdout+stderr are
+    merged so a single reader catches the progress lines (which go to stderr).
+    """
+    cmd = build_scan_cmd(universe, tickers, speed_flags, min_price, min_volume, notify)
+    proc = subprocess.Popen(
+        cmd, cwd=str(REPO_ROOT),
+        stdout=subprocess.PIPE, stderr=subprocess.STDOUT,
+        text=True, bufsize=1,
+    )
+    lines = []
+    for line in proc.stdout:
+        lines.append(line)
+        msg = progress_message(line)
+        if msg and status_box is not None:
+            status_box.caption(f"\u23f3 Progress: {msg}")
+    proc.wait()
+    return proc.returncode, "".join(lines[-60:])
 
 
 def render_report(report):
@@ -132,12 +146,17 @@ if cached_only:
         "it refreshes only when the scheduled GitHub Actions job runs."
     )
 elif run_clicked and safety_level != "block":
-    with st.spinner(f"Scanning {label}… (small universes finish in seconds-minutes)"):
-        proc = run_scan(universe, custom_tickers, SPEED_FLAGS[speed], min_price, min_volume, notify)
-    if proc.returncode != 0:
+    status_box = st.empty()
+    with st.spinner(f"Scanning {label}… live progress below"):
+        returncode, tail = run_scan(
+            universe, custom_tickers, SPEED_FLAGS[speed],
+            min_price, min_volume, notify, status_box=status_box,
+        )
+    if returncode != 0:
         st.error("Scan failed. Last lines of output:")
-        st.code((proc.stderr or proc.stdout or "")[-3000:])
+        st.code(tail[-3000:])
     else:
+        status_box.empty()
         st.success("Scan complete.")
 
 # Decide which report to show
