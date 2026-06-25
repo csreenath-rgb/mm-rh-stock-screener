@@ -69,3 +69,30 @@ def test_missing_keys_default_to_neutral_and_unavailable():
     assert result["revenue_trend"] == "flat"
     assert result["eps_trend"] == "flat"
     assert result["fundamentals_available"] is False
+
+
+# --- create_fundamental_snapshot must also tolerate None metrics (signal-gen path) ---
+from src.data.fundamentals_fetcher import create_fundamental_snapshot
+from src.data.enhanced_fundamentals import EnhancedFundamentalsFetcher
+
+
+def test_snapshot_with_none_metrics_does_not_crash():
+    qd = {"revenue_yoy_change": None, "eps_yoy_change": None,
+          "inventory_qoq_change": None, "gross_margin": 50.0, "margin_change": None}
+    out = create_fundamental_snapshot("TEST", qd)
+    assert isinstance(out, str) and "FUNDAMENTAL SNAPSHOT" in out
+
+
+def test_snapshot_via_enhanced_fetcher_path_with_none():
+    qd = {"revenue_yoy_change": None, "eps_yoy_change": None, "inventory_qoq_change": None}
+    out = EnhancedFundamentalsFetcher().create_snapshot("TEST", quarterly_data=qd, use_fmp=False)
+    assert isinstance(out, str) and len(out) > 0
+
+
+def test_snapshot_with_numeric_metrics_reports_concerns():
+    qd = {"revenue_yoy_change": -5.0, "eps_yoy_change": 10.0, "inventory_qoq_change": 20.0,
+          "gross_margin": 40.0, "margin_change": -3.0}
+    out = create_fundamental_snapshot("TEST", qd)
+    assert "revenue declining" in out
+    assert "inventory building rapidly" in out
+    assert "margins contracting" in out

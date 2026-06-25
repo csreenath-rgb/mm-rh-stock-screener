@@ -257,7 +257,8 @@ def create_fundamental_snapshot(ticker: str, quarterly_data: Dict) -> str:
     # Margin analysis
     if 'gross_margin' in quarterly_data:
         margin = quarterly_data['gross_margin']
-        margin_change = quarterly_data.get('margin_change', 0)
+        margin_change = quarterly_data.get('margin_change')
+        margin_change = margin_change if margin_change is not None else 0
 
         if margin_change > 1:
             snapshot += f"✓ Margins: EXPANDING ({margin:.1f}%, +{margin_change:.1f}pp QoQ)\n"
@@ -298,18 +299,30 @@ def create_fundamental_snapshot(ticker: str, quarterly_data: Dict) -> str:
     supports_breakout = True
     concerns = []
 
-    if quarterly_data.get('revenue_yoy_change', 0) < 0:
+    # Coerce present-but-None metrics to 0 before comparisons (a present None
+    # otherwise raises 'TypeError: < not supported between NoneType and int' and
+    # aborts the whole scan during signal generation).
+    snap_rev_yoy = quarterly_data.get('revenue_yoy_change')
+    snap_eps_yoy = quarterly_data.get('eps_yoy_change')
+    snap_margin_change = quarterly_data.get('margin_change')
+    snap_inv_change = quarterly_data.get('inventory_qoq_change')
+    snap_rev_yoy = snap_rev_yoy if snap_rev_yoy is not None else 0
+    snap_eps_yoy = snap_eps_yoy if snap_eps_yoy is not None else 0
+    snap_margin_change = snap_margin_change if snap_margin_change is not None else 0
+    snap_inv_change = snap_inv_change if snap_inv_change is not None else 0
+
+    if snap_rev_yoy < 0:
         supports_breakout = False
         concerns.append('revenue declining')
 
-    if quarterly_data.get('eps_yoy_change', 0) < 0:
+    if snap_eps_yoy < 0:
         supports_breakout = False
         concerns.append('EPS declining')
 
-    if quarterly_data.get('margin_change', 0) < -2:
+    if snap_margin_change < -2:
         concerns.append('margins contracting')
 
-    if quarterly_data.get('inventory_qoq_change', 0) > 15:
+    if snap_inv_change > 15:
         concerns.append('inventory building rapidly')
 
     if supports_breakout and len(concerns) == 0:
