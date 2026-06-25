@@ -6,8 +6,11 @@ pandas.read_html and is meant to run on a networked machine (your laptop or CI),
 not unattended in the daily job. The daily scan only ever reads the committed CSVs.
 """
 
+import io
 import logging
 from pathlib import Path
+
+import requests
 from typing import List, Optional
 
 from src.data.universe_selector import UNIVERSES_DIR, INDEX_FILES, normalize_ticker, _dedupe
@@ -67,10 +70,23 @@ def count_ok(name: str, n: int) -> bool:
     return lo <= n <= hi
 
 
-def fetch_index(name: str) -> List[str]:
-    """Live-fetch constituents for an index from Wikipedia (needs network)."""
+# Wikipedia returns HTTP 403 to the default urllib User-Agent that pandas.read_html
+# uses, so we fetch with requests + a descriptive UA and parse the returned HTML.
+USER_AGENT = (
+    "mm-rh-stock-screener/1.0 (https://github.com/csreenath-rgb/mm-rh-stock-screener) "
+    "python-requests"
+)
+
+
+def fetch_index(name: str, timeout: int = 30) -> List[str]:
+    """Live-fetch constituents for an index from Wikipedia (needs network).
+
+    Sends a descriptive User-Agent; Wikipedia 403s the default urllib UA.
+    """
     import pandas as pd
-    tables = pd.read_html(SOURCES[name])
+    resp = requests.get(SOURCES[name], headers={"User-Agent": USER_AGENT}, timeout=timeout)
+    resp.raise_for_status()
+    tables = pd.read_html(io.StringIO(resp.text))
     return extract_symbols(tables)
 
 

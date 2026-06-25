@@ -47,3 +47,27 @@ def test_write_universe_csv_roundtrips_through_selector(tmp_path):
 
 def test_expected_indices_known():
     assert set(ur.EXPECTED_COUNTS) == {"sp500", "nasdaq100", "dow"}
+
+
+def test_fetch_index_sends_user_agent_and_parses(monkeypatch):
+    """fetch_index must send a User-Agent (Wikipedia 403s the default urllib UA)."""
+    captured = {}
+
+    class FakeResp:
+        status_code = 200
+        text = ("<table><tr><th>Symbol</th></tr>"
+                "<tr><td>AAPL</td></tr><tr><td>MSFT</td></tr></table>")
+
+        def raise_for_status(self):
+            return None
+
+    def fake_get(url, headers=None, timeout=None):
+        captured["url"] = url
+        captured["headers"] = headers or {}
+        return FakeResp()
+
+    monkeypatch.setattr(ur.requests, "get", fake_get)
+    out = ur.fetch_index("dow")
+    assert out == ["AAPL", "MSFT"]
+    assert captured["headers"].get("User-Agent")  # non-empty UA sent
+    assert captured["url"] == ur.SOURCES["dow"]
