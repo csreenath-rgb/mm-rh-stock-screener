@@ -1,0 +1,16 @@
+# Normalize line endings: store AND check out text files as LF everywhere.
+# Prevents the CRLF/LF churn on Windows that breaks `git apply` (silent skipped
+# hunks) and shows phantom whole-file diffs.
+* text=auto eol=lf
+
+# Shell scripts must stay LF (they run in Linux containers / CI).
+*.sh text eol=lf
+
+# Leave binary files untouched.
+*.pkl binary
+*.png binary
+*.jpg binary
+*.jpeg binary
+*.gif binary
+*.ico binary
+*.pdf binary
