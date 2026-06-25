@@ -79,10 +79,18 @@ Manually triggering the workflow now offers a **universe** dropdown
 ## Russell 1000
 
 Russell 1000 (`--universe russell1000`, ~1,000 stocks) is sourced from the **iShares
-Russell 1000 ETF (IWB) holdings CSV** (Wikipedia doesn't list its constituents), via
-the same `scripts/refresh_universes.py` / refresh workflow. A few class-share tickers
-(e.g. `BRKB`→`BRK-B`) are reconciled to yfinance format; add more in
-`ISHARES_FIXUPS` if needed.
+Russell 1000 ETF (IWB) holdings CSV**. iShares blocks scripted download with a JS
+bot-wall, so this one is a **manual, occasional** step (the index reconstitutes yearly):
+
+1. Open the iShares IWB page: https://www.ishares.com/us/products/239707/ishares-russell-1000-etf
+2. Click **Download Holdings** to get `IWB_holdings.csv`.
+3. Save it as `data/universes/IWB_holdings.csv`.
+4. Run `python scripts/refresh_universes.py` (or the refresh workflow) — it parses that
+   file into `russell1000.csv`. A few class-share tickers (e.g. `BRKB`→`BRK-B`) are
+   reconciled to yfinance format via `ISHARES_FIXUPS`.
+
+If the file is absent the refresh reports Russell 1000 as failed (and still refreshes
+the other indices, which use Wikipedia).
 
 Because ~1,000 stocks exceed the free Streamlit Cloud memory limit, Russell 1000
 (like **All US stocks**) is **cached-only** in the dashboard: it shows the most recent

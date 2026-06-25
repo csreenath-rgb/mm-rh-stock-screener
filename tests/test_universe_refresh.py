@@ -111,3 +111,16 @@ def test_refresh_all_isolates_per_index_failures(tmp_path, monkeypatch):
     assert isinstance(results["russell1000"], str) and "FAIL" in results["russell1000"].upper()
     assert (tmp_path / "sp500.csv").exists() and (tmp_path / "dow.csv").exists()
     assert not (tmp_path / "russell1000.csv").exists()
+
+
+def test_fetch_russell1000_reads_local_ishares_file(tmp_path, monkeypatch):
+    f = tmp_path / "IWB_holdings.csv"
+    f.write_text(ISHARES_CSV)
+    monkeypatch.setitem(ur.SOURCES, "russell1000", ("ishares_local", str(f)))
+    assert ur.fetch_index("russell1000") == ["AAPL", "MSFT", "BRK-B"]
+
+
+def test_fetch_russell1000_missing_local_file_raises(tmp_path, monkeypatch):
+    monkeypatch.setitem(ur.SOURCES, "russell1000", ("ishares_local", str(tmp_path / "nope.csv")))
+    with pytest.raises(FileNotFoundError):
+        ur.fetch_index("russell1000")

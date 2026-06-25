@@ -22,7 +22,9 @@ SOURCES = {
     "sp500": ("wikipedia", "https://en.wikipedia.org/wiki/List_of_S%26P_500_companies"),
     "nasdaq100": ("wikipedia", "https://en.wikipedia.org/wiki/Nasdaq-100"),
     "dow": ("wikipedia", "https://en.wikipedia.org/wiki/Dow_Jones_Industrial_Average"),
-    "russell1000": ("ishares", "https://www.ishares.com/us/products/239707/ishares-russell-1000-etf/1467271812596.ajax?fileType=csv&fileName=IWB_holdings&dataType=fund"),
+    # iShares blocks scripted CSV download with a JS bot-wall, so Russell 1000 is
+    # sourced from a manually-downloaded holdings file placed at this path.
+    "russell1000": ("ishares_local", "data/universes/IWB_holdings.csv"),
 }
 
 # iShares uses class-share tickers like BRKB; map the common ones to yfinance form.
@@ -111,8 +113,18 @@ def fetch_index(name: str, timeout: int = 30) -> List[str]:
     (Wikipedia 403s the default urllib UA).
     """
     import pandas as pd
-    kind, url = SOURCES[name]
-    resp = requests.get(url, headers={"User-Agent": USER_AGENT}, timeout=timeout)
+    kind, src = SOURCES[name]
+    if kind == "ishares_local":
+        from pathlib import Path as _Path
+        f = _Path(src)
+        if not f.exists():
+            raise FileNotFoundError(
+                f"{src} not found. iShares blocks scripted download; download the IWB "
+                f"holdings CSV from the iShares Russell 1000 ETF page (\"Download Holdings\") "
+                f"and save it as {src}, then re-run."
+            )
+        return extract_ishares_symbols(f.read_text())
+    resp = requests.get(src, headers={"User-Agent": USER_AGENT}, timeout=timeout)
     resp.raise_for_status()
     if kind == "ishares":
         return extract_ishares_symbols(resp.text)
