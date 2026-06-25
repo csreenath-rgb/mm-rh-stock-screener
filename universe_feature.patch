@@ -1,0 +1,1135 @@
+diff --git a/.github/workflows/daily_screening_git_storage.yml b/.github/workflows/daily_screening_git_storage.yml
+index 823ac37..6be22f6 100644
+--- a/.github/workflows/daily_screening_git_storage.yml
++++ b/.github/workflows/daily_screening_git_storage.yml
+@@ -8,6 +8,12 @@ on:
+   # Allow manual triggering
+   workflow_dispatch:
+     inputs:
++      universe:
++        description: 'Which universe to scan'
++        required: false
++        type: choice
++        options: [all, sp500, nasdaq100, dow]
++        default: all
+       force_full_refresh:
+         description: 'Force refresh all fundamentals (ignore cache)'
+         required: false
+@@ -95,6 +101,7 @@ jobs:
+           TELEGRAM_BOT_TOKEN: ${{ secrets.TELEGRAM_BOT_TOKEN }}
+           TELEGRAM_CHAT_ID: ${{ secrets.TELEGRAM_CHAT_ID }}
+           FORCE_FULL_REFRESH: ${{ github.event.inputs.force_full_refresh || 'false' }}
++          UNIVERSE: ${{ github.event.inputs.universe || 'all' }}
+           CACHED_STOCKS: ${{ steps.cache-check.outputs.cached_stocks }}
+         run: |
+           echo "Starting screening with:"
+@@ -117,7 +124,8 @@ jobs:
+             -e TELEGRAM_BOT_TOKEN -e TELEGRAM_CHAT_ID \
+             -e HOME=/tmp \
+             -v "$PWD/data:/app/data" \
+-            "$IMAGE" --conservative --git-storage
++            -e UNIVERSE \
++            "$IMAGE" --conservative --git-storage --universe "$UNIVERSE"
+ 
+       - name: Show fundamental refresh stats
+         if: always()
+diff --git a/.gitignore b/.gitignore
+index 48b962a..3654631 100644
+--- a/.gitignore
++++ b/.gitignore
+@@ -44,3 +44,5 @@ data/*
+ !data/daily_scans/**
+ !data/position_reports/
+ !data/position_reports/**
++!data/universes/
++!data/universes/**
+diff --git a/Dockerfile.dashboard b/Dockerfile.dashboard
+new file mode 100644
+index 0000000..f9caca3
+--- /dev/null
++++ b/Dockerfile.dashboard
+@@ -0,0 +1,15 @@
++# Optional dashboard image (kept separate so the core scan image stays lean).
++# Build/run via: docker compose up dashboard   then open http://localhost:8501
++FROM python:3.12-slim
++
++ENV PYTHONUNBUFFERED=1 PYTHONDONTWRITEBYTECODE=1 PIP_NO_CACHE_DIR=1
++
++WORKDIR /app
++COPY requirements.txt requirements-dashboard.txt ./
++RUN python -m pip install --upgrade pip && \
++    pip install -r requirements.txt -r requirements-dashboard.txt
++COPY . .
++
++EXPOSE 8501
++ENTRYPOINT ["streamlit", "run", "dashboard/app.py", \
++            "--server.address=0.0.0.0", "--server.port=8501"]
+diff --git a/dashboard/app.py b/dashboard/app.py
+new file mode 100644
+index 0000000..23bbfb1
+--- /dev/null
++++ b/dashboard/app.py
+@@ -0,0 +1,121 @@
++"""Streamlit dashboard for the MM-RH stock screener.
++
++Pick a universe (S&P 500 / Nasdaq-100 / Dow 30 / custom list), run a scan, and
++view ranked buy/sell signals with market regime. Runs the existing
++run_optimized_scan.py as a subprocess and renders its structured JSON output.
++
++Run locally:   streamlit run dashboard/app.py
++Run in Docker: docker compose up dashboard   (then open http://localhost:8501)
++"""
++
++import subprocess
++import sys
++from pathlib import Path
++
++import pandas as pd
++import streamlit as st
++
++# Make the repo root importable and the working dir for the scan subprocess.
++REPO_ROOT = Path(__file__).resolve().parent.parent
++sys.path.insert(0, str(REPO_ROOT))
++
++from src.screening import report_io  # noqa: E402
++
++DAILY_SCANS = REPO_ROOT / "data" / "daily_scans"
++LATEST_JSON = DAILY_SCANS / "latest_optimized_scan.json"
++
++UNIVERSE_CHOICES = {
++    "S&P 500": "sp500",
++    "Nasdaq-100": "nasdaq100",
++    "Dow 30": "dow",
++    "All US stocks (slow ~30-40 min)": "all",
++    "Custom list": "custom",
++}
++SPEED_FLAGS = {
++    "Conservative (safe)": ["--conservative"],
++    "Default": [],
++    "Aggressive (may hit rate limits)": ["--aggressive"],
++}
++
++st.set_page_config(page_title="MM-RH Stock Screener", layout="wide")
++st.title("📈 MM-RH Stock Screener")
++
++
++def run_scan(universe, tickers, speed_flags, min_price, min_volume, notify):
++    cmd = [sys.executable, "run_optimized_scan.py", "--universe", universe,
++           "--git-storage", "--min-price", str(min_price), "--min-volume", str(min_volume)]
++    cmd += speed_flags
++    if universe == "custom":
++        cmd += ["--tickers", tickers]
++    if not notify:
++        cmd += ["--no-notify"]
++    return subprocess.run(cmd, cwd=str(REPO_ROOT), capture_output=True, text=True)
++
++
++def render_report(report):
++    if not report:
++        st.info("No scan loaded yet. Pick a universe and click **Run scan**.")
++        return
++    st.subheader(f"{report.get('universe') or 'Scan'} — {report.get('scan_date', '')}")
++    stats = report.get("stats", {})
++    c1, c2, c3, c4, c5 = st.columns(5)
++    c1.metric("Analyzed", stats.get("total_analyzed"))
++    c2.metric("Buy signals", stats.get("buy_count"))
++    c3.metric("Sell signals", stats.get("sell_count"))
++    c4.metric("Fundamentals N/A", stats.get("fundamentals_unavailable"))
++    err = stats.get("error_rate")
++    c5.metric("Error rate", f"{err*100:.1f}%" if isinstance(err, (int, float)) else "—")
++
++    market = report.get("market", {})
++    st.caption(f"Market: SPY {market.get('spy_phase')} · Breadth (Phase 2) "
++               f"{market.get('breadth_phase2_pct')}%")
++
++    st.markdown("### 🟢 Buy signals")
++    buys = report.get("buy_signals", [])
++    st.dataframe(pd.DataFrame(buys), use_container_width=True) if buys else st.write("None")
++
++    st.markdown("### 🔴 Sell signals")
++    sells = report.get("sell_signals", [])
++    st.dataframe(pd.DataFrame(sells), use_container_width=True) if sells else st.write("None")
++
++
++# ---------------- Sidebar controls ----------------
++with st.sidebar:
++    st.header("Scan settings")
++    label = st.radio("Universe", list(UNIVERSE_CHOICES.keys()))
++    universe = UNIVERSE_CHOICES[label]
++    custom_tickers = ""
++    if universe == "custom":
++        custom_tickers = st.text_area("Tickers (comma/space separated)", "AAPL, MSFT, NVDA")
++    speed = st.selectbox("Scan speed", list(SPEED_FLAGS.keys()))
++    with st.expander("Advanced"):
++        min_price = st.number_input("Min price", value=5.0, step=1.0)
++        min_volume = st.number_input("Min volume", value=100000, step=10000)
++        notify = st.checkbox("Send email/Telegram alerts", value=False)
++    run_clicked = st.button("▶ Run scan", type="primary")
++
++    st.divider()
++    history = report_io.list_report_files(str(DAILY_SCANS))
++    hist_choice = st.selectbox("History", ["(latest)"] + history, format_func=lambda p: p.split("/")[-1].split("\\")[-1])
++
++# ---------------- Main panel ----------------
++if run_clicked:
++    with st.spinner(f"Scanning {label}… (small universes finish in seconds-minutes)"):
++        proc = run_scan(universe, custom_tickers, SPEED_FLAGS[speed], min_price, min_volume, notify)
++    if proc.returncode != 0:
++        st.error("Scan failed. Last lines of output:")
++        st.code((proc.stderr or proc.stdout or "")[-3000:])
++    else:
++        st.success("Scan complete.")
++
++# Decide which report to show
++report = None
++try:
++    if hist_choice and hist_choice != "(latest)":
++        report = report_io.load_report_json(hist_choice)
++    elif LATEST_JSON.exists():
++        report = report_io.load_report_json(str(LATEST_JSON))
++except Exception as e:
++    st.warning(f"Could not load report: {e}")
++
++render_report(report)
+diff --git a/data/universes/README.md b/data/universes/README.md
+new file mode 100644
+index 0000000..819ef15
+--- /dev/null
++++ b/data/universes/README.md
+@@ -0,0 +1,2 @@
++# Index constituent lists live here (sp500.csv, nasdaq100.csv, dow.csv).
++# Generate/refresh them with: python scripts/refresh_universes.py
+diff --git a/docker-compose.yml b/docker-compose.yml
+index b013c8b..119c3c4 100644
+--- a/docker-compose.yml
++++ b/docker-compose.yml
+@@ -40,3 +40,17 @@ services:
+       - ./data:/app/data
+     entrypoint: ["python", "scripts/test_notifications.py"]
+     command: []
++
++  # Optional web dashboard: pick a universe, run a scan, view results.
++  # Start with:  docker compose up dashboard   then open http://localhost:8501
++  dashboard:
++    build:
++      context: .
++      dockerfile: Dockerfile.dashboard
++    image: mm-rh-stock-screener-dashboard:latest
++    env_file:
++      - .env
++    ports:
++      - "8501:8501"
++    volumes:
++      - ./data:/app/data
+diff --git a/docs/UNIVERSE_AND_DASHBOARD.md b/docs/UNIVERSE_AND_DASHBOARD.md
+new file mode 100644
+index 0000000..c01fa4d
+--- /dev/null
++++ b/docs/UNIVERSE_AND_DASHBOARD.md
+@@ -0,0 +1,77 @@
++# Universe Selection & Dashboard
++
++You can now choose **which set of stocks** the screener scans, and view results in a
++web dashboard instead of only a text file.
++
++## Universes
++
++| Universe | Tickers | Source | Typical runtime (conservative) |
++| --- | --- | --- | --- |
++| `all` | ~3,800 | live exchange listings | ~30–40 min |
++| `sp500` | ~500 | `data/universes/sp500.csv` | a few minutes |
++| `nasdaq100` | ~100 | `data/universes/nasdaq100.csv` | ~1 min |
++| `dow` | 30 | `data/universes/dow.csv` | seconds |
++| `custom` | your list | `--tickers` / `--tickers-file` | depends |
++
++> Note: the `all` universe already **contains** every S&P 500 / Nasdaq-100 / Dow
++> member, so picking an index doesn't scan stocks you'd otherwise miss — it scans a
++> faster, focused subset. A named index or custom list is scanned **directly** (the
++> broad price/volume filter is not applied), so you always get the full index.
++
++## One-time setup: populate the index lists
++
++The index CSVs are generated from the public Wikipedia constituent tables. Run this
++once on a networked machine (and re-run occasionally as indices change), then commit
++the updated CSVs:
++
++```bash
++python scripts/refresh_universes.py
++```
++
++It validates the counts (≈500 / ≈100 / 30) before overwriting, so a bad fetch can't
++corrupt the lists. The daily scan never calls this — it only reads the committed CSVs.
++(`custom` lists need no setup.)
++
++## Command line
++
++```bash
++# Focused index scans
++python run_optimized_scan.py --universe dow --git-storage
++python run_optimized_scan.py --universe sp500 --git-storage --conservative
++
++# Your own watchlist
++python run_optimized_scan.py --universe custom --tickers "AAPL,MSFT,NVDA" --git-storage
++python run_optimized_scan.py --universe custom --tickers-file watchlist.txt --git-storage
++
++# Full market (the scheduled default)
++python run_optimized_scan.py --universe all --git-storage --conservative
++```
++
++Each run writes both `data/daily_scans/latest_optimized_scan.txt` and
++`latest_optimized_scan.json` (the dashboard reads the JSON), and labels the report
++with the universe scanned.
++
++## Dashboard
++
++Pick a universe, run a scan, and view ranked buy/sell signals + market regime.
++
++```bash
++# Local
++pip install -r requirements-dashboard.txt
++streamlit run dashboard/app.py
++
++# Docker
++docker compose up dashboard      # then open http://localhost:8501
++```
++
++Notifications are **off by default** in the dashboard (interactive runs shouldn't spam
++your email/Telegram); tick the box under Advanced to enable them for a run. Use the
++**History** dropdown to re-open past scans.
++
++> The full `all` scan takes 30–40 min and is best left to the scheduled GitHub Actions
++> job; the dashboard is ideal for the fast index/custom universes.
++
++## GitHub Actions
++
++Manually triggering the workflow now offers a **universe** dropdown
++(all / sp500 / nasdaq100 / dow). The scheduled daily run stays on `all`.
+diff --git a/requirements-dashboard.txt b/requirements-dashboard.txt
+new file mode 100644
+index 0000000..86d0936
+--- /dev/null
++++ b/requirements-dashboard.txt
+@@ -0,0 +1 @@
++streamlit>=1.30
+diff --git a/run_optimized_scan.py b/run_optimized_scan.py
+index d219763..3aca8d3 100755
+--- a/run_optimized_scan.py
++++ b/run_optimized_scan.py
+@@ -23,6 +23,7 @@ from datetime import datetime
+ from pathlib import Path
+ 
+ from src.data.universe_fetcher import USStockUniverseFetcher
++from src.data.universe_selector import get_universe, available_universes
+ from src.screening.optimized_batch_processor import OptimizedBatchProcessor
+ from src.screening.benchmark import (
+     analyze_spy_trend,
+@@ -40,7 +41,7 @@ logging.basicConfig(
+ logger = logging.getLogger(__name__)
+ 
+ 
+-def save_report(results, buy_signals, sell_signals, spy_analysis, breadth, output_dir="./data/daily_scans"):
++def save_report(results, buy_signals, sell_signals, spy_analysis, breadth, output_dir="./data/daily_scans", universe_label=None):
+     """Save comprehensive report."""
+     Path(output_dir).mkdir(parents=True, exist_ok=True)
+ 
+@@ -50,6 +51,8 @@ def save_report(results, buy_signals, sell_signals, spy_analysis, breadth, outpu
+     output = []
+     output.append("="*80)
+     output.append("OPTIMIZED FULL MARKET SCAN - ALL US STOCKS")
++    if universe_label:
++        output.append(f"Universe: {universe_label}")
+     output.append(f"Scan Date: {date_str}")
+     output.append(f"Generated: {datetime.now().strftime('%Y-%m-%d %H:%M:%S')}")
+     output.append("="*80)
+@@ -275,13 +278,33 @@ def save_report(results, buy_signals, sell_signals, spy_analysis, breadth, outpu
+     with open(latest_path, 'w') as f:
+         f.write(report_text)
+ 
++    # Structured JSON for the dashboard / programmatic use
++    try:
++        from src.screening import report_io
++        report_dict = report_io.build_report_dict(
++            results, buy_signals, sell_signals, spy_analysis, breadth, universe_label=universe_label
++        )
++        report_io.write_report_json(str(Path(output_dir) / f"optimized_scan_{timestamp}.json"), report_dict)
++        report_io.write_report_json(str(Path(output_dir) / "latest_optimized_scan.json"), report_dict)
++    except Exception as e:
++        logger.warning(f"Could not write JSON report: {e}")
++
+     logger.info(f"Report saved: {filepath}")
+     print(report_text)
+ 
+     return filepath, report_text
+ 
+ 
+-def main():
++UNIVERSE_LABELS = {
++    'all': 'All US stocks',
++    'sp500': 'S&P 500',
++    'nasdaq100': 'Nasdaq-100',
++    'dow': 'Dow 30',
++    'custom': 'Custom list',
++}
++
++
++def build_parser():
+     parser = argparse.ArgumentParser(description='Optimized Full Market Scanner')
+     parser.add_argument('--workers', type=int, default=3, help='Parallel workers (default: 3)')
+     parser.add_argument('--delay', type=float, default=0.5, help='Delay per worker (default: 0.5s)')
+@@ -296,8 +319,27 @@ def main():
+     parser.add_argument('--git-storage', action='store_true', help='Use Git-based storage for fundamentals (recommended)')
+     parser.add_argument('--no-notify', action='store_true', help='Disable email/Telegram notifications even if credentials are set')
+     parser.add_argument('--notify-top-n', type=int, default=10, help='Top tickers per side in notification summary (default: 10)')
++    parser.add_argument('--universe', choices=available_universes(), default='all',
++                        help='Which set of stocks to scan: all/sp500/nasdaq100/dow/custom (default: all)')
++    parser.add_argument('--tickers', type=str, default=None, help='Comma-separated tickers (with --universe custom)')
++    parser.add_argument('--tickers-file', type=str, default=None, help='Path to a file of tickers (with --universe custom)')
++    return parser
++
++
++def resolve_universe(args):
++    """Return (tickers, human_label) for the selected universe, honoring --test-mode."""
++    tickers = get_universe(args.universe, custom=getattr(args, 'tickers', None),
++                           custom_file=getattr(args, 'tickers_file', None))
++    label = UNIVERSE_LABELS.get(args.universe, args.universe)
++    if args.universe == 'custom':
++        label = f'Custom list ({len(tickers)} tickers)'
++    if getattr(args, 'test_mode', False):
++        tickers = tickers[:100]
++    return tickers, label
+ 
+-    args = parser.parse_args()
++
++def main():
++    args = build_parser().parse_args()
+ 
+     # Presets
+     if args.conservative:
+@@ -320,20 +362,17 @@ def main():
+         logger.warning("--use-fmp specified but FMP_API_KEY not set. Using yfinance only.")
+ 
+     try:
+-        # Fetch universe
+-        universe_fetcher = USStockUniverseFetcher()
+-        logger.info("Fetching stock universe...")
+-        tickers = universe_fetcher.fetch_universe()
++        # Resolve which universe to scan (all / sp500 / nasdaq100 / dow / custom)
++        logger.info(f"Selecting universe: {args.universe}")
++        tickers, universe_label = resolve_universe(args)
+ 
+         if not tickers:
+-            logger.error("Failed to fetch universe")
++            logger.error("No tickers to scan for the selected universe")
+             sys.exit(1)
+ 
+-        logger.info(f"Universe: {len(tickers):,} stocks")
+-
++        logger.info(f"{universe_label}: {len(tickers):,} stocks")
+         if args.test_mode:
+-            tickers = tickers[:100]
+-            logger.info(f"TEST MODE: {len(tickers)} stocks")
++            logger.info(f"TEST MODE: capped to {len(tickers)} stocks")
+ 
+         # Initialize processor
+         processor = OptimizedBatchProcessor(
+@@ -417,7 +456,8 @@ def main():
+ 
+         # Report
+         report_path, _report_text = save_report(
+-            results, buy_signals, sell_signals, spy_analysis, breadth
++            results, buy_signals, sell_signals, spy_analysis, breadth,
++            universe_label=universe_label
+         )
+ 
+         # Notifications (email / Telegram). Each channel runs only if its
+diff --git a/scripts/refresh_universes.py b/scripts/refresh_universes.py
+new file mode 100644
+index 0000000..3a888af
+--- /dev/null
++++ b/scripts/refresh_universes.py
+@@ -0,0 +1,33 @@
++#!/usr/bin/env python3
++"""Refresh the shipped index-constituent CSVs from Wikipedia.
++
++Run on a networked machine (laptop or CI), then commit the updated CSVs:
++    python scripts/refresh_universes.py
++
++The daily scan never calls this - it only reads the committed CSVs.
++"""
++import logging
++import sys
++from pathlib import Path
++
++sys.path.insert(0, str(Path(__file__).resolve().parent.parent))
++
++from src.data.universe_refresh import refresh_all  # noqa: E402
++
++logging.basicConfig(level=logging.INFO, format="%(asctime)s - %(levelname)s - %(message)s")
++
++
++def main() -> int:
++    try:
++        results = refresh_all()
++    except Exception as exc:
++        logging.error("Refresh failed: %s", exc)
++        return 1
++    print("Updated index CSVs:")
++    for name, count in results.items():
++        print(f"  {name}: {count} tickers")
++    return 0
++
++
++if __name__ == "__main__":
++    sys.exit(main())
+diff --git a/src/data/universe_refresh.py b/src/data/universe_refresh.py
+new file mode 100644
+index 0000000..745f480
+--- /dev/null
++++ b/src/data/universe_refresh.py
+@@ -0,0 +1,100 @@
++"""Refresh shipped index-constituent CSVs (S&P 500, Nasdaq-100, Dow 30).
++
++The parse/validate/write logic here is network-free and unit-tested. The live
++fetch (fetch_index) reads the public Wikipedia constituent tables via
++pandas.read_html and is meant to run on a networked machine (your laptop or CI),
++not unattended in the daily job. The daily scan only ever reads the committed CSVs.
++"""
++
++import logging
++from pathlib import Path
++from typing import List, Optional
++
++from src.data.universe_selector import UNIVERSES_DIR, INDEX_FILES, normalize_ticker, _dedupe
++
++logger = logging.getLogger(__name__)
++
++# Wikipedia sources and the column that holds the ticker.
++SOURCES = {
++    "sp500": "https://en.wikipedia.org/wiki/List_of_S%26P_500_companies",
++    "nasdaq100": "https://en.wikipedia.org/wiki/Nasdaq-100",
++    "dow": "https://en.wikipedia.org/wiki/Dow_Jones_Industrial_Average",
++}
++
++# Candidate column names that hold tickers, in priority order.
++SYMBOL_COLUMNS = ("Symbol", "Ticker", "Ticker symbol")
++
++# Sanity-check ranges so a malformed fetch never overwrites a good CSV.
++EXPECTED_COUNTS = {
++    "sp500": (480, 520),
++    "nasdaq100": (90, 110),
++    "dow": (28, 32),
++}
++
++
++def _find_symbol_column(df):
++    for col in df.columns:
++        if str(col) in SYMBOL_COLUMNS:
++            return col
++    return None
++
++
++def extract_symbols(tables: List) -> List[str]:
++    """Extract normalized tickers from the first table that has a symbol column.
++
++    Args:
++        tables: list of DataFrames (e.g. from pandas.read_html).
++
++    Returns:
++        Deduped, normalized ticker list.
++
++    Raises:
++        ValueError: if no table has a recognizable symbol column.
++    """
++    for df in tables:
++        col = _find_symbol_column(df)
++        if col is not None:
++            symbols = [normalize_ticker(str(v)) for v in df[col].tolist() if str(v).strip()]
++            return _dedupe(symbols)
++    raise ValueError(
++        f"No symbol column found (looked for {SYMBOL_COLUMNS}) in any provided table"
++    )
++
++
++def count_ok(name: str, n: int) -> bool:
++    """True if n is within the sane range for the given index."""
++    lo, hi = EXPECTED_COUNTS[name]
++    return lo <= n <= hi
++
++
++def fetch_index(name: str) -> List[str]:
++    """Live-fetch constituents for an index from Wikipedia (needs network)."""
++    import pandas as pd
++    tables = pd.read_html(SOURCES[name])
++    return extract_symbols(tables)
++
++
++def write_universe_csv(name: str, tickers: List[str], universes_dir: Optional[Path] = None) -> Path:
++    """Write the ticker list to data/universes/<name>.csv (one per line)."""
++    base = Path(universes_dir) if universes_dir is not None else UNIVERSES_DIR
++    base.mkdir(parents=True, exist_ok=True)
++    path = base / INDEX_FILES[name]
++    header = f"# {name} constituents - refreshed by scripts/refresh_universes.py\n"
++    path.write_text(header + "\n".join(tickers) + "\n")
++    return path
++
++
++def refresh_all(universes_dir: Optional[Path] = None) -> dict:
++    """Fetch, validate, and write all three index CSVs. Returns {name: count}."""
++    results = {}
++    for name in SOURCES:
++        tickers = fetch_index(name)
++        if not count_ok(name, len(tickers)):
++            raise ValueError(
++                f"{name}: got {len(tickers)} tickers, outside expected "
++                f"{EXPECTED_COUNTS[name]} - refusing to overwrite CSV"
++            )
++        write_universe_csv(name, tickers, universes_dir=universes_dir)
++        results[name] = len(tickers)
++        logger.info("%s: wrote %d tickers", name, len(tickers))
++    return results
+diff --git a/src/data/universe_selector.py b/src/data/universe_selector.py
+new file mode 100644
+index 0000000..df6676d
+--- /dev/null
++++ b/src/data/universe_selector.py
+@@ -0,0 +1,129 @@
++"""Select which set of tickers the screener scans.
++
++Universes:
++    all        - full ~3,800 US common-stock universe (USStockUniverseFetcher)
++    sp500      - S&P 500 constituents      (data/universes/sp500.csv)
++    nasdaq100  - Nasdaq-100 constituents   (data/universes/nasdaq100.csv)
++    dow        - Dow 30 constituents       (data/universes/dow.csv)
++    custom     - an explicit ticker list (--tickers "AAPL,MSFT" or --tickers-file path)
++
++Index lists are read from shipped CSV files (one ticker per line; blank lines and
++'#' comments ignored). Refresh them with scripts/refresh_universes.py. Named-index
++and custom scans hit exactly those tickers (no broad-universe filtering), so you
++always get the full index even if a member would be dropped by price/volume filters.
++"""
++
++import re
++from pathlib import Path
++from typing import List, Optional
++
++# Default location of the shipped constituent CSVs (relative to repo root).
++UNIVERSES_DIR = Path("data/universes")
++
++INDEX_FILES = {
++    "sp500": "sp500.csv",
++    "nasdaq100": "nasdaq100.csv",
++    "dow": "dow.csv",
++}
++
++# Order matters only for display/help.
++_ALL_NAMES = ["all", "sp500", "nasdaq100", "dow", "custom"]
++
++_SPLIT_RE = re.compile(r"[,\s]+")
++
++
++def available_universes() -> List[str]:
++    """Return the list of valid --universe choices."""
++    return list(_ALL_NAMES)
++
++
++def normalize_ticker(ticker: str) -> str:
++    """Normalize a ticker for yfinance: upper-case, trimmed, '.'->'-' (BRK.B -> BRK-B)."""
++    return ticker.strip().upper().replace(".", "-")
++
++
++def _dedupe(tickers: List[str]) -> List[str]:
++    """Drop blanks and duplicates while preserving first-seen order."""
++    seen = set()
++    out = []
++    for t in tickers:
++        if t and t not in seen:
++            seen.add(t)
++            out.append(t)
++    return out
++
++
++def parse_custom(text: str) -> List[str]:
++    """Parse a custom ticker list from comma/space/newline-separated text."""
++    raw = _SPLIT_RE.split(text.strip())
++    return _dedupe([normalize_ticker(t) for t in raw if t.strip()])
++
++
++def _read_csv_list(path: Path) -> List[str]:
++    """Read tickers from a constituent CSV (first field per line; skip blanks/comments)."""
++    tickers = []
++    for line in path.read_text().splitlines():
++        line = line.strip()
++        if not line or line.startswith("#"):
++            continue
++        first = line.split(",")[0]
++        tickers.append(normalize_ticker(first))
++    return _dedupe(tickers)
++
++
++def get_universe(
++    name: str,
++    custom: Optional[str] = None,
++    custom_file: Optional[str] = None,
++    universes_dir: Optional[Path] = None,
++    fetcher=None,
++) -> List[str]:
++    """Return the ticker list for the requested universe.
++
++    Args:
++        name: one of available_universes().
++        custom: comma/space-separated tickers (for name='custom').
++        custom_file: path to a file of tickers (for name='custom').
++        universes_dir: override the CSV directory (tests inject a temp dir).
++        fetcher: object with .fetch_universe() (for name='all'; injectable for tests).
++
++    Raises:
++        ValueError: unknown name, or custom with no input.
++        FileNotFoundError: index CSV missing (prompt to run the refresh script).
++    """
++    key = (name or "").strip().lower()
++
++    if key == "all":
++        if fetcher is None:
++            from src.data.universe_fetcher import USStockUniverseFetcher
++            fetcher = USStockUniverseFetcher()
++        return fetcher.fetch_universe()
++
++    if key == "custom":
++        if custom_file:
++            text = Path(custom_file).read_text()
++        elif custom:
++            text = custom
++        else:
++            raise ValueError("custom universe requires --tickers or --tickers-file")
++        tickers = parse_custom(text)
++        if not tickers:
++            raise ValueError("custom universe produced no tickers")
++        return tickers
++
++    if key in INDEX_FILES:
++        base = Path(universes_dir) if universes_dir is not None else UNIVERSES_DIR
++        path = base / INDEX_FILES[key]
++        if not path.exists():
++            raise FileNotFoundError(
++                f"Constituent list not found: {path}. "
++                f"Run: python scripts/refresh_universes.py"
++            )
++        tickers = _read_csv_list(path)
++        if not tickers:
++            raise ValueError(f"{path} contains no tickers")
++        return tickers
++
++    raise ValueError(
++        f"Unknown universe '{name}'. Choices: {', '.join(_ALL_NAMES)}"
++    )
+diff --git a/src/screening/report_io.py b/src/screening/report_io.py
+new file mode 100644
+index 0000000..80d166d
+--- /dev/null
++++ b/src/screening/report_io.py
+@@ -0,0 +1,97 @@
++"""Structured (JSON) representation of a scan, shared by the scanner and dashboard.
++
++The scanner writes data/daily_scans/latest_optimized_scan.json alongside the .txt
++report; the Streamlit dashboard reads it back to render sortable tables without
++parsing free text. All extraction is defensive so missing fields never crash.
++"""
++
++import json
++from datetime import datetime
++from typing import Dict, List, Optional
++
++
++def _num(v):
++    """Return v if it is a real number, else None (keeps JSON clean)."""
++    return v if isinstance(v, (int, float)) and not isinstance(v, bool) else None
++
++
++def _signal_row(sig: Dict) -> Dict:
++    details = sig.get("details", {}) or {}
++    return {
++        "ticker": sig.get("ticker"),
++        "score": _num(sig.get("score")),
++        "phase": sig.get("phase"),
++        "entry_quality": sig.get("entry_quality"),
++        "stop_loss": _num(sig.get("stop_loss")),
++        "risk_reward_ratio": _num(sig.get("risk_reward_ratio")),
++        "breakout_price": _num(sig.get("breakout_price")),
++        "rs_slope": _num(details.get("rs_slope")),
++        "volume_ratio": _num(details.get("volume_ratio")),
++    }
++
++
++def build_report_dict(
++    results: Dict,
++    buy_signals: List[Dict],
++    sell_signals: List[Dict],
++    spy_analysis: Optional[Dict],
++    breadth: Optional[Dict],
++    universe_label: Optional[str] = None,
++) -> Dict:
++    """Build a JSON-serializable summary of a scan."""
++    results = results or {}
++    spy_analysis = spy_analysis or {}
++    breadth = breadth or {}
++
++    spy_phase = spy_analysis.get("phase_name") or spy_analysis.get("phase")
++
++    return {
++        "scan_date": datetime.now().strftime("%Y-%m-%d"),
++        "generated_at": datetime.now().strftime("%Y-%m-%d %H:%M:%S"),
++        "universe": universe_label,
++        "stats": {
++            "total_processed": results.get("total_processed"),
++            "total_analyzed": results.get("total_analyzed"),
++            "fundamentals_unavailable": results.get("fundamentals_unavailable"),
++            "processing_time_seconds": _num(results.get("processing_time_seconds")),
++            "actual_tps": _num(results.get("actual_tps")),
++            "error_rate": _num(results.get("error_rate")),
++            "buy_count": len(buy_signals or []),
++            "sell_count": len(sell_signals or []),
++        },
++        "market": {
++            "spy_phase": spy_phase,
++            "breadth_phase2_pct": _num(breadth.get("phase2_pct")),
++        },
++        "buy_signals": [_signal_row(s) for s in (buy_signals or [])],
++        "sell_signals": [_signal_row(s) for s in (sell_signals or [])],
++    }
++
++
++def write_report_json(path: str, report_dict: Dict) -> None:
++    """Write the report dict to path as pretty JSON."""
++    with open(path, "w") as f:
++        json.dump(report_dict, f, indent=2, default=str)
++
++
++def load_report_json(path: str) -> Dict:
++    """Load a report dict previously written by write_report_json."""
++    with open(path) as f:
++        return json.load(f)
++
++
++def list_report_files(dirpath: str) -> List[str]:
++    """Return timestamped scan-report JSON paths, newest first.
++
++    Excludes 'latest_optimized_scan.json' and non-JSON files. Returns [] if the
++    directory does not exist.
++    """
++    import os
++    if not os.path.isdir(dirpath):
++        return []
++    names = [
++        n for n in os.listdir(dirpath)
++        if n.startswith("optimized_scan_") and n.endswith(".json")
++    ]
++    names.sort(reverse=True)  # timestamp in name -> lexical sort = chronological
++    return [os.path.join(dirpath, n) for n in names]
+diff --git a/tests/test_cli_universe.py b/tests/test_cli_universe.py
+new file mode 100644
+index 0000000..fd0d188
+--- /dev/null
++++ b/tests/test_cli_universe.py
+@@ -0,0 +1,47 @@
++"""TDD: --universe / --tickers / --tickers-file wiring in run_optimized_scan."""
++
++import pytest
++import run_optimized_scan as ros
++
++
++def test_parser_universe_defaults_to_all():
++    assert ros.build_parser().parse_args([]).universe == "all"
++
++
++def test_parser_accepts_each_index_choice():
++    for u in ("all", "sp500", "nasdaq100", "dow", "custom"):
++        assert ros.build_parser().parse_args(["--universe", u]).universe == u
++
++
++def test_parser_rejects_unknown_universe():
++    with pytest.raises(SystemExit):
++        ros.build_parser().parse_args(["--universe", "russell2000"])
++
++
++def test_parser_tickers_and_tickers_file():
++    a = ros.build_parser().parse_args(["--universe", "custom", "--tickers", "AAPL,MSFT"])
++    assert a.tickers == "AAPL,MSFT"
++    a2 = ros.build_parser().parse_args(["--tickers-file", "watch.txt"])
++    assert a2.tickers_file == "watch.txt"
++
++
++def test_resolve_universe_custom_returns_tickers_and_label():
++    a = ros.build_parser().parse_args(["--universe", "custom", "--tickers", "aapl, msft"])
++    tickers, label = ros.resolve_universe(a)
++    assert tickers == ["AAPL", "MSFT"]
++    assert "ustom" in label  # "Custom ..." human label
++
++
++def test_universe_labels_cover_all_choices():
++    for u in ("all", "sp500", "nasdaq100", "dow", "custom"):
++        assert u in ros.UNIVERSE_LABELS
++
++
++def test_resolve_universe_test_mode_truncates(monkeypatch):
++    # Build a custom universe of 5, with --test-mode capping at 100 (no truncation here),
++    # then a larger one to confirm capping logic via the helper.
++    a = ros.build_parser().parse_args(["--universe", "custom",
++                                       "--tickers", ",".join(f"T{i}" for i in range(150)),
++                                       "--test-mode"])
++    tickers, _ = ros.resolve_universe(a)
++    assert len(tickers) == 100  # test-mode caps at 100
+diff --git a/tests/test_report_history.py b/tests/test_report_history.py
+new file mode 100644
+index 0000000..72dc7d3
+--- /dev/null
++++ b/tests/test_report_history.py
+@@ -0,0 +1,27 @@
++"""TDD: listing past scan reports for the dashboard history view."""
++
++from src.screening import report_io
++
++
++def test_list_report_files_newest_first_excluding_latest(tmp_path):
++    for name in ["optimized_scan_20260101_090000.json",
++                 "optimized_scan_20260102_090000.json",
++                 "optimized_scan_20260103_090000.json",
++                 "latest_optimized_scan.json",
++                 "optimized_scan_20260101_090000.txt"]:
++        (tmp_path / name).write_text("{}")
++    files = report_io.list_report_files(str(tmp_path))
++    names = [f.split("/")[-1].split("\\")[-1] for f in files]
++    assert names == [
++        "optimized_scan_20260103_090000.json",
++        "optimized_scan_20260102_090000.json",
++        "optimized_scan_20260101_090000.json",
++    ]  # newest first, no 'latest', no .txt
++
++
++def test_list_report_files_empty_dir(tmp_path):
++    assert report_io.list_report_files(str(tmp_path)) == []
++
++
++def test_list_report_files_missing_dir():
++    assert report_io.list_report_files("/no/such/dir") == []
+diff --git a/tests/test_report_io.py b/tests/test_report_io.py
+new file mode 100644
+index 0000000..48a9a7b
+--- /dev/null
++++ b/tests/test_report_io.py
+@@ -0,0 +1,74 @@
++"""TDD: structured report JSON (shared by the scanner and the dashboard)."""
++
++import json
++from src.screening import report_io
++
++
++SAMPLE_RESULTS = {
++    "total_processed": 30,
++    "total_analyzed": 28,
++    "fundamentals_unavailable": 3,
++    "processing_time_seconds": 42.0,
++    "actual_tps": 1.5,
++    "error_rate": 0.0,
++}
++SAMPLE_BUYS = [
++    {"ticker": "AAPL", "score": 91.0, "phase": "Phase 2", "entry_quality": "Good",
++     "stop_loss": 180.0, "risk_reward_ratio": 3.0, "breakout_price": 195.0,
++     "details": {"rs_slope": 0.42, "volume_ratio": 1.8}},
++]
++SAMPLE_SELLS = [
++    {"ticker": "XYZ", "score": 75.0, "phase": "Phase 4", "details": {"rs_slope": -0.3}},
++]
++SAMPLE_SPY = {"phase": 2, "phase_name": "Phase 2 (Uptrend)"}
++SAMPLE_BREADTH = {"phase2_pct": 41.5}
++
++
++def test_build_report_dict_top_level_and_universe_label():
++    d = report_io.build_report_dict(
++        SAMPLE_RESULTS, SAMPLE_BUYS, SAMPLE_SELLS, SAMPLE_SPY, SAMPLE_BREADTH,
++        universe_label="Dow 30",
++    )
++    assert d["universe"] == "Dow 30"
++    assert d["stats"]["buy_count"] == 1
++    assert d["stats"]["sell_count"] == 1
++    assert d["stats"]["fundamentals_unavailable"] == 3
++    assert d["stats"]["total_analyzed"] == 28
++
++
++def test_build_report_dict_extracts_buy_signal_fields():
++    d = report_io.build_report_dict(SAMPLE_RESULTS, SAMPLE_BUYS, [], SAMPLE_SPY, SAMPLE_BREADTH)
++    b = d["buy_signals"][0]
++    assert b["ticker"] == "AAPL"
++    assert b["score"] == 91.0
++    assert b["stop_loss"] == 180.0
++    assert b["risk_reward_ratio"] == 3.0
++    assert b["rs_slope"] == 0.42
++    assert b["volume_ratio"] == 1.8
++
++
++def test_build_report_dict_market_regime():
++    d = report_io.build_report_dict(SAMPLE_RESULTS, [], [], SAMPLE_SPY, SAMPLE_BREADTH)
++    assert d["market"]["spy_phase"] in (2, "Phase 2 (Uptrend)")
++    assert d["market"]["breadth_phase2_pct"] == 41.5
++
++
++def test_build_report_dict_is_json_serializable():
++    d = report_io.build_report_dict(SAMPLE_RESULTS, SAMPLE_BUYS, SAMPLE_SELLS, SAMPLE_SPY, SAMPLE_BREADTH)
++    json.dumps(d)  # must not raise
++
++
++def test_write_and_load_report_json_roundtrip(tmp_path):
++    d = report_io.build_report_dict(SAMPLE_RESULTS, SAMPLE_BUYS, SAMPLE_SELLS, SAMPLE_SPY, SAMPLE_BREADTH, universe_label="Custom")
++    p = tmp_path / "scan.json"
++    report_io.write_report_json(str(p), d)
++    loaded = report_io.load_report_json(str(p))
++    assert loaded["universe"] == "Custom"
++    assert loaded["buy_signals"][0]["ticker"] == "AAPL"
++
++
++def test_build_report_dict_handles_missing_optionals():
++    # Sells with no details / missing fields must not crash.
++    d = report_io.build_report_dict(SAMPLE_RESULTS, [], [{"ticker": "Q", "score": 60}], None, None)
++    assert d["sell_signals"][0]["ticker"] == "Q"
++    assert d["market"]["spy_phase"] is None
+diff --git a/tests/test_universe_refresh.py b/tests/test_universe_refresh.py
+new file mode 100644
+index 0000000..68b9b2a
+--- /dev/null
++++ b/tests/test_universe_refresh.py
+@@ -0,0 +1,49 @@
++"""TDD: parsing/validation logic for the index-constituent refresh (no network)."""
++
++import pandas as pd
++import pytest
++from src.data import universe_refresh as ur
++from src.data import universe_selector as us
++
++
++def test_extract_symbols_from_symbol_column_normalizes():
++    df = pd.DataFrame({"Symbol": ["AAPL", "MSFT", "BRK.B"], "Name": ["a", "b", "c"]})
++    assert ur.extract_symbols([df]) == ["AAPL", "MSFT", "BRK-B"]
++
++
++def test_extract_symbols_handles_ticker_column():
++    df = pd.DataFrame({"Company": ["x"], "Ticker": ["NVDA"]})
++    assert ur.extract_symbols([df]) == ["NVDA"]
++
++
++def test_extract_symbols_picks_table_with_symbols_among_many():
++    junk = pd.DataFrame({"Foo": [1, 2], "Bar": [3, 4]})
++    good = pd.DataFrame({"Symbol": ["AAPL", "AMZN"]})
++    assert ur.extract_symbols([junk, good]) == ["AAPL", "AMZN"]
++
++
++def test_extract_symbols_dedupes_preserving_order():
++    df = pd.DataFrame({"Symbol": ["AAPL", "MSFT", "AAPL"]})
++    assert ur.extract_symbols([df]) == ["AAPL", "MSFT"]
++
++
++def test_extract_symbols_raises_when_no_symbol_column():
++    with pytest.raises(ValueError):
++        ur.extract_symbols([pd.DataFrame({"Foo": [1], "Bar": [2]})])
++
++
++def test_count_ok_ranges():
++    assert ur.count_ok("dow", 30) is True
++    assert ur.count_ok("dow", 12) is False
++    assert ur.count_ok("sp500", 503) is True
++    assert ur.count_ok("sp500", 50) is False
++    assert ur.count_ok("nasdaq100", 101) is True
++
++
++def test_write_universe_csv_roundtrips_through_selector(tmp_path):
++    ur.write_universe_csv("dow", ["AAPL", "MSFT", "BRK-B"], universes_dir=tmp_path)
++    assert us.get_universe("dow", universes_dir=tmp_path) == ["AAPL", "MSFT", "BRK-B"]
++
++
++def test_expected_indices_known():
++    assert set(ur.EXPECTED_COUNTS) == {"sp500", "nasdaq100", "dow"}
+diff --git a/tests/test_universe_selector.py b/tests/test_universe_selector.py
+new file mode 100644
+index 0000000..8c8c77c
+--- /dev/null
++++ b/tests/test_universe_selector.py
+@@ -0,0 +1,81 @@
++"""TDD: universe selection (sp500 / nasdaq100 / dow / custom / all)."""
++
++import pytest
++from src.data import universe_selector as us
++
++
++# ---------- ticker normalization ----------
++
++def test_normalize_ticker_dot_to_dash_and_upper():
++    assert us.normalize_ticker("brk.b") == "BRK-B"
++    assert us.normalize_ticker("  aapl ") == "AAPL"
++    assert us.normalize_ticker("BF.B") == "BF-B"
++
++
++# ---------- custom list parsing ----------
++
++def test_parse_custom_comma_separated():
++    assert us.parse_custom("AAPL, msft ,GOOGL") == ["AAPL", "MSFT", "GOOGL"]
++
++
++def test_parse_custom_mixed_whitespace_and_newlines_dedupes():
++    assert us.parse_custom("AAPL msft\nGOOGL,AAPL") == ["AAPL", "MSFT", "GOOGL"]
++
++
++def test_parse_custom_empty_returns_empty():
++    assert us.parse_custom("   ") == []
++
++
++# ---------- index CSV reading ----------
++
++def _write_csv(p, lines):
++    p.write_text("\n".join(lines) + "\n")
++
++
++def test_get_universe_index_reads_csv(tmp_path):
++    _write_csv(tmp_path / "dow.csv", ["# header comment", "AAPL", "msft", "", "brk.b"])
++    out = us.get_universe("dow", universes_dir=tmp_path)
++    assert out == ["AAPL", "MSFT", "BRK-B"]
++
++
++def test_get_universe_unknown_name_raises(tmp_path):
++    with pytest.raises(ValueError):
++        us.get_universe("russell2000", universes_dir=tmp_path)
++
++
++def test_get_universe_missing_csv_raises_helpful(tmp_path):
++    with pytest.raises(FileNotFoundError):
++        us.get_universe("sp500", universes_dir=tmp_path)
++
++
++# ---------- custom via get_universe ----------
++
++def test_get_universe_custom_from_string():
++    assert us.get_universe("custom", custom="AAPL,MSFT") == ["AAPL", "MSFT"]
++
++
++def test_get_universe_custom_from_file(tmp_path):
++    f = tmp_path / "watch.txt"
++    f.write_text("NVDA\nAMD\n")
++    assert us.get_universe("custom", custom_file=str(f)) == ["NVDA", "AMD"]
++
++
++def test_get_universe_custom_without_input_raises():
++    with pytest.raises(ValueError):
++        us.get_universe("custom")
++
++
++# ---------- all -> delegates to the existing fetcher (injected) ----------
++
++def test_get_universe_all_uses_injected_fetcher():
++    class FakeFetcher:
++        def fetch_universe(self):
++            return ["AAA", "BBB", "CCC"]
++    assert us.get_universe("all", fetcher=FakeFetcher()) == ["AAA", "BBB", "CCC"]
++
++
++# ---------- list of valid names is discoverable ----------
++
++def test_available_universes_lists_all_choices():
++    names = set(us.available_universes())
++    assert {"all", "sp500", "nasdaq100", "dow", "custom"} <= names

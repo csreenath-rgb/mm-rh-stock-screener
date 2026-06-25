@@ -23,6 +23,7 @@ from datetime import datetime
 from pathlib import Path
 
 from src.data.universe_fetcher import USStockUniverseFetcher
+from src.data.universe_selector import get_universe, available_universes
 from src.screening.optimized_batch_processor import OptimizedBatchProcessor
 from src.screening.benchmark import (
     analyze_spy_trend,
@@ -40,7 +41,7 @@ logging.basicConfig(
 logger = logging.getLogger(__name__)
 
 
-def save_report(results, buy_signals, sell_signals, spy_analysis, breadth, output_dir="./data/daily_scans"):
+def save_report(results, buy_signals, sell_signals, spy_analysis, breadth, output_dir="./data/daily_scans", universe_label=None):
     """Save comprehensive report."""
     Path(output_dir).mkdir(parents=True, exist_ok=True)
 
@@ -50,6 +51,8 @@ def save_report(results, buy_signals, sell_signals, spy_analysis, breadth, outpu
     output = []
     output.append("="*80)
     output.append("OPTIMIZED FULL MARKET SCAN - ALL US STOCKS")
+    if universe_label:
+        output.append(f"Universe: {universe_label}")
     output.append(f"Scan Date: {date_str}")
     output.append(f"Generated: {datetime.now().strftime('%Y-%m-%d %H:%M:%S')}")
     output.append("="*80)
@@ -275,13 +278,33 @@ def save_report(results, buy_signals, sell_signals, spy_analysis, breadth, outpu
     with open(latest_path, 'w') as f:
         f.write(report_text)
 
+    # Structured JSON for the dashboard / programmatic use
+    try:
+        from src.screening import report_io
+        report_dict = report_io.build_report_dict(
+            results, buy_signals, sell_signals, spy_analysis, breadth, universe_label=universe_label
+        )
+        report_io.write_report_json(str(Path(output_dir) / f"optimized_scan_{timestamp}.json"), report_dict)
+        report_io.write_report_json(str(Path(output_dir) / "latest_optimized_scan.json"), report_dict)
+    except Exception as e:
+        logger.warning(f"Could not write JSON report: {e}")
+
     logger.info(f"Report saved: {filepath}")
     print(report_text)
 
     return filepath, report_text
 
 
-def main():
+UNIVERSE_LABELS = {
+    'all': 'All US stocks',
+    'sp500': 'S&P 500',
+    'nasdaq100': 'Nasdaq-100',
+    'dow': 'Dow 30',
+    'custom': 'Custom list',
+}
+
+
+def build_parser():
     parser = argparse.ArgumentParser(description='Optimized Full Market Scanner')
     parser.add_argument('--workers', type=int, default=3, help='Parallel workers (default: 3)')
     parser.add_argument('--delay', type=float, default=0.5, help='Delay per worker (default: 0.5s)')
@@ -296,8 +319,27 @@ def main():
     parser.add_argument('--git-storage', action='store_true', help='Use Git-based storage for fundamentals (recommended)')
     parser.add_argument('--no-notify', action='store_true', help='Disable email/Telegram notifications even if credentials are set')
     parser.add_argument('--notify-top-n', type=int, default=10, help='Top tickers per side in notification summary (default: 10)')
+    parser.add_argument('--universe', choices=available_universes(), default='all',
+                        help='Which set of stocks to scan: all/sp500/nasdaq100/dow/custom (default: all)')
+    parser.add_argument('--tickers', type=str, default=None, help='Comma-separated tickers (with --universe custom)')
+    parser.add_argument('--tickers-file', type=str, default=None, help='Path to a file of tickers (with --universe custom)')
+    return parser
 
-    args = parser.parse_args()
+
+def resolve_universe(args):
+    """Return (tickers, human_label) for the selected universe, honoring --test-mode."""
+    tickers = get_universe(args.universe, custom=getattr(args, 'tickers', None),
+                           custom_file=getattr(args, 'tickers_file', None))
+    label = UNIVERSE_LABELS.get(args.universe, args.universe)
+    if args.universe == 'custom':
+        label = f'Custom list ({len(tickers)} tickers)'
+    if getattr(args, 'test_mode', False):
+        tickers = tickers[:100]
+    return tickers, label
+
+
+def main():
+    args = build_parser().parse_args()
 
     # Presets
     if args.conservative:
@@ -320,20 +362,17 @@ def main():
         logger.warning("--use-fmp specified but FMP_API_KEY not set. Using yfinance only.")
 
     try:
-        # Fetch universe
-        universe_fetcher = USStockUniverseFetcher()
-        logger.info("Fetching stock universe...")
-        tickers = universe_fetcher.fetch_universe()
+        # Resolve which universe to scan (all / sp500 / nasdaq100 / dow / custom)
+        logger.info(f"Selecting universe: {args.universe}")
+        tickers, universe_label = resolve_universe(args)
 
         if not tickers:
-            logger.error("Failed to fetch universe")
+            logger.error("No tickers to scan for the selected universe")
             sys.exit(1)
 
-        logger.info(f"Universe: {len(tickers):,} stocks")
-
+        logger.info(f"{universe_label}: {len(tickers):,} stocks")
         if args.test_mode:
-            tickers = tickers[:100]
-            logger.info(f"TEST MODE: {len(tickers)} stocks")
+            logger.info(f"TEST MODE: capped to {len(tickers)} stocks")
 
         # Initialize processor
         processor = OptimizedBatchProcessor(
@@ -417,7 +456,8 @@ def main():
 
         # Report
         report_path, _report_text = save_report(
-            results, buy_signals, sell_signals, spy_analysis, breadth
+            results, buy_signals, sell_signals, spy_analysis, breadth,
+            universe_label=universe_label
         )
 
         # Notifications (email / Telegram). Each channel runs only if its

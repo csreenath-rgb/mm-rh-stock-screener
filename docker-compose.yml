@@ -40,3 +40,17 @@ services:
       - ./data:/app/data
     entrypoint: ["python", "scripts/test_notifications.py"]
     command: []
+
+  # Optional web dashboard: pick a universe, run a scan, view results.
+  # Start with:  docker compose up dashboard   then open http://localhost:8501
+  dashboard:
+    build:
+      context: .
+      dockerfile: Dockerfile.dashboard
+    image: mm-rh-stock-screener-dashboard:latest
+    env_file:
+      - .env
+    ports:
+      - "8501:8501"
+    volumes:
+      - ./data:/app/data

@@ -1,0 +1,121 @@
+"""Streamlit dashboard for the MM-RH stock screener.
+
+Pick a universe (S&P 500 / Nasdaq-100 / Dow 30 / custom list), run a scan, and
+view ranked buy/sell signals with market regime. Runs the existing
+run_optimized_scan.py as a subprocess and renders its structured JSON output.
+
+Run locally:   streamlit run dashboard/app.py
+Run in Docker: docker compose up dashboard   (then open http://localhost:8501)
+"""
+
+import subprocess
+import sys
+from pathlib import Path
+
+import pandas as pd
+import streamlit as st
+
+# Make the repo root importable and the working dir for the scan subprocess.
+REPO_ROOT = Path(__file__).resolve().parent.parent
+sys.path.insert(0, str(REPO_ROOT))
+
+from src.screening import report_io  # noqa: E402
+
+DAILY_SCANS = REPO_ROOT / "data" / "daily_scans"
+LATEST_JSON = DAILY_SCANS / "latest_optimized_scan.json"
+
+UNIVERSE_CHOICES = {
+    "S&P 500": "sp500",
+    "Nasdaq-100": "nasdaq100",
+    "Dow 30": "dow",
+    "All US stocks (slow ~30-40 min)": "all",
+    "Custom list": "custom",
+}
+SPEED_FLAGS = {
+    "Conservative (safe)": ["--conservative"],
+    "Default": [],
+    "Aggressive (may hit rate limits)": ["--aggressive"],
+}
+
+st.set_page_config(page_title="MM-RH Stock Screener", layout="wide")
+st.title("📈 MM-RH Stock Screener")
+
+
+def run_scan(universe, tickers, speed_flags, min_price, min_volume, notify):
+    cmd = [sys.executable, "run_optimized_scan.py", "--universe", universe,
+           "--git-storage", "--min-price", str(min_price), "--min-volume", str(min_volume)]
+    cmd += speed_flags
+    if universe == "custom":
+        cmd += ["--tickers", tickers]
+    if not notify:
+        cmd += ["--no-notify"]
+    return subprocess.run(cmd, cwd=str(REPO_ROOT), capture_output=True, text=True)
+
+
+def render_report(report):
+    if not report:
+        st.info("No scan loaded yet. Pick a universe and click **Run scan**.")
+        return
+    st.subheader(f"{report.get('universe') or 'Scan'} — {report.get('scan_date', '')}")
+    stats = report.get("stats", {})
+    c1, c2, c3, c4, c5 = st.columns(5)
+    c1.metric("Analyzed", stats.get("total_analyzed"))
+    c2.metric("Buy signals", stats.get("buy_count"))
+    c3.metric("Sell signals", stats.get("sell_count"))
+    c4.metric("Fundamentals N/A", stats.get("fundamentals_unavailable"))
+    err = stats.get("error_rate")
+    c5.metric("Error rate", f"{err*100:.1f}%" if isinstance(err, (int, float)) else "—")
+
+    market = report.get("market", {})
+    st.caption(f"Market: SPY {market.get('spy_phase')} · Breadth (Phase 2) "
+               f"{market.get('breadth_phase2_pct')}%")
+
+    st.markdown("### 🟢 Buy signals")
+    buys = report.get("buy_signals", [])
+    st.dataframe(pd.DataFrame(buys), use_container_width=True) if buys else st.write("None")
+
+    st.markdown("### 🔴 Sell signals")
+    sells = report.get("sell_signals", [])
+    st.dataframe(pd.DataFrame(sells), use_container_width=True) if sells else st.write("None")
+
+
+# ---------------- Sidebar controls ----------------
+with st.sidebar:
+    st.header("Scan settings")
+    label = st.radio("Universe", list(UNIVERSE_CHOICES.keys()))
+    universe = UNIVERSE_CHOICES[label]
+    custom_tickers = ""
+    if universe == "custom":
+        custom_tickers = st.text_area("Tickers (comma/space separated)", "AAPL, MSFT, NVDA")
+    speed = st.selectbox("Scan speed", list(SPEED_FLAGS.keys()))
+    with st.expander("Advanced"):
+        min_price = st.number_input("Min price", value=5.0, step=1.0)
+        min_volume = st.number_input("Min volume", value=100000, step=10000)
+        notify = st.checkbox("Send email/Telegram alerts", value=False)
+    run_clicked = st.button("▶ Run scan", type="primary")
+
+    st.divider()
+    history = report_io.list_report_files(str(DAILY_SCANS))
+    hist_choice = st.selectbox("History", ["(latest)"] + history, format_func=lambda p: p.split("/")[-1].split("\\")[-1])
+
+# ---------------- Main panel ----------------
+if run_clicked:
+    with st.spinner(f"Scanning {label}… (small universes finish in seconds-minutes)"):
+        proc = run_scan(universe, custom_tickers, SPEED_FLAGS[speed], min_price, min_volume, notify)
+    if proc.returncode != 0:
+        st.error("Scan failed. Last lines of output:")
+        st.code((proc.stderr or proc.stdout or "")[-3000:])
+    else:
+        st.success("Scan complete.")
+
+# Decide which report to show
+report = None
+try:
+    if hist_choice and hist_choice != "(latest)":
+        report = report_io.load_report_json(hist_choice)
+    elif LATEST_JSON.exists():
+        report = report_io.load_report_json(str(LATEST_JSON))
+except Exception as e:
+    st.warning(f"Could not load report: {e}")
+
+render_report(report)

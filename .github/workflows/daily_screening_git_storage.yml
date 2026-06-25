@@ -8,6 +8,12 @@ on:
   # Allow manual triggering
   workflow_dispatch:
     inputs:
+      universe:
+        description: 'Which universe to scan'
+        required: false
+        type: choice
+        options: [all, sp500, nasdaq100, dow]
+        default: all
       force_full_refresh:
         description: 'Force refresh all fundamentals (ignore cache)'
         required: false
@@ -95,6 +101,7 @@ jobs:
           TELEGRAM_BOT_TOKEN: ${{ secrets.TELEGRAM_BOT_TOKEN }}
           TELEGRAM_CHAT_ID: ${{ secrets.TELEGRAM_CHAT_ID }}
           FORCE_FULL_REFRESH: ${{ github.event.inputs.force_full_refresh || 'false' }}
+          UNIVERSE: ${{ github.event.inputs.universe || 'all' }}
           CACHED_STOCKS: ${{ steps.cache-check.outputs.cached_stocks }}
         run: |
           echo "Starting screening with:"
@@ -117,7 +124,8 @@ jobs:
             -e TELEGRAM_BOT_TOKEN -e TELEGRAM_CHAT_ID \
             -e HOME=/tmp \
             -v "$PWD/data:/app/data" \
-            "$IMAGE" --conservative --git-storage
+            -e UNIVERSE \
+            "$IMAGE" --conservative --git-storage --universe "$UNIVERSE"
 
       - name: Show fundamental refresh stats
         if: always()
