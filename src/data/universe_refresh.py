@@ -19,10 +19,14 @@ logger = logging.getLogger(__name__)
 
 # Wikipedia sources and the column that holds the ticker.
 SOURCES = {
-    "sp500": "https://en.wikipedia.org/wiki/List_of_S%26P_500_companies",
-    "nasdaq100": "https://en.wikipedia.org/wiki/Nasdaq-100",
-    "dow": "https://en.wikipedia.org/wiki/Dow_Jones_Industrial_Average",
+    "sp500": ("wikipedia", "https://en.wikipedia.org/wiki/List_of_S%26P_500_companies"),
+    "nasdaq100": ("wikipedia", "https://en.wikipedia.org/wiki/Nasdaq-100"),
+    "dow": ("wikipedia", "https://en.wikipedia.org/wiki/Dow_Jones_Industrial_Average"),
+    "russell1000": ("ishares", "https://www.ishares.com/us/products/239707/ishares-russell-1000-etf/1467271812596.ajax?fileType=csv&fileName=IWB_holdings&dataType=fund"),
 }
+
+# iShares uses class-share tickers like BRKB; map the common ones to yfinance form.
+ISHARES_FIXUPS = {"BRKB": "BRK-B", "BFB": "BF-B"}
 
 # Candidate column names that hold tickers, in priority order.
 SYMBOL_COLUMNS = ("Symbol", "Ticker", "Ticker symbol")
@@ -32,6 +36,7 @@ EXPECTED_COUNTS = {
     "sp500": (480, 520),
     "nasdaq100": (90, 110),
     "dow": (28, 32),
+    "russell1000": (950, 1050),
 }
 
 
@@ -64,6 +69,26 @@ def extract_symbols(tables: List) -> List[str]:
     )
 
 
+def extract_ishares_symbols(csv_text: str) -> List[str]:
+    """Parse tickers from an iShares ETF holdings CSV (skips metadata + cash rows)."""
+    import csv as _csv
+    lines = csv_text.splitlines()
+    header_idx = next((i for i, ln in enumerate(lines)
+                       if "Ticker" in next(_csv.reader([ln]), [])), None)
+    if header_idx is None:
+        raise ValueError("iShares CSV: no Ticker header row found")
+    rows = list(_csv.DictReader(lines[header_idx:]))
+    out = []
+    for r in rows:
+        if (r.get("Asset Class") or "Equity").strip() != "Equity":
+            continue
+        t = normalize_ticker(str(r.get("Ticker", "")))
+        t = ISHARES_FIXUPS.get(t, t)
+        if t and t not in ("-", "CASH"):
+            out.append(t)
+    return _dedupe(out)
+
+
 def count_ok(name: str, n: int) -> bool:
     """True if n is within the sane range for the given index."""
     lo, hi = EXPECTED_COUNTS[name]
@@ -79,13 +104,18 @@ USER_AGENT = (
 
 
 def fetch_index(name: str, timeout: int = 30) -> List[str]:
-    """Live-fetch constituents for an index from Wikipedia (needs network).
+    """Live-fetch constituents for an index (needs network).
 
-    Sends a descriptive User-Agent; Wikipedia 403s the default urllib UA.
+    Wikipedia sources are parsed as HTML tables; the Russell 1000 comes from the
+    iShares IWB ETF holdings CSV. A descriptive User-Agent is sent either way
+    (Wikipedia 403s the default urllib UA).
     """
     import pandas as pd
-    resp = requests.get(SOURCES[name], headers={"User-Agent": USER_AGENT}, timeout=timeout)
+    kind, url = SOURCES[name]
+    resp = requests.get(url, headers={"User-Agent": USER_AGENT}, timeout=timeout)
     resp.raise_for_status()
+    if kind == "ishares":
+        return extract_ishares_symbols(resp.text)
     tables = pd.read_html(io.StringIO(resp.text))
     return extract_symbols(tables)
 
@@ -101,16 +131,27 @@ def write_universe_csv(name: str, tickers: List[str], universes_dir: Optional[Pa
 
 
 def refresh_all(universes_dir: Optional[Path] = None) -> dict:
-    """Fetch, validate, and write all three index CSVs. Returns {name: count}."""
+    """Fetch, validate, and write each index CSV, isolating per-index failures.
+
+    A failure for one index (e.g. iShares for Russell 1000) does not abort the
+    others. Returns {name: count_int OR "FAILED: ..."}. Raises only if every
+    index failed.
+    """
     results = {}
     for name in SOURCES:
-        tickers = fetch_index(name)
-        if not count_ok(name, len(tickers)):
-            raise ValueError(
-                f"{name}: got {len(tickers)} tickers, outside expected "
-                f"{EXPECTED_COUNTS[name]} - refusing to overwrite CSV"
-            )
-        write_universe_csv(name, tickers, universes_dir=universes_dir)
-        results[name] = len(tickers)
-        logger.info("%s: wrote %d tickers", name, len(tickers))
+        try:
+            tickers = fetch_index(name)
+            if not count_ok(name, len(tickers)):
+                results[name] = (f"FAILED: got {len(tickers)} tickers, outside "
+                                 f"expected {EXPECTED_COUNTS[name]} - not written")
+                logger.error("%s: %s", name, results[name])
+                continue
+            write_universe_csv(name, tickers, universes_dir=universes_dir)
+            results[name] = len(tickers)
+            logger.info("%s: wrote %d tickers", name, len(tickers))
+        except Exception as e:  # one bad source must not break the others
+            results[name] = f"FAILED: {e}"
+            logger.error("%s refresh failed: %s", name, e)
+    if all(isinstance(v, str) for v in results.values()):
+        raise RuntimeError(f"All index refreshes failed: {results}")
     return results

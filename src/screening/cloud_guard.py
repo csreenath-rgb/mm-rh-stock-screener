@@ -18,6 +18,8 @@ _INDEX_LEVELS = {
                      "scheduled GitHub Actions job for the full scan."),
     "sp500": ("warn", "~500 stocks can approach the ~1 GB memory limit on free "
                       "hosting and may be slow. If it fails, use a smaller universe."),
+    "russell1000": ("block", "~1,000 stocks needs more memory than free hosting "
+                            "allows (~1 GB). It is shown from cache only."),
     "nasdaq100": ("ok", ""),
     "dow": ("ok", ""),
 }
@@ -51,7 +53,7 @@ def assess_scan_safety(
 
 # Universes too large to ever run on-demand in limited hosting — the dashboard
 # shows the last scheduled-run (cached) result instead of running them live.
-CACHED_ONLY = {"all"}
+CACHED_ONLY = {"all", "russell1000"}
 
 
 def is_cached_only(universe: str) -> bool:

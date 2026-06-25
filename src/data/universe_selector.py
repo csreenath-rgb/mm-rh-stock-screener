@@ -24,10 +24,11 @@ INDEX_FILES = {
     "sp500": "sp500.csv",
     "nasdaq100": "nasdaq100.csv",
     "dow": "dow.csv",
+    "russell1000": "russell1000.csv",
 }
 
 # Order matters only for display/help.
-_ALL_NAMES = ["all", "sp500", "nasdaq100", "dow", "custom"]
+_ALL_NAMES = ["all", "sp500", "nasdaq100", "dow", "russell1000", "custom"]
 
 _SPLIT_RE = re.compile(r"[,\s]+")
 

@@ -41,7 +41,7 @@ logging.basicConfig(
 logger = logging.getLogger(__name__)
 
 
-def save_report(results, buy_signals, sell_signals, spy_analysis, breadth, output_dir="./data/daily_scans", universe_label=None, keep_reports=30):
+def save_report(results, buy_signals, sell_signals, spy_analysis, breadth, output_dir="./data/daily_scans", universe_label=None, keep_reports=30, universe_key=None):
     """Save comprehensive report."""
     Path(output_dir).mkdir(parents=True, exist_ok=True)
 
@@ -287,6 +287,9 @@ def save_report(results, buy_signals, sell_signals, spy_analysis, breadth, outpu
         )
         report_io.write_report_json(str(Path(output_dir) / f"optimized_scan_{timestamp}.json"), report_dict)
         report_io.write_report_json(str(Path(output_dir) / "latest_optimized_scan.json"), report_dict)
+        # Per-universe cached file so the dashboard can show each cached universe distinctly.
+        if universe_key:
+            report_io.write_report_json(str(Path(output_dir) / f"latest_{universe_key}.json"), report_dict)
         # Retention ring buffer: keep only the newest N timestamped reports.
         if keep_reports:
             pruned = report_io.prune_reports(output_dir, keep_reports)
@@ -306,6 +309,7 @@ UNIVERSE_LABELS = {
     'sp500': 'S&P 500',
     'nasdaq100': 'Nasdaq-100',
     'dow': 'Dow 30',
+    'russell1000': 'Russell 1000',
     'custom': 'Custom list',
 }
 
@@ -466,7 +470,7 @@ def main():
         # Report
         report_path, _report_text = save_report(
             results, buy_signals, sell_signals, spy_analysis, breadth,
-            universe_label=universe_label, keep_reports=args.keep_reports
+            universe_label=universe_label, keep_reports=args.keep_reports, universe_key=args.universe
         )
 
         # Notifications (email / Telegram). Each channel runs only if its

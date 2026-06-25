@@ -31,6 +31,7 @@ UNIVERSE_CHOICES = {
     "Nasdaq-100": "nasdaq100",
     "Dow 30": "dow",
     "All US stocks (CACHED daily result — not on-demand)": "all",
+    "Russell 1000 (CACHED — not on-demand)": "russell1000",
     "Custom list": "custom",
 }
 SPEED_FLAGS = {
@@ -137,7 +138,10 @@ elif run_clicked and safety_level != "block":
 report = None
 try:
     if cached_only:
-        report = report_io.load_report_json(str(LATEST_JSON)) if LATEST_JSON.exists() else None
+        cached_file = DAILY_SCANS / f"latest_{universe}.json"
+        if not cached_file.exists():
+            cached_file = LATEST_JSON  # fall back to the rolling latest
+        report = report_io.load_report_json(str(cached_file)) if cached_file.exists() else None
         if report is None:
             st.info("No cached scan committed yet — the daily scheduled job will populate this.")
     elif hist_choice and hist_choice != "(latest)":
