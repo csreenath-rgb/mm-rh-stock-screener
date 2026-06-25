@@ -41,7 +41,7 @@ logging.basicConfig(
 logger = logging.getLogger(__name__)
 
 
-def save_report(results, buy_signals, sell_signals, spy_analysis, breadth, output_dir="./data/daily_scans", universe_label=None):
+def save_report(results, buy_signals, sell_signals, spy_analysis, breadth, output_dir="./data/daily_scans", universe_label=None, keep_reports=30):
     """Save comprehensive report."""
     Path(output_dir).mkdir(parents=True, exist_ok=True)
 
@@ -282,10 +282,16 @@ def save_report(results, buy_signals, sell_signals, spy_analysis, breadth, outpu
     try:
         from src.screening import report_io
         report_dict = report_io.build_report_dict(
-            results, buy_signals, sell_signals, spy_analysis, breadth, universe_label=universe_label
+            results, buy_signals, sell_signals, spy_analysis, breadth,
+            universe_label=universe_label
         )
         report_io.write_report_json(str(Path(output_dir) / f"optimized_scan_{timestamp}.json"), report_dict)
         report_io.write_report_json(str(Path(output_dir) / "latest_optimized_scan.json"), report_dict)
+        # Retention ring buffer: keep only the newest N timestamped reports.
+        if keep_reports:
+            pruned = report_io.prune_reports(output_dir, keep_reports)
+            if pruned:
+                logger.info(f"Pruned {len(pruned)} old report file(s), keeping newest {keep_reports}")
     except Exception as e:
         logger.warning(f"Could not write JSON report: {e}")
 
@@ -319,6 +325,7 @@ def build_parser():
     parser.add_argument('--git-storage', action='store_true', help='Use Git-based storage for fundamentals (recommended)')
     parser.add_argument('--no-notify', action='store_true', help='Disable email/Telegram notifications even if credentials are set')
     parser.add_argument('--notify-top-n', type=int, default=10, help='Top tickers per side in notification summary (default: 10)')
+    parser.add_argument('--keep-reports', type=int, default=30, help='Retain only the newest N scan reports in data/daily_scans (default: 30)')
     parser.add_argument('--universe', choices=available_universes(), default='all',
                         help='Which set of stocks to scan: all/sp500/nasdaq100/dow/custom (default: all)')
     parser.add_argument('--tickers', type=str, default=None, help='Comma-separated tickers (with --universe custom)')
@@ -426,6 +433,7 @@ def main():
                             quarterly_data=analysis.get('quarterly_data', {}),
                             use_fmp=args.use_fmp
                         )
+                        signal['current_price'] = analysis['current_price']
                         buy_signals.append(signal)
 
         buy_signals = sorted(buy_signals, key=lambda x: x['score'], reverse=True)
@@ -450,6 +458,7 @@ def main():
                             quarterly_data=analysis.get('quarterly_data', {}),
                             use_fmp=args.use_fmp
                         )
+                        signal['current_price'] = analysis['current_price']
                         sell_signals.append(signal)
 
         sell_signals = sorted(sell_signals, key=lambda x: x['score'], reverse=True)
@@ -457,7 +466,7 @@ def main():
         # Report
         report_path, _report_text = save_report(
             results, buy_signals, sell_signals, spy_analysis, breadth,
-            universe_label=universe_label
+            universe_label=universe_label, keep_reports=args.keep_reports
         )
 
         # Notifications (email / Telegram). Each channel runs only if its

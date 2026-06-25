@@ -1,0 +1,14 @@
+# Dependencies for deploying dashboard/app.py to Streamlit Community Cloud.
+# Cloud uses the file next to the entrypoint first, so the root requirements.txt
+# stays lean for the daily-scan Docker image. Includes the scan stack because the
+# dashboard runs run_optimized_scan.py as a subprocess.
+streamlit>=1.35
+yfinance>=0.2.66
+pandas>=2.2.0
+sqlalchemy>=2.0.20
+psycopg2-binary>=2.9.9
+python-dotenv>=1.0.0
+requests>=2.31.0
+slack-sdk>=3.26.0
+pyyaml>=6.0
+numpy>=1.24.0

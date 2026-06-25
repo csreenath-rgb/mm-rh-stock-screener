@@ -72,3 +72,16 @@ def test_build_report_dict_handles_missing_optionals():
     d = report_io.build_report_dict(SAMPLE_RESULTS, [], [{"ticker": "Q", "score": 60}], None, None)
     assert d["sell_signals"][0]["ticker"] == "Q"
     assert d["market"]["spy_phase"] is None
+
+
+def test_build_report_dict_includes_current_and_target_price():
+    buys = [{
+        "ticker": "AAPL", "score": 91.0, "phase": "Phase 2",
+        "current_price": 190.00500488,
+        "stop_loss": 180.0, "risk_reward_ratio": 3.0,
+        "details": {"reward_target": 247.0, "rs_slope": 0.42, "volume_ratio": 1.8},
+    }]
+    d = report_io.build_report_dict(SAMPLE_RESULTS, buys, [], SAMPLE_SPY, SAMPLE_BREADTH)
+    row = d["buy_signals"][0]
+    assert row["current_price"] == 190.01  # rounded to 2dp
+    assert row["target_price"] == 247.0   # from details.reward_target

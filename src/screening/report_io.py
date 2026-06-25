@@ -21,9 +21,12 @@ def _signal_row(sig: Dict) -> Dict:
         "ticker": sig.get("ticker"),
         "score": _num(sig.get("score")),
         "phase": sig.get("phase"),
-        "entry_quality": sig.get("entry_quality"),
+        "current_price": (round(cp, 2) if isinstance((cp := sig.get("current_price")), (int, float)) and not isinstance(cp, bool) else None),
         "stop_loss": _num(sig.get("stop_loss")),
+        # Exit/profit target: buy signals carry details.reward_target.
+        "target_price": _num(details.get("reward_target")),
         "risk_reward_ratio": _num(sig.get("risk_reward_ratio")),
+        "entry_quality": sig.get("entry_quality"),
         "breakout_price": _num(sig.get("breakout_price")),
         "rs_slope": _num(details.get("rs_slope")),
         "volume_ratio": _num(details.get("volume_ratio")),
@@ -95,3 +98,32 @@ def list_report_files(dirpath: str) -> List[str]:
     ]
     names.sort(reverse=True)  # timestamp in name -> lexical sort = chronological
     return [os.path.join(dirpath, n) for n in names]
+
+
+def prune_reports(dirpath: str, keep: int) -> List[str]:
+    """Keep only the newest `keep` timestamped scan reports; delete older ones.
+
+    Deletes both the .json and .txt for each pruned timestamp. Never touches
+    latest_optimized_scan.*. Returns the list of deleted file paths. Safe if the
+    directory is missing or has fewer than `keep` reports.
+    """
+    import os
+    if keep is None or keep < 0 or not os.path.isdir(dirpath):
+        return []
+    stamps = sorted(
+        {n[len("optimized_scan_"):-len(".json")]
+         for n in os.listdir(dirpath)
+         if n.startswith("optimized_scan_") and n.endswith(".json")},
+        reverse=True,
+    )
+    deleted = []
+    for ts in stamps[keep:]:
+        for ext in (".json", ".txt"):
+            f = os.path.join(dirpath, f"optimized_scan_{ts}{ext}")
+            if os.path.exists(f):
+                try:
+                    os.remove(f)
+                    deleted.append(f)
+                except OSError:
+                    pass
+    return deleted

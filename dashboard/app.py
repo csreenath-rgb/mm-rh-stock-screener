@@ -20,6 +20,8 @@ REPO_ROOT = Path(__file__).resolve().parent.parent
 sys.path.insert(0, str(REPO_ROOT))
 
 from src.screening import report_io  # noqa: E402
+from src.screening.cloud_guard import assess_scan_safety, is_cached_only  # noqa: E402
+from src.data import universe_selector  # noqa: E402
 
 DAILY_SCANS = REPO_ROOT / "data" / "daily_scans"
 LATEST_JSON = DAILY_SCANS / "latest_optimized_scan.json"
@@ -28,7 +30,7 @@ UNIVERSE_CHOICES = {
     "S&P 500": "sp500",
     "Nasdaq-100": "nasdaq100",
     "Dow 30": "dow",
-    "All US stocks (slow ~30-40 min)": "all",
+    "All US stocks (CACHED daily result — not on-demand)": "all",
     "Custom list": "custom",
 }
 SPEED_FLAGS = {
@@ -72,11 +74,17 @@ def render_report(report):
 
     st.markdown("### 🟢 Buy signals")
     buys = report.get("buy_signals", [])
-    st.dataframe(pd.DataFrame(buys), use_container_width=True) if buys else st.write("None")
+    if buys:
+        st.dataframe(pd.DataFrame(buys), use_container_width=True)
+    else:
+        st.write("None")
 
     st.markdown("### 🔴 Sell signals")
     sells = report.get("sell_signals", [])
-    st.dataframe(pd.DataFrame(sells), use_container_width=True) if sells else st.write("None")
+    if sells:
+        st.dataframe(pd.DataFrame(sells), use_container_width=True)
+    else:
+        st.write("None")
 
 
 # ---------------- Sidebar controls ----------------
@@ -92,14 +100,31 @@ with st.sidebar:
         min_price = st.number_input("Min price", value=5.0, step=1.0)
         min_volume = st.number_input("Min volume", value=100000, step=10000)
         notify = st.checkbox("Send email/Telegram alerts", value=False)
-    run_clicked = st.button("▶ Run scan", type="primary")
+
+    # Memory-safety guard for limited hosting (e.g. Streamlit Cloud ~1 GB RAM)
+    n_custom = len(universe_selector.parse_custom(custom_tickers)) if universe == "custom" else None
+    safety_level, safety_msg = assess_scan_safety(universe, n_custom)
+    if safety_level == "block":
+        st.error(safety_msg)
+    elif safety_level == "warn":
+        st.warning(safety_msg)
+    run_clicked = st.button("▶ Run scan", type="primary", disabled=(safety_level == "block"))
 
     st.divider()
     history = report_io.list_report_files(str(DAILY_SCANS))
     hist_choice = st.selectbox("History", ["(latest)"] + history, format_func=lambda p: p.split("/")[-1].split("\\")[-1])
 
 # ---------------- Main panel ----------------
-if run_clicked:
+cached_only = is_cached_only(universe)
+
+if cached_only:
+    st.markdown(
+        "> ### ⚠️ CACHED RESULT — NOT run on demand\n"
+        "> **This is the most recent _scheduled_ full-market scan committed by the daily job.** "
+        "The full ~3,800-stock universe is **not available to run live here** (memory limits) — "
+        "it refreshes only when the scheduled GitHub Actions job runs."
+    )
+elif run_clicked and safety_level != "block":
     with st.spinner(f"Scanning {label}… (small universes finish in seconds-minutes)"):
         proc = run_scan(universe, custom_tickers, SPEED_FLAGS[speed], min_price, min_volume, notify)
     if proc.returncode != 0:
@@ -111,11 +136,20 @@ if run_clicked:
 # Decide which report to show
 report = None
 try:
-    if hist_choice and hist_choice != "(latest)":
+    if cached_only:
+        report = report_io.load_report_json(str(LATEST_JSON)) if LATEST_JSON.exists() else None
+        if report is None:
+            st.info("No cached scan committed yet — the daily scheduled job will populate this.")
+    elif hist_choice and hist_choice != "(latest)":
         report = report_io.load_report_json(hist_choice)
     elif LATEST_JSON.exists():
         report = report_io.load_report_json(str(LATEST_JSON))
 except Exception as e:
     st.warning(f"Could not load report: {e}")
 
-render_report(report)
+if cached_only and report:
+    st.markdown(f"**🕒 Cached version generated:** {report.get('generated_at', '?')} "
+                f"(scanned universe: {report.get('universe', '?')})")
+
+# Assigning the result prevents Streamlit's "magic" from auto-printing it.
+_ = render_report(report)
