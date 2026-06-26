@@ -12,7 +12,6 @@ import subprocess
 import sys
 from pathlib import Path
 
-import pandas as pd
 import streamlit as st
 
 # Make the repo root importable and the working dir for the scan subprocess.
@@ -22,6 +21,7 @@ sys.path.insert(0, str(REPO_ROOT))
 from src.screening import report_io  # noqa: E402
 from src.screening.cloud_guard import assess_scan_safety, is_cached_only  # noqa: E402
 from src.screening.scan_cmd import build_scan_cmd, progress_message  # noqa: E402
+from src.screening.dashboard_view import signals_dataframe, apply_sort  # noqa: E402
 from src.data import universe_selector  # noqa: E402
 
 DAILY_SCANS = REPO_ROOT / "data" / "daily_scans"
@@ -87,17 +87,30 @@ def render_report(report):
     st.caption(f"Market: SPY {market.get('spy_phase')} · Breadth (Phase 2) "
                f"{market.get('breadth_phase2_pct')}%")
 
-    st.markdown("### 🟢 Buy signals")
     buys = report.get("buy_signals", [])
-    if buys:
-        st.dataframe(pd.DataFrame(buys), use_container_width=True)
+    sells = report.get("sell_signals", [])
+    buy_df = signals_dataframe(buys)
+    sell_df = signals_dataframe(sells)
+
+    # Sort controls applied to both tables. Default: Score, highest first.
+    sort_cols = list(buy_df.columns) or list(sell_df.columns)
+    if sort_cols:
+        sc1, sc2 = st.columns([3, 1])
+        default_ix = sort_cols.index("Score") if "Score" in sort_cols else 0
+        sort_by = sc1.selectbox("Sort results by", sort_cols, index=default_ix)
+        ascending = sc2.radio("Order", ["Descending", "Ascending"], horizontal=True) == "Ascending"
+        buy_df = apply_sort(buy_df, sort_by, ascending)
+        sell_df = apply_sort(sell_df, sort_by, ascending)
+
+    st.markdown("### 🟢 Buy signals")
+    if not buy_df.empty:
+        st.dataframe(buy_df, use_container_width=True, hide_index=True)
     else:
         st.write("None")
 
     st.markdown("### 🔴 Sell signals")
-    sells = report.get("sell_signals", [])
-    if sells:
-        st.dataframe(pd.DataFrame(sells), use_container_width=True)
+    if not sell_df.empty:
+        st.dataframe(sell_df, use_container_width=True, hide_index=True)
     else:
         st.write("None")
 
