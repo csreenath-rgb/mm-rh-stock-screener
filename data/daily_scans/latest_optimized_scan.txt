@@ -1,20 +1,20 @@
 ================================================================================
 OPTIMIZED FULL MARKET SCAN - ALL US STOCKS
 Universe: All US stocks
-Scan Date: 2026-08-12
-Generated: 2026-08-12 14:11:48
+Scan Date: 2026-08-13
+Generated: 2026-08-13 14:13:06
 ================================================================================
 
 SCANNING STATISTICS
 --------------------------------------------------------------------------------
 Total Universe: 3,782 stocks
-Analyzed: 1,994 stocks
-Fundamentals Unavailable (all-None cache): 19 stocks
+Analyzed: 2,003 stocks
+Fundamentals Unavailable (all-None cache): 20 stocks
 Processing Time: 63.0 minutes
 Actual TPS: 1.00
 🟢 Error Rate: 0.00%
-🟢 Buy Signals: 628
-🔴 Sell Signals: 186
+🟢 Buy Signals: 641
+🔴 Sell Signals: 172
 
 
 ============================================================
@@ -24,16 +24,16 @@ BENCHMARK SUMMARY
 🟢 SPY Trend Classification:
   Phase: 2 - Uptrend/Breakout
   Trend: Bullish
-  Current Price: $770.56
-  🟢 50 SMA: $747.34 (slope: 0.0294)
-  🟢 200 SMA: $701.21 (slope: 0.0637)
+  Current Price: $772.49
+  🟢 50 SMA: $747.66 (slope: 0.0304)
+  🟢 200 SMA: $701.74 (slope: 0.0649)
   🟢 Confidence: 85%
 
-Market Breadth (n=1994):
-  🟡 Phase 1 (Base Building): 994 stocks (49.8%)
-  🟢 Phase 2 (Uptrend): 750 stocks (37.6%)
-  🟡 Phase 3 (Distribution): 45 stocks (2.3%)
-  🔴 Phase 4 (Downtrend): 205 stocks (10.3%)
+Market Breadth (n=2003):
+  🟡 Phase 1 (Base Building): 979 stocks (48.9%)
+  🟢 Phase 2 (Uptrend): 777 stocks (38.8%)
+  🟡 Phase 3 (Distribution): 44 stocks (2.2%)
+  🔴 Phase 4 (Downtrend): 203 stocks (10.1%)
   🔴 Breadth Quality: Good
 
 🟢 Market Regime: RISK-ON (Moderate)
@@ -45,93 +45,27 @@ Interpretation:
 
 
 ================================================================================
-🟢 TOP BUY SIGNALS (Score >= 70) - 628 Total
+🟢 TOP BUY SIGNALS (Score >= 70) - 641 Total
 ================================================================================
 
 
 ################################################################################
-⭐ BUY #1: NUE | Score: 115.9/125
+⭐ BUY #1: ETON | Score: 114.4/125
 ################################################################################
 Phase: 2
 🟢 Entry Quality: Good
-Stop Loss: $249.99
-🟢 Risk/Reward: 3.9:1 (Risk $20.85, Reward $81.25)
-🟢 RS: 0.743
+Stop Loss: $40.33
+🟢 Risk/Reward: 10.0:1 (Risk $1.25, Reward $12.47)
+🟡 RS: 0.421
 
 Key Reasons:
-  • Good Stage 2: 9.3% above 50 SMA
-  • SMAs rising strongly (50:0.229, 200:0.324)
-  • 🔴 Revenue: 3Q avg nan% QoQ (-9.8% → 23.5% → nan%)
-  • 🟢 EPS: +94% YoY (strong earnings)
-  • Inventory neutral (3.3% QoQ)
-  • ✓ Volume heavier on up days (1.1M vs 0.8M, ratio 1.37)
-  • ✓ Strong RS: 0.743 (outperforming SPY)
-
-============================================================
-FUNDAMENTAL SNAPSHOT - NUE
-============================================================
-• Revenue: Data not available
-  QoQ Trend (last 4Q): +0.8% → -9.8% → +23.5% → N/A
-✓ EPS: STRONG growth (YoY: +93.8%, QoQ: +56.0%)
-  QoQ Trend (last 4Q): +1.2% → -37.6% → +97.0% → +56.0%
-✗ Margins: CONTRACTING (nan%, nanpp QoQ)
-• Inventory: Slight increase (+3.3% QoQ, ratio: nan)
-  Note: Detailed breakdown (raw/WIP/finished) not available via API
-
-Overall Assessment:
-✓ Fundamentals SUPPORT technical breakout
-
-
-################################################################################
-⭐ BUY #2: SCL | Score: 114.5/125
-################################################################################
-Phase: 2
-🟢 Entry Quality: Good
-Stop Loss: $60.69
-🟢 Risk/Reward: 6.5:1 (Risk $2.92, Reward $19.08)
-🟢 RS: 0.596
-
-Key Reasons:
-  • Strong Stage 2: 11.8% above 50 SMA
-  • SMAs rising strongly (50:0.392, 200:0.148)
-  • 🔴 Revenue: 3Q avg nan% QoQ (-6.2% → 9.1% → nan%)
-  • 🟢 EPS: +100% YoY (strong earnings)
-  • Inventory neutral (-3.3% QoQ)
-  • Volume slightly heavier on up days (ratio 1.13)
-  • ✓ Strong RS: 0.596 (outperforming SPY)
-
-============================================================
-FUNDAMENTAL SNAPSHOT - SCL
-============================================================
-• Revenue: Data not available
-  QoQ Trend (last 4Q): -0.7% → -6.2% → +9.1% → N/A
-✓ EPS: STRONG growth (YoY: +100.0%, QoQ: +155.2%)
-  QoQ Trend (last 4Q): -6.0% → -53.2% → -922.7% → +155.2%
-✗ Margins: CONTRACTING (nan%, nanpp QoQ)
-• Inventory: Slight draw (-3.3% QoQ, ratio: nan)
-  Note: Detailed breakdown (raw/WIP/finished) not available via API
-
-Overall Assessment:
-✓ Fundamentals SUPPORT technical breakout
-
-
-################################################################################
-⭐ BUY #3: ETON | Score: 113.1/125
-################################################################################
-Phase: 2
-🟢 Entry Quality: Good
-Stop Loss: $40.41
-🟢 Risk/Reward: 7.7:1 (Risk $1.64, Reward $12.61)
-🟢 RS: 0.911
-
-Key Reasons:
-  • Strong Stage 2: 13.9% above 50 SMA
-  • SMAs rising strongly (50:0.773, 200:0.516)
+  • Strong Stage 2: 10.4% above 50 SMA
+  • SMAs rising strongly (50:0.765, 200:0.539)
   • 🟢 Revenue: 3Q avg 9.1% QoQ (18.7% → -5.2% → 14.0%)
   • 🟢 EPS: +183% YoY (strong earnings)
   • ✓ Inventory drawing (-6.2% QoQ - strong demand)
-  • Volume slightly heavier on up days (ratio 1.12)
-  • ✓ Strong RS: 0.911 (outperforming SPY)
+  • Volume slightly heavier on up days (ratio 1.24)
+  • ✓ Strong RS: 0.421 (outperforming SPY)
 
 ============================================================
 FUNDAMENTAL SNAPSHOT - ETON
@@ -150,188 +84,22 @@ Overall Assessment:
 
 
 ################################################################################
-⭐ BUY #4: LYV | Score: 112.9/125
+⭐ BUY #2: LH | Score: 112.4/125
 ################################################################################
 Phase: 2
 🟢 Entry Quality: Good
-Stop Loss: $174.78
-🟢 Risk/Reward: 6.5:1 (Risk $8.52, Reward $54.99)
-Breakout: $176.00
-🔴 RS: -0.101
-🟢 VCP: 2 contractions: 7.8% → 5.6% (quality: 65/100)
+Stop Loss: $299.08
+🟢 Risk/Reward: 4.0:1 (Risk $24.27, Reward $97.01)
+🟢 RS: 0.502
 
 Key Reasons:
-  • Good Stage 2: 3.8% above 50 SMA
-  • SMAs rising strongly (50:0.186, 200:0.081)
-  • 🟡 VCP Breakout (2 contractions) (low volume)
-  • 🟢 Revenue: 3Q avg 12.2% QoQ (-25.7% → -39.9% → 102.1%)
-  • 🟢 EPS: +156% YoY (strong earnings)
-  • ✓ Volume heavier on up days (2.0M vs 1.2M, ratio 1.67)
-  • ⚠ Declining RS: -0.101 (underperforming SPY)
-
-============================================================
-FUNDAMENTAL SNAPSHOT - LYV
-============================================================
-• Revenue: Modest growth (YoY: +9.4%, QoQ: +102.1%)
-  QoQ Trend (last 4Q): +21.3% → -25.7% → -39.9% → +102.1%
-✓ EPS: STRONG growth (YoY: +156.1%, QoQ: +156.8%)
-  QoQ Trend (last 4Q): +78.0% → N/A → N/A → +156.8%
-✗ Margins: CONTRACTING (25.3%, nanpp QoQ)
-
-Overall Assessment:
-✓ Fundamentals SUPPORT technical breakout
-
-
-################################################################################
-⭐ BUY #5: MBIN | Score: 112.8/125
-################################################################################
-Phase: 2
-🟢 Entry Quality: Good
-Stop Loss: $50.74
-🟢 Risk/Reward: 4.5:1 (Risk $3.60, Reward $16.30)
-🟢 RS: 0.632
-
-Key Reasons:
-  • Good Stage 2: 9.1% above 50 SMA
-  • SMAs rising strongly (50:0.261, 200:0.247)
-  • 🔴 Revenue: 3Q avg nan% QoQ (8.5% → -5.5% → nan%)
-  • 🟢 EPS: +147% YoY (strong earnings)
-  • ✓ Volume heavier on up days (0.2M vs 0.1M, ratio 2.12)
-  • ✓ Strong RS: 0.632 (outperforming SPY)
-  • 🟢 Excellent R/R: 4.5:1 ($16.30 upside, $3.60 risk)
-
-============================================================
-FUNDAMENTAL SNAPSHOT - MBIN
-============================================================
-• Revenue: Data not available
-  QoQ Trend (last 4Q): -4.6% → +8.5% → -5.5% → N/A
-✓ EPS: STRONG growth (YoY: +146.7%, QoQ: +18.4%)
-  QoQ Trend (last 4Q): +61.7% → +32.0% → -2.3% → +18.4%
-
-Overall Assessment:
-✓ Fundamentals SUPPORT technical breakout
-
-
-################################################################################
-⭐ BUY #6: STLD | Score: 112.8/125
-################################################################################
-Phase: 2
-🟢 Entry Quality: Good
-Stop Loss: $249.18
-🟢 Risk/Reward: 5.6:1 (Risk $13.99, Reward $78.95)
-🟢 RS: 0.609
-
-Key Reasons:
-  • Good Stage 2: 4.6% above 50 SMA
-  • SMAs rising strongly (50:0.155, 200:0.282)
-  • 🟢 Revenue: 3Q avg 8.8% QoQ (-8.6% → 17.9% → 17.0%)
-  • 🟢 EPS: +84% YoY (strong earnings)
-  • Inventory neutral (1.2% QoQ)
-  • ✓ Volume heavier on up days (1.1M vs 0.6M, ratio 1.79)
-  • ✓ Strong RS: 0.609 (outperforming SPY)
-
-============================================================
-FUNDAMENTAL SNAPSHOT - STLD
-============================================================
-✓ Revenue: ACCELERATING strongly (YoY: +33.4%, QoQ: +17.0%)
-  QoQ Trend (last 4Q): +5.8% → -8.6% → +17.9% → +17.0%
-✓ EPS: STRONG growth (YoY: +83.6%, QoQ: +32.7%)
-  QoQ Trend (last 4Q): +36.3% → -33.6% → +52.7% → +32.7%
-✓ Margins: EXPANDING (15.7%, +1.1pp QoQ)
-• Inventory: Slight increase (+1.2% QoQ, ratio: 0.65)
-  Note: Detailed breakdown (raw/WIP/finished) not available via API
-
-Overall Assessment:
-✓ Fundamentals SUPPORT technical breakout
-
-
-################################################################################
-⭐ BUY #7: WKC | Score: 112.3/125
-################################################################################
-Phase: 2
-🟢 Entry Quality: Good
-Stop Loss: $35.72
-🟢 Risk/Reward: 10.0:1 (Risk $1.10, Reward $11.05)
-🔴 RS: -0.054
-
-Key Reasons:
-  • Good Stage 2: 8.4% above 50 SMA
-  • SMAs rising strongly (50:0.649, 200:0.248)
-  • 🟢 Revenue: 3Q avg 14.6% QoQ (-3.9% → 7.3% → 40.3%)
-  • 🟢 EPS: +116% YoY (strong earnings)
-  • ✓ Inventory drawing (-21.6% QoQ - strong demand)
-  • ✓ Volume heavier on up days (1.2M vs 0.8M, ratio 1.47)
-  • Weak RS: -0.054
-
-============================================================
-FUNDAMENTAL SNAPSHOT - WKC
-============================================================
-✓ Revenue: ACCELERATING strongly (YoY: +50.3%, QoQ: +40.3%)
-  QoQ Trend (last 4Q): +3.9% → -3.9% → +7.3% → +40.3%
-✓ EPS: STRONG growth (YoY: +115.5%, QoQ: +88.0%)
-  QoQ Trend (last 4Q): +107.6% → -1210.9% → +109.8% → +88.0%
-• Margins: Flat (2.7%, -0.1pp QoQ)
-✓ Inventory: DRAWING (-21.6% QoQ, ratio: 0.04)
-  → Strong demand signal
-  Note: Detailed breakdown (raw/WIP/finished) not available via API
-
-Overall Assessment:
-✓ Fundamentals SUPPORT technical breakout
-
-
-################################################################################
-⭐ BUY #8: DRI | Score: 110.6/125
-################################################################################
-Phase: 2
-🟢 Entry Quality: Good
-Stop Loss: $201.77
-🟢 Risk/Reward: 3.8:1 (Risk $17.13, Reward $65.67)
-Breakout: $208.74
-🟡 RS: 0.397
-🟢 VCP: 6 contractions (last 4): 9.8% → 7.1% → 6.4% → 8.9% (quality: 74/100)
-
-Key Reasons:
-  • Good Stage 2: 7.4% above 50 SMA
-  • SMAs rising strongly (50:0.091, 200:0.051)
-  • 🟡 VCP Breakout (6 contractions) (low volume)
-  • 🟢 Revenue: 3Q avg 7.0% QoQ (1.9% → 7.8% → 11.2%)
-  • 🟢 EPS: +36% YoY
-  • ✓ Inventory drawing (-5.5% QoQ - strong demand)
-  • Volume pattern neutral (ratio 1.00)
-
-============================================================
-FUNDAMENTAL SNAPSHOT - DRI
-============================================================
-✓ Revenue: Growing well (YoY: +13.7%, QoQ: +11.2%)
-  QoQ Trend (last 4Q): -6.9% → +1.9% → +7.8% → +11.2%
-✓ EPS: STRONG growth (YoY: +36.0%, QoQ: +32.5%)
-  QoQ Trend (last 4Q): -15.1% → -7.3% → +30.5% → +32.5%
-✓ Margins: EXPANDING (23.3%, +1.1pp QoQ)
-✓ Inventory: DRAWING (-5.5% QoQ, ratio: 0.09)
-  → Strong demand signal
-  Note: Detailed breakdown (raw/WIP/finished) not available via API
-
-Overall Assessment:
-✓ Fundamentals SUPPORT technical breakout
-
-
-################################################################################
-⭐ BUY #9: LH | Score: 109.3/125
-################################################################################
-Phase: 2
-🟢 Entry Quality: Good
-Stop Loss: $292.87
-🟢 Risk/Reward: 3.5:1 (Risk $27.47, Reward $96.10)
-🟢 RS: 0.717
-
-Key Reasons:
-  • Strong Stage 2: 13.8% above 50 SMA
-  • SMAs rising strongly (50:0.365, 200:0.050)
+  • Strong Stage 2: 13.6% above 50 SMA
+  • SMAs rising strongly (50:0.387, 200:0.056)
   • 🔴 Revenue: 3Q avg nan% QoQ (-1.3% → 0.6% → nan%)
   • 🟢 EPS: +28% YoY
   • ✓ Inventory drawing (-6.9% QoQ - strong demand)
-  • ✓ Volume heavier on up days (0.5M vs 0.0M, ratio 25.06)
-  • ✓ Strong RS: 0.717 (outperforming SPY)
+  • ✓ Volume heavier on up days (0.5M vs 0.0M, ratio 29.26)
+  • ✓ Strong RS: 0.502 (outperforming SPY)
 
 ============================================================
 FUNDAMENTAL SNAPSHOT - LH
@@ -350,744 +118,22 @@ Overall Assessment:
 
 
 ################################################################################
-⭐ BUY #10: RS | Score: 108.5/125
+⭐ BUY #3: NVEC | Score: 111.0/125
 ################################################################################
 Phase: 2
 🟢 Entry Quality: Good
-Stop Loss: $393.26
-🟢 Risk/Reward: 4.2:1 (Risk $30.24, Reward $127.05)
-🟡 RS: 0.329
-
-Key Reasons:
-  • Good Stage 2: 6.6% above 50 SMA
-  • SMAs rising strongly (50:0.219, 200:0.202)
-  • 🟢 Revenue: 3Q avg 8.6% QoQ (-4.2% → 15.1% → 15.0%)
-  • 🟢 EPS: +42% YoY
-  • Inventory neutral (4.0% QoQ)
-  • ✓ Volume heavier on up days (0.3M vs 0.2M, ratio 1.50)
-  • ✓ Strong RS: 0.329 (outperforming SPY)
-
-============================================================
-FUNDAMENTAL SNAPSHOT - RS
-============================================================
-✓ Revenue: ACCELERATING strongly (YoY: +26.5%, QoQ: +15.0%)
-  QoQ Trend (last 4Q): -0.2% → -4.2% → +15.1% → +15.0%
-✓ EPS: STRONG growth (YoY: +42.3%, QoQ: +23.3%)
-  QoQ Trend (last 4Q): -18.8% → -38.2% → +129.7% → +23.3%
-✗ Margins: CONTRACTING (28.1%, -1.0pp QoQ)
-• Inventory: Slight increase (+4.0% QoQ, ratio: 0.50)
-  Note: Detailed breakdown (raw/WIP/finished) not available via API
-
-Overall Assessment:
-✓ Fundamentals SUPPORT technical breakout
-
-
-################################################################################
-⭐ BUY #11: CNK | Score: 107.7/125
-################################################################################
-Phase: 2
-🟢 Entry Quality: Good
-Stop Loss: $34.35
-🟢 Risk/Reward: 4.8:1 (Risk $2.31, Reward $11.00)
-🟢 RS: 1.330
-
-Key Reasons:
-  • Strong Stage 2: 12.3% above 50 SMA
-  • SMAs rising strongly (50:0.530, 200:0.149)
-  • 🟢 Revenue: 3Q avg 14.1% QoQ (-9.5% → -17.2% → 68.9%)
-  • Inventory neutral (-0.6% QoQ)
-  • Volume pattern neutral (ratio 1.09)
-  • ✓ Strong RS: 1.330 (outperforming SPY)
-  • 🟢 Excellent R/R: 4.8:1 ($11.00 upside, $2.31 risk)
-
-============================================================
-FUNDAMENTAL SNAPSHOT - CNK
-============================================================
-✓ Revenue: Growing well (YoY: +15.5%, QoQ: +68.9%)
-  QoQ Trend (last 4Q): -8.8% → -9.5% → -17.2% → +68.9%
-• EPS: Data not available
-  QoQ Trend (last 4Q): N/A → -60.0% → -137.5% → +2083.3%
-✗ Margins: CONTRACTING (63.7%, -2.3pp QoQ)
-• Inventory: Slight draw (-0.6% QoQ, ratio: 0.03)
-  Note: Detailed breakdown (raw/WIP/finished) not available via API
-
-Overall Assessment:
-⚠ Some concerns: margins contracting
-
-
-################################################################################
-⭐ BUY #12: ECO | Score: 107.7/125
-################################################################################
-Phase: 2
-🟢 Entry Quality: Good
-Stop Loss: $56.86
-🟢 Risk/Reward: 4.7:1 (Risk $3.88, Reward $18.22)
-🟡 RS: 0.481
-
-Key Reasons:
-  • Strong Stage 2: 12.5% above 50 SMA
-  • SMAs rising strongly (50:0.194, 200:0.363)
-  • 🟢 Revenue: 3Q avg 23.5% QoQ (-3.6% → 40.0% → 34.1%)
-  • 🟢 EPS: +492% YoY (strong earnings)
-  • ⚠ Inventory building rapidly (41.0% QoQ - demand concern)
-  • ✓ Volume heavier on up days (0.8M vs 0.6M, ratio 1.34)
-  • ✓ Strong RS: 0.481 (outperforming SPY)
-
-============================================================
-FUNDAMENTAL SNAPSHOT - ECO
-============================================================
-✓ Revenue: ACCELERATING strongly (YoY: +112.3%, QoQ: +34.1%)
-  QoQ Trend (last 4Q): +17.2% → -3.6% → +40.0% → +34.1%
-✓ EPS: STRONG growth (YoY: +492.3%, QoQ: +31.2%)
-  QoQ Trend (last 4Q): +115.4% → -10.7% → +134.7% → +31.2%
-✓ Margins: EXPANDING (64.5%, +7.5pp QoQ)
-⚠ Inventory: BUILDING (+41.0% QoQ, ratio: 0.14)
-  → Potential demand weakness or production ramp
-  Note: Detailed breakdown (raw/WIP/finished) not available via API
-
-Overall Assessment:
-⚠ Some concerns: inventory building rapidly
-
-
-################################################################################
-⭐ BUY #13: SXI | Score: 107.7/125
-################################################################################
-Phase: 2
-🟢 Entry Quality: Good
-Stop Loss: $307.38
-🟢 Risk/Reward: 3.9:1 (Risk $25.96, Reward $100.00)
-🟡 RS: 0.316
-
-Key Reasons:
-  • Good Stage 2: 7.4% above 50 SMA
-  • SMAs rising strongly (50:0.350, 200:0.178)
-  • 🔴 Revenue: 3Q avg nan% QoQ (1.8% → 1.5% → nan%)
-  • 🟢 EPS: +38% YoY
-  • Inventory neutral (-1.2% QoQ)
-  • Volume slightly heavier on up days (ratio 1.18)
-  • ✓ Strong RS: 0.316 (outperforming SPY)
-
-============================================================
-FUNDAMENTAL SNAPSHOT - SXI
-============================================================
-• Revenue: Data not available
-  QoQ Trend (last 4Q): -2.1% → +1.8% → +1.5% → N/A
-✓ EPS: STRONG growth (YoY: +38.2%, QoQ: -69.4%)
-  QoQ Trend (last 4Q): +1.6% → -86.4% → +3170.6% → -69.4%
-✗ Margins: CONTRACTING (nan%, nanpp QoQ)
-• Inventory: Slight draw (-1.2% QoQ, ratio: nan)
-  Note: Detailed breakdown (raw/WIP/finished) not available via API
-
-Overall Assessment:
-✓ Fundamentals SUPPORT technical breakout
-
-
-################################################################################
-⭐ BUY #14: EOG | Score: 107.3/125
-################################################################################
-Phase: 2
-🟢 Entry Quality: Good
-Stop Loss: $135.71
-🟢 Risk/Reward: 5.6:1 (Risk $7.69, Reward $43.02)
-Breakout: $141.87
-🔴 RS: -0.203
-🟡 VCP: 3 contractions: 9.8% → 9.3% → 9.7% (quality: 58/100)
-
-Key Reasons:
-  • Good Stage 2: 4.6% above 50 SMA
-  • SMAs rising strongly (50:0.092, 200:0.150)
-  • 🟡 VCP Breakout (3 contractions) (low volume)
-  • 🟢 Revenue: 3Q avg 14.6% QoQ (-1.4% → 19.5% → 25.7%)
-  • 🟢 EPS: +109% YoY (strong earnings)
-  • Inventory neutral (-2.6% QoQ)
-  • ⚠ Volume heavier on down days (ratio 0.78 - distribution)
-
-============================================================
-FUNDAMENTAL SNAPSHOT - EOG
-============================================================
-✓ Revenue: ACCELERATING strongly (YoY: +58.6%, QoQ: +25.7%)
-  QoQ Trend (last 4Q): +7.0% → -1.4% → +19.5% → +25.7%
-✓ EPS: STRONG growth (YoY: +109.3%, QoQ: +39.2%)
-  QoQ Trend (last 4Q): +9.8% → -51.9% → +184.6% → +39.2%
-✓ Margins: EXPANDING (71.7%, +5.9pp QoQ)
-• Inventory: Slight draw (-2.6% QoQ, ratio: 0.11)
-  Note: Detailed breakdown (raw/WIP/finished) not available via API
-
-Overall Assessment:
-✓ Fundamentals SUPPORT technical breakout
-
-
-################################################################################
-⭐ BUY #15: CHE | Score: 107.0/125
-################################################################################
-Phase: 2
-🟢 Entry Quality: Good
-Stop Loss: $508.49
-🟢 Risk/Reward: 5.6:1 (Risk $28.65, Reward $161.14)
-🟢 RS: 0.506
-
-Key Reasons:
-  • Strong Stage 2: 12.7% above 50 SMA
-  • SMAs rising strongly (50:0.416, 200:0.098)
-  • 🔴 Revenue: 3Q avg nan% QoQ (2.3% → 2.8% → nan%)
-  • 🟢 EPS: +44% YoY
-  • Volume slightly heavier on up days (ratio 1.16)
-  • ✓ Strong RS: 0.506 (outperforming SPY)
-  • 🟢 Outstanding R/R: 5.6:1 ($161.14 upside, $28.65 risk)
-
-============================================================
-FUNDAMENTAL SNAPSHOT - CHE
-============================================================
-• Revenue: Data not available
-  QoQ Trend (last 4Q): +1.0% → +2.3% → +2.8% → N/A
-✓ EPS: STRONG growth (YoY: +43.7%, QoQ: +6.0%)
-  QoQ Trend (last 4Q): +24.9% → +22.9% → -11.7% → +6.0%
-✗ Margins: CONTRACTING (nan%, nanpp QoQ)
-
-Overall Assessment:
-✓ Fundamentals SUPPORT technical breakout
-
-
-################################################################################
-⭐ BUY #16: OBK | Score: 105.5/125
-################################################################################
-Phase: 2
-🟢 Entry Quality: Good
-Stop Loss: $52.14
-🟢 Risk/Reward: 10.0:1 (Risk $1.61, Reward $16.12)
-🟡 RS: 0.080
-
-Key Reasons:
-  • Good Stage 2: 5.0% above 50 SMA
-  • SMAs rising strongly (50:0.299, 200:0.236)
-  • 🔴 Revenue: 3Q avg nan% QoQ (-6.9% → 3.8% → nan%)
-  • 🟢 EPS: +132% YoY (strong earnings)
-  • ✓ Volume heavier on up days (0.3M vs 0.1M, ratio 1.91)
-  • Positive RS: 0.080
-  • 🟢 Outstanding R/R: 10.0:1 ($16.12 upside, $1.61 risk)
-
-============================================================
-FUNDAMENTAL SNAPSHOT - OBK
-============================================================
-• Revenue: Data not available
-  QoQ Trend (last 4Q): +27.8% → -6.9% → +3.8% → N/A
-✓ EPS: STRONG growth (YoY: +131.9%, QoQ: +22.5%)
-  QoQ Trend (last 4Q): -42.6% → +251.9% → -6.3% → +22.5%
-
-Overall Assessment:
-✓ Fundamentals SUPPORT technical breakout
-
-
-################################################################################
-⭐ BUY #17: COMP | Score: 105.2/125
-################################################################################
-Phase: 2
-🟢 Entry Quality: Good
-Stop Loss: $11.42
-🟢 Risk/Reward: 3.0:1 (Risk $1.27, Reward $3.81)
-🟡 RS: 0.149
-
-Key Reasons:
-  • Strong Stage 2: 17.7% above 50 SMA
-  • SMAs rising strongly (50:0.712, 200:0.225)
-  • 🟢 Revenue: 3Q avg 13.6% QoQ (-10.4% → -7.9% → 59.1%)
-  • 🟢 EPS: +133% YoY (strong earnings)
-  • ✓ Volume heavier on up days (18.3M vs 11.6M, ratio 1.57)
-  • ✓ Strong RS: 0.149 (outperforming SPY)
-  • 🟡 Acceptable R/R: 3.0:1
-
-============================================================
-FUNDAMENTAL SNAPSHOT - COMP
-============================================================
-✓ Revenue: ACCELERATING strongly (YoY: +99.4%, QoQ: +59.1%)
-  QoQ Trend (last 4Q): +51.9% → -10.4% → -7.9% → +59.1%
-✓ EPS: STRONG growth (YoY: +133.3%, QoQ: +142.9%)
-  QoQ Trend (last 4Q): +177.8% → -114.3% → -600.0% → +142.9%
-✓ Margins: EXPANDING (25.7%, +7.2pp QoQ)
-
-Overall Assessment:
-✓ Fundamentals SUPPORT technical breakout
-
-
-################################################################################
-⭐ BUY #18: OVV | Score: 105.0/125
-################################################################################
-Phase: 2
-🟢 Entry Quality: Good
-Stop Loss: $57.55
-🟢 Risk/Reward: 3.2:1 (Risk $5.87, Reward $19.03)
-🟡 RS: 0.317
-
-Key Reasons:
-  • Strong Stage 2: 11.1% above 50 SMA
-  • SMAs rising moderately
-  • 🟢 Revenue: 3Q avg 13.6% QoQ (3.9% → 17.9% → 19.0%)
-  • 🟢 EPS: +37% YoY
-  • ✓ Volume heavier on up days (3.6M vs 1.9M, ratio 1.96)
-  • ✓ Strong RS: 0.317 (outperforming SPY)
-  • 🟢 Good R/R: 3.2:1 ($19.03 upside)
-
-============================================================
-FUNDAMENTAL SNAPSHOT - OVV
-============================================================
-✓ Revenue: ACCELERATING strongly (YoY: +30.0%, QoQ: +19.0%)
-  QoQ Trend (last 4Q): -10.9% → +3.9% → +17.9% → +19.0%
-✓ EPS: STRONG growth (YoY: +37.3%, QoQ: +168.9%)
-  QoQ Trend (last 4Q): -51.7% → N/A → N/A → +168.9%
-• Margins: Stable/slightly up (61.4%, +0.3pp QoQ)
-
-Overall Assessment:
-✓ Fundamentals SUPPORT technical breakout
-
-
-################################################################################
-⭐ BUY #19: NWL | Score: 104.9/125
-################################################################################
-Phase: 2
-🟢 Entry Quality: Good
-Stop Loss: $5.43
-🟢 Risk/Reward: 3.0:1 (Risk $0.60, Reward $1.81)
-🟢 RS: 0.861
-
-Key Reasons:
-  • Strong Stage 2: 16.3% above 50 SMA
-  • SMAs rising strongly (50:0.733, 200:0.100)
-  • 🟢 Revenue: 3Q avg 5.1% QoQ (5.0% → -18.3% → 28.7%)
-  • 🟢 EPS: +127% YoY (strong earnings)
-  • Inventory neutral (-0.1% QoQ)
-  • ✓ Volume heavier on up days (10.4M vs 5.9M, ratio 1.75)
-  • ✓ Strong RS: 0.861 (outperforming SPY)
-
-============================================================
-FUNDAMENTAL SNAPSHOT - NWL
-============================================================
-• Revenue: Modest growth (YoY: +3.0%, QoQ: +28.7%)
-  QoQ Trend (last 4Q): -6.7% → +5.0% → -18.3% → +28.7%
-✓ EPS: STRONG growth (YoY: +127.3%, QoQ: +412.5%)
-  QoQ Trend (last 4Q): -54.5% → -1600.0% → +89.3% → +412.5%
-✓ Margins: EXPANDING (40.7%, +7.6pp QoQ)
-• Inventory: Slight draw (-0.1% QoQ, ratio: 0.75)
-  Note: Detailed breakdown (raw/WIP/finished) not available via API
-
-Overall Assessment:
-✓ Fundamentals SUPPORT technical breakout
-
-
-################################################################################
-⭐ BUY #20: OMC | Score: 104.9/125
-################################################################################
-Phase: 2
-🟢 Entry Quality: Good
-Stop Loss: $77.41
-🟢 Risk/Reward: 3.6:1 (Risk $6.98, Reward $25.32)
-🔴 RS: -0.023
-
-Key Reasons:
-  • Good Stage 2: 7.9% above 50 SMA
-  • SMAs rising strongly (50:0.218, 200:0.041)
-  • 🟢 Revenue: 3Q avg 18.3% QoQ (36.9% → 12.9% → 5.1%)
-  • 🟢 EPS: +59% YoY (strong earnings)
-  • Inventory neutral (-1.7% QoQ)
-  • ✓ Volume heavier on up days (2.4M vs 1.0M, ratio 2.35)
-  • Neutral RS: -0.023
-
-============================================================
-FUNDAMENTAL SNAPSHOT - OMC
-============================================================
-✓ Revenue: ACCELERATING strongly (YoY: +63.4%, QoQ: +5.1%)
-  QoQ Trend (last 4Q): +0.5% → +36.9% → +12.9% → +5.1%
-✓ EPS: STRONG growth (YoY: +58.8%, QoQ: +54.1%)
-  QoQ Trend (last 4Q): +33.6% → -329.7% → +133.6% → +54.1%
-✓ Margins: EXPANDING (19.8%, +3.2pp QoQ)
-• Inventory: Slight draw (-1.7% QoQ, ratio: 0.56)
-  Note: Detailed breakdown (raw/WIP/finished) not available via API
-
-Overall Assessment:
-✓ Fundamentals SUPPORT technical breakout
-
-
-################################################################################
-⭐ BUY #21: BC | Score: 104.7/125
-################################################################################
-Phase: 2
-🟢 Entry Quality: Good
-Stop Loss: $78.97
-🟢 Risk/Reward: 10.0:1 (Risk $2.44, Reward $24.42)
-Breakout: $81.29
-🟡 RS: 0.073
-
-Key Reasons:
-  • Weak Stage 2: 0.1% above 50 SMA
-  • SMAs rising strongly (50:0.058, 200:0.122)
-  • 🟡 50 SMA Breakout (low volume)
-  • 🔴 Revenue: 3Q avg nan% QoQ (-1.9% → 3.3% → nan%)
-  • 🟢 EPS: +89% YoY (strong earnings)
-  • ⚠ Inventory building (5.1% QoQ)
-  • Volume pattern neutral (ratio 0.99)
-
-============================================================
-FUNDAMENTAL SNAPSHOT - BC
-============================================================
-• Revenue: Data not available
-  QoQ Trend (last 4Q): -6.0% → -1.9% → +3.3% → N/A
-✓ EPS: STRONG growth (YoY: +88.8%, QoQ: +425.0%)
-  QoQ Trend (last 4Q): -503.4% → +107.8% → +14.3% → +425.0%
-✗ Margins: CONTRACTING (nan%, nanpp QoQ)
-• Inventory: Moderate build (+5.1% QoQ, ratio: nan)
-  Note: Detailed breakdown (raw/WIP/finished) not available via API
-
-Overall Assessment:
-✓ Fundamentals SUPPORT technical breakout
-
-
-################################################################################
-⭐ BUY #22: AMAL | Score: 104.5/125
-################################################################################
-Phase: 2
-🟢 Entry Quality: Good
-Stop Loss: $48.51
-🟢 Risk/Reward: 10.0:1 (Risk $1.50, Reward $15.00)
-🟡 RS: 0.261
-
-Key Reasons:
-  • Good Stage 2: 9.1% above 50 SMA
-  • SMAs rising strongly (50:0.366, 200:0.300)
-  • 🔴 Revenue: 3Q avg nan% QoQ (0.1% → 9.1% → nan%)
-  • 🟢 EPS: +37% YoY
-  • Volume slightly heavier on up days (ratio 1.11)
-  • ✓ Strong RS: 0.261 (outperforming SPY)
-  • 🟢 Outstanding R/R: 10.0:1 ($15.00 upside, $1.50 risk)
-
-============================================================
-FUNDAMENTAL SNAPSHOT - AMAL
-============================================================
-• Revenue: Data not available
-  QoQ Trend (last 4Q): +5.1% → +0.1% → +9.1% → N/A
-✓ EPS: STRONG growth (YoY: +36.9%, QoQ: +36.9%)
-  QoQ Trend (last 4Q): +4.8% → N/A → N/A → +36.9%
-
-Overall Assessment:
-✓ Fundamentals SUPPORT technical breakout
-
-
-################################################################################
-⭐ BUY #23: CUBI | Score: 104.3/125
-################################################################################
-Phase: 2
-🟢 Entry Quality: Good
-Stop Loss: $77.67
-🟢 Risk/Reward: 4.8:1 (Risk $5.19, Reward $24.86)
-Breakout: $81.44
-🟡 RS: 0.298
-🟢 VCP: 4 contractions: 10.8% → 7.6% → 6.8% → 8.3% (quality: 77/100)
-
-Key Reasons:
-  • Good Stage 2: 6.8% above 50 SMA
-  • SMAs rising strongly (50:0.107, 200:0.097)
-  • 🟡 VCP Breakout (4 contractions) (low volume)
-  • 🔴 Revenue: 3Q avg nan% QoQ (2.2% → -4.8% → nan%)
-  • 🟡 EPS: +18% YoY
-  • ⚠ Volume heavier on down days (ratio 0.68 - distribution)
-  • ✓ Strong RS: 0.298 (outperforming SPY)
-
-============================================================
-FUNDAMENTAL SNAPSHOT - CUBI
-============================================================
-• Revenue: Data not available
-  QoQ Trend (last 4Q): +12.7% → +2.2% → -4.8% → N/A
-✓ EPS: Growing (YoY: +18.5%, QoQ: +4.1%)
-  QoQ Trend (last 4Q): +27.2% → -10.0% → -0.5% → +4.1%
-
-Overall Assessment:
-✓ Fundamentals SUPPORT technical breakout
-
-
-################################################################################
-⭐ BUY #24: OKE | Score: 104.3/125
-################################################################################
-Phase: 2
-🟢 Entry Quality: Good
-Stop Loss: $87.22
-🟢 Risk/Reward: 6.7:1 (Risk $4.10, Reward $27.39)
-Breakout: $89.42
-🔴 RS: -0.381
-🟢 VCP: 5 contractions (last 4): 8.5% → 13.0% → 9.8% → 5.6% (quality: 74/100)
-
-Key Reasons:
-  • Good Stage 2: 3.6% above 50 SMA
-  • SMAs rising weakly
-  • 🟡 VCP Breakout (5 contractions) (low volume)
-  • 🟢 Revenue: 3Q avg 12.1% QoQ (5.0% → 6.1% → 25.3%)
-  • 🟡 EPS: +14% YoY
-  • ✓ Inventory drawing (-7.0% QoQ - strong demand)
-  • ✓ Volume heavier on up days (3.9M vs 1.4M, ratio 2.73)
-
-============================================================
-FUNDAMENTAL SNAPSHOT - OKE
-============================================================
-✓ Revenue: ACCELERATING strongly (YoY: +52.8%, QoQ: +25.3%)
-  QoQ Trend (last 4Q): +9.5% → +5.0% → +6.1% → +25.3%
-✓ EPS: Growing (YoY: +14.2%, QoQ: +24.4%)
-  QoQ Trend (last 4Q): +11.2% → +4.0% → -20.6% → +24.4%
-✗ Margins: CONTRACTING (20.1%, -2.6pp QoQ)
-✓ Inventory: DRAWING (-7.0% QoQ, ratio: 0.09)
-  → Strong demand signal
-  Note: Detailed breakdown (raw/WIP/finished) not available via API
-
-Overall Assessment:
-⚠ Some concerns: margins contracting
-
-
-################################################################################
-⭐ BUY #25: FCX | Score: 103.4/125
-################################################################################
-Phase: 2
-🟢 Entry Quality: Good
-Stop Loss: $63.51
-🟢 Risk/Reward: 3.9:1 (Risk $5.36, Reward $20.66)
-🟢 RS: 0.656
-
-Key Reasons:
-  • Good Stage 2: 7.3% above 50 SMA
-  • SMAs rising moderately
-  • 🔴 Revenue: 3Q avg nan% QoQ (-19.2% → 10.7% → nan%)
-  • 🟢 EPS: +28% YoY
-  • Inventory neutral (-1.0% QoQ)
-  • Volume pattern neutral (ratio 1.09)
-  • ✓ Strong RS: 0.656 (outperforming SPY)
-
-============================================================
-FUNDAMENTAL SNAPSHOT - FCX
-============================================================
-• Revenue: Data not available
-  QoQ Trend (last 4Q): -8.0% → -19.2% → +10.7% → N/A
-✓ EPS: STRONG growth (YoY: +28.3%, QoQ: +11.5%)
-  QoQ Trend (last 4Q): -13.2% → -39.1% → +117.9% → +11.5%
-✗ Margins: CONTRACTING (nan%, nanpp QoQ)
-• Inventory: Slight draw (-1.0% QoQ, ratio: nan)
-  Note: Detailed breakdown (raw/WIP/finished) not available via API
-
-Overall Assessment:
-✓ Fundamentals SUPPORT technical breakout
-
-
-################################################################################
-⭐ BUY #26: AMN | Score: 103.2/125
-################################################################################
-Phase: 2
-🟢 Entry Quality: Good
-Stop Loss: $31.92
-🟢 Risk/Reward: 8.3:1 (Risk $1.19, Reward $9.93)
-🔴 RS: -0.020
-
-Key Reasons:
-  • Weak Stage 2: 2.7% above 50 SMA
-  • SMAs rising strongly (50:0.467, 200:0.327)
-  • 🟢 Revenue: 3Q avg 32.8% QoQ (-3.6% → 17.9% → 84.2%)
-  • 🟢 EPS: +5400% YoY (strong earnings)
-  • Volume pattern neutral (ratio 1.09)
-  • Neutral RS: -0.020
-  • 🟢 Outstanding R/R: 8.3:1 ($9.93 upside, $1.19 risk)
-
-============================================================
-FUNDAMENTAL SNAPSHOT - AMN
-============================================================
-✓ Revenue: ACCELERATING strongly (YoY: +99.9%, QoQ: +84.2%)
-  QoQ Trend (last 4Q): -4.5% → -3.6% → +17.9% → +84.2%
-✓ EPS: STRONG growth (YoY: +5400.0%, QoQ: +895.0%)
-  QoQ Trend (last 4Q): -9966.7% → +125.2% → -126.3% → +895.0%
-• Margins: Stable/slightly up (26.8%, +0.7pp QoQ)
-
-Overall Assessment:
-✓ Fundamentals SUPPORT technical breakout
-
-
-################################################################################
-⭐ BUY #27: TDY | Score: 103.0/125
-################################################################################
-Phase: 2
-🟢 Entry Quality: Good
-Stop Loss: $632.60
-🟢 Risk/Reward: 4.3:1 (Risk $47.20, Reward $203.94)
-Breakout: $674.66
-🟡 RS: 0.349
-🟢 VCP: 4 contractions: 9.3% → 5.8% → 5.6% → 9.6% (quality: 66/100)
-
-Key Reasons:
-  • Good Stage 2: 6.4% above 50 SMA
-  • SMAs rising strongly (50:0.108, 200:0.069)
-  • 🟡 VCP Breakout (4 contractions) (low volume)
-  • 🟡 Revenue: 3Q avg 2.7% QoQ (4.7% → -3.2% → 6.6%)
-  • 🟢 EPS: +21% YoY
-  • Inventory neutral (4.0% QoQ)
-  • ✓ Volume heavier on up days (0.3M vs 0.2M, ratio 1.31)
-
-============================================================
-FUNDAMENTAL SNAPSHOT - TDY
-============================================================
-• Revenue: Modest growth (YoY: +9.8%, QoQ: +6.6%)
-  QoQ Trend (last 4Q): +1.7% → +4.7% → -3.2% → +6.6%
-✓ EPS: Growing (YoY: +21.2%, QoQ: +10.7%)
-  QoQ Trend (last 4Q): +5.0% → +25.6% → -17.0% → +10.7%
-✓ Margins: EXPANDING (44.4%, +1.2pp QoQ)
-• Inventory: Slight increase (+4.0% QoQ, ratio: 0.70)
-  Note: Detailed breakdown (raw/WIP/finished) not available via API
-
-Overall Assessment:
-✓ Fundamentals SUPPORT technical breakout
-
-
-################################################################################
-⭐ BUY #28: BOKF | Score: 102.9/125
-################################################################################
-Phase: 2
-🟢 Entry Quality: Good
-Stop Loss: $139.71
-🟢 Risk/Reward: 10.0:1 (Risk $4.32, Reward $43.21)
-Breakout: $136.11
-🟡 RS: 0.038
-🟢 VCP: 6 contractions (last 4): 10.3% → 8.6% → 7.7% → 4.7% (quality: 70/100)
-
-Key Reasons:
-  • Good Stage 2: 5.3% above 50 SMA
-  • SMAs rising strongly (50:0.180, 200:0.127)
-  • 🟡 VCP Breakout (6 contractions) (low volume)
-  • 🔴 Revenue: 3Q avg nan% QoQ (-0.5% → 1.3% → nan%)
-  • 🟢 EPS: +33% YoY
-  • ⚠ Volume heavier on down days (ratio 0.75 - distribution)
-  • Positive RS: 0.038
-
-============================================================
-FUNDAMENTAL SNAPSHOT - BOKF
-============================================================
-• Revenue: Data not available
-  QoQ Trend (last 4Q): +1.7% → -0.5% → +1.3% → N/A
-✓ EPS: STRONG growth (YoY: +33.3%, QoQ: +13.2%)
-  QoQ Trend (last 4Q): +1.4% → +30.2% → -10.7% → +13.2%
-
-Overall Assessment:
-✓ Fundamentals SUPPORT technical breakout
-
-
-################################################################################
-⭐ BUY #29: DELL | Score: 102.9/125
-################################################################################
-Phase: 2
-🟢 Entry Quality: Good
-Stop Loss: $414.53
-🟢 Risk/Reward: 5.0:1 (Risk $26.44, Reward $132.29)
-🟡 RS: 0.469
-
-Key Reasons:
-  • Good Stage 2: 5.3% above 50 SMA
-  • SMAs rising strongly (50:0.860, 200:0.651)
-  • 🟢 Revenue: 3Q avg 15.2% QoQ (-9.3% → 23.6% → 31.3%)
-  • 🟢 EPS: +282% YoY (strong earnings)
-  • ⚠ Inventory building rapidly (44.2% QoQ - demand concern)
-  • ⚠ Volume heavier on down days (ratio 0.86 - distribution)
-  • ✓ Strong RS: 0.469 (outperforming SPY)
-
-============================================================
-FUNDAMENTAL SNAPSHOT - DELL
-============================================================
-✓ Revenue: ACCELERATING strongly (YoY: +87.5%, QoQ: +31.3%)
-  QoQ Trend (last 4Q): +27.4% → -9.3% → +23.6% → +31.3%
-✓ EPS: STRONG growth (YoY: +282.5%, QoQ: +55.5%)
-  QoQ Trend (last 4Q): +24.1% → +34.1% → +47.8% → +55.5%
-✗ Margins: CONTRACTING (17.8%, -2.4pp QoQ)
-⚠ Inventory: BUILDING (+44.2% QoQ, ratio: 0.34)
-  → Potential demand weakness or production ramp
-  Note: Detailed breakdown (raw/WIP/finished) not available via API
-
-Overall Assessment:
-⚠ Some concerns: margins contracting, inventory building rapidly
-
-
-################################################################################
-⭐ BUY #30: SUN | Score: 102.9/125
-################################################################################
-Phase: 2
-🟢 Entry Quality: Good
-Stop Loss: $70.15
-🟢 Risk/Reward: 5.2:1 (Risk $4.33, Reward $22.34)
-🔴 RS: -0.067
-
-Key Reasons:
-  • Good Stage 2: 9.1% above 50 SMA
-  • SMAs rising strongly (50:0.161, 200:0.220)
-  • 🟢 Revenue: 3Q avg 26.3% QoQ (11.9% → 42.6% → 24.3%)
-  • 🟢 EPS: +136% YoY (strong earnings)
-  • Inventory neutral (-1.5% QoQ)
-  • ⚠ Volume heavier on down days (ratio 0.76 - distribution)
-  • Weak RS: -0.067
-
-============================================================
-FUNDAMENTAL SNAPSHOT - SUN
-============================================================
-✓ Revenue: ACCELERATING strongly (YoY: +106.4%, QoQ: +24.3%)
-  QoQ Trend (last 4Q): +4.1% → +11.9% → +42.6% → +24.3%
-✓ EPS: STRONG growth (YoY: +135.5%, QoQ: +3066.7%)
-  QoQ Trend (last 4Q): -72.7% → +93.9% → -85.9% → +3066.7%
-✓ Margins: EXPANDING (13.1%, +4.9pp QoQ)
-• Inventory: Slight draw (-1.5% QoQ, ratio: 0.22)
-  Note: Detailed breakdown (raw/WIP/finished) not available via API
-
-Overall Assessment:
-✓ Fundamentals SUPPORT technical breakout
-
-
-################################################################################
-⭐ BUY #31: BWA | Score: 102.8/125
-################################################################################
-Phase: 2
-🟢 Entry Quality: Good
-Stop Loss: $67.38
-🟢 Risk/Reward: 9.1:1 (Risk $2.30, Reward $20.90)
-Breakout: $66.32
-🟡 RS: 0.203
-🟢 VCP: 2 contractions: 18.4% → 9.4% (quality: 67/100)
-
-Key Reasons:
-  • Weak Stage 2: 2.4% above 50 SMA
-  • SMAs rising strongly (50:0.071, 200:0.197)
-  • 🟡 VCP Breakout (2 contractions) (low volume)
-  • 🔴 Revenue: 3Q avg -1.0% QoQ (-1.3% → -0.5% → -1.1%)
-  • 🟢 EPS: +61% YoY (strong earnings)
-  • Inventory neutral (-0.6% QoQ)
-  • Volume pattern neutral (ratio 0.90)
-
-============================================================
-FUNDAMENTAL SNAPSHOT - BWA
-============================================================
-• Revenue: Modest growth (YoY: +0.5%, QoQ: -1.1%)
-  QoQ Trend (last 4Q): +3.5% → -1.3% → -0.5% → -1.1%
-✓ EPS: STRONG growth (YoY: +61.1%, QoQ: +191.7%)
-  QoQ Trend (last 4Q): +41.6% → -28.4% → -273.3% → +191.7%
-✗ Margins: CONTRACTING (19.2%, -1.3pp QoQ)
-• Inventory: Slight draw (-0.6% QoQ, ratio: 0.34)
-  Note: Detailed breakdown (raw/WIP/finished) not available via API
-
-Overall Assessment:
-✓ Fundamentals SUPPORT technical breakout
-
-
-################################################################################
-⭐ BUY #32: NVEC | Score: 102.8/125
-################################################################################
-Phase: 2
-🟢 Entry Quality: Good
-Stop Loss: $109.23
-🟢 Risk/Reward: 3.0:1 (Risk $12.14, Reward $36.41)
-🟢 RS: 1.723
+Stop Loss: $110.56
+🟢 Risk/Reward: 3.5:1 (Risk $10.34, Reward $36.27)
+🟢 RS: 1.299
 
 Key Reasons:
   • Strong Stage 2: 14.7% above 50 SMA
-  • SMAs rising strongly (50:0.518, 200:0.319)
+  • SMAs rising strongly (50:0.550, 200:0.332)
   • 🟢 Revenue: 3Q avg 21.7% QoQ (-1.9% → 23.0% → 44.1%)
   • 🟢 EPS: +78% YoY (strong earnings)
   • ✓ Inventory drawing (-5.8% QoQ - strong demand)
-  • ⚠ Volume heavier on down days (ratio 0.45 - distribution)
-  • ✓ Strong RS: 1.723 (outperforming SPY)
+  • Volume pattern neutral (ratio 1.02)
+  • ✓ Strong RS: 1.299 (outperforming SPY)
 
 ============================================================
 FUNDAMENTAL SNAPSHOT - NVEC
@@ -1106,94 +152,32 @@ Overall Assessment:
 
 
 ################################################################################
-⭐ BUY #33: PTGX | Score: 102.8/125
+⭐ BUY #4: SCL | Score: 110.5/125
 ################################################################################
 Phase: 2
 🟢 Entry Quality: Good
-Stop Loss: $135.66
-🟢 Risk/Reward: 3.0:1 (Risk $15.07, Reward $45.22)
-🟡 RS: 0.411
+Stop Loss: $61.80
+🟢 Risk/Reward: 6.1:1 (Risk $3.18, Reward $19.49)
+🟡 RS: 0.476
 
 Key Reasons:
-  • Strong Stage 2: 21.4% above 50 SMA
-  • SMAs rising strongly (50:0.628, 200:0.355)
-  • Moderately extended above 50 SMA
-  • 🟢 Revenue: 3Q avg 233.6% QoQ (-15.0% → 57.8% → 657.9%)
-  • 🟢 EPS: +126% YoY (strong earnings)
-  • ✓ Volume heavier on up days (0.5M vs 0.3M, ratio 1.49)
-  • ✓ Strong RS: 0.411 (outperforming SPY)
+  • Strong Stage 2: 12.7% above 50 SMA
+  • SMAs rising strongly (50:0.413, 200:0.161)
+  • 🔴 Revenue: 3Q avg nan% QoQ (-6.2% → 9.1% → nan%)
+  • 🟢 EPS: +100% YoY (strong earnings)
+  • Inventory neutral (-3.3% QoQ)
+  • ⚠ Volume heavier on down days (ratio 0.63 - distribution)
+  • ✓ Strong RS: 0.476 (outperforming SPY)
 
 ============================================================
-FUNDAMENTAL SNAPSHOT - PTGX
-============================================================
-✓ Revenue: ACCELERATING strongly (YoY: +99.0%, QoQ: +657.9%)
-  QoQ Trend (last 4Q): -80.4% → -15.0% → +57.8% → +657.9%
-✓ EPS: STRONG growth (YoY: +126.3%, QoQ: +107.2%)
-  QoQ Trend (last 4Q): -189.5% → -12.7% → -11.3% → +107.2%
-
-Overall Assessment:
-✓ Fundamentals SUPPORT technical breakout
-
-
-################################################################################
-⭐ BUY #34: FBP | Score: 102.7/125
-################################################################################
-Phase: 2
-🟢 Entry Quality: Good
-Stop Loss: $28.17
-🟢 Risk/Reward: 10.0:1 (Risk $0.87, Reward $8.71)
-🟡 RS: 0.301
-
-Key Reasons:
-  • Good Stage 2: 9.6% above 50 SMA
-  • SMAs rising strongly (50:0.389, 200:0.161)
-  • 🔴 Revenue: 3Q avg nan% QoQ (-0.7% → 5.9% → nan%)
-  • 🟢 EPS: +24% YoY
-  • Volume slightly heavier on up days (ratio 1.15)
-  • ✓ Strong RS: 0.301 (outperforming SPY)
-  • 🟢 Outstanding R/R: 10.0:1 ($8.71 upside, $0.87 risk)
-
-============================================================
-FUNDAMENTAL SNAPSHOT - FBP
+FUNDAMENTAL SNAPSHOT - SCL
 ============================================================
 • Revenue: Data not available
-  QoQ Trend (last 4Q): -0.0% → -0.7% → +5.9% → N/A
-✓ EPS: Growing (YoY: +24.0%, QoQ: +8.8%)
-  QoQ Trend (last 4Q): +26.0% → N/A → N/A → +8.8%
-
-Overall Assessment:
-✓ Fundamentals SUPPORT technical breakout
-
-
-################################################################################
-⭐ BUY #35: GD | Score: 102.7/125
-################################################################################
-Phase: 2
-🟢 Entry Quality: Good
-Stop Loss: $372.17
-🟢 Risk/Reward: 6.9:1 (Risk $16.91, Reward $116.72)
-Breakout: $380.71
-🟡 RS: 0.100
-🟢 VCP: 2 contractions: 7.1% → 4.4% (quality: 64/100)
-
-Key Reasons:
-  • Good Stage 2: 6.5% above 50 SMA
-  • SMAs rising strongly (50:0.239, 200:0.073)
-  • 🟡 VCP Breakout (2 contractions) (low volume)
-  • 🟡 Revenue: 3Q avg 3.2% QoQ (11.4% → -6.2% → 4.5%)
-  • 🟡 EPS: +13% YoY
-  • Inventory neutral (-0.9% QoQ)
-  • ✓ Volume heavier on up days (0.8M vs 0.3M, ratio 2.83)
-
-============================================================
-FUNDAMENTAL SNAPSHOT - GD
-============================================================
-• Revenue: Modest growth (YoY: +8.1%, QoQ: +4.5%)
-  QoQ Trend (last 4Q): -1.0% → +11.4% → -6.2% → +4.5%
-✓ EPS: Growing (YoY: +13.4%, QoQ: +3.4%)
-  QoQ Trend (last 4Q): +3.7% → +7.5% → -1.7% → +3.4%
-• Margins: Flat (15.5%, -0.4pp QoQ)
-• Inventory: Slight draw (-0.9% QoQ, ratio: 0.65)
+  QoQ Trend (last 4Q): -0.7% → -6.2% → +9.1% → N/A
+✓ EPS: STRONG growth (YoY: +100.0%, QoQ: +155.2%)
+  QoQ Trend (last 4Q): -6.0% → -53.2% → -922.7% → +155.2%
+✗ Margins: CONTRACTING (nan%, nanpp QoQ)
+• Inventory: Slight draw (-3.3% QoQ, ratio: nan)
   Note: Detailed breakdown (raw/WIP/finished) not available via API
 
 Overall Assessment:
@@ -1201,53 +185,123 @@ Overall Assessment:
 
 
 ################################################################################
-⭐ BUY #36: CNS | Score: 102.6/125
+⭐ BUY #5: EOG | Score: 109.9/125
 ################################################################################
 Phase: 2
 🟢 Entry Quality: Good
-Stop Loss: $78.72
-🟢 Risk/Reward: 4.5:1 (Risk $5.59, Reward $25.29)
-🟡 RS: 0.261
+Stop Loss: $135.86
+🟢 Risk/Reward: 5.9:1 (Risk $7.28, Reward $42.94)
+Breakout: $141.87
+🔴 RS: -0.291
+🟡 VCP: 3 contractions: 9.8% → 9.3% → 9.7% (quality: 58/100)
 
 Key Reasons:
-  • Good Stage 2: 9.3% above 50 SMA
-  • SMAs rising strongly (50:0.292, 200:0.134)
-  • 🔴 Revenue: 3Q avg nan% QoQ (1.5% → 1.3% → nan%)
-  • 🟢 EPS: +32% YoY
-  • Volume slightly heavier on up days (ratio 1.16)
-  • ✓ Strong RS: 0.261 (outperforming SPY)
-  • 🟢 Excellent R/R: 4.5:1 ($25.29 upside, $5.59 risk)
+  • Good Stage 2: 4.3% above 50 SMA
+  • SMAs rising strongly (50:0.090, 200:0.151)
+  • 🟡 VCP Breakout (3 contractions) (low volume)
+  • 🟢 Revenue: 3Q avg 14.6% QoQ (-1.4% → 19.5% → 25.7%)
+  • 🟢 EPS: +109% YoY (strong earnings)
+  • Inventory neutral (-2.6% QoQ)
+  • Volume slightly heavier on up days (ratio 1.21)
 
 ============================================================
-FUNDAMENTAL SNAPSHOT - CNS
+FUNDAMENTAL SNAPSHOT - EOG
 ============================================================
-• Revenue: Data not available
-  QoQ Trend (last 4Q): +3.1% → +1.5% → +1.3% → N/A
-✓ EPS: STRONG growth (YoY: +31.9%, QoQ: +15.9%)
-  QoQ Trend (last 4Q): +12.5% → -16.0% → +20.6% → +15.9%
-✗ Margins: CONTRACTING (nan%, nanpp QoQ)
+✓ Revenue: ACCELERATING strongly (YoY: +58.6%, QoQ: +25.7%)
+  QoQ Trend (last 4Q): +7.0% → -1.4% → +19.5% → +25.7%
+✓ EPS: STRONG growth (YoY: +109.3%, QoQ: +39.2%)
+  QoQ Trend (last 4Q): +9.8% → -51.9% → +184.6% → +39.2%
+✓ Margins: EXPANDING (71.7%, +5.9pp QoQ)
+• Inventory: Slight draw (-2.6% QoQ, ratio: 0.11)
+  Note: Detailed breakdown (raw/WIP/finished) not available via API
 
 Overall Assessment:
 ✓ Fundamentals SUPPORT technical breakout
 
 
 ################################################################################
-⭐ BUY #37: AVBC | Score: 102.5/125
+⭐ BUY #6: NUE | Score: 109.2/125
+################################################################################
+Phase: 2
+🟢 Entry Quality: Good
+Stop Loss: $249.99
+🟢 Risk/Reward: 3.7:1 (Risk $21.84, Reward $81.55)
+🟢 RS: 0.669
+
+Key Reasons:
+  • Good Stage 2: 9.7% above 50 SMA
+  • SMAs rising strongly (50:0.231, 200:0.329)
+  • 🔴 Revenue: 3Q avg nan% QoQ (-9.8% → 23.5% → nan%)
+  • 🟢 EPS: +94% YoY (strong earnings)
+  • Inventory neutral (3.3% QoQ)
+  • ⚠ Volume heavier on down days (ratio 0.79 - distribution)
+  • ✓ Strong RS: 0.669 (outperforming SPY)
+
+============================================================
+FUNDAMENTAL SNAPSHOT - NUE
+============================================================
+• Revenue: Data not available
+  QoQ Trend (last 4Q): +0.8% → -9.8% → +23.5% → N/A
+✓ EPS: STRONG growth (YoY: +93.8%, QoQ: +56.0%)
+  QoQ Trend (last 4Q): +1.2% → -37.6% → +97.0% → +56.0%
+✗ Margins: CONTRACTING (nan%, nanpp QoQ)
+• Inventory: Slight increase (+3.3% QoQ, ratio: nan)
+  Note: Detailed breakdown (raw/WIP/finished) not available via API
+
+Overall Assessment:
+✓ Fundamentals SUPPORT technical breakout
+
+
+################################################################################
+⭐ BUY #7: RS | Score: 108.2/125
+################################################################################
+Phase: 2
+🟢 Entry Quality: Good
+Stop Loss: $394.70
+🟢 Risk/Reward: 4.0:1 (Risk $32.17, Reward $128.06)
+🟡 RS: 0.273
+
+Key Reasons:
+  • Good Stage 2: 7.1% above 50 SMA
+  • SMAs rising strongly (50:0.220, 200:0.207)
+  • 🟢 Revenue: 3Q avg 8.6% QoQ (-4.2% → 15.1% → 15.0%)
+  • 🟢 EPS: +42% YoY
+  • Inventory neutral (4.0% QoQ)
+  • ✓ Volume heavier on up days (0.3M vs 0.1M, ratio 1.77)
+  • ✓ Strong RS: 0.273 (outperforming SPY)
+
+============================================================
+FUNDAMENTAL SNAPSHOT - RS
+============================================================
+✓ Revenue: ACCELERATING strongly (YoY: +26.5%, QoQ: +15.0%)
+  QoQ Trend (last 4Q): -0.2% → -4.2% → +15.1% → +15.0%
+✓ EPS: STRONG growth (YoY: +42.3%, QoQ: +23.3%)
+  QoQ Trend (last 4Q): -18.8% → -38.2% → +129.7% → +23.3%
+✗ Margins: CONTRACTING (28.1%, -1.0pp QoQ)
+• Inventory: Slight increase (+4.0% QoQ, ratio: 0.50)
+  Note: Detailed breakdown (raw/WIP/finished) not available via API
+
+Overall Assessment:
+✓ Fundamentals SUPPORT technical breakout
+
+
+################################################################################
+⭐ BUY #8: AVBC | Score: 107.7/125
 ################################################################################
 Phase: 2
 🟢 Entry Quality: Good
 Stop Loss: $20.65
-🟢 Risk/Reward: 8.0:1 (Risk $0.80, Reward $6.44)
-🟡 RS: 0.225
+🟢 Risk/Reward: 4.5:1 (Risk $1.49, Reward $6.64)
+🟡 RS: 0.207
 
 Key Reasons:
-  • Good Stage 2: 4.8% above 50 SMA
-  • SMAs rising strongly (50:0.171, 200:0.179)
+  • Good Stage 2: 7.5% above 50 SMA
+  • SMAs rising strongly (50:0.214, 200:0.185)
   • 🔴 Revenue: 3Q avg nan% QoQ (-3.6% → 5.5% → nan%)
   • 🟢 EPS: +102% YoY (strong earnings)
-  • Volume slightly heavier on up days (ratio 1.20)
-  • ✓ Strong RS: 0.225 (outperforming SPY)
-  • 🟢 Outstanding R/R: 8.0:1 ($6.44 upside, $0.80 risk)
+  • ✓ Volume heavier on up days (0.3M vs 0.2M, ratio 1.79)
+  • ✓ Strong RS: 0.207 (outperforming SPY)
+  • 🟢 Excellent R/R: 4.4:1 ($6.64 upside, $1.49 risk)
 
 ============================================================
 FUNDAMENTAL SNAPSHOT - AVBC
@@ -1262,63 +316,128 @@ Overall Assessment:
 
 
 ################################################################################
-⭐ BUY #38: IVZ | Score: 102.3/125
+⭐ BUY #9: PTGX | Score: 107.7/125
 ################################################################################
 Phase: 2
 🟢 Entry Quality: Good
-Stop Loss: $28.46
-🟢 Risk/Reward: 3.4:1 (Risk $2.80, Reward $9.38)
-🟡 RS: 0.206
+Stop Loss: $135.83
+🟢 Risk/Reward: 3.0:1 (Risk $15.09, Reward $45.28)
+🟡 RS: 0.281
 
 Key Reasons:
-  • Good Stage 2: 8.7% above 50 SMA
-  • SMAs rising strongly (50:0.220, 200:0.145)
-  • 🔴 Revenue: 3Q avg nan% QoQ (3.1% → 3.1% → nan%)
-  • 🟢 EPS: +2633% YoY (strong earnings)
-  • Volume slightly heavier on up days (ratio 1.25)
-  • ✓ Strong RS: 0.206 (outperforming SPY)
-  • 🟢 Good R/R: 3.4:1 ($9.38 upside)
+  • Strong Stage 2: 19.2% above 50 SMA
+  • SMAs rising strongly (50:0.623, 200:0.340)
+  • 🟢 Revenue: 3Q avg 233.6% QoQ (-15.0% → 57.8% → 657.9%)
+  • 🟢 EPS: +126% YoY (strong earnings)
+  • ✓ Volume heavier on up days (0.6M vs 0.2M, ratio 3.51)
+  • ✓ Strong RS: 0.281 (outperforming SPY)
+  • 🟢 Good R/R: 3.0:1 ($45.28 upside)
 
 ============================================================
-FUNDAMENTAL SNAPSHOT - IVZ
+FUNDAMENTAL SNAPSHOT - PTGX
+============================================================
+✓ Revenue: ACCELERATING strongly (YoY: +99.0%, QoQ: +657.9%)
+  QoQ Trend (last 4Q): -80.4% → -15.0% → +57.8% → +657.9%
+✓ EPS: STRONG growth (YoY: +126.3%, QoQ: +107.2%)
+  QoQ Trend (last 4Q): -189.5% → -12.7% → -11.3% → +107.2%
+
+Overall Assessment:
+✓ Fundamentals SUPPORT technical breakout
+
+
+################################################################################
+⭐ BUY #10: LYV | Score: 107.6/125
+################################################################################
+Phase: 2
+🟢 Entry Quality: Good
+Stop Loss: $175.69
+🟢 Risk/Reward: 4.9:1 (Risk $11.42, Reward $56.13)
+Breakout: $176.00
+🔴 RS: -0.079
+🟢 VCP: 2 contractions: 7.8% → 5.6% (quality: 66/100)
+
+Key Reasons:
+  • Good Stage 2: 5.4% above 50 SMA
+  • SMAs rising strongly (50:0.167, 200:0.085)
+  • 🟡 VCP Breakout (2 contractions) (low volume)
+  • 🟢 Revenue: 3Q avg 12.2% QoQ (-25.7% → -39.9% → 102.1%)
+  • 🟢 EPS: +156% YoY (strong earnings)
+  • ⚠ Volume heavier on down days (ratio 0.78 - distribution)
+  • Weak RS: -0.079
+
+============================================================
+FUNDAMENTAL SNAPSHOT - LYV
+============================================================
+• Revenue: Modest growth (YoY: +9.4%, QoQ: +102.1%)
+  QoQ Trend (last 4Q): +21.3% → -25.7% → -39.9% → +102.1%
+✓ EPS: STRONG growth (YoY: +156.1%, QoQ: +156.8%)
+  QoQ Trend (last 4Q): +78.0% → N/A → N/A → +156.8%
+✗ Margins: CONTRACTING (25.3%, nanpp QoQ)
+
+Overall Assessment:
+✓ Fundamentals SUPPORT technical breakout
+
+
+################################################################################
+⭐ BUY #11: STLD | Score: 107.1/125
+################################################################################
+Phase: 2
+🟢 Entry Quality: Good
+Stop Loss: $247.91
+🟢 Risk/Reward: 5.2:1 (Risk $15.34, Reward $78.98)
+🟡 RS: 0.444
+
+Key Reasons:
+  • Good Stage 2: 5.1% above 50 SMA
+  • SMAs rising strongly (50:0.141, 200:0.282)
+  • 🟢 Revenue: 3Q avg 8.8% QoQ (-8.6% → 17.9% → 17.0%)
+  • 🟢 EPS: +84% YoY (strong earnings)
+  • Inventory neutral (1.2% QoQ)
+  • Volume pattern neutral (ratio 0.93)
+  • ✓ Strong RS: 0.444 (outperforming SPY)
+
+============================================================
+FUNDAMENTAL SNAPSHOT - STLD
+============================================================
+✓ Revenue: ACCELERATING strongly (YoY: +33.4%, QoQ: +17.0%)
+  QoQ Trend (last 4Q): +5.8% → -8.6% → +17.9% → +17.0%
+✓ EPS: STRONG growth (YoY: +83.6%, QoQ: +32.7%)
+  QoQ Trend (last 4Q): +36.3% → -33.6% → +52.7% → +32.7%
+✓ Margins: EXPANDING (15.7%, +1.1pp QoQ)
+• Inventory: Slight increase (+1.2% QoQ, ratio: 0.65)
+  Note: Detailed breakdown (raw/WIP/finished) not available via API
+
+Overall Assessment:
+✓ Fundamentals SUPPORT technical breakout
+
+
+################################################################################
+⭐ BUY #12: FCX | Score: 107.0/125
+################################################################################
+Phase: 2
+🟢 Entry Quality: Good
+Stop Loss: $63.49
+🟢 Risk/Reward: 4.5:1 (Risk $4.50, Reward $20.40)
+🟢 RS: 0.560
+
+Key Reasons:
+  • Good Stage 2: 6.0% above 50 SMA
+  • SMAs rising strongly (50:0.056, 200:0.211)
+  • 🔴 Revenue: 3Q avg nan% QoQ (-19.2% → 10.7% → nan%)
+  • 🟢 EPS: +28% YoY
+  • Inventory neutral (-1.0% QoQ)
+  • ✓ Volume heavier on up days (10.4M vs 6.0M, ratio 1.73)
+  • ✓ Strong RS: 0.560 (outperforming SPY)
+
+============================================================
+FUNDAMENTAL SNAPSHOT - FCX
 ============================================================
 • Revenue: Data not available
-  QoQ Trend (last 4Q): +8.2% → +3.1% → +3.1% → N/A
-✓ EPS: STRONG growth (YoY: +2633.3%, QoQ: +49.0%)
-  QoQ Trend (last 4Q): +2300.0% → -498.5% → +119.4% → +49.0%
+  QoQ Trend (last 4Q): -8.0% → -19.2% → +10.7% → N/A
+✓ EPS: STRONG growth (YoY: +28.3%, QoQ: +11.5%)
+  QoQ Trend (last 4Q): -13.2% → -39.1% → +117.9% → +11.5%
 ✗ Margins: CONTRACTING (nan%, nanpp QoQ)
-
-Overall Assessment:
-✓ Fundamentals SUPPORT technical breakout
-
-
-################################################################################
-⭐ BUY #39: AVT | Score: 102.2/125
-################################################################################
-Phase: 2
-🟢 Entry Quality: Good
-Stop Loss: $87.63
-🟢 Risk/Reward: 3.5:1 (Risk $8.33, Reward $28.79)
-🟢 RS: 0.541
-
-Key Reasons:
-  • Good Stage 2: 8.4% above 50 SMA
-  • SMAs rising strongly (50:0.140, 200:0.294)
-  • 🟢 Revenue: 3Q avg 8.3% QoQ (5.0% → 7.1% → 12.7%)
-  • 🟡 EPS: +13% YoY
-  • Inventory neutral (3.2% QoQ)
-  • ✓ Volume heavier on up days (2.2M vs 1.6M, ratio 1.39)
-  • ✓ Strong RS: 0.541 (outperforming SPY)
-
-============================================================
-FUNDAMENTAL SNAPSHOT - AVT
-============================================================
-✓ Revenue: ACCELERATING strongly (YoY: +33.9%, QoQ: +12.7%)
-  QoQ Trend (last 4Q): +5.7% → +5.0% → +7.1% → +12.7%
-✓ EPS: Growing (YoY: +12.9%, QoQ: +52.0%)
-  QoQ Trend (last 4Q): -93.1% → +771.4% → +23.0% → +52.0%
-• Margins: Flat (10.4%, -0.1pp QoQ)
-• Inventory: Slight increase (+3.2% QoQ, ratio: 0.77)
+• Inventory: Slight draw (-1.0% QoQ, ratio: nan)
   Note: Detailed breakdown (raw/WIP/finished) not available via API
 
 Overall Assessment:
@@ -1326,56 +445,121 @@ Overall Assessment:
 
 
 ################################################################################
-⭐ BUY #40: LQDA | Score: 102.1/125
+⭐ BUY #13: CNK | Score: 106.8/125
 ################################################################################
 Phase: 2
 🟢 Entry Quality: Good
-Stop Loss: $77.66
-🟢 Risk/Reward: 4.3:1 (Risk $5.83, Reward $25.05)
-🟡 RS: 0.376
+Stop Loss: $34.35
+🟢 Risk/Reward: 3.8:1 (Risk $2.96, Reward $11.19)
+🟢 RS: 1.001
 
 Key Reasons:
-  • Good Stage 2: 8.3% above 50 SMA
-  • SMAs rising strongly (50:0.853, 200:0.714)
-  • 🟢 Revenue: 3Q avg 209.6% QoQ (514.9% → 69.3% → 44.4%)
-  • 🟢 EPS: +216% YoY (strong earnings)
-  • ⚠ Inventory building rapidly (19.8% QoQ - demand concern)
-  • ⚠ Volume heavier on down days (ratio 0.79 - distribution)
-  • ✓ Strong RS: 0.376 (outperforming SPY)
+  • Strong Stage 2: 13.2% above 50 SMA
+  • SMAs rising strongly (50:0.564, 200:0.165)
+  • 🟢 Revenue: 3Q avg 14.1% QoQ (-9.5% → -17.2% → 68.9%)
+  • Inventory neutral (-0.6% QoQ)
+  • Volume slightly heavier on up days (ratio 1.12)
+  • ✓ Strong RS: 1.001 (outperforming SPY)
+  • 🟢 Good R/R: 3.8:1 ($11.19 upside)
 
 ============================================================
-FUNDAMENTAL SNAPSHOT - LQDA
+FUNDAMENTAL SNAPSHOT - CNK
 ============================================================
-✓ Revenue: ACCELERATING strongly (YoY: +4158.5%, QoQ: +44.4%)
-  QoQ Trend (last 4Q): +183.2% → +514.9% → +69.3% → +44.4%
-✓ EPS: STRONG growth (YoY: +215.6%, QoQ: +246.7%)
-  QoQ Trend (last 4Q): -8.9% → +91.8% → +475.0% → +246.7%
-✗ Margins: CONTRACTING (91.1%, -1.2pp QoQ)
-⚠ Inventory: BUILDING (+19.8% QoQ, ratio: 0.21)
-  → Potential demand weakness or production ramp
+✓ Revenue: Growing well (YoY: +15.5%, QoQ: +68.9%)
+  QoQ Trend (last 4Q): -8.8% → -9.5% → -17.2% → +68.9%
+• EPS: Data not available
+  QoQ Trend (last 4Q): N/A → -60.0% → -137.5% → +2083.3%
+✗ Margins: CONTRACTING (63.7%, -2.3pp QoQ)
+• Inventory: Slight draw (-0.6% QoQ, ratio: 0.03)
   Note: Detailed breakdown (raw/WIP/finished) not available via API
 
 Overall Assessment:
-⚠ Some concerns: inventory building rapidly
+⚠ Some concerns: margins contracting
 
 
 ################################################################################
-⭐ BUY #41: LPG | Score: 102.0/125
+⭐ BUY #14: SUN | Score: 106.4/125
 ################################################################################
 Phase: 2
 🟢 Entry Quality: Good
-Stop Loss: $41.91
-🟢 Risk/Reward: 9.4:1 (Risk $1.38, Reward $12.99)
-🟡 RS: 0.190
+Stop Loss: $70.15
+🟢 Risk/Reward: 5.2:1 (Risk $4.29, Reward $22.33)
+🔴 RS: -0.247
 
 Key Reasons:
-  • Good Stage 2: 5.7% above 50 SMA
-  • SMAs rising strongly (50:0.199, 200:0.300)
+  • Good Stage 2: 8.0% above 50 SMA
+  • SMAs rising strongly (50:0.172, 200:0.218)
+  • 🟢 Revenue: 3Q avg 26.3% QoQ (11.9% → 42.6% → 24.3%)
+  • 🟢 EPS: +136% YoY (strong earnings)
+  • Inventory neutral (-1.5% QoQ)
+  • ✓ Volume heavier on up days (0.5M vs 0.3M, ratio 1.77)
+  • ⚠ Declining RS: -0.247 (underperforming SPY)
+
+============================================================
+FUNDAMENTAL SNAPSHOT - SUN
+============================================================
+✓ Revenue: ACCELERATING strongly (YoY: +106.4%, QoQ: +24.3%)
+  QoQ Trend (last 4Q): +4.1% → +11.9% → +42.6% → +24.3%
+✓ EPS: STRONG growth (YoY: +135.5%, QoQ: +3066.7%)
+  QoQ Trend (last 4Q): -72.7% → +93.9% → -85.9% → +3066.7%
+✓ Margins: EXPANDING (13.1%, +4.9pp QoQ)
+• Inventory: Slight draw (-1.5% QoQ, ratio: 0.22)
+  Note: Detailed breakdown (raw/WIP/finished) not available via API
+
+Overall Assessment:
+✓ Fundamentals SUPPORT technical breakout
+
+
+################################################################################
+⭐ BUY #15: VLO | Score: 106.3/125
+################################################################################
+Phase: 2
+🟢 Entry Quality: Good
+Stop Loss: $295.10
+🟢 Risk/Reward: 3.0:1 (Risk $32.79, Reward $98.37)
+🔴 RS: -0.062
+
+Key Reasons:
+  • Strong Stage 2: 16.5% above 50 SMA
+  • SMAs rising strongly (50:0.455, 200:0.345)
+  • 🟢 Revenue: 3Q avg 12.8% QoQ (-5.6% → 6.6% → 37.4%)
+  • 🟢 EPS: +454% YoY (strong earnings)
+  • Inventory neutral (0.9% QoQ)
+  • ✓ Volume heavier on up days (2.8M vs 1.9M, ratio 1.46)
+  • Weak RS: -0.062
+
+============================================================
+FUNDAMENTAL SNAPSHOT - VLO
+============================================================
+✓ Revenue: ACCELERATING strongly (YoY: +48.8%, QoQ: +37.4%)
+  QoQ Trend (last 4Q): +7.6% → -5.6% → +6.6% → +37.4%
+✓ EPS: STRONG growth (YoY: +453.5%, QoQ: +199.1%)
+  QoQ Trend (last 4Q): +54.8% → +5.7% → +13.1% → +199.1%
+✓ Margins: EXPANDING (12.3%, +6.0pp QoQ)
+• Inventory: Slight increase (+0.9% QoQ, ratio: 0.17)
+  Note: Detailed breakdown (raw/WIP/finished) not available via API
+
+Overall Assessment:
+✓ Fundamentals SUPPORT technical breakout
+
+
+################################################################################
+⭐ BUY #16: LPG | Score: 106.0/125
+################################################################################
+Phase: 2
+🟢 Entry Quality: Good
+Stop Loss: $42.55
+🟢 Risk/Reward: 4.6:1 (Risk $2.99, Reward $13.66)
+🟡 RS: 0.184
+
+Key Reasons:
+  • Strong Stage 2: 10.6% above 50 SMA
+  • SMAs rising strongly (50:0.180, 200:0.309)
   • 🟢 Revenue: 3Q avg 23.9% QoQ (47.3% → -3.3% → 27.8%)
   • 🟢 EPS: +900% YoY (strong earnings)
   • ⚠ Inventory building (8.5% QoQ)
-  • ⚠ Volume heavier on down days (ratio 0.69 - distribution)
-  • ✓ Strong RS: 0.190 (outperforming SPY)
+  • ⚠ Volume heavier on down days (ratio 0.77 - distribution)
+  • ✓ Strong RS: 0.184 (outperforming SPY)
 
 ============================================================
 FUNDAMENTAL SNAPSHOT - LPG
@@ -1393,32 +577,32 @@ Overall Assessment:
 
 
 ################################################################################
-⭐ BUY #42: CTRN | Score: 101.8/125
+⭐ BUY #17: SXI | Score: 105.7/125
 ################################################################################
 Phase: 2
 🟢 Entry Quality: Good
-Stop Loss: $68.56
-🟢 Risk/Reward: 3.0:1 (Risk $7.62, Reward $22.85)
-🟢 RS: 0.909
+Stop Loss: $309.77
+🟢 Risk/Reward: 4.2:1 (Risk $23.80, Reward $100.07)
+🟡 RS: 0.363
 
 Key Reasons:
-  • Strong Stage 2: 29.5% above 50 SMA
-  • SMAs rising strongly (50:0.906, 200:0.366)
-  • Moderately extended above 50 SMA
-  • 🟢 Revenue: 3Q avg 6.8% QoQ (3.3% → 16.9% → 0.2%)
-  • 🟢 EPS: +727% YoY (strong earnings)
-  • Inventory neutral (1.5% QoQ)
-  • ✓ Volume heavier on up days (0.2M vs 0.1M, ratio 1.98)
+  • Good Stage 2: 6.6% above 50 SMA
+  • SMAs rising strongly (50:0.340, 200:0.165)
+  • 🔴 Revenue: 3Q avg nan% QoQ (1.8% → 1.5% → nan%)
+  • 🟢 EPS: +38% YoY
+  • Inventory neutral (-1.2% QoQ)
+  • Volume pattern neutral (ratio 0.96)
+  • ✓ Strong RS: 0.363 (outperforming SPY)
 
 ============================================================
-FUNDAMENTAL SNAPSHOT - CTRN
+FUNDAMENTAL SNAPSHOT - SXI
 ============================================================
-✓ Revenue: Growing well (YoY: +14.4%, QoQ: +0.2%)
-  QoQ Trend (last 4Q): -5.4% → +3.3% → +16.9% → +0.2%
-✓ EPS: STRONG growth (YoY: +727.3%, QoQ: +3.4%)
-  QoQ Trend (last 4Q): +318.2% → -287.0% → +202.3% → +3.4%
-• Margins: Stable/slightly up (40.0%, +0.1pp QoQ)
-• Inventory: Slight increase (+1.5% QoQ, ratio: 0.50)
+• Revenue: Data not available
+  QoQ Trend (last 4Q): -2.1% → +1.8% → +1.5% → N/A
+✓ EPS: STRONG growth (YoY: +38.2%, QoQ: -69.4%)
+  QoQ Trend (last 4Q): +1.6% → -86.4% → +3170.6% → -69.4%
+✗ Margins: CONTRACTING (nan%, nanpp QoQ)
+• Inventory: Slight draw (-1.2% QoQ, ratio: nan)
   Note: Detailed breakdown (raw/WIP/finished) not available via API
 
 Overall Assessment:
@@ -1426,32 +610,125 @@ Overall Assessment:
 
 
 ################################################################################
-⭐ BUY #43: CNXN | Score: 101.6/125
+⭐ BUY #18: MBIN | Score: 105.0/125
 ################################################################################
 Phase: 2
 🟢 Entry Quality: Good
-Stop Loss: $78.37
-🟢 Risk/Reward: 10.0:1 (Risk $2.42, Reward $24.24)
-🟡 RS: 0.366
+Stop Loss: $52.63
+🟢 Risk/Reward: 7.3:1 (Risk $2.25, Reward $16.46)
+🟢 RS: 0.578
 
 Key Reasons:
-  • Good Stage 2: 7.1% above 50 SMA
-  • SMAs rising strongly (50:0.484, 200:0.173)
-  • 🟢 Revenue: 3Q avg 6.7% QoQ (-0.9% → 2.7% → 18.3%)
-  • 🟢 EPS: +35% YoY
-  • ⚠ Inventory building (5.6% QoQ)
-  • ✓ Volume heavier on up days (0.2M vs 0.2M, ratio 1.35)
-  • ✓ Strong RS: 0.366 (outperforming SPY)
+  • Good Stage 2: 9.6% above 50 SMA
+  • SMAs rising strongly (50:0.273, 200:0.250)
+  • 🔴 Revenue: 3Q avg nan% QoQ (8.5% → -5.5% → nan%)
+  • 🟢 EPS: +147% YoY (strong earnings)
+  • ⚠ Volume heavier on down days (ratio 0.67 - distribution)
+  • ✓ Strong RS: 0.578 (outperforming SPY)
+  • 🟢 Outstanding R/R: 7.3:1 ($16.46 upside, $2.25 risk)
 
 ============================================================
-FUNDAMENTAL SNAPSHOT - CNXN
+FUNDAMENTAL SNAPSHOT - MBIN
 ============================================================
-✓ Revenue: Growing well (YoY: +12.4%, QoQ: +18.3%)
-  QoQ Trend (last 4Q): -6.7% → -0.9% → +2.7% → +18.3%
-✓ EPS: STRONG growth (YoY: +35.1%, QoQ: +92.6%)
-  QoQ Trend (last 4Q): +0.0% → -15.5% → -17.1% → +92.6%
-• Margins: Stable/slightly up (18.4%, +0.1pp QoQ)
-• Inventory: Moderate build (+5.6% QoQ, ratio: 0.24)
+• Revenue: Data not available
+  QoQ Trend (last 4Q): -4.6% → +8.5% → -5.5% → N/A
+✓ EPS: STRONG growth (YoY: +146.7%, QoQ: +18.4%)
+  QoQ Trend (last 4Q): +61.7% → +32.0% → -2.3% → +18.4%
+
+Overall Assessment:
+✓ Fundamentals SUPPORT technical breakout
+
+
+################################################################################
+⭐ BUY #19: COMP | Score: 104.9/125
+################################################################################
+Phase: 2
+🟢 Entry Quality: Good
+Stop Loss: $11.46
+🟢 Risk/Reward: 3.0:1 (Risk $1.27, Reward $3.82)
+🟡 RS: 0.126
+
+Key Reasons:
+  • Strong Stage 2: 17.4% above 50 SMA
+  • SMAs rising strongly (50:0.696, 200:0.225)
+  • 🟢 Revenue: 3Q avg 13.6% QoQ (-10.4% → -7.9% → 59.1%)
+  • 🟢 EPS: +133% YoY (strong earnings)
+  • ✓ Volume heavier on up days (18.8M vs 11.6M, ratio 1.62)
+  • ✓ Strong RS: 0.126 (outperforming SPY)
+  • 🟢 Good R/R: 3.0:1 ($3.82 upside)
+
+============================================================
+FUNDAMENTAL SNAPSHOT - COMP
+============================================================
+✓ Revenue: ACCELERATING strongly (YoY: +99.4%, QoQ: +59.1%)
+  QoQ Trend (last 4Q): +51.9% → -10.4% → -7.9% → +59.1%
+✓ EPS: STRONG growth (YoY: +133.3%, QoQ: +142.9%)
+  QoQ Trend (last 4Q): +177.8% → -114.3% → -600.0% → +142.9%
+✓ Margins: EXPANDING (25.7%, +7.2pp QoQ)
+
+Overall Assessment:
+✓ Fundamentals SUPPORT technical breakout
+
+
+################################################################################
+⭐ BUY #20: FCF | Score: 104.7/125
+################################################################################
+Phase: 2
+🟢 Entry Quality: Good
+Stop Loss: $20.99
+🟢 Risk/Reward: 8.6:1 (Risk $0.76, Reward $6.53)
+Breakout: $21.27
+🔴 RS: -0.026
+⭐ VCP: 2 contractions: 4.9% → 4.6% (quality: 85/100)
+
+Key Reasons:
+  • Good Stage 2: 6.6% above 50 SMA
+  • SMAs rising strongly (50:0.295, 200:0.152)
+  • 🟡 VCP Breakout (2 contractions) (low volume)
+  • 🔴 Revenue: 3Q avg nan% QoQ (1.4% → -3.2% → nan%)
+  • 🟢 EPS: +38% YoY
+  • ⚠ Volume heavier on down days (ratio 0.49 - distribution)
+  • Neutral RS: -0.026
+
+============================================================
+FUNDAMENTAL SNAPSHOT - FCF
+============================================================
+• Revenue: Data not available
+  QoQ Trend (last 4Q): +3.9% → +1.4% → -3.2% → N/A
+✓ EPS: STRONG growth (YoY: +38.2%, QoQ: +19.2%)
+  QoQ Trend (last 4Q): +22.5% → +10.3% → -14.1% → +19.2%
+
+Overall Assessment:
+✓ Fundamentals SUPPORT technical breakout
+
+
+################################################################################
+⭐ BUY #21: MLKN | Score: 104.7/125
+################################################################################
+Phase: 2
+🟢 Entry Quality: Good
+Stop Loss: $21.80
+🟢 Risk/Reward: 3.6:1 (Risk $1.95, Reward $7.12)
+🟡 RS: 0.410
+
+Key Reasons:
+  • Strong Stage 2: 18.6% above 50 SMA
+  • SMAs rising strongly (50:0.872, 200:0.197)
+  • 🟡 Revenue: 3Q avg 1.8% QoQ (-0.1% → -3.0% → 8.4%)
+  • 🟢 EPS: +140% YoY (strong earnings)
+  • Inventory neutral (-0.7% QoQ)
+  • ✓ Volume heavier on up days (0.5M vs 0.3M, ratio 1.56)
+  • ✓ Strong RS: 0.410 (outperforming SPY)
+
+============================================================
+FUNDAMENTAL SNAPSHOT - MLKN
+============================================================
+• Revenue: Modest growth (YoY: +4.4%, QoQ: +8.4%)
+  QoQ Trend (last 4Q): -0.6% → -0.1% → -3.0% → +8.4%
+✓ EPS: STRONG growth (YoY: +140.5%, QoQ: +0.0%)
+  QoQ Trend (last 4Q): +134.5% → +20.7% → -2.9% → +0.0%
+✓ Margins: EXPANDING (39.4%, +1.3pp QoQ)
+• Inventory: Slight draw (-0.7% QoQ, ratio: 0.49)
   Note: Detailed breakdown (raw/WIP/finished) not available via API
 
 Overall Assessment:
@@ -1459,123 +736,53 @@ Overall Assessment:
 
 
 ################################################################################
-⭐ BUY #44: ASH | Score: 101.5/125
+⭐ BUY #22: CHE | Score: 104.6/125
 ################################################################################
 Phase: 2
 🟢 Entry Quality: Good
-Stop Loss: $67.12
-🟢 Risk/Reward: 3.0:1 (Risk $7.46, Reward $22.37)
-🟢 RS: 0.523
+Stop Loss: $519.88
+🟢 Risk/Reward: 7.7:1 (Risk $21.14, Reward $162.31)
+🟡 RS: 0.271
 
 Key Reasons:
-  • Strong Stage 2: 13.6% above 50 SMA
-  • SMAs rising strongly (50:0.493, 200:0.198)
-  • 🟡 Revenue: 3Q avg 3.0% QoQ (-19.1% → 24.9% → 3.1%)
-  • 🟢 EPS: +102% YoY (strong earnings)
-  • Inventory neutral (-3.2% QoQ)
-  • ✓ Volume heavier on up days (1.3M vs 0.9M, ratio 1.37)
-  • ✓ Strong RS: 0.523 (outperforming SPY)
-
-============================================================
-FUNDAMENTAL SNAPSHOT - ASH
-============================================================
-• Revenue: Modest growth (YoY: +7.3%, QoQ: +3.1%)
-  QoQ Trend (last 4Q): +3.0% → -19.1% → +24.9% → +3.1%
-✓ EPS: STRONG growth (YoY: +102.2%, QoQ: +2.8%)
-  QoQ Trend (last 4Q): +104.3% → -137.4% → +230.8% → +2.8%
-✓ Margins: EXPANDING (34.2%, +3.7pp QoQ)
-• Inventory: Slight draw (-3.2% QoQ, ratio: 0.99)
-  Note: Detailed breakdown (raw/WIP/finished) not available via API
-
-Overall Assessment:
-✓ Fundamentals SUPPORT technical breakout
-
-
-################################################################################
-⭐ BUY #45: DMLP | Score: 101.5/125
-################################################################################
-Phase: 2
-🟢 Entry Quality: Good
-Stop Loss: $25.26
-🟢 Risk/Reward: 4.3:1 (Risk $1.92, Reward $8.15)
-Breakout: $27.15
-🔴 RS: -0.118
-🟢 VCP: 5 contractions (last 4): 4.1% → 10.3% → 7.4% → 12.8% (quality: 69/100)
-
-Key Reasons:
-  • Good Stage 2: 6.5% above 50 SMA
-  • SMAs rising weakly
-  • 🟡 VCP Breakout (5 contractions) (low volume)
-  • 🟢 Revenue: 3Q avg 22.7% QoQ (9.3% → 18.2% → 40.7%)
-  • 🟢 EPS: +64% YoY (strong earnings)
+  • Strong Stage 2: 11.8% above 50 SMA
+  • SMAs rising strongly (50:0.417, 200:0.108)
+  • 🔴 Revenue: 3Q avg nan% QoQ (2.3% → 2.8% → nan%)
+  • 🟢 EPS: +44% YoY
   • Volume pattern neutral (ratio 1.00)
-  • ⚠ Declining RS: -0.118 (underperforming SPY)
+  • ✓ Strong RS: 0.271 (outperforming SPY)
+  • 🟢 Outstanding R/R: 7.7:1 ($162.31 upside, $21.14 risk)
 
 ============================================================
-FUNDAMENTAL SNAPSHOT - DMLP
+FUNDAMENTAL SNAPSHOT - CHE
 ============================================================
-✓ Revenue: ACCELERATING strongly (YoY: +36.4%, QoQ: +40.7%)
-  QoQ Trend (last 4Q): -24.9% → +9.3% → +18.2% → +40.7%
-✓ EPS: STRONG growth (YoY: +63.9%, QoQ: N/A)
-  QoQ Trend (last 4Q): -30.6% → -8.0% → N/A → N/A
-✓ Margins: EXPANDING (56.7%, +10.3pp QoQ)
+• Revenue: Data not available
+  QoQ Trend (last 4Q): +1.0% → +2.3% → +2.8% → N/A
+✓ EPS: STRONG growth (YoY: +43.7%, QoQ: +6.0%)
+  QoQ Trend (last 4Q): +24.9% → +22.9% → -11.7% → +6.0%
+✗ Margins: CONTRACTING (nan%, nanpp QoQ)
 
 Overall Assessment:
 ✓ Fundamentals SUPPORT technical breakout
 
 
 ################################################################################
-⭐ BUY #46: LZB | Score: 101.5/125
+⭐ BUY #23: RELL | Score: 104.6/125
 ################################################################################
 Phase: 2
 🟢 Entry Quality: Good
-Stop Loss: $39.83
-🟢 Risk/Reward: 7.7:1 (Risk $1.61, Reward $12.43)
-🟡 RS: 0.142
-
-Key Reasons:
-  • Good Stage 2: 5.3% above 50 SMA
-  • SMAs rising strongly (50:0.296, 200:0.113)
-  • 🟢 Revenue: 3Q avg 5.0% QoQ (6.1% → 3.7% → 5.3%)
-  • 🟢 EPS: +125% YoY (strong earnings)
-  • ✓ Inventory drawing (-7.1% QoQ - strong demand)
-  • ✓ Volume heavier on up days (0.4M vs 0.3M, ratio 1.58)
-  • ✓ Strong RS: 0.142 (outperforming SPY)
-
-============================================================
-FUNDAMENTAL SNAPSHOT - LZB
-============================================================
-✗ Revenue: DETERIORATING (YoY: -0.1%, QoQ: +5.3%)
-  QoQ Trend (last 4Q): -13.8% → +6.1% → +3.7% → +5.3%
-✓ EPS: STRONG growth (YoY: +125.0%, QoQ: +55.8%)
-  QoQ Trend (last 4Q): +22.2% → +59.1% → -25.7% → +55.8%
-✓ Margins: EXPANDING (46.1%, +3.0pp QoQ)
-✓ Inventory: DRAWING (-7.1% QoQ, ratio: 0.38)
-  → Strong demand signal
-  Note: Detailed breakdown (raw/WIP/finished) not available via API
-
-Overall Assessment:
-⚠ Some concerns: revenue declining
-✗ Fundamentals CONTRADICT technical breakout
-
-
-################################################################################
-⭐ BUY #47: RELL | Score: 101.5/125
-################################################################################
-Phase: 2
-🟢 Entry Quality: Good
-Stop Loss: $18.43
+Stop Loss: $18.41
 🟢 Risk/Reward: 3.0:1 (Risk $2.05, Reward $6.14)
-🟢 RS: 0.889
+🟢 RS: 0.718
 
 Key Reasons:
-  • Strong Stage 2: 14.1% above 50 SMA
-  • SMAs rising strongly (50:0.335, 200:0.330)
+  • Strong Stage 2: 13.4% above 50 SMA
+  • SMAs rising strongly (50:0.306, 200:0.326)
   • 🔴 Revenue: 3Q avg nan% QoQ (-4.2% → 6.1% → nan%)
   • 🟢 EPS: +212% YoY (strong earnings)
   • Inventory neutral (2.3% QoQ)
-  • ⚠ Volume heavier on down days (ratio 0.21 - distribution)
-  • ✓ Strong RS: 0.889 (outperforming SPY)
+  • ⚠ Volume heavier on down days (ratio 0.81 - distribution)
+  • ✓ Strong RS: 0.718 (outperforming SPY)
 
 ============================================================
 FUNDAMENTAL SNAPSHOT - RELL
@@ -1593,32 +800,99 @@ Overall Assessment:
 
 
 ################################################################################
-⭐ BUY #48: CCK | Score: 101.2/125
+⭐ BUY #24: EQH | Score: 104.5/125
 ################################################################################
 Phase: 2
 🟢 Entry Quality: Good
-Stop Loss: $115.10
-🟢 Risk/Reward: 7.3:1 (Risk $4.91, Reward $36.00)
-🟡 RS: 0.297
+Stop Loss: $46.68
+🟢 Risk/Reward: 3.0:1 (Risk $5.19, Reward $15.56)
+🟡 RS: 0.175
 
 Key Reasons:
-  • Strong Stage 2: 10.5% above 50 SMA
-  • SMAs rising strongly (50:0.380, 200:0.126)
-  • 🟡 Revenue: 3Q avg 4.8% QoQ (-2.3% → 4.2% → 12.5%)
-  • 🟢 EPS: +43% YoY
-  • ⚠ Inventory building (5.5% QoQ)
-  • ✓ Volume heavier on up days (1.0M vs 0.7M, ratio 1.45)
-  • ✓ Strong RS: 0.297 (outperforming SPY)
+  • Strong Stage 2: 12.8% above 50 SMA
+  • SMAs rising strongly (50:0.327, 200:0.006)
+  • 🟢 Revenue: 3Q avg 38.8% QoQ (-38.6% → 126.0% → 29.1%)
+  • 🟢 EPS: +1244% YoY (strong earnings)
+  • ✓ Volume heavier on up days (4.7M vs 2.6M, ratio 1.81)
+  • ✓ Strong RS: 0.175 (outperforming SPY)
+  • 🟡 Acceptable R/R: 3.0:1
 
 ============================================================
-FUNDAMENTAL SNAPSHOT - CCK
+FUNDAMENTAL SNAPSHOT - EQH
 ============================================================
-✓ Revenue: Growing well (YoY: +16.5%, QoQ: +12.5%)
-  QoQ Trend (last 4Q): +1.7% → -2.3% → +4.2% → +12.5%
-✓ EPS: STRONG growth (YoY: +42.9%, QoQ: +42.9%)
-  QoQ Trend (last 4Q): +18.6% → -29.2% → +19.1% → +42.9%
-• Margins: Stable/slightly up (20.4%, +0.6pp QoQ)
-• Inventory: Moderate build (+5.5% QoQ, ratio: 0.49)
+✗ Revenue: DETERIORATING (YoY: -7.6%, QoQ: +29.1%)
+  QoQ Trend (last 4Q): -48.4% → -38.6% → +126.0% → +29.1%
+✓ EPS: STRONG growth (YoY: +1244.3%, QoQ: +205.7%)
+  QoQ Trend (last 4Q): -860.1% → -269.4% → +115.7% → +205.7%
+
+Overall Assessment:
+⚠ Some concerns: revenue declining
+✗ Fundamentals CONTRADICT technical breakout
+
+
+################################################################################
+⭐ BUY #25: ECO | Score: 104.4/125
+################################################################################
+Phase: 2
+🟢 Entry Quality: Good
+Stop Loss: $57.47
+🟢 Risk/Reward: 3.5:1 (Risk $5.41, Reward $18.86)
+🟡 RS: 0.471
+
+Key Reasons:
+  • Strong Stage 2: 15.5% above 50 SMA
+  • SMAs rising strongly (50:0.222, 200:0.363)
+  • 🟢 Revenue: 3Q avg 23.5% QoQ (-3.6% → 40.0% → 34.1%)
+  • 🟢 EPS: +492% YoY (strong earnings)
+  • ⚠ Inventory building rapidly (41.0% QoQ - demand concern)
+  • ✓ Volume heavier on up days (0.8M vs 0.6M, ratio 1.33)
+  • ✓ Strong RS: 0.471 (outperforming SPY)
+
+============================================================
+FUNDAMENTAL SNAPSHOT - ECO
+============================================================
+✓ Revenue: ACCELERATING strongly (YoY: +112.3%, QoQ: +34.1%)
+  QoQ Trend (last 4Q): +17.2% → -3.6% → +40.0% → +34.1%
+✓ EPS: STRONG growth (YoY: +492.3%, QoQ: +31.2%)
+  QoQ Trend (last 4Q): +115.4% → -10.7% → +134.7% → +31.2%
+✓ Margins: EXPANDING (64.5%, +7.5pp QoQ)
+⚠ Inventory: BUILDING (+41.0% QoQ, ratio: 0.14)
+  → Potential demand weakness or production ramp
+  Note: Detailed breakdown (raw/WIP/finished) not available via API
+
+Overall Assessment:
+⚠ Some concerns: inventory building rapidly
+
+
+################################################################################
+⭐ BUY #26: BWA | Score: 104.3/125
+################################################################################
+Phase: 2
+🟢 Entry Quality: Good
+Stop Loss: $66.78
+🟢 Risk/Reward: 10.0:1 (Risk $2.07, Reward $20.65)
+Breakout: $66.32
+🟡 RS: 0.263
+🟢 VCP: 2 contractions: 18.4% → 9.4% (quality: 66/100)
+
+Key Reasons:
+  • Weak Stage 2: 1.9% above 50 SMA
+  • SMAs rising weakly
+  • 🟡 VCP Breakout (2 contractions) (low volume)
+  • 🔴 Revenue: 3Q avg -1.0% QoQ (-1.3% → -0.5% → -1.1%)
+  • 🟢 EPS: +61% YoY (strong earnings)
+  • Inventory neutral (-0.6% QoQ)
+  • Volume pattern neutral (ratio 1.06)
+
+============================================================
+FUNDAMENTAL SNAPSHOT - BWA
+============================================================
+• Revenue: Modest growth (YoY: +0.5%, QoQ: -1.1%)
+  QoQ Trend (last 4Q): +3.5% → -1.3% → -0.5% → -1.1%
+✓ EPS: STRONG growth (YoY: +61.1%, QoQ: +191.7%)
+  QoQ Trend (last 4Q): +41.6% → -28.4% → -273.3% → +191.7%
+✗ Margins: CONTRACTING (19.2%, -1.3pp QoQ)
+• Inventory: Slight draw (-0.6% QoQ, ratio: 0.34)
   Note: Detailed breakdown (raw/WIP/finished) not available via API
 
 Overall Assessment:
@@ -1626,635 +900,1343 @@ Overall Assessment:
 
 
 ################################################################################
-⭐ BUY #49: ATEX | Score: 101.1/125
+⭐ BUY #27: AMAL | Score: 103.8/125
 ################################################################################
 Phase: 2
 🟢 Entry Quality: Good
-Stop Loss: $87.12
-🟢 Risk/Reward: 4.8:1 (Risk $5.82, Reward $27.88)
-🔴 RS: -0.541
+Stop Loss: $48.10
+🟢 Risk/Reward: 5.8:1 (Risk $2.62, Reward $15.22)
+🟡 RS: 0.154
 
 Key Reasons:
-  • Good Stage 2: 5.6% above 50 SMA
-  • SMAs rising strongly (50:1.047, 200:0.887)
-  • 🟢 Revenue: 3Q avg 11.8% QoQ (9.4% → 1.4% → 24.5%)
+  • Good Stage 2: 9.7% above 50 SMA
+  • SMAs rising strongly (50:0.369, 200:0.302)
+  • 🔴 Revenue: 3Q avg nan% QoQ (0.1% → 9.1% → nan%)
+  • 🟢 EPS: +37% YoY
+  • Volume slightly heavier on up days (ratio 1.16)
+  • ✓ Strong RS: 0.154 (outperforming SPY)
+  • 🟢 Outstanding R/R: 5.8:1 ($15.22 upside, $2.62 risk)
+
+============================================================
+FUNDAMENTAL SNAPSHOT - AMAL
+============================================================
+• Revenue: Data not available
+  QoQ Trend (last 4Q): +5.1% → +0.1% → +9.1% → N/A
+✓ EPS: STRONG growth (YoY: +36.9%, QoQ: +36.9%)
+  QoQ Trend (last 4Q): +4.8% → N/A → N/A → +36.9%
+
+Overall Assessment:
+✓ Fundamentals SUPPORT technical breakout
+
+
+################################################################################
+⭐ BUY #28: RJF | Score: 103.8/125
+################################################################################
+Phase: 2
+🟢 Entry Quality: Good
+Stop Loss: $173.68
+🟢 Risk/Reward: 8.2:1 (Risk $6.62, Reward $54.09)
+🟡 RS: 0.165
+
+Key Reasons:
+  • Good Stage 2: 9.7% above 50 SMA
+  • SMAs rising strongly (50:0.312, 200:0.043)
+  • 🔴 Revenue: 3Q avg nan% QoQ (0.1% → 3.4% → nan%)
+  • 🟢 EPS: +42% YoY
+  • ✓ Volume heavier on up days (0.9M vs 0.3M, ratio 2.85)
+  • ✓ Strong RS: 0.165 (outperforming SPY)
+  • 🟢 Outstanding R/R: 8.2:1 ($54.09 upside, $6.62 risk)
+
+============================================================
+FUNDAMENTAL SNAPSHOT - RJF
+============================================================
+• Revenue: Data not available
+  QoQ Trend (last 4Q): +9.7% → +0.1% → +3.4% → N/A
+✓ EPS: STRONG growth (YoY: +42.0%, QoQ: +10.7%)
+  QoQ Trend (last 4Q): +39.2% → -5.4% → -2.5% → +10.7%
+
+Overall Assessment:
+✓ Fundamentals SUPPORT technical breakout
+
+
+################################################################################
+⭐ BUY #29: VSAT | Score: 103.8/125
+################################################################################
+Phase: 2
+🟢 Entry Quality: Good
+Stop Loss: $76.98
+🟢 Risk/Reward: 3.0:1 (Risk $8.55, Reward $25.66)
+🟢 RS: 0.833
+
+Key Reasons:
+  • Strong Stage 2: 16.7% above 50 SMA
+  • SMAs rising strongly (50:0.113, 200:0.418)
+  • 🔴 Revenue: 3Q avg nan% QoQ (1.4% → 1.2% → nan%)
+  • 🟡 EPS: +12% YoY
+  • Inventory neutral (-2.0% QoQ)
+  • ✓ Volume heavier on up days (1.8M vs 1.1M, ratio 1.62)
+  • ✓ Strong RS: 0.833 (outperforming SPY)
+
+============================================================
+FUNDAMENTAL SNAPSHOT - VSAT
+============================================================
+• Revenue: Data not available
+  QoQ Trend (last 4Q): -2.6% → +1.4% → +1.2% → N/A
+✓ EPS: Growing (YoY: +11.6%, QoQ: -192.7%)
+  QoQ Trend (last 4Q): -5.8% → +139.0% → +131.4% → -192.7%
+✗ Margins: CONTRACTING (nan%, nanpp QoQ)
+• Inventory: Slight draw (-2.0% QoQ, ratio: nan)
+  Note: Detailed breakdown (raw/WIP/finished) not available via API
+
+Overall Assessment:
+✓ Fundamentals SUPPORT technical breakout
+
+
+################################################################################
+⭐ BUY #30: GABC | Score: 103.4/125
+################################################################################
+Phase: 2
+🟢 Entry Quality: Good
+Stop Loss: $48.98
+🟢 Risk/Reward: 7.3:1 (Risk $2.10, Reward $15.32)
+Breakout: $49.09
+🟡 RS: 0.078
+🟢 VCP: 2 contractions: 8.4% → 5.6% (quality: 75/100)
+
+Key Reasons:
+  • Good Stage 2: 7.7% above 50 SMA
+  • SMAs rising strongly (50:0.316, 200:0.148)
+  • 🟡 VCP Breakout (2 contractions) (low volume)
+  • 🔴 Revenue: 3Q avg nan% QoQ (1.9% → 0.1% → nan%)
+  • 🟢 EPS: +21% YoY
+  • ⚠ Volume heavier on down days (ratio 0.64 - distribution)
+  • Positive RS: 0.078
+
+============================================================
+FUNDAMENTAL SNAPSHOT - GABC
+============================================================
+• Revenue: Data not available
+  QoQ Trend (last 4Q): +4.7% → +1.9% → +0.1% → N/A
+✓ EPS: Growing (YoY: +21.4%, QoQ: +15.9%)
+  QoQ Trend (last 4Q): +11.9% → +1.1% → -7.4% → +15.9%
+
+Overall Assessment:
+✓ Fundamentals SUPPORT technical breakout
+
+
+################################################################################
+⭐ BUY #31: FBNC | Score: 103.2/125
+################################################################################
+Phase: 2
+🟢 Entry Quality: Good
+Stop Loss: $62.24
+🟢 Risk/Reward: 5.0:1 (Risk $3.99, Reward $19.87)
+Breakout: $66.06
+🔴 RS: -0.103
+🟢 VCP: 3 contractions: 4.6% → 4.4% → 6.5% (quality: 68/100)
+
+Key Reasons:
+  • Good Stage 2: 5.3% above 50 SMA
+  • SMAs rising strongly (50:0.181, 200:0.130)
+  • 🟡 VCP Breakout (3 contractions) (low volume)
+  • 🔴 Revenue: 3Q avg nan% QoQ (-7.1% → 47.8% → nan%)
+  • 🟢 EPS: +31% YoY
+  • Volume pattern neutral (ratio 1.00)
+  • ⚠ Declining RS: -0.103 (underperforming SPY)
+
+============================================================
+FUNDAMENTAL SNAPSHOT - FBNC
+============================================================
+• Revenue: Data not available
+  QoQ Trend (last 4Q): -19.5% → -7.1% → +47.8% → N/A
+✓ EPS: STRONG growth (YoY: +31.2%, QoQ: +8.0%)
+  QoQ Trend (last 4Q): -47.3% → -22.4% → +197.4% → +8.0%
+
+Overall Assessment:
+✓ Fundamentals SUPPORT technical breakout
+
+
+################################################################################
+⭐ BUY #32: C | Score: 103.0/125
+################################################################################
+Phase: 2
+🟢 Entry Quality: Good
+Stop Loss: $133.45
+🟢 Risk/Reward: 10.0:1 (Risk $4.13, Reward $41.27)
+Breakout: $136.13
+🟡 RS: 0.041
+
+Key Reasons:
+  • Weak Stage 2: 1.1% above 50 SMA
+  • SMAs rising strongly (50:0.126, 200:0.158)
+  • 🟡 50 SMA Breakout (low volume)
+  • 🔴 Revenue: 3Q avg nan% QoQ (-11.0% → 25.4% → nan%)
+  • 🟢 EPS: +61% YoY (strong earnings)
+  • ⚠ Volume heavier on down days (ratio 0.80 - distribution)
+  • Positive RS: 0.041
+
+============================================================
+FUNDAMENTAL SNAPSHOT - C
+============================================================
+• Revenue: Data not available
+  QoQ Trend (last 4Q): +2.0% → -11.0% → +25.4% → N/A
+✓ EPS: STRONG growth (YoY: +60.7%, QoQ: +2.9%)
+  QoQ Trend (last 4Q): -5.1% → -36.0% → +157.1% → +2.9%
+
+Overall Assessment:
+✓ Fundamentals SUPPORT technical breakout
+
+
+################################################################################
+⭐ BUY #33: CORT | Score: 102.8/125
+################################################################################
+Phase: 2
+🟢 Entry Quality: Good
+Stop Loss: $104.23
+🟢 Risk/Reward: 4.2:1 (Risk $7.95, Reward $33.65)
+🟢 RS: 1.164
+
+Key Reasons:
+  • Strong Stage 2: 22.9% above 50 SMA
+  • SMAs rising strongly (50:1.114, 200:0.183)
+  • Moderately extended above 50 SMA
+  • 🟢 Revenue: 3Q avg 11.4% QoQ (-2.7% → -18.4% → 55.3%)
+  • 🟢 EPS: +24% YoY
+  • Inventory neutral (2.3% QoQ)
+  • Volume slightly heavier on up days (ratio 1.22)
+
+============================================================
+FUNDAMENTAL SNAPSHOT - CORT
+============================================================
+✓ Revenue: ACCELERATING strongly (YoY: +31.7%, QoQ: +55.3%)
+  QoQ Trend (last 4Q): +6.8% → -2.7% → -18.4% → +55.3%
+✓ EPS: Growing (YoY: +24.1%, QoQ: +220.0%)
+  QoQ Trend (last 4Q): -44.8% → +25.0% → -250.0% → +220.0%
+• Margins: Stable/slightly up (98.4%, +0.2pp QoQ)
+• Inventory: Slight increase (+2.3% QoQ, ratio: 0.05)
+  Note: Detailed breakdown (raw/WIP/finished) not available via API
+
+Overall Assessment:
+✓ Fundamentals SUPPORT technical breakout
+
+
+################################################################################
+⭐ BUY #34: BCAL | Score: 102.5/125
+################################################################################
+Phase: 2
+🟢 Entry Quality: Good
+Stop Loss: $20.39
+🟢 Risk/Reward: 4.6:1 (Risk $1.41, Reward $6.54)
+Breakout: $21.71
+🔴 RS: -0.148
+⭐ VCP: 2 contractions: 6.1% → 6.0% (quality: 86/100)
+
+Key Reasons:
+  • Good Stage 2: 5.8% above 50 SMA
+  • SMAs rising strongly (50:0.250, 200:0.131)
+  • 🟡 VCP Breakout (2 contractions) (low volume)
+  • 🔴 Revenue: 3Q avg nan% QoQ (1.6% → -3.7% → nan%)
+  • 🟡 EPS: +2% YoY
+  • ✓ Volume heavier on up days (0.2M vs 0.1M, ratio 1.34)
+  • ⚠ Declining RS: -0.148 (underperforming SPY)
+
+============================================================
+FUNDAMENTAL SNAPSHOT - BCAL
+============================================================
+• Revenue: Data not available
+  QoQ Trend (last 4Q): +2.1% → +1.6% → -3.7% → N/A
+• EPS: Slight growth (YoY: +2.3%, QoQ: +4.8%)
+  QoQ Trend (last 4Q): +11.6% → +4.2% → -16.0% → +4.8%
+
+Overall Assessment:
+✓ Fundamentals SUPPORT technical breakout
+
+
+################################################################################
+⭐ BUY #35: AMTB | Score: 102.4/125
+################################################################################
+Phase: 2
+🟢 Entry Quality: Good
+Stop Loss: $28.40
+🟢 Risk/Reward: 9.7:1 (Risk $0.90, Reward $8.79)
+🟢 RS: 0.592
+
+Key Reasons:
+  • Strong Stage 2: 13.6% above 50 SMA
+  • SMAs rising strongly (50:0.481, 200:0.234)
+  • 🔴 Revenue: 3Q avg nan% QoQ (-11.3% → -1.7% → nan%)
+  • 🔴 EPS: -4% YoY
+  • ✓ Volume heavier on up days (0.7M vs 0.3M, ratio 2.19)
+  • ✓ Strong RS: 0.592 (outperforming SPY)
+  • 🟢 Outstanding R/R: 9.7:1 ($8.79 upside, $0.90 risk)
+
+============================================================
+FUNDAMENTAL SNAPSHOT - AMTB
+============================================================
+• Revenue: Data not available
+  QoQ Trend (last 4Q): -0.4% → -11.3% → -1.7% → N/A
+✗ EPS: DECLINING (YoY: -3.6%, QoQ: +20.5%)
+  QoQ Trend (last 4Q): -36.4% → -80.0% → +528.6% → +20.5%
+
+Overall Assessment:
+⚠ Some concerns: EPS declining
+✗ Fundamentals CONTRADICT technical breakout
+
+
+################################################################################
+⭐ BUY #36: ASH | Score: 102.4/125
+################################################################################
+Phase: 2
+🟢 Entry Quality: Good
+Stop Loss: $70.62
+🟢 Risk/Reward: 5.5:1 (Risk $4.10, Reward $22.42)
+🟡 RS: 0.387
+
+Key Reasons:
+  • Strong Stage 2: 11.9% above 50 SMA
+  • SMAs rising strongly (50:0.477, 200:0.202)
+  • 🟡 Revenue: 3Q avg 3.0% QoQ (-19.1% → 24.9% → 3.1%)
+  • 🟢 EPS: +102% YoY (strong earnings)
+  • Inventory neutral (-3.2% QoQ)
+  • ⚠ Volume heavier on down days (ratio 0.88 - distribution)
+  • ✓ Strong RS: 0.387 (outperforming SPY)
+
+============================================================
+FUNDAMENTAL SNAPSHOT - ASH
+============================================================
+• Revenue: Modest growth (YoY: +7.3%, QoQ: +3.1%)
+  QoQ Trend (last 4Q): +3.0% → -19.1% → +24.9% → +3.1%
+✓ EPS: STRONG growth (YoY: +102.2%, QoQ: +2.8%)
+  QoQ Trend (last 4Q): +104.3% → -137.4% → +230.8% → +2.8%
+✓ Margins: EXPANDING (34.2%, +3.7pp QoQ)
+• Inventory: Slight draw (-3.2% QoQ, ratio: 0.99)
+  Note: Detailed breakdown (raw/WIP/finished) not available via API
+
+Overall Assessment:
+✓ Fundamentals SUPPORT technical breakout
+
+
+################################################################################
+⭐ BUY #37: CTRN | Score: 102.2/125
+################################################################################
+Phase: 2
+🟢 Entry Quality: Good
+Stop Loss: $66.62
+🟢 Risk/Reward: 3.0:1 (Risk $7.40, Reward $22.21)
+🟢 RS: 0.703
+
+Key Reasons:
+  • Strong Stage 2: 23.0% above 50 SMA
+  • SMAs rising strongly (50:0.937, 200:0.362)
+  • Moderately extended above 50 SMA
+  • 🟢 Revenue: 3Q avg 6.8% QoQ (3.3% → 16.9% → 0.2%)
+  • 🟢 EPS: +727% YoY (strong earnings)
+  • Inventory neutral (1.5% QoQ)
+  • ✓ Volume heavier on up days (0.2M vs 0.1M, ratio 1.78)
+
+============================================================
+FUNDAMENTAL SNAPSHOT - CTRN
+============================================================
+✓ Revenue: Growing well (YoY: +14.4%, QoQ: +0.2%)
+  QoQ Trend (last 4Q): -5.4% → +3.3% → +16.9% → +0.2%
+✓ EPS: STRONG growth (YoY: +727.3%, QoQ: +3.4%)
+  QoQ Trend (last 4Q): +318.2% → -287.0% → +202.3% → +3.4%
+• Margins: Stable/slightly up (40.0%, +0.1pp QoQ)
+• Inventory: Slight increase (+1.5% QoQ, ratio: 0.50)
+  Note: Detailed breakdown (raw/WIP/finished) not available via API
+
+Overall Assessment:
+✓ Fundamentals SUPPORT technical breakout
+
+
+################################################################################
+⭐ BUY #38: HEI | Score: 102.1/125
+################################################################################
+Phase: 2
+🟢 Entry Quality: Good
+Stop Loss: $351.07
+🟢 Risk/Reward: 5.2:1 (Risk $21.54, Reward $111.78)
+🟡 RS: 0.227
+
+Key Reasons:
+  • Good Stage 2: 7.1% above 50 SMA
+  • SMAs rising strongly (50:0.332, 200:0.070)
+  • 🟢 Revenue: 3Q avg 6.5% QoQ (5.4% → -2.5% → 16.7%)
+  • 🟢 EPS: +48% YoY
+  • ⚠ Inventory building (5.4% QoQ)
+  • ✓ Volume heavier on up days (0.4M vs 0.2M, ratio 2.11)
+  • ✓ Strong RS: 0.227 (outperforming SPY)
+
+============================================================
+FUNDAMENTAL SNAPSHOT - HEI
+============================================================
+✓ Revenue: ACCELERATING strongly (YoY: +25.3%, QoQ: +16.7%)
+  QoQ Trend (last 4Q): +4.5% → +5.4% → -2.5% → +16.7%
+✓ EPS: STRONG growth (YoY: +48.2%, QoQ: +23.0%)
+  QoQ Trend (last 4Q): +12.5% → +5.6% → +1.5% → +23.0%
+✓ Margins: EXPANDING (41.4%, +2.8pp QoQ)
+• Inventory: Moderate build (+5.4% QoQ, ratio: 1.02)
+  Note: Detailed breakdown (raw/WIP/finished) not available via API
+
+Overall Assessment:
+✓ Fundamentals SUPPORT technical breakout
+
+
+################################################################################
+⭐ BUY #39: WKC | Score: 101.9/125
+################################################################################
+Phase: 2
+🟢 Entry Quality: Good
+Stop Loss: $35.93
+🟢 Risk/Reward: 10.0:1 (Risk $1.11, Reward $11.11)
+🔴 RS: -0.232
+
+Key Reasons:
+  • Good Stage 2: 6.8% above 50 SMA
+  • SMAs rising strongly (50:0.617, 200:0.253)
+  • 🟢 Revenue: 3Q avg 14.6% QoQ (-3.9% → 7.3% → 40.3%)
+  • 🟢 EPS: +116% YoY (strong earnings)
+  • ✓ Inventory drawing (-21.6% QoQ - strong demand)
+  • ⚠ Volume heavier on down days (ratio 0.82 - distribution)
+  • ⚠ Declining RS: -0.232 (underperforming SPY)
+
+============================================================
+FUNDAMENTAL SNAPSHOT - WKC
+============================================================
+✓ Revenue: ACCELERATING strongly (YoY: +50.3%, QoQ: +40.3%)
+  QoQ Trend (last 4Q): +3.9% → -3.9% → +7.3% → +40.3%
+✓ EPS: STRONG growth (YoY: +115.5%, QoQ: +88.0%)
+  QoQ Trend (last 4Q): +107.6% → -1210.9% → +109.8% → +88.0%
+• Margins: Flat (2.7%, -0.1pp QoQ)
+✓ Inventory: DRAWING (-21.6% QoQ, ratio: 0.04)
+  → Strong demand signal
+  Note: Detailed breakdown (raw/WIP/finished) not available via API
+
+Overall Assessment:
+✓ Fundamentals SUPPORT technical breakout
+
+
+################################################################################
+⭐ BUY #40: CHEF | Score: 101.8/125
+################################################################################
+Phase: 2
+🟢 Entry Quality: Good
+Stop Loss: $103.48
+🟢 Risk/Reward: 4.4:1 (Risk $7.59, Reward $33.32)
+🟢 RS: 0.686
+
+Key Reasons:
+  • Strong Stage 2: 14.9% above 50 SMA
+  • SMAs rising strongly (50:0.566, 200:0.337)
+  • 🟡 Revenue: 3Q avg 5.0% QoQ (11.9% → -7.3% → 10.3%)
+  • 🟢 EPS: +55% YoY (strong earnings)
+  • Inventory neutral (4.3% QoQ)
+  • ⚠ Volume heavier on down days (ratio 0.82 - distribution)
+  • ✓ Strong RS: 0.686 (outperforming SPY)
+
+============================================================
+FUNDAMENTAL SNAPSHOT - CHEF
+============================================================
+✓ Revenue: Growing well (YoY: +12.9%, QoQ: +10.3%)
+  QoQ Trend (last 4Q): -1.3% → +11.9% → -7.3% → +10.3%
+✓ EPS: STRONG growth (YoY: +55.1%, QoQ: +90.0%)
+  QoQ Trend (last 4Q): -10.2% → +13.6% → -20.0% → +90.0%
+• Margins: Stable/slightly up (25.1%, +0.8pp QoQ)
+• Inventory: Slight increase (+4.3% QoQ, ratio: 0.33)
+  Note: Detailed breakdown (raw/WIP/finished) not available via API
+
+Overall Assessment:
+✓ Fundamentals SUPPORT technical breakout
+
+
+################################################################################
+⭐ BUY #41: CUBI | Score: 101.8/125
+################################################################################
+Phase: 2
+🟢 Entry Quality: Good
+Stop Loss: $76.93
+🟢 Risk/Reward: 4.2:1 (Risk $5.86, Reward $24.84)
+Breakout: $81.44
+🟡 RS: 0.207
+🟢 VCP: 4 contractions: 10.8% → 7.6% → 6.8% → 8.3% (quality: 77/100)
+
+Key Reasons:
+  • Good Stage 2: 6.5% above 50 SMA
+  • SMAs rising strongly (50:0.115, 200:0.100)
+  • 🟡 VCP Breakout (4 contractions) (low volume)
+  • 🔴 Revenue: 3Q avg nan% QoQ (2.2% → -4.8% → nan%)
+  • 🟡 EPS: +18% YoY
+  • ⚠ Volume heavier on down days (ratio 0.60 - distribution)
+  • ✓ Strong RS: 0.207 (outperforming SPY)
+
+============================================================
+FUNDAMENTAL SNAPSHOT - CUBI
+============================================================
+• Revenue: Data not available
+  QoQ Trend (last 4Q): +12.7% → +2.2% → -4.8% → N/A
+✓ EPS: Growing (YoY: +18.5%, QoQ: +4.1%)
+  QoQ Trend (last 4Q): +27.2% → -10.0% → -0.5% → +4.1%
+
+Overall Assessment:
+✓ Fundamentals SUPPORT technical breakout
+
+
+################################################################################
+⭐ BUY #42: JPM | Score: 101.8/125
+################################################################################
+Phase: 2
+🟢 Entry Quality: Good
+Stop Loss: $347.95
+🟢 Risk/Reward: 6.9:1 (Risk $15.81, Reward $109.13)
+🟡 RS: 0.022
+
+Key Reasons:
+  • Good Stage 2: 7.8% above 50 SMA
+  • SMAs rising strongly (50:0.333, 200:0.089)
+  • 🔴 Revenue: 3Q avg nan% QoQ (-1.4% → 8.8% → nan%)
+  • 🟢 EPS: +47% YoY
+  • ✓ Volume heavier on up days (4.7M vs 0.4M, ratio 12.41)
+  • Neutral RS: 0.022
+  • 🟢 Outstanding R/R: 6.9:1 ($109.13 upside, $15.81 risk)
+
+============================================================
+FUNDAMENTAL SNAPSHOT - JPM
+============================================================
+• Revenue: Data not available
+  QoQ Trend (last 4Q): +3.4% → -1.4% → +8.8% → N/A
+✓ EPS: STRONG growth (YoY: +46.9%, QoQ: +29.6%)
+  QoQ Trend (last 4Q): -3.2% → -8.7% → +28.3% → +29.6%
+
+Overall Assessment:
+✓ Fundamentals SUPPORT technical breakout
+
+
+################################################################################
+⭐ BUY #43: UCB | Score: 101.7/125
+################################################################################
+Phase: 2
+🟢 Entry Quality: Good
+Stop Loss: $34.75
+🟢 Risk/Reward: 5.6:1 (Risk $1.97, Reward $11.02)
+Breakout: $36.30
+🔴 RS: -0.180
+🟢 VCP: 5 contractions (last 4): 7.1% → 5.0% → 7.6% → 5.4% (quality: 72/100)
+
+Key Reasons:
+  • Good Stage 2: 5.0% above 50 SMA
+  • SMAs rising strongly (50:0.171, 200:0.080)
+  • 🟡 VCP Breakout (5 contractions) (low volume)
+  • 🔴 Revenue: 3Q avg nan% QoQ (0.7% → -0.9% → nan%)
+  • 🟢 EPS: +51% YoY (strong earnings)
+  • ⚠ Volume heavier on down days (ratio 0.73 - distribution)
+  • ⚠ Declining RS: -0.180 (underperforming SPY)
+
+============================================================
+FUNDAMENTAL SNAPSHOT - UCB
+============================================================
+• Revenue: Data not available
+  QoQ Trend (last 4Q): +6.5% → +0.7% → -0.9% → N/A
+✓ EPS: STRONG growth (YoY: +50.8%, QoQ: +37.7%)
+  QoQ Trend (last 4Q): +11.1% → +0.0% → -1.4% → +37.7%
+
+Overall Assessment:
+✓ Fundamentals SUPPORT technical breakout
+
+
+################################################################################
+⭐ BUY #44: ECPG | Score: 101.4/125
+################################################################################
+Phase: 2
+🟢 Entry Quality: Good
+Stop Loss: $91.42
+🟢 Risk/Reward: 4.8:1 (Risk $6.08, Reward $29.25)
+🟡 RS: 0.218
+
+Key Reasons:
+  • Good Stage 2: 9.6% above 50 SMA
+  • SMAs rising strongly (50:0.285, 200:0.381)
+  • 🟡 Revenue: 3Q avg 2.5% QoQ (4.1% → 2.9% → 0.4%)
   • 🟢 EPS: +100% YoY (strong earnings)
-  • Volume slightly heavier on up days (ratio 1.26)
-  • ⚠ Declining RS: -0.541 (underperforming SPY)
-  • 🟢 Excellent R/R: 4.8:1 ($27.88 upside, $5.82 risk)
+  • ✓ Volume heavier on up days (0.5M vs 0.3M, ratio 1.46)
+  • ✓ Strong RS: 0.218 (outperforming SPY)
+  • 🟢 Excellent R/R: 4.8:1 ($29.25 upside, $6.08 risk)
 
 ============================================================
-FUNDAMENTAL SNAPSHOT - ATEX
+FUNDAMENTAL SNAPSHOT - ECPG
 ============================================================
-✓ Revenue: ACCELERATING strongly (YoY: +41.0%, QoQ: +24.5%)
-  QoQ Trend (last 4Q): +2.1% → +9.4% → +1.4% → +24.5%
-✓ EPS: STRONG growth (YoY: +100.0%, QoQ: +380.0%)
-  QoQ Trend (last 4Q): +175.5% → +111.9% → -112.2% → +380.0%
+✓ Revenue: ACCELERATING strongly (YoY: +21.0%, QoQ: +0.4%)
+  QoQ Trend (last 4Q): +12.6% → +4.1% → +2.9% → +0.4%
+✓ EPS: STRONG growth (YoY: +100.0%, QoQ: +14.5%)
+  QoQ Trend (last 4Q): +29.0% → +27.3% → +6.3% → +14.5%
+• Margins: Stable/slightly up (55.8%, +0.7pp QoQ)
 
 Overall Assessment:
 ✓ Fundamentals SUPPORT technical breakout
 
 
 ################################################################################
-⭐ BUY #50: TWFG | Score: 101.1/125
+⭐ BUY #45: OVV | Score: 101.3/125
 ################################################################################
 Phase: 2
 🟢 Entry Quality: Good
-Stop Loss: $26.44
-🟢 Risk/Reward: 10.0:1 (Risk $0.82, Reward $8.18)
-🟡 RS: 0.239
+Stop Loss: $57.55
+🟢 Risk/Reward: 4.2:1 (Risk $4.41, Reward $18.59)
+🔴 RS: -0.015
 
 Key Reasons:
-  • Strong Stage 2: 13.2% above 50 SMA
-  • SMAs rising strongly (50:0.755, 200:0.003)
-  • 🟢 Revenue: 3Q avg 6.8% QoQ (6.6% → 1.3% → 12.6%)
-  • 🟢 EPS: +33% YoY
-  • ✓ Volume heavier on up days (0.2M vs 0.1M, ratio 3.66)
-  • ✓ Strong RS: 0.239 (outperforming SPY)
-  • 🟢 Outstanding R/R: 10.0:1 ($8.18 upside, $0.82 risk)
+  • Good Stage 2: 8.0% above 50 SMA
+  • SMAs rising strongly (50:0.101, 200:0.242)
+  • 🟢 Revenue: 3Q avg 13.6% QoQ (3.9% → 17.9% → 19.0%)
+  • 🟢 EPS: +37% YoY
+  • ✓ Volume heavier on up days (3.8M vs 2.5M, ratio 1.51)
+  • Neutral RS: -0.015
+  • 🟢 Excellent R/R: 4.2:1 ($18.59 upside, $4.41 risk)
 
 ============================================================
-FUNDAMENTAL SNAPSHOT - TWFG
+FUNDAMENTAL SNAPSHOT - OVV
 ============================================================
-✓ Revenue: ACCELERATING strongly (YoY: +35.9%, QoQ: +12.6%)
-  QoQ Trend (last 4Q): +11.8% → +6.6% → +1.3% → +12.6%
-✓ EPS: STRONG growth (YoY: +33.3%, QoQ: -33.3%)
-  QoQ Trend (last 4Q): +44.4% → -15.4% → +63.6% → -33.3%
-✓ Margins: EXPANDING (33.3%, +2.0pp QoQ)
+✓ Revenue: ACCELERATING strongly (YoY: +30.0%, QoQ: +19.0%)
+  QoQ Trend (last 4Q): -10.9% → +3.9% → +17.9% → +19.0%
+✓ EPS: STRONG growth (YoY: +37.3%, QoQ: +168.9%)
+  QoQ Trend (last 4Q): -51.7% → N/A → N/A → +168.9%
+• Margins: Stable/slightly up (61.4%, +0.3pp QoQ)
+
+Overall Assessment:
+✓ Fundamentals SUPPORT technical breakout
+
+
+################################################################################
+⭐ BUY #46: VLY | Score: 101.3/125
+################################################################################
+Phase: 2
+🟢 Entry Quality: Good
+Stop Loss: $14.33
+🟢 Risk/Reward: 6.4:1 (Risk $0.70, Reward $4.51)
+Breakout: $15.01
+🔴 RS: -0.198
+🟢 VCP: 4 contractions: 6.4% → 7.5% → 7.1% → 4.5% (quality: 72/100)
+
+Key Reasons:
+  • Good Stage 2: 3.9% above 50 SMA
+  • SMAs rising strongly (50:0.183, 200:0.172)
+  • 🟡 VCP Breakout (4 contractions) (low volume)
+  • 🔴 Revenue: 3Q avg nan% QoQ (5.9% → -0.1% → nan%)
+  • 🟢 EPS: +32% YoY
+  • Volume pattern neutral (ratio 1.00)
+  • ⚠ Declining RS: -0.198 (underperforming SPY)
+
+============================================================
+FUNDAMENTAL SNAPSHOT - VLY
+============================================================
+• Revenue: Data not available
+  QoQ Trend (last 4Q): +3.3% → +5.9% → -0.1% → N/A
+✓ EPS: STRONG growth (YoY: +31.8%, QoQ: +3.6%)
+  QoQ Trend (last 4Q): +27.3% → +17.9% → -15.2% → +3.6%
+
+Overall Assessment:
+✓ Fundamentals SUPPORT technical breakout
+
+
+################################################################################
+⭐ BUY #47: CLH | Score: 101.0/125
+################################################################################
+Phase: 2
+🟢 Entry Quality: Good
+Stop Loss: $301.94
+🟢 Risk/Reward: 6.5:1 (Risk $14.71, Reward $94.99)
+Breakout: $314.88
+🔴 RS: -0.172
+⭐ VCP: 2 contractions: 6.3% → 5.0% (quality: 82/100)
+
+Key Reasons:
+  • Good Stage 2: 5.7% above 50 SMA
+  • SMAs rising strongly (50:0.115, 200:0.141)
+  • 🟡 VCP Breakout (2 contractions) (low volume)
+  • 🟡 Revenue: 3Q avg 4.3% QoQ (-3.2% → -2.7% → 18.9%)
+  • 🟢 EPS: +36% YoY
+  • ⚠ Inventory building (5.2% QoQ)
+  • Volume slightly heavier on up days (ratio 1.21)
+
+============================================================
+FUNDAMENTAL SNAPSHOT - CLH
+============================================================
+✓ Revenue: Growing well (YoY: +11.9%, QoQ: +18.9%)
+  QoQ Trend (last 4Q): -0.0% → -3.2% → -2.7% → +18.9%
+✓ EPS: STRONG growth (YoY: +36.4%, QoQ: +170.6%)
+  QoQ Trend (last 4Q): -6.4% → -26.7% → -26.5% → +170.6%
+✓ Margins: EXPANDING (35.1%, +4.6pp QoQ)
+• Inventory: Moderate build (+5.2% QoQ, ratio: 0.22)
+  Note: Detailed breakdown (raw/WIP/finished) not available via API
+
+Overall Assessment:
+✓ Fundamentals SUPPORT technical breakout
+
+
+################################################################################
+⭐ BUY #48: HOPE | Score: 101.0/125
+################################################################################
+Phase: 2
+🟢 Entry Quality: Good
+Stop Loss: $13.67
+🟢 Risk/Reward: 6.2:1 (Risk $0.70, Reward $4.31)
+🟡 RS: 0.066
+
+Key Reasons:
+  • Good Stage 2: 7.2% above 50 SMA
+  • SMAs rising strongly (50:0.269, 200:0.158)
+  • 🔴 Revenue: 3Q avg nan% QoQ (2.5% → -3.1% → nan%)
+  • 🟢 EPS: +218% YoY (strong earnings)
+  • Volume pattern neutral (ratio 1.00)
+  • Positive RS: 0.066
+  • 🟢 Outstanding R/R: 6.2:1 ($4.31 upside, $0.70 risk)
+
+============================================================
+FUNDAMENTAL SNAPSHOT - HOPE
+============================================================
+• Revenue: Data not available
+  QoQ Trend (last 4Q): +50.2% → +2.5% → -3.1% → N/A
+✓ EPS: STRONG growth (YoY: +217.5%, QoQ: +12.4%)
+  QoQ Trend (last 4Q): +209.1% → +12.0% → -14.4% → +12.4%
+
+Overall Assessment:
+✓ Fundamentals SUPPORT technical breakout
+
+
+################################################################################
+⭐ BUY #49: SMBK | Score: 101.0/125
+################################################################################
+Phase: 2
+🟢 Entry Quality: Good
+Stop Loss: $50.68
+🟢 Risk/Reward: 7.5:1 (Risk $2.11, Reward $15.84)
+🟡 RS: 0.209
+
+Key Reasons:
+  • Strong Stage 2: 10.4% above 50 SMA
+  • SMAs rising strongly (50:0.471, 200:0.215)
+  • 🔴 Revenue: 3Q avg nan% QoQ (13.2% → 0.9% → nan%)
+  • 🟢 EPS: +39% YoY
+  • ⚠ Volume heavier on down days (ratio 0.80 - distribution)
+  • ✓ Strong RS: 0.209 (outperforming SPY)
+  • 🟢 Outstanding R/R: 7.5:1 ($15.84 upside, $2.11 risk)
+
+============================================================
+FUNDAMENTAL SNAPSHOT - SMBK
+============================================================
+• Revenue: Data not available
+  QoQ Trend (last 4Q): -4.3% → +13.2% → +0.9% → N/A
+✓ EPS: STRONG growth (YoY: +39.1%, QoQ: +18.5%)
+  QoQ Trend (last 4Q): +17.4% → +0.0% → +0.0% → +18.5%
+
+Overall Assessment:
+✓ Fundamentals SUPPORT technical breakout
+
+
+################################################################################
+⭐ BUY #50: TDY | Score: 100.9/125
+################################################################################
+Phase: 2
+🟢 Entry Quality: Good
+Stop Loss: $644.55
+🟢 Risk/Reward: 5.8:1 (Risk $35.47, Reward $204.01)
+Breakout: $674.66
+🟡 RS: 0.186
+🟢 VCP: 4 contractions: 9.3% → 5.8% → 5.6% → 9.6% (quality: 71/100)
+
+Key Reasons:
+  • Good Stage 2: 5.9% above 50 SMA
+  • SMAs rising strongly (50:0.135, 200:0.077)
+  • 🟡 VCP Breakout (4 contractions) (low volume)
+  • 🟡 Revenue: 3Q avg 2.7% QoQ (4.7% → -3.2% → 6.6%)
+  • 🟢 EPS: +21% YoY
+  • Inventory neutral (4.0% QoQ)
+  • ✓ Volume heavier on up days (0.3M vs 0.2M, ratio 1.32)
+
+============================================================
+FUNDAMENTAL SNAPSHOT - TDY
+============================================================
+• Revenue: Modest growth (YoY: +9.8%, QoQ: +6.6%)
+  QoQ Trend (last 4Q): +1.7% → +4.7% → -3.2% → +6.6%
+✓ EPS: Growing (YoY: +21.2%, QoQ: +10.7%)
+  QoQ Trend (last 4Q): +5.0% → +25.6% → -17.0% → +10.7%
+✓ Margins: EXPANDING (44.4%, +1.2pp QoQ)
+• Inventory: Slight increase (+4.0% QoQ, ratio: 0.70)
+  Note: Detailed breakdown (raw/WIP/finished) not available via API
 
 Overall Assessment:
 ✓ Fundamentals SUPPORT technical breakout
 
 
 ================================================================================
-ADDITIONAL BUYS (578 more)
+ADDITIONAL BUYS (591 more)
 ================================================================================
 
-SWK, CNO, VSEC, INCY, THRM, HEI, OOMA, RTX, ECPG, MLKN
-SXT, HOPE, HUM, APH, SKWD, MPB, CROX, FCF, RUSHA, FBK
-LLY, BPOP, CVX, PKG, VSAT, ASB, ANET, GIC, HWC, ICUI
-KO, NP, SSD, TTC, BUSE, GKOS, MAN, WEX, AMP, PAG
-HBT, FTNT, VCEL, CORT, MEI, TENB, UCB, MGA, PGEN, VLO
-BLFS, FET, SAIC, CRWD, AMRX, MEDP, PAYS, PFS, SEPN, QNST
-EGBN, CPAY, JAKK, UFCS, FISI, GRND, CCNE, IOSP, BSAC, ELMD
-IMAX, CFFN, CHCO, ENVA, WAB, WHD, BAC, CFG, HQY, VSTS
-NBBK, MDB, MRCY, MSBI, OII, HBNC, RVTY, IBCP, GEN, BMY
-CQP, TWLO, SLDE, S, BBT, TECH, ZETA, RLI, MHK, SHOO
-TSM, OC, GRMN, RBCAA, DINO, MMM, AMTB, ASND, SKY, ONB
-CBAN, ULCC, BMRC, JPM, NBTB, QCRH, LAD, WSBC, FBNC, FHI
-KRNY, AIZ, HRI, HZO, AGM, CHD, CHEF, LTH, BJRI, KMX
-ZBRA, HAE, KFY, GDOT, HSTM, BFH, GEF, GL, SXC, FTK
-CCS, PRK, UFI, ALRS, NDSN, NLY, NMIH, FMNB, MS, PNC
-RDVT, ET, SYY, UFPT, A, AGNC, BCS, CTO, NBN, SNA
-CNOB, EXPD, MPTI, IQV, DXCM, JLL, DGX, FENC, BNY, GABC
-FTRE, RELY, TFSL, EWBC, EBF, ESQ, PNFP, ZION, AVNT, KN
-BCAL, CATY, PRLB, BRC, MCS, NET, NTAP, STBA, WELL, AX
-OFG, CENTA, FSS, WSFS, DHT, HPQ, MDLZ, PII, RAPP, ANGO
-STT, WTS, SMHI, AMG, HNGE, KAI, MITK, ALRM, SENEA, UMBF
-CART, USFD, HPE, SBCF, BHRB, MTRN, QUAD, MAMA, RAL, CRBG
-MUFG, SPB, VG, VTOL, WLY, COLB, FAST, PACS, RNST, URI
-ARMK, HAFC, ORRF, GE, MFG, NAT, TXRH, CAKE, UAL, CPF
-PBF, RF, UMAC, NGVT, VSXY, FRST, SEIC, SFNC, TVTX, INDB
-KFRC, TOWN, WEST, TRV, VLY, BAX, SLAB, CNC, CSCO, CVCO
-FAF, FHN, LIND, GEO, USB, CON, ILMN, AXGN, MYE, NTRA
-WBS, RCEL, MC, TFC, WAT, WES, GAIN, SRCE, DGII, FIBK
-HWM, NSP, VRTX, DE, SB, FELE, CLH, CPIX, PRI, MPC
-FDX, FVCB, MRK, PH, FFIV, SPFI, ELS, AIT, PSA, BALL
-CSL, DBX, SAN, HXL, SYBT, UTL, ABCB, ACT, MBWM, NRIX
-OKTA, AME, JCI, RGA, GRC, CTNM, SSB, FFBC, PKE, AVBH
-HBCP, SIBN, GM, WNC, DCO, WST, AAMI, PNTG, WDFC, BBVA
-GSBC, TNET, MAX, CSX, DXPE, IEX, TIGO, XOM, CVBF, CAL
-CBL, DBRG, DNLI, TEX, MFC, MSGS, EPC, GHM, MTB, NSIT
-BIP, M, MET, ING, UNF, CNI, HFWA, OPHC, LFST, HSBC
-KELYA, PFG, TILE, EWTX, FA, TRNS, CB, CBRL, NVST, OSK
-PK, ATRO, SON, APOG, BLMN, MGRC, MSEX, LILA, LILAK, DAL
-ONTO, OGN, TFIN, RL, WAFD, FNB, RYTM, AMCX, THG, TRVI
-KTB, SNDA, WSM, APGE, CCSI, RHI, CLBK, ELVN, ACGL, NPO
-JNJ, UVSP, GH, OMF, SHIP, IRDM, KB, MRBK, HALO, OPY
-CGEM, DV, SHC, SLP, MSGE, EAT, FTV, WFG, HMN, MSM
-ALNT, FSBC, DSP, NMM, FLS, ORI, FITB, DCTH, FULT, HSIC
-WABC, KVUE, SOLV, AES, MAS, SLF, BWEN, COGT, EFSC, NX
-UNP, SMP, DYN, INVH, LKFN, QLYS, HUBB, MBX, ABM, BLZE
-GCMG, CTS, IDT, BZH, AZZ, ROST, MCY, FRME, TGT, CLMT
-HPK, BURL, CSWC, GBTG, OCFC, SJM, PRM, LNC, ALL, DIN
-MGNI, OSPN, KRT, SWX, CL, JXN, RVMD, ACHC, AMGN, SGMT
-MDGL, URBN, FEIM, CRNX, HAPN, BEN, ACA, PM, BATRK, HESM
-CASH, MHO, LNG, PHM, HTO, RCL, MD, TXO, UMH, NVCT
-SIGI, AEBI, BCRX, LGND, EIG, INNV, NATL, SAFT, TT, HRMY
-GCO, NSC, BMRN, ETSY, RAMP, NRIM, PRAA, BWIN, BAP, SCSC
-ALV, LQDT, PLUS, BSM, CTOS, HIG, LBRX, UTZ, RHP, AM
-CARS, PEBO, ATI, UHAL, HOV, SBRA, CM, EXPE, NHC, BDX
-BIIB, BMO, KSS, IMVT, ADM, BY, EG, LEGH, CAH, RMAX
-GFF, HTH, RIGL, BBY, KIDS, CVV, VKTX, ZD, BH, SRRK
-SVRA, ABNB, APD, DB, AFG, UNM, VAC, LOVE, BIO, L
-XPEL, HVT, PCVX, AFL, PCG, ANF, IFF, VOYA
+VSEC, MEI, WHD, CVX, WSFS, NBBK, AMRX, CPAY, SXC, HWC
+VSXY, IVZ, APH, ZION, GD, RUSHA, DELL, FET, PRLB, GKOS
+STT, TWFG, ULCC, MPB, OII, BAX, HVT, IOSP, IBCP, MTRN
+RVTY, CNS, CRWD, ICUI, NWL, CNXN, GRMN, ESQ, OMC, PFS
+SEPN, CVCO, TNK, BAC, EGBN, THRM, AVT, ALOT, DRI, PLPC
+BLFS, CNO, BUSE, GRND, OBK, QNST, IEX, NDSN, QCRH, RTX
+SWK, AMP, CROX, KMX, TENB, VG, BBT, ENVA, OC, MCS
+CCK, INCY, BFH, OSBC, BPOP, FBP, FENC, DHT, PRK, FFIV
+MMM, SLDE, ASND, BMY, CFFN, MITK, NBTB, AMG, CART, CHCO
+LQDA, IESC, MSBI, HZO, SMHI, ARMK, EWBC, IART, FHI, WTS
+GEN, CCNE, CFG, KO, A, MFG, PKE, FSS, LLY, TFSL
+PAYS, SHOO, UFI, CQP, CSCO, FMNB, JBHT, WAB, THC, GDOT
+TWLO, HUM, PBF, FTK, SBCF, AGNC, TECH, HBNC, NLY, PKG
+SXT, IQV, AGM, ALSN, BBVA, BSAC, GIC, EXPD, FISI, RYZ
+CNOB, ET, HRI, WDFC, BNY, ONB, RYTM, VCEL, DAC, GEF
+RBCAA, PGC, AVNT, LZB, BMRC, DGX, JLL, S, WABC, GHM
+KRNY, LTH, MEDP, QUAD, SMTI, DINO, KN, BELFB, FTNT, MHK
+NMIH, OOMA, RBRK, ALRS, HAFC, MUFG, SAIC, ANGO, MAMA, NP
+UFCS, COLB, CSL, CTO, HPE, HSTM, ILMN, JCI, CBAN, EFC
+NTRA, RAPP, WLY, FRST, HWM, KFY, USB, WSBC, PGEN, ANET
+GEO, HQY, INDB, NBN, MGA, ONTO, SSD, AXGN, CRBG, NET
+TEX, ZETA, CATY, TTC, USFD, HNGE, TREX, TVTX, UFPT, MAN
+PACS, CCS, NRIX, WEX, MBX, SKWD, TFC, UVSP, BJRI, BOKF
+FIBK, JAKK, SLG, CTNM, UMAC, CHD, SAN, WBS, FTI, ING
+TXRH, AX, OFG, GH, CAKE, FAST, MRK, PNFP, UVE, DXCM
+CNC, ALRM, BCS, LIND, PAG, RNST, BRC, SEIC, HSIC, GE
+LAD, MRCY, NVST, SENEA, TOWN, WRLD, ATRO, CBRL, TSM, HNI
+MDLZ, CENTA, UMBF, UMH, ORRF, SYY, MYE, RBKB, MS, PH
+RCEL, SYBT, SKY, FHN, CPF, MDB, DNLI, WELL, MAX, PNC
+ZBRA, DBX, LILAK, FDX, KINS, VRTX, STBA, TRNS, ELVN, ABCB
+CPIX, RDVT, BHRB, OSK, RAL, SFNC, ANIK, ASB, AVBH, HXL
+MCY, NTAP, HBCP, AAMI, NGVT, CCSI, HSBC, NAT, OPHC, DSP
+MSGS, RELY, RGA, LTC, SB, VTOL, FFBC, DYN, HALO, RLI
+DCO, HAE, MRBK, AME, CAL, CSX, RBB, WST, CASY, FNB
+INNV, MPC, GCMG, KEY, MSGE, PNTG, RF, SPFI, FVCB, NWN
+PAY, AIZ, SRCE, ACT, HFWA, IMAX, URI, CON, FELE, MCB
+GAIN, UAL, WES, FITB, LFST, DXPE, OPY, WAT, KFRC, SPG
+DE, SHIP, DBRG, SBUX, DGII, GL, TFIN, BALL, TIGO, BLMN
+RAMP, LILA, MHO, DEA, XOM, SIGI, SPB, IDT, IRDM, HPQ
+CVBF, PK, WFG, LKFN, WNC, APGE, APOG, MSEX, NSIT, CGEM
+FTRE, OGN, THG, ITT, SGMT, WTRG, BCRX, DV, NX, MBWM
+TT, FSBC, LQDT, MFC, TNL, AIT, BY, BLZE, SIBN, CNI
+FULT, TRV, SNA, INVH, OMF, CBL, SCSC, DCTH, TILE, DAL
+RVMD, SSB, PRAA, PSA, SLAB, EAT, BATRK, TRVI, FAF, MDGL
+EPC, OKTA, SNDA, MTB, NHC, IMVT, WAFD, EFSC, EWTX, CTS
+HAPN, RIGL, FEIM, FRME, KVUE, NMM, ORKA, NVCT, CLBK, PFG
+COGT, KB, BWIN, LNC, EBF, GM, KRT, SJM, BEN, CRNX
+MGNI, SOLV, SHC, JNJ, SLF, BZH, FTV, NSP, CSWC, LCUT
+AES, ALNT, HTO, SON, DIN, PRI, RCL, JXN, ABM, SLP
+SWX, PRM, UNF, MET, ACA, PCVX, AFG, KSS, LGND, AZZ
+COKE, CTOS, KNTK, UNP, SAFT, KELYA, KTB, OCFC, ACHC, PSO
+AMCX, TNET, BSM, LNG, DB, GBTG, EXPE, NRIM, APD, RHI
+NSC, WSM, PM, QLYS, ROST, L, LBRX, SMP, NATL, REYN
+UTZ, ALL, AM, CL, SRRK, HESM, UNM, ATI, MD, RMAX
+TXO, BMO, HMN, O, PROF, BIP, FA, AMGN, TGT, OSPN
+BIIB, HTH, BURL, CLMT, BBDC, CM, ANF, AEBI, BDX, BH
+CARS, CB, SBRA, HOV, LLYVA, KIDS, LLYVK, NRC, ABNB, BMRN
+PRMB, CRL, LEGH, HIG, PAYO, BBY, SVV, PEBO, URBN, CAH
+PAA, TPC, PHM, ALTG, HRMY, UHAL, RCUS, ETSY, ZD, CGON
+BWEN
 
 
 ================================================================================
-🔴 TOP SELL SIGNALS (Score >= 60) - 186 Total
+🔴 TOP SELL SIGNALS (Score >= 60) - 172 Total
 ================================================================================
 
 
 ################################################################################
-🚨 SELL #1: AHCO | Score: 100/110
+🚨 SELL #1: ACM | Score: 100/110
 ################################################################################
 Phase: 4 | 🚨 Severity: CRITICAL
-Breakdown: $9.73
-🔴 RS: -5.821
+Breakdown: $70.04
+🔴 RS: -0.609
 
 Sell Reasons:
   • In Phase 4 (Downtrend)
-  • Broke below 50 SMA by 41.9%
-  • 50 SMA declining (slope: -0.3156)
-  • High volume breakdown: 1.5x
-  • Sharp RS decline: -5.82
-FUNDAMENTAL SNAPSHOT - AHCO
+  • Broke below 50 SMA by 12.8%
+  • 50 SMA declining (slope: -0.0147)
+  • High volume breakdown: 2.3x
+  • Weak RS rollover: -0.61
+FUNDAMENTAL SNAPSHOT - ACM
 No data available
 
 ################################################################################
-🚨 SELL #2: BRCB | Score: 100/110
+🚨 SELL #2: COLL | Score: 100/110
 ################################################################################
 Phase: 4 | 🚨 Severity: CRITICAL
-Breakdown: $7.68
-🔴 RS: -1.158
+Breakdown: $34.43
+🔴 RS: -2.190
 
 Sell Reasons:
   • In Phase 4 (Downtrend)
-  • Broke below 50 SMA by 10.0%
-  • 50 SMA declining (slope: -0.2877)
-  • High volume breakdown: 1.8x
-  • RS declining: -1.16
-FUNDAMENTAL SNAPSHOT - BRCB
-No data available
-
-################################################################################
-🚨 SELL #3: COLL | Score: 100/110
-################################################################################
-Phase: 4 | 🚨 Severity: CRITICAL
-Breakdown: $34.32
-🔴 RS: -2.245
-
-Sell Reasons:
-  • In Phase 4 (Downtrend)
-  • Broke below 50 SMA by 24.3%
-  • 50 SMA declining (slope: -0.0239)
-  • High volume breakdown: 2.5x
-  • Sharp RS decline: -2.25
+  • Broke below 50 SMA by 25.4%
+  • 50 SMA declining (slope: -0.0093)
+  • High volume breakdown: 2.2x
+  • Sharp RS decline: -2.19
 FUNDAMENTAL SNAPSHOT - COLL
+No data available
+
+################################################################################
+🚨 SELL #3: CRMD | Score: 100/110
+################################################################################
+Phase: 4 | 🚨 Severity: CRITICAL
+Breakdown: $8.15
+🔴 RS: -0.881
+
+Sell Reasons:
+  • In Phase 4 (Downtrend)
+  • Broke below 50 SMA by 12.9%
+  • 50 SMA declining (slope: -0.0806)
+  • High volume breakdown: 1.5x
+  • Weak RS rollover: -0.88
+FUNDAMENTAL SNAPSHOT - CRMD
 No data available
 
 ################################################################################
 🚨 SELL #4: CSV | Score: 100/110
 ################################################################################
 Phase: 4 | 🚨 Severity: CRITICAL
-Breakdown: $38.77
-🔴 RS: -0.937
+Breakdown: $38.29
+🔴 RS: -1.494
 
 Sell Reasons:
   • In Phase 4 (Downtrend)
-  • Broke below 50 SMA by 13.2%
-  • 50 SMA declining (slope: -0.2973)
-  • High volume breakdown: 1.7x
-  • Weak RS rollover: -0.94
+  • Broke below 50 SMA by 12.0%
+  • 50 SMA declining (slope: -0.2507)
+  • High volume breakdown: 2.6x
+  • RS declining: -1.49
 FUNDAMENTAL SNAPSHOT - CSV
 No data available
 
 ################################################################################
-🚨 SELL #5: EVI | Score: 100/110
+🚨 SELL #5: AA | Score: 95/110
 ################################################################################
 Phase: 4 | 🚨 Severity: CRITICAL
-Breakdown: $15.79
-🔴 RS: -1.124
+Breakdown: $54.05
+🟢 RS: 0.953
 
 Sell Reasons:
   • In Phase 4 (Downtrend)
-  • Broke below 50 SMA by 7.8%
-  • 50 SMA declining (slope: -0.4089)
-  • High volume breakdown: 5.2x
-  • RS declining: -1.12
-FUNDAMENTAL SNAPSHOT - EVI
-No data available
-
-################################################################################
-🚨 SELL #6: CRMD | Score: 92/110
-################################################################################
-Phase: 4 | 🚨 Severity: CRITICAL
-Breakdown: $8.21
-🔴 RS: -1.046
-
-Sell Reasons:
-  • In Phase 4 (Downtrend)
-  • Broke below 50 SMA by 11.1%
-  • 50 SMA declining (slope: -0.0215)
-  • Elevated volume: 1.4x
-  • RS declining: -1.05
-FUNDAMENTAL SNAPSHOT - CRMD
-No data available
-
-################################################################################
-🚨 SELL #7: ACM | Score: 90/110
-################################################################################
-Phase: 4 | 🚨 Severity: CRITICAL
-Breakdown: $70.30
-🟢 RS: 0.086
-
-Sell Reasons:
-  • In Phase 4 (Downtrend)
-  • Below 50 SMA by 4.6%
-  • 50 SMA declining (slope: -0.1160)
-  • High volume breakdown: 3.8x
-  • RS still positive: 0.09
-FUNDAMENTAL SNAPSHOT - ACM
-No data available
-
-################################################################################
-🚨 SELL #8: ANIP | Score: 90/110
-################################################################################
-Phase: 4 | 🚨 Severity: CRITICAL
-Breakdown: $80.82
-🔴 RS: -0.517
-
-Sell Reasons:
-  • In Phase 4 (Downtrend)
-  • Broke below 50 SMA by 7.8%
-  • 50 SMA declining (slope: -0.0348)
-  • Elevated volume: 1.5x
-  • Weak RS rollover: -0.52
-FUNDAMENTAL SNAPSHOT - ANIP
-No data available
-
-################################################################################
-🚨 SELL #9: ASLE | Score: 90/110
-################################################################################
-Phase: 4 | 🚨 Severity: CRITICAL
-Breakdown: $6.29
-🔴 RS: -0.625
-
-Sell Reasons:
-  • In Phase 4 (Downtrend)
-  • Broke below 50 SMA by 8.9%
-  • 50 SMA declining (slope: -0.1153)
-  • Elevated volume: 1.3x
-  • Weak RS rollover: -0.62
-FUNDAMENTAL SNAPSHOT - ASLE
-No data available
-
-################################################################################
-🚨 SELL #10: ERII | Score: 90/110
-################################################################################
-Phase: 4 | 🚨 Severity: CRITICAL
-Breakdown: $8.56
-🔴 RS: -0.540
-
-Sell Reasons:
-  • In Phase 4 (Downtrend)
-  • Broke below 50 SMA by 9.8%
-  • 50 SMA declining (slope: -0.1858)
-  • Elevated volume: 1.4x
-  • Weak RS rollover: -0.54
-FUNDAMENTAL SNAPSHOT - ERII
-No data available
-
-################################################################################
-🚨 SELL #11: BL | Score: 85/110
-################################################################################
-Phase: 4 | 🚨 Severity: CRITICAL
-Breakdown: $29.05
-🟡 RS: -0.243
-
-Sell Reasons:
-  • In Phase 4 (Downtrend)
-  • Below 50 SMA by 3.2%
+  • Broke below 50 SMA by 5.2%
+  • 50 SMA declining (slope: -0.7217)
   • High volume breakdown: 1.6x
-  • Weak RS rollover: -0.24
+  • RS still positive: 0.95
+FUNDAMENTAL SNAPSHOT - AA
+No data available
+
+################################################################################
+🚨 SELL #6: AEO | Score: 90/110
+################################################################################
+Phase: 4 | 🚨 Severity: CRITICAL
+Breakdown: $17.27
+🟡 RS: -0.419
+
+Sell Reasons:
+  • In Phase 4 (Downtrend)
+  • Broke below 50 SMA by 6.0%
+  • High volume breakdown: 2.1x
+  • Weak RS rollover: -0.42
   • Failed breakout - closed back inside base
-FUNDAMENTAL SNAPSHOT - BL
+FUNDAMENTAL SNAPSHOT - AEO
 No data available
 
 ################################################################################
-🚨 SELL #12: CCB | Score: 85/110
+🚨 SELL #7: AHCO | Score: 85/110
 ################################################################################
 Phase: 4 | 🚨 Severity: CRITICAL
-Breakdown: $69.14
-🔴 RS: -4.879
+Breakdown: $9.69
+🔴 RS: -6.293
 
 Sell Reasons:
   • In Phase 4 (Downtrend)
-  • Broke below 50 SMA by 25.0%
-  • 50 SMA declining (slope: -0.3022)
-  • Moderate volume: 1.3x
-  • Sharp RS decline: -4.88
-FUNDAMENTAL SNAPSHOT - CCB
+  • Broke below 50 SMA by 40.5%
+  • 50 SMA declining (slope: -0.2720)
+  • Moderate volume: 1.2x
+  • Sharp RS decline: -6.29
+FUNDAMENTAL SNAPSHOT - AHCO
 No data available
 
 ################################################################################
-🚨 SELL #13: CRWV | Score: 85/110
+🚨 SELL #8: ALNY | Score: 80/110
 ################################################################################
 Phase: 4 | 🚨 Severity: CRITICAL
-Breakdown: $91.37
-🟢 RS: 1.331
+Breakdown: $275.63
+🔴 RS: -2.480
 
 Sell Reasons:
   • In Phase 4 (Downtrend)
-  • Just below 50 SMA (1.1%)
-  • 50 SMA declining (slope: -0.6815)
-  • High volume breakdown: 1.7x
-  • RS still positive: 1.33
-FUNDAMENTAL SNAPSHOT - CRWV
-No data available
-
-################################################################################
-🚨 SELL #14: AMSF | Score: 82/110
-################################################################################
-Phase: 4 | 🚨 Severity: CRITICAL
-Breakdown: $31.73
-🔴 RS: -1.443
-
-Sell Reasons:
-  • In Phase 4 (Downtrend)
-  • Broke below 50 SMA by 11.7%
-  • Elevated volume: 1.5x
-  • RS declining: -1.44
-  • Failed breakout - closed back inside base
-FUNDAMENTAL SNAPSHOT - AMSF
-No data available
-
-################################################################################
-🚨 SELL #15: ALNY | Score: 80/110
-################################################################################
-Phase: 4 | 🚨 Severity: CRITICAL
-Breakdown: $278.44
-🔴 RS: -2.612
-
-Sell Reasons:
-  • In Phase 4 (Downtrend)
-  • Broke below 50 SMA by 20.6%
-  • 50 SMA declining (slope: -0.3110)
-  • Low volume breakdown: 0.6x
-  • Sharp RS decline: -2.61
+  • Broke below 50 SMA by 18.7%
+  • 50 SMA declining (slope: -0.3479)
+  • Low volume breakdown: 0.7x
+  • Sharp RS decline: -2.48
 FUNDAMENTAL SNAPSHOT - ALNY
 No data available
 
 ################################################################################
-🚨 SELL #16: FCN | Score: 80/110
+🚨 SELL #9: CCB | Score: 80/110
 ################################################################################
 Phase: 4 | 🚨 Severity: CRITICAL
-Breakdown: $155.41
-🔴 RS: -0.957
+Breakdown: $69.21
+🔴 RS: -5.011
 
 Sell Reasons:
   • In Phase 4 (Downtrend)
-  • Just below 50 SMA (1.7%)
-  • High volume breakdown: 1.5x
-  • Weak RS rollover: -0.96
-  • Failed breakout - closed back inside base
-FUNDAMENTAL SNAPSHOT - FCN
+  • Broke below 50 SMA by 28.7%
+  • 50 SMA declining (slope: -0.2985)
+  • Low volume breakdown: 0.6x
+  • Sharp RS decline: -5.01
+FUNDAMENTAL SNAPSHOT - CCB
 No data available
 
 ################################################################################
-🚨 SELL #17: GBFH | Score: 80/110
+🚨 SELL #10: DERM | Score: 80/110
 ################################################################################
 Phase: 4 | 🚨 Severity: CRITICAL
-Breakdown: $28.91
-🔴 RS: -4.161
+Breakdown: $6.55
+🔴 RS: -0.574
 
 Sell Reasons:
   • In Phase 4 (Downtrend)
-  • Broke below 50 SMA by 25.5%
-  • 50 SMA declining (slope: -0.0849)
-  • Low volume breakdown: 0.8x
-  • Sharp RS decline: -4.16
+  • Just below 50 SMA (1.8%)
+  • High volume breakdown: 1.6x
+  • Weak RS rollover: -0.57
+  • Failed breakout - closed back inside base
+FUNDAMENTAL SNAPSHOT - DERM
+No data available
+
+################################################################################
+🚨 SELL #11: FICO | Score: 80/110
+################################################################################
+Phase: 4 | 🚨 Severity: CRITICAL
+Breakdown: $1180.68
+🔴 RS: -2.289
+
+Sell Reasons:
+  • In Phase 4 (Downtrend)
+  • Broke below 50 SMA by 9.7%
+  • 50 SMA declining (slope: -0.0456)
+  • Low volume breakdown: 0.0x
+  • Sharp RS decline: -2.29
+FUNDAMENTAL SNAPSHOT - FICO
+No data available
+
+################################################################################
+🚨 SELL #12: GBFH | Score: 80/110
+################################################################################
+Phase: 4 | 🚨 Severity: CRITICAL
+Breakdown: $28.79
+🔴 RS: -4.126
+
+Sell Reasons:
+  • In Phase 4 (Downtrend)
+  • Broke below 50 SMA by 26.3%
+  • 50 SMA declining (slope: -0.1337)
+  • Low volume breakdown: 0.7x
+  • Sharp RS decline: -4.13
 FUNDAMENTAL SNAPSHOT - GBFH
 No data available
 
 ################################################################################
-🚨 SELL #18: GEOS | Score: 80/110
+🚨 SELL #13: GEOS | Score: 80/110
 ################################################################################
 Phase: 4 | 🚨 Severity: CRITICAL
-Breakdown: $7.08
-🔴 RS: -2.158
+Breakdown: $6.96
+🔴 RS: -2.606
 
 Sell Reasons:
   • In Phase 4 (Downtrend)
-  • Broke below 50 SMA by 25.1%
-  • 50 SMA declining (slope: -0.4098)
-  • Low volume breakdown: 0.0x
-  • Sharp RS decline: -2.16
+  • Broke below 50 SMA by 26.7%
+  • 50 SMA declining (slope: -0.4025)
+  • Low volume breakdown: 0.1x
+  • Sharp RS decline: -2.61
 FUNDAMENTAL SNAPSHOT - GEOS
 No data available
 
 ################################################################################
-🚨 SELL #19: GPI | Score: 80/110
+🚨 SELL #14: GPI | Score: 80/110
 ################################################################################
 Phase: 4 | 🚨 Severity: CRITICAL
-Breakdown: $307.04
-🔴 RS: -2.397
+Breakdown: $305.69
+🔴 RS: -2.621
 
 Sell Reasons:
   • In Phase 4 (Downtrend)
-  • Broke below 50 SMA by 13.2%
-  • 50 SMA declining (slope: -0.1473)
+  • Broke below 50 SMA by 12.2%
+  • 50 SMA declining (slope: -0.1481)
   • Low volume breakdown: 0.0x
-  • Sharp RS decline: -2.40
+  • Sharp RS decline: -2.62
 FUNDAMENTAL SNAPSHOT - GPI
 No data available
 
 ################################################################################
-🚨 SELL #20: LMB | Score: 80/110
+🚨 SELL #15: LMB | Score: 80/110
 ################################################################################
 Phase: 4 | 🚨 Severity: CRITICAL
-Breakdown: $74.12
-🔴 RS: -4.317
+Breakdown: $73.68
+🔴 RS: -4.434
 
 Sell Reasons:
   • In Phase 4 (Downtrend)
-  • Broke below 50 SMA by 36.3%
-  • 50 SMA declining (slope: -0.2841)
-  • Low volume breakdown: 0.0x
-  • Sharp RS decline: -4.32
+  • Broke below 50 SMA by 39.3%
+  • 50 SMA declining (slope: -0.2159)
+  • Low volume breakdown: 0.1x
+  • Sharp RS decline: -4.43
 FUNDAMENTAL SNAPSHOT - LMB
 No data available
 
 ################################################################################
-🚨 SELL #21: MNRO | Score: 80/110
+🚨 SELL #16: MNRO | Score: 80/110
 ################################################################################
 Phase: 4 | 🚨 Severity: CRITICAL
-Breakdown: $15.54
-🔴 RS: -3.625
+Breakdown: $15.41
+🔴 RS: -3.213
 
 Sell Reasons:
   • In Phase 4 (Downtrend)
-  • Broke below 50 SMA by 26.6%
-  • 50 SMA declining (slope: -0.1768)
+  • Broke below 50 SMA by 24.2%
+  • 50 SMA declining (slope: -0.2470)
   • Low volume breakdown: 0.0x
-  • Sharp RS decline: -3.63
+  • Sharp RS decline: -3.21
 FUNDAMENTAL SNAPSHOT - MNRO
 No data available
 
 ################################################################################
-🚨 SELL #22: OI | Score: 80/110
+🚨 SELL #17: OI | Score: 80/110
 ################################################################################
 Phase: 4 | 🚨 Severity: CRITICAL
-Breakdown: $8.70
-🔴 RS: -2.643
+Breakdown: $8.65
+🔴 RS: -2.516
 
 Sell Reasons:
   • In Phase 4 (Downtrend)
-  • Broke below 50 SMA by 20.0%
-  • 50 SMA declining (slope: -0.1619)
-  • Low volume breakdown: 0.0x
-  • Sharp RS decline: -2.64
+  • Broke below 50 SMA by 21.4%
+  • 50 SMA declining (slope: -0.2209)
+  • Low volume breakdown: 0.1x
+  • Sharp RS decline: -2.52
 FUNDAMENTAL SNAPSHOT - OI
 No data available
 
 ################################################################################
-🚨 SELL #23: OLN | Score: 80/110
+🚨 SELL #18: PSN | Score: 80/110
 ################################################################################
 Phase: 4 | 🚨 Severity: CRITICAL
-Breakdown: $22.03
-🔴 RS: -2.216
+Breakdown: $53.62
+🔴 RS: -2.053
 
 Sell Reasons:
   • In Phase 4 (Downtrend)
-  • Broke below 50 SMA by 13.9%
-  • 50 SMA declining (slope: -0.5437)
+  • Broke below 50 SMA by 10.2%
+  • 50 SMA declining (slope: -0.0569)
   • Low volume breakdown: 0.0x
-  • Sharp RS decline: -2.22
-FUNDAMENTAL SNAPSHOT - OLN
+  • Sharp RS decline: -2.05
+FUNDAMENTAL SNAPSHOT - PSN
 No data available
 
 ################################################################################
-🚨 SELL #24: PZZA | Score: 80/110
+🚨 SELL #19: PZZA | Score: 80/110
 ################################################################################
 Phase: 4 | 🚨 Severity: CRITICAL
-Breakdown: $32.35
-🔴 RS: -2.605
+Breakdown: $32.03
+🔴 RS: -2.537
 
 Sell Reasons:
   • In Phase 4 (Downtrend)
-  • Broke below 50 SMA by 24.9%
-  • 50 SMA declining (slope: -0.1912)
+  • Broke below 50 SMA by 22.6%
+  • 50 SMA declining (slope: -0.2396)
   • Low volume breakdown: 0.1x
-  • Sharp RS decline: -2.60
+  • Sharp RS decline: -2.54
 FUNDAMENTAL SNAPSHOT - PZZA
 No data available
 
 ################################################################################
-🚨 SELL #25: RBLX | Score: 80/110
+🚨 SELL #20: RBLX | Score: 80/110
 ################################################################################
 Phase: 4 | 🚨 Severity: CRITICAL
-Breakdown: $47.38
-🔴 RS: -3.195
+Breakdown: $47.20
+🔴 RS: -3.152
 
 Sell Reasons:
   • In Phase 4 (Downtrend)
-  • Broke below 50 SMA by 24.3%
-  • 50 SMA declining (slope: -0.0485)
+  • Broke below 50 SMA by 23.1%
+  • 50 SMA declining (slope: -0.1027)
   • Low volume breakdown: 0.1x
-  • Sharp RS decline: -3.19
+  • Sharp RS decline: -3.15
 FUNDAMENTAL SNAPSHOT - RBLX
 No data available
 
 ################################################################################
-🔴 SELL #26: AGCO | Score: 77/110
+🔴 SELL #21: AGCO | Score: 77/110
 ################################################################################
 Phase: 4 | 🔴 Severity: HIGH
-Breakdown: $113.48
-🔴 RS: -1.723
+Breakdown: $113.09
+🔴 RS: -1.935
 
 Sell Reasons:
   • In Phase 4 (Downtrend)
-  • Broke below 50 SMA by 10.6%
-  • 50 SMA declining (slope: -0.0654)
-  • Low volume breakdown: 0.5x
-  • RS declining: -1.72
+  • Broke below 50 SMA by 10.2%
+  • 50 SMA declining (slope: -0.0748)
+  • Low volume breakdown: 0.9x
+  • RS declining: -1.93
 FUNDAMENTAL SNAPSHOT - AGCO
 No data available
 
 ################################################################################
-🔴 SELL #27: GME | Score: 77/110
+🔴 SELL #22: CCOI | Score: 77/110
 ################################################################################
 Phase: 4 | 🔴 Severity: HIGH
-Breakdown: $21.39
-🔴 RS: -1.764
+Breakdown: $13.42
+🔴 RS: -1.985
 
 Sell Reasons:
   • In Phase 4 (Downtrend)
-  • Broke below 50 SMA by 13.3%
-  • 50 SMA declining (slope: -0.1539)
+  • Broke below 50 SMA by 23.6%
+  • 50 SMA declining (slope: -0.6967)
+  • Low volume breakdown: 1.0x
+  • RS declining: -1.99
+FUNDAMENTAL SNAPSHOT - CCOI
+No data available
+
+################################################################################
+🔴 SELL #23: CMRE | Score: 77/110
+################################################################################
+Phase: 4 | 🔴 Severity: HIGH
+Breakdown: $15.08
+🔴 RS: -1.221
+
+Sell Reasons:
+  • In Phase 4 (Downtrend)
+  • Broke below 50 SMA by 6.1%
+  • 50 SMA declining (slope: -0.2045)
+  • Low volume breakdown: 0.9x
+  • RS declining: -1.22
+FUNDAMENTAL SNAPSHOT - CMRE
+No data available
+
+################################################################################
+🔴 SELL #24: CTRI | Score: 77/110
+################################################################################
+Phase: 4 | 🔴 Severity: HIGH
+Breakdown: $27.94
+🔴 RS: -1.859
+
+Sell Reasons:
+  • In Phase 4 (Downtrend)
+  • Broke below 50 SMA by 14.9%
+  • 50 SMA declining (slope: -0.4208)
+  • Low volume breakdown: 0.6x
+  • RS declining: -1.86
+FUNDAMENTAL SNAPSHOT - CTRI
+No data available
+
+################################################################################
+🔴 SELL #25: GME | Score: 77/110
+################################################################################
+Phase: 4 | 🔴 Severity: HIGH
+Breakdown: $21.34
+🔴 RS: -1.855
+
+Sell Reasons:
+  • In Phase 4 (Downtrend)
+  • Broke below 50 SMA by 14.0%
+  • 50 SMA declining (slope: -0.1589)
   • Low volume breakdown: 0.1x
-  • RS declining: -1.76
+  • RS declining: -1.86
 FUNDAMENTAL SNAPSHOT - GME
 No data available
 
 ################################################################################
-🔴 SELL #28: HE | Score: 77/110
+🔴 SELL #26: HE | Score: 77/110
 ################################################################################
 Phase: 4 | 🔴 Severity: HIGH
-Breakdown: $13.20
-🔴 RS: -1.432
+Breakdown: $13.17
+🔴 RS: -1.380
 
 Sell Reasons:
   • In Phase 4 (Downtrend)
-  • Broke below 50 SMA by 8.8%
-  • 50 SMA declining (slope: -0.1441)
+  • Broke below 50 SMA by 8.6%
+  • 50 SMA declining (slope: -0.1211)
   • Low volume breakdown: 0.0x
-  • RS declining: -1.43
+  • RS declining: -1.38
 FUNDAMENTAL SNAPSHOT - HE
 No data available
 
 ################################################################################
-🔴 SELL #29: HLI | Score: 77/110
+🔴 SELL #27: HLI | Score: 77/110
 ################################################################################
 Phase: 4 | 🔴 Severity: HIGH
-Breakdown: $136.91
-🔴 RS: -1.449
+Breakdown: $136.39
+🔴 RS: -1.503
 
 Sell Reasons:
   • In Phase 4 (Downtrend)
-  • Broke below 50 SMA by 8.0%
-  • 50 SMA declining (slope: -0.2167)
+  • Broke below 50 SMA by 9.4%
+  • 50 SMA declining (slope: -0.2266)
   • Low volume breakdown: 0.0x
-  • RS declining: -1.45
+  • RS declining: -1.50
 FUNDAMENTAL SNAPSHOT - HLI
 No data available
 
 ################################################################################
-🔴 SELL #30: IMXI | Score: 77/110
+🔴 SELL #28: IMXI | Score: 77/110
 ################################################################################
 Phase: 4 | 🔴 Severity: HIGH
-Breakdown: $13.90
-🔴 RS: -1.429
+Breakdown: $13.75
+🔴 RS: -1.490
 
 Sell Reasons:
   • In Phase 4 (Downtrend)
-  • Broke below 50 SMA by 16.6%
-  • 50 SMA declining (slope: -0.3805)
+  • Broke below 50 SMA by 17.4%
+  • 50 SMA declining (slope: -0.3856)
   • Low volume breakdown: 0.0x
-  • RS declining: -1.43
+  • RS declining: -1.49
 FUNDAMENTAL SNAPSHOT - IMXI
 No data available
 
+################################################################################
+🔴 SELL #29: LMND | Score: 77/110
+################################################################################
+Phase: 4 | 🔴 Severity: HIGH
+Breakdown: $59.90
+🔴 RS: -1.253
+
+Sell Reasons:
+  • In Phase 4 (Downtrend)
+  • Broke below 50 SMA by 12.5%
+  • 50 SMA declining (slope: -0.0218)
+  • Low volume breakdown: 0.0x
+  • RS declining: -1.25
+FUNDAMENTAL SNAPSHOT - LMND
+No data available
+
+################################################################################
+🔴 SELL #30: MBI | Score: 77/110
+################################################################################
+Phase: 4 | 🔴 Severity: HIGH
+Breakdown: $5.97
+🔴 RS: -1.257
+
+Sell Reasons:
+  • In Phase 4 (Downtrend)
+  • Broke below 50 SMA by 15.9%
+  • 50 SMA declining (slope: -0.2086)
+  • Low volume breakdown: 0.0x
+  • RS declining: -1.26
+FUNDAMENTAL SNAPSHOT - MBI
+No data available
+
 ================================================================================
-ADDITIONAL SELLS (156 more)
+ADDITIONAL SELLS (142 more)
 ================================================================================
 
-METC, NRG, PFSI, POST, PPC, SNWV, TWI, VERA, VFC, WD
-WMG, WSO, AA, ACI, FLO, HDB, LAND, MMS, PLAY, ROL
-SITE, SMPL, UAMY, VERX, WBTN, WVE, AGO, CCOI, DFH, OFIX
-SRE, ALHC, AMT, ATO, BBWI, CELC, CELH, ESAB, EYPT, FICO
-GLSI, HNRG, KEP, LHX, LKQ, LOPE, LVS, LZ, MLM, NCDL
-NKE, NMRK, PANL, PEG, PEP, PSN, SUI, SYM, TKC, TMUS
-TSLA, TSN, VICI, WING, XP, YUM, ZTS, DRVN, GBX, GT
-GXO, HWKN, IIIV, JBTM, LMND, MQ, NHI, ONT, OPFI, PAL
-PLNT, PODD, RDDT, SGI, STNE, TGS, YELP, AMSC, ARRY, AZO
-BWXT, CCI, CE, COST, CPNG, CWEN, DERM, ECHO, FPI, INSE
-IONS, JOBY, LEN, MCD, META, PAM, PATK, PPL, PRIM, PUK
-RAIL, RCI, REFI, SPH, STUB, STZ, TGLS, TXNM, UPWK, VNDA
-ZUMZ, EVCM, HDSN, VITL, VRSK, VST, XRAY, ALB, ASTS, BIPC
-CMG, CPS, CRCL, CWH, EH, FAC, FLGT, FNF, IBM, IPX
-KRUS, MBLY, NNE, NVA, OKLO, PCT, RDY, SBAC, SBGI, SHOE
-SNN, TKO, VTVT, WLK, Z, ZG
+MMS, NRG, NYT, OLN, POST, VERA, VFC, WD, WMG, WSO
+AMSF, ASLE, ATO, CE, CELH, ERII, ESAB, FLO, HDB, HWKN
+KEP, MLM, NKE, ROL, SITE, TKC, WVE, PFSI, PPC, SRE
+ACI, ALHC, AZO, GLSI, JBTM, LAND, LBRT, LKQ, LOPE, LVS
+LZ, METC, OPFI, PEG, SMPL, SNDX, TSLA, UAMY, VTVT, WING
+XP, XPOF, ZTS, AGO, DFH, DRVN, GBX, GT, IIIV, INSE
+LEG, ONT, PAL, PAM, PLNT, PODD, PUK, RAIL, RDDT, SGI
+STNE, TGS, TWI, VST, YELP, AMT, ARRY, BL, BWXT, CCI
+CPRT, CPS, CRC, ECHO, GLXY, IONS, JOBY, KE, LEN, LHX
+LIF, META, MLYS, PEP, PLAY, PRIM, REFI, SBAC, SLVM, SNWV
+SPH, STUB, SUI, SYM, TGLS, TMUS, TSN, VICI, VNDA, VTS
+WBTN, EVCM, FCN, GXO, HDSN, NHI, OFIX, VRSK, ALB, AMSC
+CPNG, CWH, EH, EVLV, FAC, FLGT, FLY, GPGI, GSIT, HNRG
+IBM, IPX, LNN, MBLY, NVA, OKLO, PCT, REZI, SARO, TDG
+TTI, UPWK
 
 
 ================================================================================
