@@ -1,16 +1,16 @@
 {
-  "scan_date": "2026-11-25",
-  "generated_at": "2026-11-25 22:17:20",
+  "scan_date": "2026-11-26",
+  "generated_at": "2026-11-26 22:01:25",
   "universe": "All US stocks",
   "stats": {
     "total_processed": 3737,
-    "total_analyzed": 1976,
+    "total_analyzed": 1977,
     "fundamentals_unavailable": 13,
-    "processing_time_seconds": 3736.905816555023,
-    "actual_tps": 1.0000252035907782,
+    "processing_time_seconds": 3737.093984603882,
+    "actual_tps": 0.9999748508856697,
     "error_rate": 0.0,
     "buy_count": 387,
-    "sell_count": 557
+    "sell_count": 558
   },
   "market": {
     "spy_phase": "Base Building",
@@ -71,7 +71,7 @@
     },
     {
       "ticker": "REGN",
-      "score": 111.5,
+      "score": 111.2,
       "phase": 2,
       "current_price": 981.87,
       "stop_loss": 911.75,
@@ -84,7 +84,7 @@
     },
     {
       "ticker": "SMP",
-      "score": 111.2,
+      "score": 111.0,
       "phase": 2,
       "current_price": 44.61,
       "stop_loss": 42.85,
@@ -196,7 +196,7 @@
       "risk_reward_ratio": 3.12,
       "entry_quality": "Good",
       "breakout_price": null,
-      "rs_slope": 0.588,
+      "rs_slope": 0.589,
       "volume_ratio": null
     },
     {
@@ -214,7 +214,7 @@
     },
     {
       "ticker": "QNST",
-      "score": 105.6,
+      "score": 105.7,
       "phase": 2,
       "current_price": 18.53,
       "stop_loss": 17.81,
@@ -223,19 +223,6 @@
       "entry_quality": "Good",
       "breakout_price": null,
       "rs_slope": 0.473,
-      "volume_ratio": null
-    },
-    {
-      "ticker": "COST",
-      "score": 105.5,
-      "phase": 2,
-      "current_price": 1086.81,
-      "stop_loss": 1048.29,
-      "target_price": 1412.85,
-      "risk_reward_ratio": 8.46,
-      "entry_quality": "Good",
-      "breakout_price": null,
-      "rs_slope": 0.904,
       "volume_ratio": null
     },
     {
@@ -248,7 +235,20 @@
       "risk_reward_ratio": 10.0,
       "entry_quality": "Good",
       "breakout_price": 80.55,
-      "rs_slope": -0.061,
+      "rs_slope": -0.06,
+      "volume_ratio": null
+    },
+    {
+      "ticker": "COST",
+      "score": 105.3,
+      "phase": 2,
+      "current_price": 1086.81,
+      "stop_loss": 1048.29,
+      "target_price": 1412.85,
+      "risk_reward_ratio": 8.46,
+      "entry_quality": "Good",
+      "breakout_price": null,
+      "rs_slope": 0.904,
       "volume_ratio": null
     },
     {
@@ -287,7 +287,7 @@
       "risk_reward_ratio": 4.08,
       "entry_quality": "Good",
       "breakout_price": null,
-      "rs_slope": 0.577,
+      "rs_slope": 0.578,
       "volume_ratio": null
     },
     {
@@ -330,6 +330,19 @@
       "volume_ratio": null
     },
     {
+      "ticker": "SBUX",
+      "score": 103.5,
+      "phase": 2,
+      "current_price": 107.74,
+      "stop_loss": 102.17,
+      "target_price": 140.06,
+      "risk_reward_ratio": 5.8,
+      "entry_quality": "Good",
+      "breakout_price": null,
+      "rs_slope": 0.452,
+      "volume_ratio": null
+    },
+    {
       "ticker": "SONO",
       "score": 103.5,
       "phase": 2,
@@ -339,20 +352,7 @@
       "risk_reward_ratio": 10.0,
       "entry_quality": "Good",
       "breakout_price": null,
-      "rs_slope": 0.806,
-      "volume_ratio": null
-    },
-    {
-      "ticker": "SBUX",
-      "score": 103.4,
-      "phase": 2,
-      "current_price": 107.74,
-      "stop_loss": 102.17,
-      "target_price": 140.06,
-      "risk_reward_ratio": 5.8,
-      "entry_quality": "Good",
-      "breakout_price": null,
-      "rs_slope": 0.452,
+      "rs_slope": 0.807,
       "volume_ratio": null
     },
     {
@@ -409,7 +409,7 @@
     },
     {
       "ticker": "ASND",
-      "score": 102.2,
+      "score": 102.3,
       "phase": 2,
       "current_price": 276.8,
       "stop_loss": 250.3,
@@ -417,7 +417,7 @@
       "risk_reward_ratio": 3.13,
       "entry_quality": "Good",
       "breakout_price": null,
-      "rs_slope": 0.792,
+      "rs_slope": 0.793,
       "volume_ratio": null
     },
     {
@@ -434,21 +434,8 @@
       "volume_ratio": null
     },
     {
-      "ticker": "KO",
-      "score": 101.9,
-      "phase": 2,
-      "current_price": 97.59,
-      "stop_loss": 94.13,
-      "target_price": 126.87,
-      "risk_reward_ratio": 8.45,
-      "entry_quality": "Good",
-      "breakout_price": 89.36,
-      "rs_slope": 0.559,
-      "volume_ratio": null
-    },
-    {
       "ticker": "CHE",
-      "score": 101.8,
+      "score": 101.6,
       "phase": 2,
       "current_price": 563.09,
       "stop_loss": 533.83,
@@ -457,6 +444,19 @@
       "entry_quality": "Good",
       "breakout_price": null,
       "rs_slope": 0.612,
+      "volume_ratio": null
+    },
+    {
+      "ticker": "KO",
+      "score": 101.6,
+      "phase": 2,
+      "current_price": 97.59,
+      "stop_loss": 94.13,
+      "target_price": 126.87,
+      "risk_reward_ratio": 8.45,
+      "entry_quality": "Good",
+      "breakout_price": 89.36,
+      "rs_slope": 0.56,
       "volume_ratio": null
     },
     {
@@ -482,7 +482,7 @@
       "risk_reward_ratio": 8.37,
       "entry_quality": "Good",
       "breakout_price": null,
-      "rs_slope": 0.198,
+      "rs_slope": 0.199,
       "volume_ratio": null
     },
     {
@@ -508,12 +508,12 @@
       "risk_reward_ratio": 7.97,
       "entry_quality": "Good",
       "breakout_price": null,
-      "rs_slope": 0.733,
+      "rs_slope": 0.734,
       "volume_ratio": null
     },
     {
       "ticker": "MSGE",
-      "score": 100.0,
+      "score": 99.9,
       "phase": 2,
       "current_price": 83.3,
       "stop_loss": 78.9,
@@ -534,7 +534,20 @@
       "risk_reward_ratio": 8.87,
       "entry_quality": "Good",
       "breakout_price": null,
-      "rs_slope": 0.29,
+      "rs_slope": 0.291,
+      "volume_ratio": null
+    },
+    {
+      "ticker": "HMC",
+      "score": 99.8,
+      "phase": 2,
+      "current_price": 33.66,
+      "stop_loss": 32.65,
+      "target_price": 43.76,
+      "risk_reward_ratio": 10.0,
+      "entry_quality": "Good",
+      "breakout_price": 33.41,
+      "rs_slope": 0.096,
       "volume_ratio": null
     },
     {
@@ -548,19 +561,6 @@
       "entry_quality": "Good",
       "breakout_price": null,
       "rs_slope": 0.474,
-      "volume_ratio": null
-    },
-    {
-      "ticker": "HMC",
-      "score": 99.6,
-      "phase": 2,
-      "current_price": 33.66,
-      "stop_loss": 32.65,
-      "target_price": 43.76,
-      "risk_reward_ratio": 10.0,
-      "entry_quality": "Good",
-      "breakout_price": 33.41,
-      "rs_slope": 0.096,
       "volume_ratio": null
     },
     {
@@ -590,6 +590,32 @@
       "volume_ratio": null
     },
     {
+      "ticker": "MAS",
+      "score": 99.1,
+      "phase": 2,
+      "current_price": 86.93,
+      "stop_loss": 81.73,
+      "target_price": 113.01,
+      "risk_reward_ratio": 5.01,
+      "entry_quality": "Good",
+      "breakout_price": null,
+      "rs_slope": 0.563,
+      "volume_ratio": null
+    },
+    {
+      "ticker": "CHD",
+      "score": 98.7,
+      "phase": 2,
+      "current_price": 113.31,
+      "stop_loss": 108.17,
+      "target_price": 147.3,
+      "risk_reward_ratio": 6.61,
+      "entry_quality": "Good",
+      "breakout_price": null,
+      "rs_slope": 0.572,
+      "volume_ratio": null
+    },
+    {
       "ticker": "KDP",
       "score": 98.7,
       "phase": 2,
@@ -603,32 +629,6 @@
       "volume_ratio": null
     },
     {
-      "ticker": "MAS",
-      "score": 98.7,
-      "phase": 2,
-      "current_price": 86.93,
-      "stop_loss": 81.73,
-      "target_price": 113.01,
-      "risk_reward_ratio": 5.01,
-      "entry_quality": "Good",
-      "breakout_price": null,
-      "rs_slope": 0.563,
-      "volume_ratio": null
-    },
-    {
-      "ticker": "CHD",
-      "score": 98.6,
-      "phase": 2,
-      "current_price": 113.31,
-      "stop_loss": 108.17,
-      "target_price": 147.3,
-      "risk_reward_ratio": 6.61,
-      "entry_quality": "Good",
-      "breakout_price": null,
-      "rs_slope": 0.571,
-      "volume_ratio": null
-    },
-    {
       "ticker": "LTH",
       "score": 98.6,
       "phase": 2,
@@ -638,7 +638,7 @@
       "risk_reward_ratio": 3.8,
       "entry_quality": "Good",
       "breakout_price": null,
-      "rs_slope": 0.613,
+      "rs_slope": 0.614,
       "volume_ratio": null
     },
     {
@@ -694,19 +694,6 @@
       "volume_ratio": null
     },
     {
-      "ticker": "ABBV",
-      "score": 97.9,
-      "phase": 2,
-      "current_price": 294.48,
-      "stop_loss": 278.48,
-      "target_price": 382.82,
-      "risk_reward_ratio": 5.52,
-      "entry_quality": "Good",
-      "breakout_price": null,
-      "rs_slope": 0.375,
-      "volume_ratio": null
-    },
-    {
       "ticker": "AWK",
       "score": 97.8,
       "phase": 2,
@@ -717,6 +704,19 @@
       "entry_quality": "Good",
       "breakout_price": null,
       "rs_slope": 0.561,
+      "volume_ratio": null
+    },
+    {
+      "ticker": "ABBV",
+      "score": 97.7,
+      "phase": 2,
+      "current_price": 294.48,
+      "stop_loss": 278.48,
+      "target_price": 382.82,
+      "risk_reward_ratio": 5.52,
+      "entry_quality": "Good",
+      "breakout_price": null,
+      "rs_slope": 0.375,
       "volume_ratio": null
     },
     {
@@ -781,7 +781,7 @@
       "risk_reward_ratio": 3.23,
       "entry_quality": "Good",
       "breakout_price": null,
-      "rs_slope": 0.828,
+      "rs_slope": 0.829,
       "volume_ratio": null
     },
     {
@@ -802,25 +802,12 @@
       "score": 96.6,
       "phase": 2,
       "current_price": 127.92,
-      "stop_loss": 123.1,
+      "stop_loss": 122.71,
       "target_price": 166.3,
-      "risk_reward_ratio": 7.96,
+      "risk_reward_ratio": 7.37,
       "entry_quality": "Good",
       "breakout_price": null,
       "rs_slope": 0.362,
-      "volume_ratio": null
-    },
-    {
-      "ticker": "BHC",
-      "score": 96.5,
-      "phase": 2,
-      "current_price": 8.52,
-      "stop_loss": 8.08,
-      "target_price": 11.08,
-      "risk_reward_ratio": 5.8,
-      "entry_quality": "Good",
-      "breakout_price": null,
-      "rs_slope": 0.522,
       "volume_ratio": null
     },
     {
@@ -834,6 +821,19 @@
       "entry_quality": "Good",
       "breakout_price": null,
       "rs_slope": 0.427,
+      "volume_ratio": null
+    },
+    {
+      "ticker": "BHC",
+      "score": 96.4,
+      "phase": 2,
+      "current_price": 8.52,
+      "stop_loss": 8.08,
+      "target_price": 11.08,
+      "risk_reward_ratio": 5.8,
+      "entry_quality": "Good",
+      "breakout_price": null,
+      "rs_slope": 0.522,
       "volume_ratio": null
     },
     {
@@ -872,7 +872,7 @@
       "risk_reward_ratio": 10.0,
       "entry_quality": "Good",
       "breakout_price": null,
-      "rs_slope": 0.823,
+      "rs_slope": 0.824,
       "volume_ratio": null
     },
     {
@@ -911,7 +911,7 @@
       "risk_reward_ratio": 7.9,
       "entry_quality": "Good",
       "breakout_price": 120.58,
-      "rs_slope": 0.168,
+      "rs_slope": 0.169,
       "volume_ratio": null
     },
     {
@@ -941,6 +941,19 @@
       "volume_ratio": null
     },
     {
+      "ticker": "CARS",
+      "score": 95.9,
+      "phase": 2,
+      "current_price": 12.7,
+      "stop_loss": 11.91,
+      "target_price": 16.51,
+      "risk_reward_ratio": 4.82,
+      "entry_quality": "Good",
+      "breakout_price": null,
+      "rs_slope": 0.618,
+      "volume_ratio": null
+    },
+    {
       "ticker": "IDXX",
       "score": 95.9,
       "phase": 2,
@@ -954,32 +967,6 @@
       "volume_ratio": null
     },
     {
-      "ticker": "LLY",
-      "score": 95.9,
-      "phase": 2,
-      "current_price": 1392.22,
-      "stop_loss": 1334.75,
-      "target_price": 1809.89,
-      "risk_reward_ratio": 7.27,
-      "entry_quality": "Good",
-      "breakout_price": null,
-      "rs_slope": 0.3,
-      "volume_ratio": null
-    },
-    {
-      "ticker": "CARS",
-      "score": 95.8,
-      "phase": 2,
-      "current_price": 12.7,
-      "stop_loss": 11.91,
-      "target_price": 16.51,
-      "risk_reward_ratio": 4.82,
-      "entry_quality": "Good",
-      "breakout_price": null,
-      "rs_slope": 0.618,
-      "volume_ratio": null
-    },
-    {
       "ticker": "CB",
       "score": 95.8,
       "phase": 2,
@@ -990,6 +977,19 @@
       "entry_quality": "Good",
       "breakout_price": 364.86,
       "rs_slope": 0.516,
+      "volume_ratio": null
+    },
+    {
+      "ticker": "LLY",
+      "score": 95.8,
+      "phase": 2,
+      "current_price": 1392.22,
+      "stop_loss": 1334.75,
+      "target_price": 1809.89,
+      "risk_reward_ratio": 7.27,
+      "entry_quality": "Good",
+      "breakout_price": null,
+      "rs_slope": 0.3,
       "volume_ratio": null
     },
     {
@@ -1015,7 +1015,7 @@
       "risk_reward_ratio": 9.15,
       "entry_quality": "Good",
       "breakout_price": null,
-      "rs_slope": 0.52,
+      "rs_slope": 0.521,
       "volume_ratio": null
     },
     {
@@ -1036,9 +1036,9 @@
       "score": 95.5,
       "phase": 2,
       "current_price": 103.15,
-      "stop_loss": 98.84,
+      "stop_loss": 98.74,
       "target_price": 134.1,
-      "risk_reward_ratio": 7.19,
+      "risk_reward_ratio": 7.02,
       "entry_quality": "Good",
       "breakout_price": null,
       "rs_slope": 1.236,
@@ -1124,7 +1124,7 @@
     },
     {
       "ticker": "MMM",
-      "score": 94.5,
+      "score": 94.6,
       "phase": 2,
       "current_price": 189.83,
       "stop_loss": 176.18,
@@ -1158,7 +1158,7 @@
       "risk_reward_ratio": 3.0,
       "entry_quality": "Good",
       "breakout_price": null,
-      "rs_slope": 1.205,
+      "rs_slope": 1.206,
       "volume_ratio": null
     },
     {
@@ -1189,7 +1189,7 @@
     },
     {
       "ticker": "CSX",
-      "score": 93.8,
+      "score": 93.9,
       "phase": 2,
       "current_price": 51.16,
       "stop_loss": 48.78,
@@ -1198,6 +1198,19 @@
       "entry_quality": "Good",
       "breakout_price": null,
       "rs_slope": 0.228,
+      "volume_ratio": null
+    },
+    {
+      "ticker": "MANH",
+      "score": 93.9,
+      "phase": 2,
+      "current_price": 251.97,
+      "stop_loss": 241.4,
+      "target_price": 327.56,
+      "risk_reward_ratio": 7.15,
+      "entry_quality": "Good",
+      "breakout_price": null,
+      "rs_slope": 0.285,
       "volume_ratio": null
     },
     {
@@ -1223,7 +1236,7 @@
       "risk_reward_ratio": 5.37,
       "entry_quality": "Good",
       "breakout_price": null,
-      "rs_slope": 0.506,
+      "rs_slope": 0.507,
       "volume_ratio": null
     },
     {
@@ -1253,19 +1266,6 @@
       "volume_ratio": null
     },
     {
-      "ticker": "MANH",
-      "score": 93.6,
-      "phase": 2,
-      "current_price": 251.97,
-      "stop_loss": 241.4,
-      "target_price": 327.56,
-      "risk_reward_ratio": 7.15,
-      "entry_quality": "Good",
-      "breakout_price": null,
-      "rs_slope": 0.285,
-      "volume_ratio": null
-    },
-    {
       "ticker": "AIG",
       "score": 93.5,
       "phase": 2,
@@ -1275,7 +1275,7 @@
       "risk_reward_ratio": 7.51,
       "entry_quality": "Good",
       "breakout_price": null,
-      "rs_slope": 0.347,
+      "rs_slope": 0.348,
       "volume_ratio": null
     },
     {
@@ -1288,7 +1288,7 @@
       "risk_reward_ratio": 3.48,
       "entry_quality": "Good",
       "breakout_price": null,
-      "rs_slope": -0.344,
+      "rs_slope": -0.343,
       "volume_ratio": null
     },
     {
@@ -1305,6 +1305,19 @@
       "volume_ratio": null
     },
     {
+      "ticker": "PKG",
+      "score": 93.3,
+      "phase": 2,
+      "current_price": 246.87,
+      "stop_loss": 238.94,
+      "target_price": 320.93,
+      "risk_reward_ratio": 9.34,
+      "entry_quality": "Good",
+      "breakout_price": 242.63,
+      "rs_slope": -0.048,
+      "volume_ratio": null
+    },
+    {
       "ticker": "GKOS",
       "score": 93.2,
       "phase": 2,
@@ -1314,7 +1327,20 @@
       "risk_reward_ratio": 3.0,
       "entry_quality": "Good",
       "breakout_price": null,
-      "rs_slope": 0.714,
+      "rs_slope": 0.715,
+      "volume_ratio": null
+    },
+    {
+      "ticker": "LEGH",
+      "score": 93.2,
+      "phase": 2,
+      "current_price": 29.37,
+      "stop_loss": 28.34,
+      "target_price": 38.18,
+      "risk_reward_ratio": 8.59,
+      "entry_quality": "Extended",
+      "breakout_price": null,
+      "rs_slope": -0.093,
       "volume_ratio": null
     },
     {
@@ -1327,33 +1353,7 @@
       "risk_reward_ratio": 5.18,
       "entry_quality": "Good",
       "breakout_price": null,
-      "rs_slope": 1.068,
-      "volume_ratio": null
-    },
-    {
-      "ticker": "LEGH",
-      "score": 93.1,
-      "phase": 2,
-      "current_price": 29.37,
-      "stop_loss": 28.34,
-      "target_price": 38.18,
-      "risk_reward_ratio": 8.59,
-      "entry_quality": "Extended",
-      "breakout_price": null,
-      "rs_slope": -0.093,
-      "volume_ratio": null
-    },
-    {
-      "ticker": "AXGN",
-      "score": 93.0,
-      "phase": 2,
-      "current_price": 59.33,
-      "stop_loss": 53.6,
-      "target_price": 77.14,
-      "risk_reward_ratio": 3.1,
-      "entry_quality": "Good",
-      "breakout_price": null,
-      "rs_slope": 1.456,
+      "rs_slope": 1.069,
       "volume_ratio": null
     },
     {
@@ -1366,7 +1366,7 @@
       "risk_reward_ratio": 4.11,
       "entry_quality": "Good",
       "breakout_price": null,
-      "rs_slope": 0.547,
+      "rs_slope": 0.548,
       "volume_ratio": null
     },
     {
@@ -1405,7 +1405,7 @@
       "risk_reward_ratio": 3.65,
       "entry_quality": "Good",
       "breakout_price": null,
-      "rs_slope": 1.777,
+      "rs_slope": 1.778,
       "volume_ratio": null
     },
     {
@@ -1422,16 +1422,16 @@
       "volume_ratio": null
     },
     {
-      "ticker": "PKG",
-      "score": 92.8,
+      "ticker": "AXGN",
+      "score": 92.7,
       "phase": 2,
-      "current_price": 246.87,
-      "stop_loss": 238.94,
-      "target_price": 320.93,
-      "risk_reward_ratio": 9.34,
+      "current_price": 59.34,
+      "stop_loss": 53.6,
+      "target_price": 77.14,
+      "risk_reward_ratio": 3.1,
       "entry_quality": "Good",
-      "breakout_price": 242.63,
-      "rs_slope": -0.048,
+      "breakout_price": null,
+      "rs_slope": 1.456,
       "volume_ratio": null
     },
     {
@@ -1474,6 +1474,19 @@
       "volume_ratio": null
     },
     {
+      "ticker": "WAB",
+      "score": 92.5,
+      "phase": 2,
+      "current_price": 287.59,
+      "stop_loss": 278.96,
+      "target_price": 373.87,
+      "risk_reward_ratio": 10.0,
+      "entry_quality": "Good",
+      "breakout_price": 286.54,
+      "rs_slope": 0.28,
+      "volume_ratio": null
+    },
+    {
       "ticker": "PUBM",
       "score": 92.4,
       "phase": 2,
@@ -1484,19 +1497,6 @@
       "entry_quality": "Good",
       "breakout_price": null,
       "rs_slope": 1.658,
-      "volume_ratio": null
-    },
-    {
-      "ticker": "WAB",
-      "score": 92.3,
-      "phase": 2,
-      "current_price": 287.59,
-      "stop_loss": 278.96,
-      "target_price": 373.87,
-      "risk_reward_ratio": 10.0,
-      "entry_quality": "Good",
-      "breakout_price": 286.54,
-      "rs_slope": 0.28,
       "volume_ratio": null
     },
     {
@@ -1561,7 +1561,7 @@
       "risk_reward_ratio": 7.81,
       "entry_quality": "Good",
       "breakout_price": null,
-      "rs_slope": 0.307,
+      "rs_slope": 0.308,
       "volume_ratio": null
     },
     {
@@ -1574,7 +1574,7 @@
       "risk_reward_ratio": 5.77,
       "entry_quality": "Good",
       "breakout_price": null,
-      "rs_slope": 0.555,
+      "rs_slope": 0.556,
       "volume_ratio": null
     },
     {
@@ -1587,7 +1587,20 @@
       "risk_reward_ratio": 3.05,
       "entry_quality": "Good",
       "breakout_price": null,
-      "rs_slope": 0.792,
+      "rs_slope": 0.793,
+      "volume_ratio": null
+    },
+    {
+      "ticker": "CNK",
+      "score": 91.2,
+      "phase": 2,
+      "current_price": 39.41,
+      "stop_loss": 38.01,
+      "target_price": 51.23,
+      "risk_reward_ratio": 8.42,
+      "entry_quality": "Good",
+      "breakout_price": null,
+      "rs_slope": 0.363,
       "volume_ratio": null
     },
     {
@@ -1604,16 +1617,16 @@
       "volume_ratio": null
     },
     {
-      "ticker": "MCK",
+      "ticker": "SCL",
       "score": 91.1,
       "phase": 2,
-      "current_price": 1077.32,
-      "stop_loss": 1037.65,
-      "target_price": 1400.52,
-      "risk_reward_ratio": 8.15,
+      "current_price": 65.54,
+      "stop_loss": 63.57,
+      "target_price": 85.2,
+      "risk_reward_ratio": 10.0,
       "entry_quality": "Good",
       "breakout_price": null,
-      "rs_slope": 0.748,
+      "rs_slope": -0.08,
       "volume_ratio": null
     },
     {
@@ -1630,6 +1643,19 @@
       "volume_ratio": null
     },
     {
+      "ticker": "FWONK",
+      "score": 91.0,
+      "phase": 2,
+      "current_price": 107.16,
+      "stop_loss": 102.48,
+      "target_price": 139.31,
+      "risk_reward_ratio": 6.88,
+      "entry_quality": "Good",
+      "breakout_price": null,
+      "rs_slope": 0.975,
+      "volume_ratio": null
+    },
+    {
       "ticker": "EWTX",
       "score": 90.9,
       "phase": 2,
@@ -1643,19 +1669,6 @@
       "volume_ratio": null
     },
     {
-      "ticker": "FWONK",
-      "score": 90.9,
-      "phase": 2,
-      "current_price": 107.16,
-      "stop_loss": 102.48,
-      "target_price": 139.31,
-      "risk_reward_ratio": 6.88,
-      "entry_quality": "Good",
-      "breakout_price": null,
-      "rs_slope": 0.974,
-      "volume_ratio": null
-    },
-    {
       "ticker": "CUZ",
       "score": 90.8,
       "phase": 2,
@@ -1665,7 +1678,7 @@
       "risk_reward_ratio": 4.41,
       "entry_quality": "Good",
       "breakout_price": 28.1,
-      "rs_slope": 0.348,
+      "rs_slope": 0.349,
       "volume_ratio": null
     },
     {
@@ -1695,6 +1708,19 @@
       "volume_ratio": null
     },
     {
+      "ticker": "MCK",
+      "score": 90.8,
+      "phase": 2,
+      "current_price": 1077.32,
+      "stop_loss": 1037.65,
+      "target_price": 1400.52,
+      "risk_reward_ratio": 8.15,
+      "entry_quality": "Good",
+      "breakout_price": null,
+      "rs_slope": 0.748,
+      "volume_ratio": null
+    },
+    {
       "ticker": "TGT",
       "score": 90.7,
       "phase": 2,
@@ -1717,7 +1743,7 @@
       "risk_reward_ratio": 10.0,
       "entry_quality": "Good",
       "breakout_price": null,
-      "rs_slope": 0.458,
+      "rs_slope": 0.459,
       "volume_ratio": null
     },
     {
@@ -1731,19 +1757,6 @@
       "entry_quality": "Good",
       "breakout_price": 23.18,
       "rs_slope": 0.144,
-      "volume_ratio": null
-    },
-    {
-      "ticker": "GIC",
-      "score": 90.5,
-      "phase": 2,
-      "current_price": 44.11,
-      "stop_loss": 42.48,
-      "target_price": 57.34,
-      "risk_reward_ratio": 8.12,
-      "entry_quality": "Good",
-      "breakout_price": null,
-      "rs_slope": 0.396,
       "volume_ratio": null
     },
     {
@@ -1769,7 +1782,7 @@
       "risk_reward_ratio": 3.0,
       "entry_quality": "Good",
       "breakout_price": null,
-      "rs_slope": 0.775,
+      "rs_slope": 0.776,
       "volume_ratio": null
     },
     {
@@ -1799,16 +1812,16 @@
       "volume_ratio": null
     },
     {
-      "ticker": "CNK",
+      "ticker": "MGNI",
       "score": 90.2,
       "phase": 2,
-      "current_price": 39.41,
-      "stop_loss": 38.09,
-      "target_price": 51.23,
-      "risk_reward_ratio": 8.93,
+      "current_price": 26.44,
+      "stop_loss": 24.83,
+      "target_price": 34.37,
+      "risk_reward_ratio": 4.92,
       "entry_quality": "Good",
       "breakout_price": null,
-      "rs_slope": 0.36,
+      "rs_slope": 1.231,
       "volume_ratio": null
     },
     {
@@ -1838,16 +1851,16 @@
       "volume_ratio": null
     },
     {
-      "ticker": "MGNI",
+      "ticker": "PLUS",
       "score": 90.1,
       "phase": 2,
-      "current_price": 26.44,
-      "stop_loss": 24.83,
-      "target_price": 34.37,
-      "risk_reward_ratio": 4.92,
+      "current_price": 97.71,
+      "stop_loss": 92.3,
+      "target_price": 127.02,
+      "risk_reward_ratio": 5.42,
       "entry_quality": "Good",
-      "breakout_price": null,
-      "rs_slope": 1.231,
+      "breakout_price": 97.47,
+      "rs_slope": 0.716,
       "volume_ratio": null
     },
     {
@@ -1864,29 +1877,16 @@
       "volume_ratio": null
     },
     {
-      "ticker": "PLUS",
-      "score": 89.8,
+      "ticker": "GIC",
+      "score": 89.9,
       "phase": 2,
-      "current_price": 97.71,
-      "stop_loss": 92.3,
-      "target_price": 127.02,
-      "risk_reward_ratio": 5.42,
-      "entry_quality": "Good",
-      "breakout_price": 97.47,
-      "rs_slope": 0.716,
-      "volume_ratio": null
-    },
-    {
-      "ticker": "SCL",
-      "score": 89.8,
-      "phase": 2,
-      "current_price": 65.54,
-      "stop_loss": 63.57,
-      "target_price": 85.2,
-      "risk_reward_ratio": 10.0,
+      "current_price": 44.11,
+      "stop_loss": 42.48,
+      "target_price": 57.34,
+      "risk_reward_ratio": 8.12,
       "entry_quality": "Good",
       "breakout_price": null,
-      "rs_slope": -0.08,
+      "rs_slope": 0.396,
       "volume_ratio": null
     },
     {
@@ -1899,7 +1899,7 @@
       "risk_reward_ratio": 7.26,
       "entry_quality": "Good",
       "breakout_price": null,
-      "rs_slope": 0.548,
+      "rs_slope": 0.549,
       "volume_ratio": null
     },
     {
@@ -1912,7 +1912,7 @@
       "risk_reward_ratio": 6.58,
       "entry_quality": "Good",
       "breakout_price": null,
-      "rs_slope": 0.088,
+      "rs_slope": 0.089,
       "volume_ratio": null
     },
     {
@@ -1926,19 +1926,6 @@
       "entry_quality": "Good",
       "breakout_price": null,
       "rs_slope": 0.524,
-      "volume_ratio": null
-    },
-    {
-      "ticker": "GILD",
-      "score": 89.5,
-      "phase": 2,
-      "current_price": 176.74,
-      "stop_loss": 163.98,
-      "target_price": 229.76,
-      "risk_reward_ratio": 4.15,
-      "entry_quality": "Good",
-      "breakout_price": null,
-      "rs_slope": 0.485,
       "volume_ratio": null
     },
     {
@@ -1977,7 +1964,7 @@
       "risk_reward_ratio": 7.25,
       "entry_quality": "Good",
       "breakout_price": null,
-      "rs_slope": 0.093,
+      "rs_slope": 0.094,
       "volume_ratio": null
     },
     {
@@ -2020,6 +2007,19 @@
       "volume_ratio": null
     },
     {
+      "ticker": "GILD",
+      "score": 88.9,
+      "phase": 2,
+      "current_price": 176.74,
+      "stop_loss": 163.98,
+      "target_price": 229.76,
+      "risk_reward_ratio": 4.15,
+      "entry_quality": "Good",
+      "breakout_price": null,
+      "rs_slope": 0.485,
+      "volume_ratio": null
+    },
+    {
       "ticker": "FAST",
       "score": 88.7,
       "phase": 2,
@@ -2029,20 +2029,7 @@
       "risk_reward_ratio": 9.19,
       "entry_quality": "Good",
       "breakout_price": null,
-      "rs_slope": 0.36,
-      "volume_ratio": null
-    },
-    {
-      "ticker": "PTC",
-      "score": 88.7,
-      "phase": 2,
-      "current_price": 196.0,
-      "stop_loss": 190.12,
-      "target_price": 254.8,
-      "risk_reward_ratio": 10.0,
-      "entry_quality": "Good",
-      "breakout_price": null,
-      "rs_slope": 0.402,
+      "rs_slope": 0.361,
       "volume_ratio": null
     },
     {
@@ -2059,6 +2046,19 @@
       "volume_ratio": null
     },
     {
+      "ticker": "PTC",
+      "score": 88.6,
+      "phase": 2,
+      "current_price": 196.0,
+      "stop_loss": 190.12,
+      "target_price": 254.8,
+      "risk_reward_ratio": 10.0,
+      "entry_quality": "Good",
+      "breakout_price": null,
+      "rs_slope": 0.402,
+      "volume_ratio": null
+    },
+    {
       "ticker": "YEXT",
       "score": 88.6,
       "phase": 2,
@@ -2072,19 +2072,6 @@
       "volume_ratio": null
     },
     {
-      "ticker": "A",
-      "score": 88.5,
-      "phase": 2,
-      "current_price": 178.33,
-      "stop_loss": 171.04,
-      "target_price": 231.83,
-      "risk_reward_ratio": 7.34,
-      "entry_quality": "Good",
-      "breakout_price": null,
-      "rs_slope": 0.39,
-      "volume_ratio": null
-    },
-    {
       "ticker": "AIZ",
       "score": 88.5,
       "phase": 2,
@@ -2095,19 +2082,6 @@
       "entry_quality": "Good",
       "breakout_price": null,
       "rs_slope": 0.857,
-      "volume_ratio": null
-    },
-    {
-      "ticker": "JNJ",
-      "score": 88.5,
-      "phase": 2,
-      "current_price": 273.94,
-      "stop_loss": 263.88,
-      "target_price": 356.12,
-      "risk_reward_ratio": 8.17,
-      "entry_quality": "Good",
-      "breakout_price": 263.08,
-      "rs_slope": 0.382,
       "volume_ratio": null
     },
     {
@@ -2137,6 +2111,19 @@
       "volume_ratio": null
     },
     {
+      "ticker": "RSG",
+      "score": 88.3,
+      "phase": 2,
+      "current_price": 254.16,
+      "stop_loss": 242.59,
+      "target_price": 330.41,
+      "risk_reward_ratio": 6.59,
+      "entry_quality": "Good",
+      "breakout_price": null,
+      "rs_slope": 0.566,
+      "volume_ratio": null
+    },
+    {
       "ticker": "VFC",
       "score": 88.3,
       "phase": 2,
@@ -2150,16 +2137,42 @@
       "volume_ratio": null
     },
     {
-      "ticker": "RSG",
+      "ticker": "JNJ",
       "score": 88.2,
       "phase": 2,
-      "current_price": 254.16,
-      "stop_loss": 242.59,
-      "target_price": 330.41,
-      "risk_reward_ratio": 6.59,
+      "current_price": 273.94,
+      "stop_loss": 263.88,
+      "target_price": 356.12,
+      "risk_reward_ratio": 8.17,
+      "entry_quality": "Good",
+      "breakout_price": 263.08,
+      "rs_slope": 0.382,
+      "volume_ratio": null
+    },
+    {
+      "ticker": "A",
+      "score": 88.0,
+      "phase": 2,
+      "current_price": 178.44,
+      "stop_loss": 171.04,
+      "target_price": 231.97,
+      "risk_reward_ratio": 7.24,
       "entry_quality": "Good",
       "breakout_price": null,
-      "rs_slope": 0.566,
+      "rs_slope": 0.391,
+      "volume_ratio": null
+    },
+    {
+      "ticker": "GRNT",
+      "score": 88.0,
+      "phase": 2,
+      "current_price": 5.7,
+      "stop_loss": 5.38,
+      "target_price": 7.41,
+      "risk_reward_ratio": 5.31,
+      "entry_quality": "Good",
+      "breakout_price": null,
+      "rs_slope": 0.792,
       "volume_ratio": null
     },
     {
@@ -2173,19 +2186,6 @@
       "entry_quality": "Good",
       "breakout_price": null,
       "rs_slope": 0.34,
-      "volume_ratio": null
-    },
-    {
-      "ticker": "GRNT",
-      "score": 87.9,
-      "phase": 2,
-      "current_price": 5.7,
-      "stop_loss": 5.38,
-      "target_price": 7.41,
-      "risk_reward_ratio": 5.31,
-      "entry_quality": "Good",
-      "breakout_price": null,
-      "rs_slope": 0.792,
       "volume_ratio": null
     },
     {
@@ -2263,7 +2263,7 @@
       "risk_reward_ratio": 3.0,
       "entry_quality": "Extended",
       "breakout_price": null,
-      "rs_slope": 1.485,
+      "rs_slope": 1.486,
       "volume_ratio": null
     },
     {
@@ -2280,6 +2280,19 @@
       "volume_ratio": null
     },
     {
+      "ticker": "MSEX",
+      "score": 87.4,
+      "phase": 2,
+      "current_price": 58.22,
+      "stop_loss": 55.04,
+      "target_price": 75.69,
+      "risk_reward_ratio": 5.5,
+      "entry_quality": "Good",
+      "breakout_price": null,
+      "rs_slope": 0.337,
+      "volume_ratio": null
+    },
+    {
       "ticker": "RL",
       "score": 87.4,
       "phase": 2,
@@ -2289,7 +2302,7 @@
       "risk_reward_ratio": 4.2,
       "entry_quality": "Good",
       "breakout_price": null,
-      "rs_slope": 0.193,
+      "rs_slope": 0.194,
       "volume_ratio": null
     },
     {
@@ -2332,6 +2345,19 @@
       "volume_ratio": null
     },
     {
+      "ticker": "DIS",
+      "score": 87.1,
+      "phase": 2,
+      "current_price": 125.6,
+      "stop_loss": 115.55,
+      "target_price": 163.28,
+      "risk_reward_ratio": 3.75,
+      "entry_quality": "Good",
+      "breakout_price": null,
+      "rs_slope": 0.806,
+      "volume_ratio": null
+    },
+    {
       "ticker": "ADP",
       "score": 87.0,
       "phase": 2,
@@ -2345,8 +2371,21 @@
       "volume_ratio": null
     },
     {
+      "ticker": "ALRS",
+      "score": 86.8,
+      "phase": 2,
+      "current_price": 32.87,
+      "stop_loss": 31.88,
+      "target_price": 42.73,
+      "risk_reward_ratio": 10.0,
+      "entry_quality": "Good",
+      "breakout_price": null,
+      "rs_slope": 0.149,
+      "volume_ratio": null
+    },
+    {
       "ticker": "AMGN",
-      "score": 87.0,
+      "score": 86.8,
       "phase": 2,
       "current_price": 469.24,
       "stop_loss": 430.59,
@@ -2359,7 +2398,7 @@
     },
     {
       "ticker": "LH",
-      "score": 86.9,
+      "score": 86.8,
       "phase": 2,
       "current_price": 368.95,
       "stop_loss": 357.88,
@@ -2367,46 +2406,7 @@
       "risk_reward_ratio": 10.0,
       "entry_quality": "Good",
       "breakout_price": null,
-      "rs_slope": 0.532,
-      "volume_ratio": null
-    },
-    {
-      "ticker": "ALRS",
-      "score": 86.8,
-      "phase": 2,
-      "current_price": 32.87,
-      "stop_loss": 31.88,
-      "target_price": 42.73,
-      "risk_reward_ratio": 10.0,
-      "entry_quality": "Good",
-      "breakout_price": null,
-      "rs_slope": 0.148,
-      "volume_ratio": null
-    },
-    {
-      "ticker": "DIS",
-      "score": 86.8,
-      "phase": 2,
-      "current_price": 125.6,
-      "stop_loss": 115.55,
-      "target_price": 163.28,
-      "risk_reward_ratio": 3.75,
-      "entry_quality": "Good",
-      "breakout_price": null,
-      "rs_slope": 0.806,
-      "volume_ratio": null
-    },
-    {
-      "ticker": "FRBA",
-      "score": 86.8,
-      "phase": 2,
-      "current_price": 19.16,
-      "stop_loss": 18.59,
-      "target_price": 24.91,
-      "risk_reward_ratio": 10.0,
-      "entry_quality": "Good",
-      "breakout_price": null,
-      "rs_slope": 0.143,
+      "rs_slope": 0.533,
       "volume_ratio": null
     },
     {
@@ -2449,6 +2449,19 @@
       "volume_ratio": null
     },
     {
+      "ticker": "FRBA",
+      "score": 86.6,
+      "phase": 2,
+      "current_price": 19.16,
+      "stop_loss": 18.59,
+      "target_price": 24.91,
+      "risk_reward_ratio": 10.0,
+      "entry_quality": "Good",
+      "breakout_price": null,
+      "rs_slope": 0.143,
+      "volume_ratio": null
+    },
+    {
       "ticker": "CHT",
       "score": 86.4,
       "phase": 2,
@@ -2458,7 +2471,7 @@
       "risk_reward_ratio": 10.0,
       "entry_quality": "Good",
       "breakout_price": null,
-      "rs_slope": 0.504,
+      "rs_slope": 0.505,
       "volume_ratio": null
     },
     {
@@ -2488,19 +2501,6 @@
       "volume_ratio": null
     },
     {
-      "ticker": "MSEX",
-      "score": 86.4,
-      "phase": 2,
-      "current_price": 58.22,
-      "stop_loss": 55.04,
-      "target_price": 75.69,
-      "risk_reward_ratio": 5.5,
-      "entry_quality": "Good",
-      "breakout_price": null,
-      "rs_slope": 0.337,
-      "volume_ratio": null
-    },
-    {
       "ticker": "NATL",
       "score": 86.3,
       "phase": 2,
@@ -2510,7 +2510,20 @@
       "risk_reward_ratio": 5.37,
       "entry_quality": "Good",
       "breakout_price": null,
-      "rs_slope": 0.643,
+      "rs_slope": 0.644,
+      "volume_ratio": null
+    },
+    {
+      "ticker": "EL",
+      "score": 86.2,
+      "phase": 2,
+      "current_price": 109.61,
+      "stop_loss": 101.8,
+      "target_price": 142.49,
+      "risk_reward_ratio": 4.21,
+      "entry_quality": "Good",
+      "breakout_price": null,
+      "rs_slope": 0.145,
       "volume_ratio": null
     },
     {
@@ -2523,7 +2536,7 @@
       "risk_reward_ratio": 10.0,
       "entry_quality": "Good",
       "breakout_price": null,
-      "rs_slope": -0.205,
+      "rs_slope": -0.204,
       "volume_ratio": null
     },
     {
@@ -2553,19 +2566,6 @@
       "volume_ratio": null
     },
     {
-      "ticker": "EL",
-      "score": 86.0,
-      "phase": 2,
-      "current_price": 109.61,
-      "stop_loss": 101.8,
-      "target_price": 142.49,
-      "risk_reward_ratio": 4.21,
-      "entry_quality": "Good",
-      "breakout_price": null,
-      "rs_slope": 0.145,
-      "volume_ratio": null
-    },
-    {
       "ticker": "ESQ",
       "score": 86.0,
       "phase": 2,
@@ -2589,6 +2589,19 @@
       "entry_quality": "Good",
       "breakout_price": null,
       "rs_slope": -0.218,
+      "volume_ratio": null
+    },
+    {
+      "ticker": "PG",
+      "score": 86.0,
+      "phase": 2,
+      "current_price": 173.23,
+      "stop_loss": 166.06,
+      "target_price": 225.2,
+      "risk_reward_ratio": 7.24,
+      "entry_quality": "Good",
+      "breakout_price": null,
+      "rs_slope": 0.687,
       "volume_ratio": null
     },
     {
@@ -2627,33 +2640,20 @@
       "risk_reward_ratio": 3.0,
       "entry_quality": "Good",
       "breakout_price": null,
-      "rs_slope": 0.01,
+      "rs_slope": 0.011,
       "volume_ratio": null
     },
     {
-      "ticker": "PG",
-      "score": 85.7,
+      "ticker": "AAPL",
+      "score": 85.5,
       "phase": 2,
-      "current_price": 173.23,
-      "stop_loss": 166.06,
-      "target_price": 225.2,
-      "risk_reward_ratio": 7.24,
+      "current_price": 355.58,
+      "stop_loss": 339.41,
+      "target_price": 462.25,
+      "risk_reward_ratio": 6.6,
       "entry_quality": "Good",
-      "breakout_price": null,
-      "rs_slope": 0.687,
-      "volume_ratio": null
-    },
-    {
-      "ticker": "AMRX",
-      "score": 85.6,
-      "phase": 2,
-      "current_price": 21.48,
-      "stop_loss": 20.65,
-      "target_price": 27.92,
-      "risk_reward_ratio": 7.73,
-      "entry_quality": "Good",
-      "breakout_price": null,
-      "rs_slope": 0.665,
+      "breakout_price": 347.89,
+      "rs_slope": 0.536,
       "volume_ratio": null
     },
     {
@@ -2679,38 +2679,25 @@
       "risk_reward_ratio": 8.47,
       "entry_quality": "Good",
       "breakout_price": null,
-      "rs_slope": 0.402,
-      "volume_ratio": null
-    },
-    {
-      "ticker": "AAPL",
-      "score": 85.4,
-      "phase": 2,
-      "current_price": 355.58,
-      "stop_loss": 339.41,
-      "target_price": 462.25,
-      "risk_reward_ratio": 6.6,
-      "entry_quality": "Good",
-      "breakout_price": 347.89,
-      "rs_slope": 0.535,
+      "rs_slope": 0.403,
       "volume_ratio": null
     },
     {
       "ticker": "III",
-      "score": 85.4,
+      "score": 85.5,
       "phase": 2,
-      "current_price": 6.16,
-      "stop_loss": 5.78,
-      "target_price": 8.01,
-      "risk_reward_ratio": 4.82,
+      "current_price": 6.17,
+      "stop_loss": 5.79,
+      "target_price": 8.02,
+      "risk_reward_ratio": 4.89,
       "entry_quality": "Good",
       "breakout_price": null,
-      "rs_slope": 0.335,
+      "rs_slope": 0.337,
       "volume_ratio": null
     },
     {
       "ticker": "MET",
-      "score": 85.4,
+      "score": 85.5,
       "phase": 2,
       "current_price": 99.78,
       "stop_loss": 96.79,
@@ -2719,6 +2706,19 @@
       "entry_quality": "Good",
       "breakout_price": null,
       "rs_slope": 0.259,
+      "volume_ratio": null
+    },
+    {
+      "ticker": "AMRX",
+      "score": 85.4,
+      "phase": 2,
+      "current_price": 21.48,
+      "stop_loss": 20.65,
+      "target_price": 27.92,
+      "risk_reward_ratio": 7.73,
+      "entry_quality": "Good",
+      "breakout_price": null,
+      "rs_slope": 0.665,
       "volume_ratio": null
     },
     {
@@ -2740,8 +2740,8 @@
       "phase": 2,
       "current_price": 246.79,
       "stop_loss": 237.47,
-      "target_price": 320.82,
-      "risk_reward_ratio": 7.95,
+      "target_price": 320.83,
+      "risk_reward_ratio": 7.94,
       "entry_quality": "Good",
       "breakout_price": null,
       "rs_slope": 0.24,
@@ -2787,6 +2787,19 @@
       "volume_ratio": null
     },
     {
+      "ticker": "PDS",
+      "score": 84.9,
+      "phase": 2,
+      "current_price": 89.47,
+      "stop_loss": 86.79,
+      "target_price": 116.31,
+      "risk_reward_ratio": 10.0,
+      "entry_quality": "Good",
+      "breakout_price": 89.31,
+      "rs_slope": -0.477,
+      "volume_ratio": null
+    },
+    {
       "ticker": "RDY",
       "score": 84.9,
       "phase": 2,
@@ -2796,7 +2809,7 @@
       "risk_reward_ratio": 5.88,
       "entry_quality": "Good",
       "breakout_price": null,
-      "rs_slope": 0.696,
+      "rs_slope": 0.697,
       "volume_ratio": null
     },
     {
@@ -2823,19 +2836,6 @@
       "entry_quality": "Good",
       "breakout_price": null,
       "rs_slope": 0.847,
-      "volume_ratio": null
-    },
-    {
-      "ticker": "PDS",
-      "score": 84.8,
-      "phase": 2,
-      "current_price": 89.47,
-      "stop_loss": 86.79,
-      "target_price": 116.31,
-      "risk_reward_ratio": 10.0,
-      "entry_quality": "Good",
-      "breakout_price": 89.31,
-      "rs_slope": -0.477,
       "volume_ratio": null
     },
     {
@@ -2874,7 +2874,7 @@
       "risk_reward_ratio": 5.92,
       "entry_quality": "Extended",
       "breakout_price": 147.14,
-      "rs_slope": 0.83,
+      "rs_slope": 0.831,
       "volume_ratio": null
     },
     {
@@ -2913,7 +2913,7 @@
       "risk_reward_ratio": 3.45,
       "entry_quality": "Good",
       "breakout_price": null,
-      "rs_slope": 0.251,
+      "rs_slope": 0.252,
       "volume_ratio": null
     },
     {
@@ -2943,6 +2943,19 @@
       "volume_ratio": null
     },
     {
+      "ticker": "RRC",
+      "score": 83.8,
+      "phase": 2,
+      "current_price": 50.63,
+      "stop_loss": 47.21,
+      "target_price": 65.82,
+      "risk_reward_ratio": 4.44,
+      "entry_quality": "Good",
+      "breakout_price": null,
+      "rs_slope": -0.185,
+      "volume_ratio": null
+    },
+    {
       "ticker": "BALL",
       "score": 83.7,
       "phase": 2,
@@ -2969,19 +2982,6 @@
       "volume_ratio": null
     },
     {
-      "ticker": "RRC",
-      "score": 83.7,
-      "phase": 2,
-      "current_price": 50.63,
-      "stop_loss": 47.21,
-      "target_price": 65.82,
-      "risk_reward_ratio": 4.44,
-      "entry_quality": "Good",
-      "breakout_price": null,
-      "rs_slope": -0.185,
-      "volume_ratio": null
-    },
-    {
       "ticker": "MCB",
       "score": 83.6,
       "phase": 2,
@@ -3005,6 +3005,19 @@
       "entry_quality": "Good",
       "breakout_price": null,
       "rs_slope": 0.421,
+      "volume_ratio": null
+    },
+    {
+      "ticker": "ABM",
+      "score": 83.5,
+      "phase": 2,
+      "current_price": 55.14,
+      "stop_loss": 53.09,
+      "target_price": 71.68,
+      "risk_reward_ratio": 8.08,
+      "entry_quality": "Good",
+      "breakout_price": null,
+      "rs_slope": 0.463,
       "volume_ratio": null
     },
     {
@@ -3038,9 +3051,9 @@
       "score": 83.4,
       "phase": 2,
       "current_price": 109.22,
-      "stop_loss": 104.2,
+      "stop_loss": 104.21,
       "target_price": 141.99,
-      "risk_reward_ratio": 6.53,
+      "risk_reward_ratio": 6.54,
       "entry_quality": "Good",
       "breakout_price": null,
       "rs_slope": 0.394,
@@ -3087,7 +3100,7 @@
     },
     {
       "ticker": "GME",
-      "score": 82.5,
+      "score": 82.4,
       "phase": 2,
       "current_price": 26.97,
       "stop_loss": 24.97,
@@ -3095,20 +3108,20 @@
       "risk_reward_ratio": 4.04,
       "entry_quality": "Good",
       "breakout_price": null,
-      "rs_slope": 1.056,
+      "rs_slope": 1.057,
       "volume_ratio": null
     },
     {
-      "ticker": "ABM",
+      "ticker": "JJSF",
       "score": 82.4,
       "phase": 2,
-      "current_price": 55.09,
-      "stop_loss": 53.09,
-      "target_price": 71.62,
-      "risk_reward_ratio": 8.28,
+      "current_price": 95.07,
+      "stop_loss": 86.9,
+      "target_price": 123.59,
+      "risk_reward_ratio": 3.49,
       "entry_quality": "Good",
       "breakout_price": null,
-      "rs_slope": 0.461,
+      "rs_slope": 0.908,
       "volume_ratio": null
     },
     {
@@ -3122,6 +3135,19 @@
       "entry_quality": "Good",
       "breakout_price": 100.4,
       "rs_slope": 0.471,
+      "volume_ratio": null
+    },
+    {
+      "ticker": "BATRK",
+      "score": 82.2,
+      "phase": 2,
+      "current_price": 54.44,
+      "stop_loss": 51.03,
+      "target_price": 70.77,
+      "risk_reward_ratio": 4.8,
+      "entry_quality": "Good",
+      "breakout_price": null,
+      "rs_slope": 0.645,
       "volume_ratio": null
     },
     {
@@ -3151,29 +3177,16 @@
       "volume_ratio": null
     },
     {
-      "ticker": "BATRK",
+      "ticker": "DSGX",
       "score": 82.1,
       "phase": 2,
-      "current_price": 54.44,
-      "stop_loss": 51.03,
-      "target_price": 70.77,
-      "risk_reward_ratio": 4.8,
+      "current_price": 91.86,
+      "stop_loss": 88.52,
+      "target_price": 119.42,
+      "risk_reward_ratio": 8.24,
       "entry_quality": "Good",
       "breakout_price": null,
-      "rs_slope": 0.644,
-      "volume_ratio": null
-    },
-    {
-      "ticker": "JJSF",
-      "score": 82.1,
-      "phase": 2,
-      "current_price": 95.07,
-      "stop_loss": 86.9,
-      "target_price": 123.59,
-      "risk_reward_ratio": 3.49,
-      "entry_quality": "Good",
-      "breakout_price": null,
-      "rs_slope": 0.908,
+      "rs_slope": 0.25,
       "volume_ratio": null
     },
     {
@@ -3199,7 +3212,7 @@
       "risk_reward_ratio": 4.66,
       "entry_quality": "Good",
       "breakout_price": null,
-      "rs_slope": 0.584,
+      "rs_slope": 0.585,
       "volume_ratio": null
     },
     {
@@ -3225,20 +3238,7 @@
       "risk_reward_ratio": 3.24,
       "entry_quality": "Good",
       "breakout_price": null,
-      "rs_slope": 0.632,
-      "volume_ratio": null
-    },
-    {
-      "ticker": "DSGX",
-      "score": 81.8,
-      "phase": 2,
-      "current_price": 91.86,
-      "stop_loss": 88.52,
-      "target_price": 119.42,
-      "risk_reward_ratio": 8.24,
-      "entry_quality": "Good",
-      "breakout_price": null,
-      "rs_slope": 0.25,
+      "rs_slope": 0.633,
       "volume_ratio": null
     },
     {
@@ -3316,7 +3316,7 @@
       "risk_reward_ratio": 3.0,
       "entry_quality": "Good",
       "breakout_price": null,
-      "rs_slope": 1.23,
+      "rs_slope": 1.231,
       "volume_ratio": null
     },
     {
@@ -3329,7 +3329,7 @@
       "risk_reward_ratio": 9.67,
       "entry_quality": "Good",
       "breakout_price": null,
-      "rs_slope": 0.66,
+      "rs_slope": 0.661,
       "volume_ratio": null
     },
     {
@@ -3342,7 +3342,7 @@
       "risk_reward_ratio": 9.36,
       "entry_quality": "Good",
       "breakout_price": null,
-      "rs_slope": 0.566,
+      "rs_slope": 0.567,
       "volume_ratio": null
     },
     {
@@ -3369,6 +3369,19 @@
       "entry_quality": "Good",
       "breakout_price": null,
       "rs_slope": 0.584,
+      "volume_ratio": null
+    },
+    {
+      "ticker": "MO",
+      "score": 80.7,
+      "phase": 2,
+      "current_price": 76.28,
+      "stop_loss": 72.75,
+      "target_price": 99.16,
+      "risk_reward_ratio": 6.49,
+      "entry_quality": "Good",
+      "breakout_price": null,
+      "rs_slope": 0.21,
       "volume_ratio": null
     },
     {
@@ -3411,19 +3424,6 @@
       "volume_ratio": null
     },
     {
-      "ticker": "MO",
-      "score": 80.5,
-      "phase": 2,
-      "current_price": 76.28,
-      "stop_loss": 72.75,
-      "target_price": 99.16,
-      "risk_reward_ratio": 6.49,
-      "entry_quality": "Good",
-      "breakout_price": null,
-      "rs_slope": 0.21,
-      "volume_ratio": null
-    },
-    {
       "ticker": "BOBS",
       "score": 80.4,
       "phase": 2,
@@ -3463,19 +3463,6 @@
       "volume_ratio": null
     },
     {
-      "ticker": "LLYVK",
-      "score": 80.3,
-      "phase": 2,
-      "current_price": 107.79,
-      "stop_loss": 101.6,
-      "target_price": 140.13,
-      "risk_reward_ratio": 5.23,
-      "entry_quality": "Good",
-      "breakout_price": null,
-      "rs_slope": 0.399,
-      "volume_ratio": null
-    },
-    {
       "ticker": "DAL",
       "score": 80.2,
       "phase": 2,
@@ -3485,7 +3472,7 @@
       "risk_reward_ratio": 10.0,
       "entry_quality": "Good",
       "breakout_price": null,
-      "rs_slope": 0.295,
+      "rs_slope": 0.296,
       "volume_ratio": null
     },
     {
@@ -3511,20 +3498,20 @@
       "risk_reward_ratio": 10.0,
       "entry_quality": "Good",
       "breakout_price": null,
-      "rs_slope": 0.025,
+      "rs_slope": 0.026,
       "volume_ratio": null
     },
     {
-      "ticker": "LILA",
+      "ticker": "STRC",
       "score": 80.1,
       "phase": 2,
-      "current_price": 9.41,
-      "stop_loss": 8.7,
-      "target_price": 12.23,
-      "risk_reward_ratio": 3.96,
+      "current_price": 98.04,
+      "stop_loss": 95.1,
+      "target_price": 127.45,
+      "risk_reward_ratio": 10.0,
       "entry_quality": "Good",
-      "breakout_price": null,
-      "rs_slope": 0.952,
+      "breakout_price": 97.98,
+      "rs_slope": 0.213,
       "volume_ratio": null
     },
     {
@@ -3541,16 +3528,29 @@
       "volume_ratio": null
     },
     {
-      "ticker": "BUD",
+      "ticker": "LILA",
       "score": 80.0,
       "phase": 2,
-      "current_price": 79.98,
-      "stop_loss": 77.58,
-      "target_price": 103.97,
-      "risk_reward_ratio": 10.0,
+      "current_price": 9.41,
+      "stop_loss": 8.7,
+      "target_price": 12.23,
+      "risk_reward_ratio": 3.96,
       "entry_quality": "Good",
       "breakout_price": null,
-      "rs_slope": 0.241,
+      "rs_slope": 0.952,
+      "volume_ratio": null
+    },
+    {
+      "ticker": "TENB",
+      "score": 80.0,
+      "phase": 2,
+      "current_price": 45.7,
+      "stop_loss": 41.13,
+      "target_price": 59.41,
+      "risk_reward_ratio": 3.0,
+      "entry_quality": "Good",
+      "breakout_price": null,
+      "rs_slope": -0.25,
       "volume_ratio": null
     },
     {
@@ -3580,16 +3580,29 @@
       "volume_ratio": null
     },
     {
-      "ticker": "TENB",
-      "score": 79.9,
+      "ticker": "BUD",
+      "score": 79.8,
       "phase": 2,
-      "current_price": 45.7,
-      "stop_loss": 41.13,
-      "target_price": 59.41,
-      "risk_reward_ratio": 3.0,
+      "current_price": 79.98,
+      "stop_loss": 77.58,
+      "target_price": 103.97,
+      "risk_reward_ratio": 10.0,
       "entry_quality": "Good",
       "breakout_price": null,
-      "rs_slope": -0.25,
+      "rs_slope": 0.242,
+      "volume_ratio": null
+    },
+    {
+      "ticker": "CL",
+      "score": 79.8,
+      "phase": 2,
+      "current_price": 99.66,
+      "stop_loss": 94.51,
+      "target_price": 129.56,
+      "risk_reward_ratio": 5.8,
+      "entry_quality": "Good",
+      "breakout_price": null,
+      "rs_slope": 0.565,
       "volume_ratio": null
     },
     {
@@ -3603,19 +3616,6 @@
       "entry_quality": "Good",
       "breakout_price": null,
       "rs_slope": 0.227,
-      "volume_ratio": null
-    },
-    {
-      "ticker": "CL",
-      "score": 79.7,
-      "phase": 2,
-      "current_price": 99.66,
-      "stop_loss": 94.51,
-      "target_price": 129.56,
-      "risk_reward_ratio": 5.8,
-      "entry_quality": "Good",
-      "breakout_price": null,
-      "rs_slope": 0.565,
       "volume_ratio": null
     },
     {
@@ -3658,6 +3658,19 @@
       "volume_ratio": null
     },
     {
+      "ticker": "LLYVK",
+      "score": 79.3,
+      "phase": 2,
+      "current_price": 107.79,
+      "stop_loss": 101.6,
+      "target_price": 140.13,
+      "risk_reward_ratio": 5.23,
+      "entry_quality": "Good",
+      "breakout_price": null,
+      "rs_slope": 0.399,
+      "volume_ratio": null
+    },
+    {
       "ticker": "SAIL",
       "score": 79.3,
       "phase": 2,
@@ -3668,6 +3681,19 @@
       "entry_quality": "Good",
       "breakout_price": null,
       "rs_slope": 1.024,
+      "volume_ratio": null
+    },
+    {
+      "ticker": "TTC",
+      "score": 79.3,
+      "phase": 2,
+      "current_price": 105.92,
+      "stop_loss": 100.48,
+      "target_price": 137.7,
+      "risk_reward_ratio": 5.84,
+      "entry_quality": "Good",
+      "breakout_price": null,
+      "rs_slope": 0.133,
       "volume_ratio": null
     },
     {
@@ -3684,19 +3710,6 @@
       "volume_ratio": null
     },
     {
-      "ticker": "TTC",
-      "score": 79.1,
-      "phase": 2,
-      "current_price": 105.92,
-      "stop_loss": 100.48,
-      "target_price": 137.7,
-      "risk_reward_ratio": 5.84,
-      "entry_quality": "Good",
-      "breakout_price": null,
-      "rs_slope": 0.133,
-      "volume_ratio": null
-    },
-    {
       "ticker": "VLY",
       "score": 79.1,
       "phase": 2,
@@ -3706,7 +3719,7 @@
       "risk_reward_ratio": 6.99,
       "entry_quality": "Good",
       "breakout_price": null,
-      "rs_slope": 0.221,
+      "rs_slope": 0.222,
       "volume_ratio": null
     },
     {
@@ -3732,7 +3745,7 @@
       "risk_reward_ratio": 5.45,
       "entry_quality": "Good",
       "breakout_price": null,
-      "rs_slope": 0.269,
+      "rs_slope": 0.27,
       "volume_ratio": null
     },
     {
@@ -3810,7 +3823,7 @@
       "risk_reward_ratio": 9.51,
       "entry_quality": "Good",
       "breakout_price": null,
-      "rs_slope": -0.046,
+      "rs_slope": -0.045,
       "volume_ratio": null
     },
     {
@@ -3875,7 +3888,7 @@
       "risk_reward_ratio": 10.0,
       "entry_quality": "Good",
       "breakout_price": null,
-      "rs_slope": 0.335,
+      "rs_slope": 0.336,
       "volume_ratio": null
     },
     {
@@ -3902,19 +3915,6 @@
       "entry_quality": "Good",
       "breakout_price": null,
       "rs_slope": 0.35,
-      "volume_ratio": null
-    },
-    {
-      "ticker": "STRC",
-      "score": 78.0,
-      "phase": 2,
-      "current_price": 98.04,
-      "stop_loss": 95.1,
-      "target_price": 127.45,
-      "risk_reward_ratio": 10.0,
-      "entry_quality": "Good",
-      "breakout_price": 98.04,
-      "rs_slope": 0.212,
       "volume_ratio": null
     },
     {
@@ -3979,7 +3979,7 @@
       "risk_reward_ratio": 7.49,
       "entry_quality": "Good",
       "breakout_price": null,
-      "rs_slope": -0.105,
+      "rs_slope": -0.104,
       "volume_ratio": null
     },
     {
@@ -4096,7 +4096,7 @@
       "risk_reward_ratio": 10.0,
       "entry_quality": "Good",
       "breakout_price": null,
-      "rs_slope": 0.176,
+      "rs_slope": 0.177,
       "volume_ratio": null
     },
     {
@@ -4135,12 +4135,12 @@
       "risk_reward_ratio": 10.0,
       "entry_quality": "Good",
       "breakout_price": null,
-      "rs_slope": 0.759,
+      "rs_slope": 0.76,
       "volume_ratio": null
     },
     {
       "ticker": "MTD",
-      "score": 76.0,
+      "score": 75.9,
       "phase": 2,
       "current_price": 1664.55,
       "stop_loss": 1614.61,
@@ -4162,6 +4162,19 @@
       "entry_quality": "Good",
       "breakout_price": null,
       "rs_slope": 0.155,
+      "volume_ratio": null
+    },
+    {
+      "ticker": "ITT",
+      "score": 75.2,
+      "phase": 2,
+      "current_price": 216.51,
+      "stop_loss": 202.11,
+      "target_price": 281.46,
+      "risk_reward_ratio": 4.51,
+      "entry_quality": "Good",
+      "breakout_price": null,
+      "rs_slope": 0.641,
       "volume_ratio": null
     },
     {
@@ -4188,19 +4201,6 @@
       "entry_quality": "Good",
       "breakout_price": null,
       "rs_slope": 1.548,
-      "volume_ratio": null
-    },
-    {
-      "ticker": "ITT",
-      "score": 74.8,
-      "phase": 2,
-      "current_price": 216.51,
-      "stop_loss": 202.11,
-      "target_price": 281.46,
-      "risk_reward_ratio": 4.51,
-      "entry_quality": "Good",
-      "breakout_price": null,
-      "rs_slope": 0.641,
       "volume_ratio": null
     },
     {
@@ -4243,6 +4243,19 @@
       "volume_ratio": null
     },
     {
+      "ticker": "MOH",
+      "score": 74.3,
+      "phase": 2,
+      "current_price": 205.63,
+      "stop_loss": 199.46,
+      "target_price": 267.32,
+      "risk_reward_ratio": 10.0,
+      "entry_quality": "Good",
+      "breakout_price": 203.54,
+      "rs_slope": 0.245,
+      "volume_ratio": null
+    },
+    {
       "ticker": "LILAK",
       "score": 74.2,
       "phase": 2,
@@ -4256,16 +4269,16 @@
       "volume_ratio": null
     },
     {
-      "ticker": "MOH",
-      "score": 74.2,
+      "ticker": "PPG",
+      "score": 73.9,
       "phase": 2,
-      "current_price": 205.63,
-      "stop_loss": 199.46,
-      "target_price": 267.32,
-      "risk_reward_ratio": 10.0,
+      "current_price": 124.61,
+      "stop_loss": 116.04,
+      "target_price": 161.99,
+      "risk_reward_ratio": 4.36,
       "entry_quality": "Good",
-      "breakout_price": 203.54,
-      "rs_slope": 0.245,
+      "breakout_price": null,
+      "rs_slope": 0.327,
       "volume_ratio": null
     },
     {
@@ -4282,34 +4295,8 @@
       "volume_ratio": null
     },
     {
-      "ticker": "MD",
-      "score": 73.8,
-      "phase": 2,
-      "current_price": 30.48,
-      "stop_loss": 29.57,
-      "target_price": 39.62,
-      "risk_reward_ratio": 10.0,
-      "entry_quality": "Good",
-      "breakout_price": null,
-      "rs_slope": 0.33,
-      "volume_ratio": null
-    },
-    {
-      "ticker": "PPG",
-      "score": 73.8,
-      "phase": 2,
-      "current_price": 124.61,
-      "stop_loss": 116.04,
-      "target_price": 161.99,
-      "risk_reward_ratio": 4.36,
-      "entry_quality": "Good",
-      "breakout_price": null,
-      "rs_slope": 0.327,
-      "volume_ratio": null
-    },
-    {
       "ticker": "CNMD",
-      "score": 73.6,
+      "score": 73.7,
       "phase": 2,
       "current_price": 48.35,
       "stop_loss": 46.83,
@@ -4322,7 +4309,7 @@
     },
     {
       "ticker": "EVTC",
-      "score": 73.6,
+      "score": 73.7,
       "phase": 2,
       "current_price": 31.98,
       "stop_loss": 30.2,
@@ -4331,6 +4318,19 @@
       "entry_quality": "Good",
       "breakout_price": null,
       "rs_slope": 0.058,
+      "volume_ratio": null
+    },
+    {
+      "ticker": "MD",
+      "score": 73.6,
+      "phase": 2,
+      "current_price": 30.48,
+      "stop_loss": 29.57,
+      "target_price": 39.62,
+      "risk_reward_ratio": 10.0,
+      "entry_quality": "Good",
+      "breakout_price": null,
+      "rs_slope": 0.331,
       "volume_ratio": null
     },
     {
@@ -4356,7 +4356,7 @@
       "risk_reward_ratio": 10.0,
       "entry_quality": "Good",
       "breakout_price": 122.35,
-      "rs_slope": 0.412,
+      "rs_slope": 0.413,
       "volume_ratio": null
     },
     {
@@ -4370,6 +4370,19 @@
       "entry_quality": "Extended",
       "breakout_price": null,
       "rs_slope": -0.491,
+      "volume_ratio": null
+    },
+    {
+      "ticker": "JLL",
+      "score": 73.4,
+      "phase": 2,
+      "current_price": 372.25,
+      "stop_loss": 343.31,
+      "target_price": 483.92,
+      "risk_reward_ratio": 3.86,
+      "entry_quality": "Good",
+      "breakout_price": null,
+      "rs_slope": 0.122,
       "volume_ratio": null
     },
     {
@@ -4412,19 +4425,6 @@
       "volume_ratio": null
     },
     {
-      "ticker": "JLL",
-      "score": 73.3,
-      "phase": 2,
-      "current_price": 372.25,
-      "stop_loss": 343.31,
-      "target_price": 483.92,
-      "risk_reward_ratio": 3.86,
-      "entry_quality": "Good",
-      "breakout_price": null,
-      "rs_slope": 0.122,
-      "volume_ratio": null
-    },
-    {
       "ticker": "HGTY",
       "score": 73.1,
       "phase": 2,
@@ -4438,6 +4438,19 @@
       "volume_ratio": null
     },
     {
+      "ticker": "HZN",
+      "score": 73.1,
+      "phase": 2,
+      "current_price": 81.37,
+      "stop_loss": 77.28,
+      "target_price": 105.78,
+      "risk_reward_ratio": 5.97,
+      "entry_quality": "Good",
+      "breakout_price": null,
+      "rs_slope": 0.132,
+      "volume_ratio": null
+    },
+    {
       "ticker": "FDS",
       "score": 73.0,
       "phase": 2,
@@ -4448,19 +4461,6 @@
       "entry_quality": "Good",
       "breakout_price": null,
       "rs_slope": 0.032,
-      "volume_ratio": null
-    },
-    {
-      "ticker": "HZN",
-      "score": 73.0,
-      "phase": 2,
-      "current_price": 81.37,
-      "stop_loss": 77.28,
-      "target_price": 105.78,
-      "risk_reward_ratio": 5.97,
-      "entry_quality": "Good",
-      "breakout_price": null,
-      "rs_slope": 0.132,
       "volume_ratio": null
     },
     {
@@ -4486,12 +4486,12 @@
       "risk_reward_ratio": 3.06,
       "entry_quality": "Good",
       "breakout_price": null,
-      "rs_slope": 0.789,
+      "rs_slope": 0.79,
       "volume_ratio": null
     },
     {
       "ticker": "APD",
-      "score": 72.4,
+      "score": 72.6,
       "phase": 2,
       "current_price": 314.26,
       "stop_loss": 294.84,
@@ -4499,7 +4499,7 @@
       "risk_reward_ratio": 4.85,
       "entry_quality": "Good",
       "breakout_price": null,
-      "rs_slope": 0.218,
+      "rs_slope": 0.219,
       "volume_ratio": null
     },
     {
@@ -4520,12 +4520,12 @@
       "score": 72.1,
       "phase": 2,
       "current_price": 96.94,
-      "stop_loss": 89.11,
+      "stop_loss": 89.08,
       "target_price": 126.02,
-      "risk_reward_ratio": 3.72,
+      "risk_reward_ratio": 3.7,
       "entry_quality": "Good",
       "breakout_price": null,
-      "rs_slope": 0.63,
+      "rs_slope": 0.631,
       "volume_ratio": null
     },
     {
@@ -4538,7 +4538,7 @@
       "risk_reward_ratio": 10.0,
       "entry_quality": "Good",
       "breakout_price": null,
-      "rs_slope": 0.391,
+      "rs_slope": 0.392,
       "volume_ratio": null
     },
     {
@@ -4551,7 +4551,7 @@
       "risk_reward_ratio": 10.0,
       "entry_quality": "Good",
       "breakout_price": null,
-      "rs_slope": 0.198,
+      "rs_slope": 0.199,
       "volume_ratio": null
     },
     {
@@ -4564,12 +4564,12 @@
       "risk_reward_ratio": 10.0,
       "entry_quality": "Good",
       "breakout_price": null,
-      "rs_slope": 0.431,
+      "rs_slope": 0.432,
       "volume_ratio": null
     },
     {
       "ticker": "CPF",
-      "score": 71.0,
+      "score": 70.9,
       "phase": 2,
       "current_price": 37.48,
       "stop_loss": 36.36,
@@ -4577,7 +4577,7 @@
       "risk_reward_ratio": 10.0,
       "entry_quality": "Good",
       "breakout_price": null,
-      "rs_slope": 0.145,
+      "rs_slope": 0.146,
       "volume_ratio": null
     },
     {
@@ -4629,7 +4629,7 @@
       "risk_reward_ratio": 10.0,
       "entry_quality": "Good",
       "breakout_price": null,
-      "rs_slope": 0.1,
+      "rs_slope": 0.101,
       "volume_ratio": null
     },
     {
@@ -4681,7 +4681,7 @@
       "risk_reward_ratio": 10.0,
       "entry_quality": "Good",
       "breakout_price": null,
-      "rs_slope": 0.229,
+      "rs_slope": 0.23,
       "volume_ratio": null
     },
     {
@@ -4699,15 +4699,15 @@
     },
     {
       "ticker": "H",
-      "score": 70.0,
+      "score": 69.8,
       "phase": 2,
       "current_price": 186.43,
-      "stop_loss": 178.88,
+      "stop_loss": 178.87,
       "target_price": 242.36,
       "risk_reward_ratio": 7.4,
       "entry_quality": "Good",
       "breakout_price": null,
-      "rs_slope": 0.452,
+      "rs_slope": 0.453,
       "volume_ratio": null
     },
     {
@@ -4798,7 +4798,7 @@
       "risk_reward_ratio": 10.0,
       "entry_quality": "Good",
       "breakout_price": null,
-      "rs_slope": 0.197,
+      "rs_slope": 0.198,
       "volume_ratio": null
     },
     {
@@ -4824,7 +4824,7 @@
       "risk_reward_ratio": 7.74,
       "entry_quality": "Good",
       "breakout_price": null,
-      "rs_slope": 0.124,
+      "rs_slope": 0.125,
       "volume_ratio": null
     },
     {
@@ -4837,7 +4837,7 @@
       "risk_reward_ratio": 3.79,
       "entry_quality": "Good",
       "breakout_price": null,
-      "rs_slope": -0.37,
+      "rs_slope": -0.369,
       "volume_ratio": null
     },
     {
@@ -4863,7 +4863,7 @@
       "risk_reward_ratio": 5.35,
       "entry_quality": "Good",
       "breakout_price": null,
-      "rs_slope": 0.472,
+      "rs_slope": 0.473,
       "volume_ratio": null
     },
     {
@@ -4967,7 +4967,7 @@
       "risk_reward_ratio": 3.04,
       "entry_quality": "Good",
       "breakout_price": null,
-      "rs_slope": 0.701,
+      "rs_slope": 0.702,
       "volume_ratio": null
     },
     {
@@ -4980,7 +4980,7 @@
       "risk_reward_ratio": 10.0,
       "entry_quality": "Good",
       "breakout_price": null,
-      "rs_slope": 1.189,
+      "rs_slope": 1.19,
       "volume_ratio": null
     },
     {
@@ -4997,6 +4997,19 @@
       "volume_ratio": null
     },
     {
+      "ticker": "ALL",
+      "score": 60.5,
+      "phase": 2,
+      "current_price": 271.39,
+      "stop_loss": 261.09,
+      "target_price": 352.81,
+      "risk_reward_ratio": 7.9,
+      "entry_quality": "Good",
+      "breakout_price": null,
+      "rs_slope": 0.582,
+      "volume_ratio": null
+    },
+    {
       "ticker": "SGRY",
       "score": 60.5,
       "phase": 2,
@@ -5007,19 +5020,6 @@
       "entry_quality": "Good",
       "breakout_price": null,
       "rs_slope": 1.323,
-      "volume_ratio": null
-    },
-    {
-      "ticker": "ALL",
-      "score": 60.4,
-      "phase": 2,
-      "current_price": 271.39,
-      "stop_loss": 261.09,
-      "target_price": 352.81,
-      "risk_reward_ratio": 7.9,
-      "entry_quality": "Good",
-      "breakout_price": null,
-      "rs_slope": 0.582,
       "volume_ratio": null
     },
     {
@@ -5037,7 +5037,7 @@
     },
     {
       "ticker": "OUT",
-      "score": 60.3,
+      "score": 60.2,
       "phase": 2,
       "current_price": 32.1,
       "stop_loss": 30.83,
@@ -5074,7 +5074,7 @@
       "entry_quality": null,
       "breakout_price": null,
       "rs_slope": -2.377,
-      "volume_ratio": 1.5
+      "volume_ratio": 1.52
     },
     {
       "ticker": "DGP",
@@ -5087,7 +5087,7 @@
       "entry_quality": null,
       "breakout_price": null,
       "rs_slope": -2.036,
-      "volume_ratio": 2.73
+      "volume_ratio": 2.75
     },
     {
       "ticker": "ESE",
@@ -5125,7 +5125,7 @@
       "risk_reward_ratio": null,
       "entry_quality": null,
       "breakout_price": null,
-      "rs_slope": -0.302,
+      "rs_slope": -0.301,
       "volume_ratio": 2.63
     },
     {
@@ -5138,7 +5138,7 @@
       "risk_reward_ratio": null,
       "entry_quality": null,
       "breakout_price": null,
-      "rs_slope": -0.178,
+      "rs_slope": -0.177,
       "volume_ratio": 1.56
     },
     {
@@ -5151,7 +5151,7 @@
       "risk_reward_ratio": null,
       "entry_quality": null,
       "breakout_price": null,
-      "rs_slope": -4.629,
+      "rs_slope": -4.628,
       "volume_ratio": 1.55
     },
     {
@@ -5203,7 +5203,7 @@
       "risk_reward_ratio": null,
       "entry_quality": null,
       "breakout_price": null,
-      "rs_slope": -0.328,
+      "rs_slope": -0.327,
       "volume_ratio": 2.17
     },
     {
@@ -5216,8 +5216,8 @@
       "risk_reward_ratio": null,
       "entry_quality": null,
       "breakout_price": null,
-      "rs_slope": -0.87,
-      "volume_ratio": 1.54
+      "rs_slope": -0.869,
+      "volume_ratio": 1.56
     },
     {
       "ticker": "SNEX",
@@ -5230,7 +5230,7 @@
       "entry_quality": null,
       "breakout_price": null,
       "rs_slope": -2.869,
-      "volume_ratio": 1.52
+      "volume_ratio": 1.53
     },
     {
       "ticker": "TPL",
@@ -5242,7 +5242,7 @@
       "risk_reward_ratio": null,
       "entry_quality": null,
       "breakout_price": null,
-      "rs_slope": -0.046,
+      "rs_slope": -0.045,
       "volume_ratio": 1.91
     },
     {
@@ -5268,7 +5268,7 @@
       "risk_reward_ratio": null,
       "entry_quality": null,
       "breakout_price": null,
-      "rs_slope": 0.255,
+      "rs_slope": 0.256,
       "volume_ratio": 1.58
     },
     {
@@ -5281,7 +5281,7 @@
       "risk_reward_ratio": null,
       "entry_quality": null,
       "breakout_price": null,
-      "rs_slope": -4.005,
+      "rs_slope": -4.004,
       "volume_ratio": 1.3
     },
     {
@@ -5295,7 +5295,7 @@
       "entry_quality": null,
       "breakout_price": null,
       "rs_slope": 0.041,
-      "volume_ratio": 1.51
+      "volume_ratio": 1.57
     },
     {
       "ticker": "FLO",
@@ -5320,8 +5320,8 @@
       "risk_reward_ratio": null,
       "entry_quality": null,
       "breakout_price": null,
-      "rs_slope": -2.017,
-      "volume_ratio": 1.75
+      "rs_slope": -2.016,
+      "volume_ratio": 1.81
     },
     {
       "ticker": "MUX",
@@ -5334,7 +5334,7 @@
       "entry_quality": null,
       "breakout_price": null,
       "rs_slope": -3.978,
-      "volume_ratio": 1.3
+      "volume_ratio": 1.32
     },
     {
       "ticker": "VOYG",
@@ -5346,7 +5346,7 @@
       "risk_reward_ratio": null,
       "entry_quality": null,
       "breakout_price": null,
-      "rs_slope": -2.147,
+      "rs_slope": -2.146,
       "volume_ratio": 1.37
     },
     {
@@ -5360,7 +5360,7 @@
       "entry_quality": null,
       "breakout_price": null,
       "rs_slope": -1.441,
-      "volume_ratio": 1.37
+      "volume_ratio": 1.39
     },
     {
       "ticker": "CLSK",
@@ -5372,8 +5372,8 @@
       "risk_reward_ratio": null,
       "entry_quality": null,
       "breakout_price": null,
-      "rs_slope": -1.292,
-      "volume_ratio": 1.59
+      "rs_slope": -1.291,
+      "volume_ratio": 1.65
     },
     {
       "ticker": "MAMA",
@@ -5386,7 +5386,7 @@
       "entry_quality": null,
       "breakout_price": null,
       "rs_slope": -1.346,
-      "volume_ratio": 1.4
+      "volume_ratio": 1.41
     },
     {
       "ticker": "RH",
@@ -5398,8 +5398,21 @@
       "risk_reward_ratio": null,
       "entry_quality": null,
       "breakout_price": null,
-      "rs_slope": -1.67,
+      "rs_slope": -1.669,
       "volume_ratio": 1.35
+    },
+    {
+      "ticker": "AMAT",
+      "score": 90,
+      "phase": 4,
+      "current_price": 311.18,
+      "stop_loss": null,
+      "target_price": null,
+      "risk_reward_ratio": null,
+      "entry_quality": null,
+      "breakout_price": null,
+      "rs_slope": -0.371,
+      "volume_ratio": 1.31
     },
     {
       "ticker": "AVBP",
@@ -5437,7 +5450,7 @@
       "risk_reward_ratio": null,
       "entry_quality": null,
       "breakout_price": null,
-      "rs_slope": -0.145,
+      "rs_slope": -0.144,
       "volume_ratio": 1.74
     },
     {
@@ -5451,7 +5464,7 @@
       "entry_quality": null,
       "breakout_price": null,
       "rs_slope": 0.103,
-      "volume_ratio": 1.55
+      "volume_ratio": 1.56
     },
     {
       "ticker": "CC",
@@ -5463,7 +5476,7 @@
       "risk_reward_ratio": null,
       "entry_quality": null,
       "breakout_price": null,
-      "rs_slope": -0.999,
+      "rs_slope": -0.998,
       "volume_ratio": 1.32
     },
     {
@@ -5476,7 +5489,7 @@
       "risk_reward_ratio": null,
       "entry_quality": null,
       "breakout_price": null,
-      "rs_slope": -0.385,
+      "rs_slope": -0.384,
       "volume_ratio": 1.82
     },
     {
@@ -5503,7 +5516,7 @@
       "entry_quality": null,
       "breakout_price": null,
       "rs_slope": -0.212,
-      "volume_ratio": 1.89
+      "volume_ratio": 1.9
     },
     {
       "ticker": "GS",
@@ -5515,8 +5528,21 @@
       "risk_reward_ratio": null,
       "entry_quality": null,
       "breakout_price": null,
-      "rs_slope": -0.468,
-      "volume_ratio": 1.31
+      "rs_slope": -0.467,
+      "volume_ratio": 1.4
+    },
+    {
+      "ticker": "HLNE",
+      "score": 90,
+      "phase": 4,
+      "current_price": 85.33,
+      "stop_loss": null,
+      "target_price": null,
+      "risk_reward_ratio": null,
+      "entry_quality": null,
+      "breakout_price": null,
+      "rs_slope": -0.536,
+      "volume_ratio": 1.63
     },
     {
       "ticker": "KT",
@@ -5528,8 +5554,21 @@
       "risk_reward_ratio": null,
       "entry_quality": null,
       "breakout_price": null,
-      "rs_slope": -0.734,
+      "rs_slope": -0.733,
       "volume_ratio": 1.37
+    },
+    {
+      "ticker": "LRCX",
+      "score": 90,
+      "phase": 4,
+      "current_price": 185.01,
+      "stop_loss": null,
+      "target_price": null,
+      "risk_reward_ratio": null,
+      "entry_quality": null,
+      "breakout_price": null,
+      "rs_slope": -0.287,
+      "volume_ratio": 1.52
     },
     {
       "ticker": "MS",
@@ -5541,8 +5580,8 @@
       "risk_reward_ratio": null,
       "entry_quality": null,
       "breakout_price": null,
-      "rs_slope": -0.422,
-      "volume_ratio": 1.37
+      "rs_slope": -0.421,
+      "volume_ratio": 1.47
     },
     {
       "ticker": "ORA",
@@ -5593,7 +5632,7 @@
       "risk_reward_ratio": null,
       "entry_quality": null,
       "breakout_price": null,
-      "rs_slope": 0.005,
+      "rs_slope": 0.006,
       "volume_ratio": 1.6
     },
     {
@@ -5620,7 +5659,7 @@
       "entry_quality": null,
       "breakout_price": null,
       "rs_slope": 0.14,
-      "volume_ratio": 1.63
+      "volume_ratio": 1.68
     },
     {
       "ticker": "ASTS",
@@ -5633,7 +5672,7 @@
       "entry_quality": null,
       "breakout_price": null,
       "rs_slope": -2.473,
-      "volume_ratio": 1.36
+      "volume_ratio": 1.39
     },
     {
       "ticker": "BOH",
@@ -5649,6 +5688,19 @@
       "volume_ratio": 1.37
     },
     {
+      "ticker": "BV",
+      "score": 85,
+      "phase": 4,
+      "current_price": 8.87,
+      "stop_loss": null,
+      "target_price": null,
+      "risk_reward_ratio": null,
+      "entry_quality": null,
+      "breakout_price": null,
+      "rs_slope": -2.404,
+      "volume_ratio": 1.12
+    },
+    {
       "ticker": "CRCL",
       "score": 85,
       "phase": 4,
@@ -5658,8 +5710,8 @@
       "risk_reward_ratio": null,
       "entry_quality": null,
       "breakout_price": null,
-      "rs_slope": -2.657,
-      "volume_ratio": 1.28
+      "rs_slope": -2.656,
+      "volume_ratio": 1.3
     },
     {
       "ticker": "GRC",
@@ -5671,7 +5723,7 @@
       "risk_reward_ratio": null,
       "entry_quality": null,
       "breakout_price": null,
-      "rs_slope": 0.133,
+      "rs_slope": 0.134,
       "volume_ratio": 1.44
     },
     {
@@ -5710,8 +5762,21 @@
       "risk_reward_ratio": null,
       "entry_quality": null,
       "breakout_price": null,
-      "rs_slope": 0.12,
+      "rs_slope": 0.121,
       "volume_ratio": 1.4
+    },
+    {
+      "ticker": "MCY",
+      "score": 85,
+      "phase": 4,
+      "current_price": 82.49,
+      "stop_loss": null,
+      "target_price": null,
+      "risk_reward_ratio": null,
+      "entry_quality": null,
+      "breakout_price": null,
+      "rs_slope": 0.24,
+      "volume_ratio": 1.3
     },
     {
       "ticker": "POWI",
@@ -5775,7 +5840,7 @@
       "risk_reward_ratio": null,
       "entry_quality": null,
       "breakout_price": null,
-      "rs_slope": 0.14,
+      "rs_slope": 0.141,
       "volume_ratio": 1.7
     },
     {
@@ -5827,7 +5892,7 @@
       "risk_reward_ratio": null,
       "entry_quality": null,
       "breakout_price": null,
-      "rs_slope": -1.58,
+      "rs_slope": -1.579,
       "volume_ratio": 1.1
     },
     {
@@ -5853,8 +5918,8 @@
       "risk_reward_ratio": null,
       "entry_quality": null,
       "breakout_price": null,
-      "rs_slope": -1.89,
-      "volume_ratio": 1.22
+      "rs_slope": -1.889,
+      "volume_ratio": 1.24
     },
     {
       "ticker": "PHI",
@@ -5866,7 +5931,7 @@
       "risk_reward_ratio": null,
       "entry_quality": null,
       "breakout_price": null,
-      "rs_slope": -1.346,
+      "rs_slope": -1.345,
       "volume_ratio": 1.13
     },
     {
@@ -5919,7 +5984,7 @@
       "entry_quality": null,
       "breakout_price": null,
       "rs_slope": -2.383,
-      "volume_ratio": 0.81
+      "volume_ratio": 0.83
     },
     {
       "ticker": "ABX",
@@ -5932,20 +5997,7 @@
       "entry_quality": null,
       "breakout_price": null,
       "rs_slope": -2.703,
-      "volume_ratio": 0.54
-    },
-    {
-      "ticker": "AMAT",
-      "score": 80,
-      "phase": 4,
-      "current_price": 311.18,
-      "stop_loss": null,
-      "target_price": null,
-      "risk_reward_ratio": null,
-      "entry_quality": null,
-      "breakout_price": null,
-      "rs_slope": -0.372,
-      "volume_ratio": 1.27
+      "volume_ratio": 0.55
     },
     {
       "ticker": "BRC",
@@ -5961,19 +6013,6 @@
       "volume_ratio": 1.11
     },
     {
-      "ticker": "BV",
-      "score": 80,
-      "phase": 4,
-      "current_price": 8.87,
-      "stop_loss": null,
-      "target_price": null,
-      "risk_reward_ratio": null,
-      "entry_quality": null,
-      "breakout_price": null,
-      "rs_slope": -2.404,
-      "volume_ratio": 1.08
-    },
-    {
       "ticker": "C",
       "score": 80,
       "phase": 4,
@@ -5984,7 +6023,7 @@
       "entry_quality": null,
       "breakout_price": null,
       "rs_slope": -0.197,
-      "volume_ratio": 1.11
+      "volume_ratio": 1.14
     },
     {
       "ticker": "CDE",
@@ -5997,7 +6036,7 @@
       "entry_quality": null,
       "breakout_price": null,
       "rs_slope": -2.424,
-      "volume_ratio": 0.95
+      "volume_ratio": 0.96
     },
     {
       "ticker": "CEG",
@@ -6010,7 +6049,7 @@
       "entry_quality": null,
       "breakout_price": null,
       "rs_slope": -0.177,
-      "volume_ratio": 1.12
+      "volume_ratio": 1.18
     },
     {
       "ticker": "CEVA",
@@ -6036,7 +6075,7 @@
       "entry_quality": null,
       "breakout_price": null,
       "rs_slope": -2.533,
-      "volume_ratio": 0.94
+      "volume_ratio": 1.02
     },
     {
       "ticker": "COIN",
@@ -6049,7 +6088,7 @@
       "entry_quality": null,
       "breakout_price": null,
       "rs_slope": -2.05,
-      "volume_ratio": 1.03
+      "volume_ratio": 1.05
     },
     {
       "ticker": "CTVA",
@@ -6062,7 +6101,7 @@
       "entry_quality": null,
       "breakout_price": null,
       "rs_slope": -3.323,
-      "volume_ratio": 0.85
+      "volume_ratio": 0.86
     },
     {
       "ticker": "FHB",
@@ -6074,7 +6113,7 @@
       "risk_reward_ratio": null,
       "entry_quality": null,
       "breakout_price": null,
-      "rs_slope": -0.159,
+      "rs_slope": -0.158,
       "volume_ratio": 1.15
     },
     {
@@ -6087,7 +6126,7 @@
       "risk_reward_ratio": null,
       "entry_quality": null,
       "breakout_price": null,
-      "rs_slope": -0.543,
+      "rs_slope": -0.542,
       "volume_ratio": 1.2
     },
     {
@@ -6100,8 +6139,8 @@
       "risk_reward_ratio": null,
       "entry_quality": null,
       "breakout_price": null,
-      "rs_slope": -0.413,
-      "volume_ratio": 1.19
+      "rs_slope": -0.412,
+      "volume_ratio": 1.22
     },
     {
       "ticker": "HIMS",
@@ -6113,21 +6152,8 @@
       "risk_reward_ratio": null,
       "entry_quality": null,
       "breakout_price": null,
-      "rs_slope": -3.707,
-      "volume_ratio": 0.72
-    },
-    {
-      "ticker": "HLNE",
-      "score": 80,
-      "phase": 4,
-      "current_price": 85.33,
-      "stop_loss": null,
-      "target_price": null,
-      "risk_reward_ratio": null,
-      "entry_quality": null,
-      "breakout_price": null,
-      "rs_slope": -0.536,
-      "volume_ratio": 1.47
+      "rs_slope": -3.706,
+      "volume_ratio": 0.73
     },
     {
       "ticker": "IE",
@@ -6140,7 +6166,7 @@
       "entry_quality": null,
       "breakout_price": null,
       "rs_slope": -2.379,
-      "volume_ratio": 0.85
+      "volume_ratio": 0.86
     },
     {
       "ticker": "IMXI",
@@ -6152,7 +6178,7 @@
       "risk_reward_ratio": null,
       "entry_quality": null,
       "breakout_price": null,
-      "rs_slope": -2.296,
+      "rs_slope": -2.295,
       "volume_ratio": 0.52
     },
     {
@@ -6166,7 +6192,7 @@
       "entry_quality": null,
       "breakout_price": null,
       "rs_slope": -2.903,
-      "volume_ratio": 0.96
+      "volume_ratio": 0.97
     },
     {
       "ticker": "IPX",
@@ -6178,8 +6204,8 @@
       "risk_reward_ratio": null,
       "entry_quality": null,
       "breakout_price": null,
-      "rs_slope": -2.828,
-      "volume_ratio": 1.09
+      "rs_slope": -2.827,
+      "volume_ratio": 1.1
     },
     {
       "ticker": "KEY",
@@ -6192,7 +6218,7 @@
       "entry_quality": null,
       "breakout_price": null,
       "rs_slope": -0.168,
-      "volume_ratio": 1.32
+      "volume_ratio": 1.36
     },
     {
       "ticker": "KRMN",
@@ -6234,19 +6260,6 @@
       "volume_ratio": 1.02
     },
     {
-      "ticker": "LRCX",
-      "score": 80,
-      "phase": 4,
-      "current_price": 185.01,
-      "stop_loss": null,
-      "target_price": null,
-      "risk_reward_ratio": null,
-      "entry_quality": null,
-      "breakout_price": null,
-      "rs_slope": -0.287,
-      "volume_ratio": 1.45
-    },
-    {
       "ticker": "MELI",
       "score": 80,
       "phase": 4,
@@ -6269,7 +6282,7 @@
       "risk_reward_ratio": null,
       "entry_quality": null,
       "breakout_price": null,
-      "rs_slope": -3.705,
+      "rs_slope": -3.704,
       "volume_ratio": 0.41
     },
     {
@@ -6308,7 +6321,7 @@
       "risk_reward_ratio": null,
       "entry_quality": null,
       "breakout_price": null,
-      "rs_slope": -0.365,
+      "rs_slope": -0.364,
       "volume_ratio": 1.13
     },
     {
@@ -6322,7 +6335,7 @@
       "entry_quality": null,
       "breakout_price": null,
       "rs_slope": -3.741,
-      "volume_ratio": 0.79
+      "volume_ratio": 0.8
     },
     {
       "ticker": "RES",
@@ -6347,7 +6360,7 @@
       "risk_reward_ratio": null,
       "entry_quality": null,
       "breakout_price": null,
-      "rs_slope": -0.857,
+      "rs_slope": -0.856,
       "volume_ratio": 1.28
     },
     {
@@ -6360,7 +6373,7 @@
       "risk_reward_ratio": null,
       "entry_quality": null,
       "breakout_price": null,
-      "rs_slope": -3.984,
+      "rs_slope": -3.983,
       "volume_ratio": 0.91
     },
     {
@@ -6373,8 +6386,8 @@
       "risk_reward_ratio": null,
       "entry_quality": null,
       "breakout_price": null,
-      "rs_slope": -0.058,
-      "volume_ratio": 1.19
+      "rs_slope": -0.057,
+      "volume_ratio": 1.2
     },
     {
       "ticker": "TGS",
@@ -6412,7 +6425,7 @@
       "risk_reward_ratio": null,
       "entry_quality": null,
       "breakout_price": null,
-      "rs_slope": -0.261,
+      "rs_slope": -0.26,
       "volume_ratio": 1.15
     },
     {
@@ -6426,7 +6439,7 @@
       "entry_quality": null,
       "breakout_price": null,
       "rs_slope": -2.24,
-      "volume_ratio": 0.77
+      "volume_ratio": 0.78
     },
     {
       "ticker": "USAC",
@@ -6451,8 +6464,8 @@
       "risk_reward_ratio": null,
       "entry_quality": null,
       "breakout_price": null,
-      "rs_slope": -0.423,
-      "volume_ratio": 1.42
+      "rs_slope": -0.422,
+      "volume_ratio": 1.46
     },
     {
       "ticker": "AEBI",
@@ -6465,7 +6478,7 @@
       "entry_quality": null,
       "breakout_price": null,
       "rs_slope": -1.104,
-      "volume_ratio": 0.54
+      "volume_ratio": 0.64
     },
     {
       "ticker": "AMSC",
@@ -6477,7 +6490,7 @@
       "risk_reward_ratio": null,
       "entry_quality": null,
       "breakout_price": null,
-      "rs_slope": -1.196,
+      "rs_slope": -1.195,
       "volume_ratio": 1.09
     },
     {
@@ -6490,7 +6503,7 @@
       "risk_reward_ratio": null,
       "entry_quality": null,
       "breakout_price": null,
-      "rs_slope": -1.624,
+      "rs_slope": -1.623,
       "volume_ratio": 0.85
     },
     {
@@ -6516,8 +6529,8 @@
       "risk_reward_ratio": null,
       "entry_quality": null,
       "breakout_price": null,
-      "rs_slope": -1.906,
-      "volume_ratio": 0.86
+      "rs_slope": -1.905,
+      "volume_ratio": 0.89
     },
     {
       "ticker": "AXTI",
@@ -6530,7 +6543,7 @@
       "entry_quality": null,
       "breakout_price": null,
       "rs_slope": -1.45,
-      "volume_ratio": 0.92
+      "volume_ratio": 0.94
     },
     {
       "ticker": "CCJ",
@@ -6543,7 +6556,7 @@
       "entry_quality": null,
       "breakout_price": null,
       "rs_slope": -1.267,
-      "volume_ratio": 0.9
+      "volume_ratio": 0.92
     },
     {
       "ticker": "CGEM",
@@ -6568,7 +6581,7 @@
       "risk_reward_ratio": null,
       "entry_quality": null,
       "breakout_price": null,
-      "rs_slope": -1.425,
+      "rs_slope": -1.424,
       "volume_ratio": 0.62
     },
     {
@@ -6582,7 +6595,7 @@
       "entry_quality": null,
       "breakout_price": null,
       "rs_slope": -1.5,
-      "volume_ratio": 0.92
+      "volume_ratio": 0.93
     },
     {
       "ticker": "DVA",
@@ -6594,7 +6607,7 @@
       "risk_reward_ratio": null,
       "entry_quality": null,
       "breakout_price": null,
-      "rs_slope": -1.049,
+      "rs_slope": -1.048,
       "volume_ratio": 0.68
     },
     {
@@ -6608,7 +6621,7 @@
       "entry_quality": null,
       "breakout_price": null,
       "rs_slope": -1.988,
-      "volume_ratio": 1.06
+      "volume_ratio": 1.07
     },
     {
       "ticker": "GLXY",
@@ -6646,7 +6659,7 @@
       "risk_reward_ratio": null,
       "entry_quality": null,
       "breakout_price": null,
-      "rs_slope": -1.353,
+      "rs_slope": -1.352,
       "volume_ratio": 0.51
     },
     {
@@ -6673,7 +6686,7 @@
       "entry_quality": null,
       "breakout_price": null,
       "rs_slope": -1.416,
-      "volume_ratio": 0.92
+      "volume_ratio": 0.94
     },
     {
       "ticker": "KTOS",
@@ -6698,7 +6711,7 @@
       "risk_reward_ratio": null,
       "entry_quality": null,
       "breakout_price": null,
-      "rs_slope": -1.222,
+      "rs_slope": -1.221,
       "volume_ratio": 1.0
     },
     {
@@ -6724,7 +6737,7 @@
       "risk_reward_ratio": null,
       "entry_quality": null,
       "breakout_price": null,
-      "rs_slope": -1.196,
+      "rs_slope": -1.195,
       "volume_ratio": 0.58
     },
     {
@@ -6751,7 +6764,7 @@
       "entry_quality": null,
       "breakout_price": null,
       "rs_slope": -1.417,
-      "volume_ratio": 1.0
+      "volume_ratio": 1.01
     },
     {
       "ticker": "NAVI",
@@ -6776,8 +6789,8 @@
       "risk_reward_ratio": null,
       "entry_quality": null,
       "breakout_price": null,
-      "rs_slope": -1.685,
-      "volume_ratio": 0.95
+      "rs_slope": -1.684,
+      "volume_ratio": 0.96
     },
     {
       "ticker": "NRDS",
@@ -6828,7 +6841,7 @@
       "risk_reward_ratio": null,
       "entry_quality": null,
       "breakout_price": null,
-      "rs_slope": -1.07,
+      "rs_slope": -1.069,
       "volume_ratio": 0.79
     },
     {
@@ -6868,7 +6881,7 @@
       "entry_quality": null,
       "breakout_price": null,
       "rs_slope": -1.088,
-      "volume_ratio": 1.04
+      "volume_ratio": 1.05
     },
     {
       "ticker": "RYAM",
@@ -6881,7 +6894,7 @@
       "entry_quality": null,
       "breakout_price": null,
       "rs_slope": -1.432,
-      "volume_ratio": 0.62
+      "volume_ratio": 0.63
     },
     {
       "ticker": "SKYD",
@@ -6907,7 +6920,7 @@
       "entry_quality": null,
       "breakout_price": null,
       "rs_slope": -1.732,
-      "volume_ratio": 1.01
+      "volume_ratio": 1.02
     },
     {
       "ticker": "TBN",
@@ -6919,7 +6932,7 @@
       "risk_reward_ratio": null,
       "entry_quality": null,
       "breakout_price": null,
-      "rs_slope": -1.763,
+      "rs_slope": -1.762,
       "volume_ratio": 0.78
     },
     {
@@ -6945,8 +6958,8 @@
       "risk_reward_ratio": null,
       "entry_quality": null,
       "breakout_price": null,
-      "rs_slope": -1.415,
-      "volume_ratio": 0.67
+      "rs_slope": -1.414,
+      "volume_ratio": 0.68
     },
     {
       "ticker": "VRTS",
@@ -6959,7 +6972,7 @@
       "entry_quality": null,
       "breakout_price": null,
       "rs_slope": -1.482,
-      "volume_ratio": 0.8
+      "volume_ratio": 0.9
     },
     {
       "ticker": "ZVRA",
@@ -6971,21 +6984,21 @@
       "risk_reward_ratio": null,
       "entry_quality": null,
       "breakout_price": null,
-      "rs_slope": -1.752,
+      "rs_slope": -1.751,
       "volume_ratio": 0.97
     },
     {
       "ticker": "AA",
       "score": 75,
       "phase": 4,
-      "current_price": 35.05,
+      "current_price": 35.07,
       "stop_loss": null,
       "target_price": null,
       "risk_reward_ratio": null,
       "entry_quality": null,
       "breakout_price": null,
-      "rs_slope": -0.955,
-      "volume_ratio": 0.69
+      "rs_slope": -0.953,
+      "volume_ratio": 0.77
     },
     {
       "ticker": "AAL",
@@ -6997,8 +7010,8 @@
       "risk_reward_ratio": null,
       "entry_quality": null,
       "breakout_price": null,
-      "rs_slope": -0.34,
-      "volume_ratio": 1.1
+      "rs_slope": -0.339,
+      "volume_ratio": 1.12
     },
     {
       "ticker": "ACAD",
@@ -7017,13 +7030,13 @@
       "ticker": "ADEA",
       "score": 75,
       "phase": 4,
-      "current_price": 14.04,
+      "current_price": 14.03,
       "stop_loss": null,
       "target_price": null,
       "risk_reward_ratio": null,
       "entry_quality": null,
       "breakout_price": null,
-      "rs_slope": -0.887,
+      "rs_slope": -0.888,
       "volume_ratio": 1.08
     },
     {
@@ -7036,7 +7049,7 @@
       "risk_reward_ratio": null,
       "entry_quality": null,
       "breakout_price": null,
-      "rs_slope": -0.238,
+      "rs_slope": -0.237,
       "volume_ratio": 0.59
     },
     {
@@ -7062,7 +7075,7 @@
       "risk_reward_ratio": null,
       "entry_quality": null,
       "breakout_price": null,
-      "rs_slope": -0.43,
+      "rs_slope": -0.429,
       "volume_ratio": 1.17
     },
     {
@@ -7075,8 +7088,8 @@
       "risk_reward_ratio": null,
       "entry_quality": null,
       "breakout_price": null,
-      "rs_slope": 0.158,
-      "volume_ratio": 1.23
+      "rs_slope": 0.159,
+      "volume_ratio": 1.24
     },
     {
       "ticker": "ALG",
@@ -7089,7 +7102,7 @@
       "entry_quality": null,
       "breakout_price": null,
       "rs_slope": 0.016,
-      "volume_ratio": 1.11
+      "volume_ratio": 1.15
     },
     {
       "ticker": "ALGM",
@@ -7115,7 +7128,7 @@
       "entry_quality": null,
       "breakout_price": null,
       "rs_slope": -0.939,
-      "volume_ratio": 0.56
+      "volume_ratio": 0.61
     },
     {
       "ticker": "AMSF",
@@ -7140,7 +7153,7 @@
       "risk_reward_ratio": null,
       "entry_quality": null,
       "breakout_price": null,
-      "rs_slope": -0.827,
+      "rs_slope": -0.826,
       "volume_ratio": 0.38
     },
     {
@@ -7154,7 +7167,7 @@
       "entry_quality": null,
       "breakout_price": null,
       "rs_slope": -0.037,
-      "volume_ratio": 1.04
+      "volume_ratio": 1.05
     },
     {
       "ticker": "ATEC",
@@ -7179,7 +7192,7 @@
       "risk_reward_ratio": null,
       "entry_quality": null,
       "breakout_price": null,
-      "rs_slope": 0.034,
+      "rs_slope": 0.035,
       "volume_ratio": 1.12
     },
     {
@@ -7206,7 +7219,7 @@
       "entry_quality": null,
       "breakout_price": null,
       "rs_slope": -0.434,
-      "volume_ratio": 0.68
+      "volume_ratio": 0.98
     },
     {
       "ticker": "BCS",
@@ -7231,8 +7244,8 @@
       "risk_reward_ratio": null,
       "entry_quality": null,
       "breakout_price": null,
-      "rs_slope": 0.062,
-      "volume_ratio": 1.2
+      "rs_slope": 0.063,
+      "volume_ratio": 1.21
     },
     {
       "ticker": "BHE",
@@ -7245,7 +7258,7 @@
       "entry_quality": null,
       "breakout_price": null,
       "rs_slope": -0.256,
-      "volume_ratio": 1.08
+      "volume_ratio": 1.09
     },
     {
       "ticker": "BKD",
@@ -7270,7 +7283,7 @@
       "risk_reward_ratio": null,
       "entry_quality": null,
       "breakout_price": null,
-      "rs_slope": -0.594,
+      "rs_slope": -0.593,
       "volume_ratio": 0.75
     },
     {
@@ -7296,8 +7309,8 @@
       "risk_reward_ratio": null,
       "entry_quality": null,
       "breakout_price": null,
-      "rs_slope": -0.466,
-      "volume_ratio": 0.56
+      "rs_slope": -0.465,
+      "volume_ratio": 0.57
     },
     {
       "ticker": "CASH",
@@ -7387,7 +7400,7 @@
       "risk_reward_ratio": null,
       "entry_quality": null,
       "breakout_price": null,
-      "rs_slope": -0.685,
+      "rs_slope": -0.684,
       "volume_ratio": 0.79
     },
     {
@@ -7401,7 +7414,7 @@
       "entry_quality": null,
       "breakout_price": null,
       "rs_slope": -0.39,
-      "volume_ratio": 1.01
+      "volume_ratio": 1.06
     },
     {
       "ticker": "CMRE",
@@ -7426,7 +7439,7 @@
       "risk_reward_ratio": null,
       "entry_quality": null,
       "breakout_price": null,
-      "rs_slope": -0.518,
+      "rs_slope": -0.517,
       "volume_ratio": 0.88
     },
     {
@@ -7440,7 +7453,7 @@
       "entry_quality": null,
       "breakout_price": null,
       "rs_slope": -0.162,
-      "volume_ratio": 0.64
+      "volume_ratio": 0.69
     },
     {
       "ticker": "CRK",
@@ -7479,7 +7492,7 @@
       "entry_quality": null,
       "breakout_price": null,
       "rs_slope": -0.156,
-      "volume_ratio": 0.75
+      "volume_ratio": 0.76
     },
     {
       "ticker": "DIOD",
@@ -7517,7 +7530,7 @@
       "risk_reward_ratio": null,
       "entry_quality": null,
       "breakout_price": null,
-      "rs_slope": -0.9,
+      "rs_slope": -0.899,
       "volume_ratio": 0.89
     },
     {
@@ -7557,7 +7570,7 @@
       "entry_quality": null,
       "breakout_price": null,
       "rs_slope": -0.348,
-      "volume_ratio": 0.65
+      "volume_ratio": 0.69
     },
     {
       "ticker": "FLY",
@@ -7569,7 +7582,7 @@
       "risk_reward_ratio": null,
       "entry_quality": null,
       "breakout_price": null,
-      "rs_slope": -0.948,
+      "rs_slope": -0.947,
       "volume_ratio": 0.97
     },
     {
@@ -7582,8 +7595,8 @@
       "risk_reward_ratio": null,
       "entry_quality": null,
       "breakout_price": null,
-      "rs_slope": -0.068,
-      "volume_ratio": 1.2
+      "rs_slope": -0.067,
+      "volume_ratio": 1.22
     },
     {
       "ticker": "FTAI",
@@ -7595,8 +7608,8 @@
       "risk_reward_ratio": null,
       "entry_quality": null,
       "breakout_price": null,
-      "rs_slope": -0.774,
-      "volume_ratio": 0.56
+      "rs_slope": -0.773,
+      "volume_ratio": 0.57
     },
     {
       "ticker": "FTI",
@@ -7609,7 +7622,7 @@
       "entry_quality": null,
       "breakout_price": null,
       "rs_slope": -0.239,
-      "volume_ratio": 0.71
+      "volume_ratio": 0.72
     },
     {
       "ticker": "GAIN",
@@ -7648,7 +7661,7 @@
       "entry_quality": null,
       "breakout_price": null,
       "rs_slope": -0.481,
-      "volume_ratio": 0.82
+      "volume_ratio": 0.86
     },
     {
       "ticker": "GLUE",
@@ -7661,7 +7674,7 @@
       "entry_quality": null,
       "breakout_price": null,
       "rs_slope": -0.658,
-      "volume_ratio": 0.68
+      "volume_ratio": 0.69
     },
     {
       "ticker": "HE",
@@ -7673,7 +7686,7 @@
       "risk_reward_ratio": null,
       "entry_quality": null,
       "breakout_price": null,
-      "rs_slope": -0.266,
+      "rs_slope": -0.265,
       "volume_ratio": 0.79
     },
     {
@@ -7712,7 +7725,7 @@
       "risk_reward_ratio": null,
       "entry_quality": null,
       "breakout_price": null,
-      "rs_slope": -0.718,
+      "rs_slope": -0.717,
       "volume_ratio": 0.6
     },
     {
@@ -7725,7 +7738,7 @@
       "risk_reward_ratio": null,
       "entry_quality": null,
       "breakout_price": null,
-      "rs_slope": -0.368,
+      "rs_slope": -0.367,
       "volume_ratio": 0.44
     },
     {
@@ -7777,7 +7790,7 @@
       "risk_reward_ratio": null,
       "entry_quality": null,
       "breakout_price": null,
-      "rs_slope": -0.382,
+      "rs_slope": -0.381,
       "volume_ratio": 0.47
     },
     {
@@ -7803,7 +7816,7 @@
       "risk_reward_ratio": null,
       "entry_quality": null,
       "breakout_price": null,
-      "rs_slope": -0.121,
+      "rs_slope": -0.12,
       "volume_ratio": 1.06
     },
     {
@@ -7829,7 +7842,7 @@
       "risk_reward_ratio": null,
       "entry_quality": null,
       "breakout_price": null,
-      "rs_slope": -0.142,
+      "rs_slope": -0.141,
       "volume_ratio": 0.91
     },
     {
@@ -7842,7 +7855,7 @@
       "risk_reward_ratio": null,
       "entry_quality": null,
       "breakout_price": null,
-      "rs_slope": -0.719,
+      "rs_slope": -0.718,
       "volume_ratio": 0.96
     },
     {
@@ -7894,7 +7907,7 @@
       "risk_reward_ratio": null,
       "entry_quality": null,
       "breakout_price": null,
-      "rs_slope": -0.318,
+      "rs_slope": -0.317,
       "volume_ratio": 0.79
     },
     {
@@ -7907,7 +7920,7 @@
       "risk_reward_ratio": null,
       "entry_quality": null,
       "breakout_price": null,
-      "rs_slope": -0.221,
+      "rs_slope": -0.22,
       "volume_ratio": 0.89
     },
     {
@@ -7920,8 +7933,8 @@
       "risk_reward_ratio": null,
       "entry_quality": null,
       "breakout_price": null,
-      "rs_slope": 0.404,
-      "volume_ratio": 1.13
+      "rs_slope": 0.405,
+      "volume_ratio": 1.21
     },
     {
       "ticker": "LITE",
@@ -7934,7 +7947,7 @@
       "entry_quality": null,
       "breakout_price": null,
       "rs_slope": -0.796,
-      "volume_ratio": 0.83
+      "volume_ratio": 0.85
     },
     {
       "ticker": "LKQ",
@@ -7972,7 +7985,7 @@
       "risk_reward_ratio": null,
       "entry_quality": null,
       "breakout_price": null,
-      "rs_slope": -0.571,
+      "rs_slope": -0.57,
       "volume_ratio": 0.78
     },
     {
@@ -8011,7 +8024,7 @@
       "risk_reward_ratio": null,
       "entry_quality": null,
       "breakout_price": null,
-      "rs_slope": -0.571,
+      "rs_slope": -0.57,
       "volume_ratio": 0.38
     },
     {
@@ -8037,21 +8050,34 @@
       "risk_reward_ratio": null,
       "entry_quality": null,
       "breakout_price": null,
-      "rs_slope": -0.335,
+      "rs_slope": -0.334,
       "volume_ratio": 0.99
     },
     {
       "ticker": "MCHP",
       "score": 75,
       "phase": 4,
-      "current_price": 57.65,
+      "current_price": 57.66,
       "stop_loss": null,
       "target_price": null,
       "risk_reward_ratio": null,
       "entry_quality": null,
       "breakout_price": null,
       "rs_slope": -0.159,
-      "volume_ratio": 0.78
+      "volume_ratio": 0.79
+    },
+    {
+      "ticker": "MCRI",
+      "score": 75,
+      "phase": 4,
+      "current_price": 104.84,
+      "stop_loss": null,
+      "target_price": null,
+      "risk_reward_ratio": null,
+      "entry_quality": null,
+      "breakout_price": null,
+      "rs_slope": 0.045,
+      "volume_ratio": 1.1
     },
     {
       "ticker": "MEC",
@@ -8063,7 +8089,7 @@
       "risk_reward_ratio": null,
       "entry_quality": null,
       "breakout_price": null,
-      "rs_slope": -0.66,
+      "rs_slope": -0.659,
       "volume_ratio": 0.46
     },
     {
@@ -8076,7 +8102,7 @@
       "risk_reward_ratio": null,
       "entry_quality": null,
       "breakout_price": null,
-      "rs_slope": 0.047,
+      "rs_slope": 0.051,
       "volume_ratio": 1.41
     },
     {
@@ -8141,8 +8167,8 @@
       "risk_reward_ratio": null,
       "entry_quality": null,
       "breakout_price": null,
-      "rs_slope": -0.466,
-      "volume_ratio": 0.73
+      "rs_slope": -0.465,
+      "volume_ratio": 0.79
     },
     {
       "ticker": "NLY",
@@ -8155,7 +8181,7 @@
       "entry_quality": null,
       "breakout_price": null,
       "rs_slope": -0.341,
-      "volume_ratio": 1.12
+      "volume_ratio": 1.13
     },
     {
       "ticker": "NMRK",
@@ -8245,7 +8271,7 @@
       "risk_reward_ratio": null,
       "entry_quality": null,
       "breakout_price": null,
-      "rs_slope": -0.192,
+      "rs_slope": -0.191,
       "volume_ratio": 0.64
     },
     {
@@ -8271,8 +8297,21 @@
       "risk_reward_ratio": null,
       "entry_quality": null,
       "breakout_price": null,
-      "rs_slope": -0.148,
-      "volume_ratio": 0.95
+      "rs_slope": -0.147,
+      "volume_ratio": 0.98
+    },
+    {
+      "ticker": "OPY",
+      "score": 75,
+      "phase": 4,
+      "current_price": 86.49,
+      "stop_loss": null,
+      "target_price": null,
+      "risk_reward_ratio": null,
+      "entry_quality": null,
+      "breakout_price": null,
+      "rs_slope": -0.111,
+      "volume_ratio": 1.02
     },
     {
       "ticker": "ORCL",
@@ -8284,8 +8323,8 @@
       "risk_reward_ratio": null,
       "entry_quality": null,
       "breakout_price": null,
-      "rs_slope": -0.559,
-      "volume_ratio": 0.87
+      "rs_slope": -0.558,
+      "volume_ratio": 0.9
     },
     {
       "ticker": "ORN",
@@ -8310,7 +8349,7 @@
       "risk_reward_ratio": null,
       "entry_quality": null,
       "breakout_price": null,
-      "rs_slope": -0.916,
+      "rs_slope": -0.915,
       "volume_ratio": 0.71
     },
     {
@@ -8324,7 +8363,7 @@
       "entry_quality": null,
       "breakout_price": null,
       "rs_slope": -0.696,
-      "volume_ratio": 0.85
+      "volume_ratio": 1.0
     },
     {
       "ticker": "RDDT",
@@ -8375,7 +8414,7 @@
       "risk_reward_ratio": null,
       "entry_quality": null,
       "breakout_price": null,
-      "rs_slope": -0.74,
+      "rs_slope": -0.739,
       "volume_ratio": 0.79
     },
     {
@@ -8401,7 +8440,7 @@
       "risk_reward_ratio": null,
       "entry_quality": null,
       "breakout_price": null,
-      "rs_slope": -0.087,
+      "rs_slope": -0.086,
       "volume_ratio": 0.9
     },
     {
@@ -8414,7 +8453,7 @@
       "risk_reward_ratio": null,
       "entry_quality": null,
       "breakout_price": null,
-      "rs_slope": -0.17,
+      "rs_slope": -0.169,
       "volume_ratio": 0.98
     },
     {
@@ -8427,7 +8466,7 @@
       "risk_reward_ratio": null,
       "entry_quality": null,
       "breakout_price": null,
-      "rs_slope": 0.2,
+      "rs_slope": 0.201,
       "volume_ratio": 1.14
     },
     {
@@ -8453,7 +8492,7 @@
       "risk_reward_ratio": null,
       "entry_quality": null,
       "breakout_price": null,
-      "rs_slope": -0.254,
+      "rs_slope": -0.253,
       "volume_ratio": 0.52
     },
     {
@@ -8492,7 +8531,7 @@
       "risk_reward_ratio": null,
       "entry_quality": null,
       "breakout_price": null,
-      "rs_slope": -0.136,
+      "rs_slope": -0.135,
       "volume_ratio": 0.96
     },
     {
@@ -8505,7 +8544,7 @@
       "risk_reward_ratio": null,
       "entry_quality": null,
       "breakout_price": null,
-      "rs_slope": -0.905,
+      "rs_slope": -0.904,
       "volume_ratio": 0.52
     },
     {
@@ -8558,7 +8597,7 @@
       "entry_quality": null,
       "breakout_price": null,
       "rs_slope": 0.026,
-      "volume_ratio": 1.42
+      "volume_ratio": 1.45
     },
     {
       "ticker": "VRT",
@@ -8570,7 +8609,7 @@
       "risk_reward_ratio": null,
       "entry_quality": null,
       "breakout_price": null,
-      "rs_slope": -0.302,
+      "rs_slope": -0.301,
       "volume_ratio": 0.84
     },
     {
@@ -8583,8 +8622,8 @@
       "risk_reward_ratio": null,
       "entry_quality": null,
       "breakout_price": null,
-      "rs_slope": -0.243,
-      "volume_ratio": 0.8
+      "rs_slope": -0.242,
+      "volume_ratio": 0.87
     },
     {
       "ticker": "VTS",
@@ -8622,7 +8661,7 @@
       "risk_reward_ratio": null,
       "entry_quality": null,
       "breakout_price": null,
-      "rs_slope": -0.366,
+      "rs_slope": -0.365,
       "volume_ratio": 0.91
     },
     {
@@ -8635,7 +8674,7 @@
       "risk_reward_ratio": null,
       "entry_quality": null,
       "breakout_price": null,
-      "rs_slope": -0.546,
+      "rs_slope": -0.545,
       "volume_ratio": 0.78
     },
     {
@@ -8648,7 +8687,7 @@
       "risk_reward_ratio": null,
       "entry_quality": null,
       "breakout_price": null,
-      "rs_slope": -0.67,
+      "rs_slope": -0.669,
       "volume_ratio": 0.7
     },
     {
@@ -8661,7 +8700,7 @@
       "risk_reward_ratio": null,
       "entry_quality": null,
       "breakout_price": null,
-      "rs_slope": -0.364,
+      "rs_slope": -0.363,
       "volume_ratio": 0.82
     },
     {
@@ -8675,7 +8714,7 @@
       "entry_quality": null,
       "breakout_price": null,
       "rs_slope": -0.533,
-      "volume_ratio": 1.15
+      "volume_ratio": 1.19
     },
     {
       "ticker": "WYY",
@@ -8687,7 +8726,7 @@
       "risk_reward_ratio": null,
       "entry_quality": null,
       "breakout_price": null,
-      "rs_slope": 0.634,
+      "rs_slope": 0.635,
       "volume_ratio": 1.24
     },
     {
@@ -8713,8 +8752,8 @@
       "risk_reward_ratio": null,
       "entry_quality": null,
       "breakout_price": null,
-      "rs_slope": -1.083,
-      "volume_ratio": 1.11
+      "rs_slope": -1.082,
+      "volume_ratio": 1.12
     },
     {
       "ticker": "NNE",
@@ -8726,7 +8765,7 @@
       "risk_reward_ratio": null,
       "entry_quality": null,
       "breakout_price": null,
-      "rs_slope": -1.362,
+      "rs_slope": -1.361,
       "volume_ratio": 1.29
     },
     {
@@ -8740,7 +8779,7 @@
       "entry_quality": null,
       "breakout_price": null,
       "rs_slope": -1.64,
-      "volume_ratio": 1.15
+      "volume_ratio": 1.17
     },
     {
       "ticker": "SSYS",
@@ -8791,8 +8830,8 @@
       "risk_reward_ratio": null,
       "entry_quality": null,
       "breakout_price": null,
-      "rs_slope": -0.621,
-      "volume_ratio": 0.87
+      "rs_slope": -0.62,
+      "volume_ratio": 0.88
     },
     {
       "ticker": "ARE",
@@ -8805,7 +8844,7 @@
       "entry_quality": null,
       "breakout_price": null,
       "rs_slope": -0.312,
-      "volume_ratio": 0.76
+      "volume_ratio": 0.77
     },
     {
       "ticker": "ATRO",
@@ -8817,7 +8856,7 @@
       "risk_reward_ratio": null,
       "entry_quality": null,
       "breakout_price": null,
-      "rs_slope": 0.424,
+      "rs_slope": 0.425,
       "volume_ratio": 0.82
     },
     {
@@ -8830,8 +8869,8 @@
       "risk_reward_ratio": null,
       "entry_quality": null,
       "breakout_price": null,
-      "rs_slope": 0.335,
-      "volume_ratio": 1.03
+      "rs_slope": 0.336,
+      "volume_ratio": 1.08
     },
     {
       "ticker": "AX",
@@ -8921,7 +8960,7 @@
       "risk_reward_ratio": null,
       "entry_quality": null,
       "breakout_price": null,
-      "rs_slope": 0.055,
+      "rs_slope": 0.056,
       "volume_ratio": 0.54
     },
     {
@@ -8947,8 +8986,8 @@
       "risk_reward_ratio": null,
       "entry_quality": null,
       "breakout_price": null,
-      "rs_slope": -0.488,
-      "volume_ratio": 0.98
+      "rs_slope": -0.487,
+      "volume_ratio": 1.01
     },
     {
       "ticker": "BROS",
@@ -8986,7 +9025,7 @@
       "risk_reward_ratio": null,
       "entry_quality": null,
       "breakout_price": null,
-      "rs_slope": -0.381,
+      "rs_slope": -0.364,
       "volume_ratio": 1.01
     },
     {
@@ -9012,8 +9051,8 @@
       "risk_reward_ratio": null,
       "entry_quality": null,
       "breakout_price": null,
-      "rs_slope": -0.146,
-      "volume_ratio": 0.84
+      "rs_slope": -0.145,
+      "volume_ratio": 0.85
     },
     {
       "ticker": "CHWY",
@@ -9039,7 +9078,7 @@
       "entry_quality": null,
       "breakout_price": null,
       "rs_slope": 0.004,
-      "volume_ratio": 0.91
+      "volume_ratio": 0.92
     },
     {
       "ticker": "CLS",
@@ -9052,7 +9091,7 @@
       "entry_quality": null,
       "breakout_price": null,
       "rs_slope": -0.135,
-      "volume_ratio": 1.21
+      "volume_ratio": 1.22
     },
     {
       "ticker": "CNS",
@@ -9064,8 +9103,8 @@
       "risk_reward_ratio": null,
       "entry_quality": null,
       "breakout_price": null,
-      "rs_slope": -0.479,
-      "volume_ratio": 1.06
+      "rs_slope": -0.478,
+      "volume_ratio": 1.05
     },
     {
       "ticker": "CPS",
@@ -9077,7 +9116,7 @@
       "risk_reward_ratio": null,
       "entry_quality": null,
       "breakout_price": null,
-      "rs_slope": 0.312,
+      "rs_slope": 0.313,
       "volume_ratio": 0.88
     },
     {
@@ -9117,7 +9156,7 @@
       "entry_quality": null,
       "breakout_price": null,
       "rs_slope": -0.644,
-      "volume_ratio": 1.14
+      "volume_ratio": 1.15
     },
     {
       "ticker": "CVLG",
@@ -9194,8 +9233,8 @@
       "risk_reward_ratio": null,
       "entry_quality": null,
       "breakout_price": null,
-      "rs_slope": 0.427,
-      "volume_ratio": 0.69
+      "rs_slope": 0.428,
+      "volume_ratio": 0.7
     },
     {
       "ticker": "EMN",
@@ -9234,7 +9273,7 @@
       "entry_quality": null,
       "breakout_price": null,
       "rs_slope": 0.427,
-      "volume_ratio": 0.95
+      "volume_ratio": 1.02
     },
     {
       "ticker": "FHN",
@@ -9247,7 +9286,7 @@
       "entry_quality": null,
       "breakout_price": null,
       "rs_slope": -0.082,
-      "volume_ratio": 0.8
+      "volume_ratio": 0.81
     },
     {
       "ticker": "FRME",
@@ -9272,7 +9311,7 @@
       "risk_reward_ratio": null,
       "entry_quality": null,
       "breakout_price": null,
-      "rs_slope": -0.832,
+      "rs_slope": -0.831,
       "volume_ratio": 0.8
     },
     {
@@ -9285,7 +9324,7 @@
       "risk_reward_ratio": null,
       "entry_quality": null,
       "breakout_price": null,
-      "rs_slope": 0.075,
+      "rs_slope": 0.076,
       "volume_ratio": 0.89
     },
     {
@@ -9298,8 +9337,8 @@
       "risk_reward_ratio": null,
       "entry_quality": null,
       "breakout_price": null,
-      "rs_slope": 0.102,
-      "volume_ratio": 0.67
+      "rs_slope": 0.121,
+      "volume_ratio": 0.68
     },
     {
       "ticker": "GLP",
@@ -9326,6 +9365,19 @@
       "breakout_price": null,
       "rs_slope": -0.416,
       "volume_ratio": 0.67
+    },
+    {
+      "ticker": "GNTX",
+      "score": 70,
+      "phase": 4,
+      "current_price": 19.66,
+      "stop_loss": null,
+      "target_price": null,
+      "risk_reward_ratio": null,
+      "entry_quality": null,
+      "breakout_price": null,
+      "rs_slope": 0.204,
+      "volume_ratio": 1.13
     },
     {
       "ticker": "GRBK",
@@ -9363,8 +9415,8 @@
       "risk_reward_ratio": null,
       "entry_quality": null,
       "breakout_price": null,
-      "rs_slope": -0.427,
-      "volume_ratio": 0.91
+      "rs_slope": -0.426,
+      "volume_ratio": 0.93
     },
     {
       "ticker": "HLIT",
@@ -9376,7 +9428,7 @@
       "risk_reward_ratio": null,
       "entry_quality": null,
       "breakout_price": null,
-      "rs_slope": 0.552,
+      "rs_slope": 0.553,
       "volume_ratio": 0.58
     },
     {
@@ -9390,7 +9442,7 @@
       "entry_quality": null,
       "breakout_price": null,
       "rs_slope": 0.076,
-      "volume_ratio": 0.86
+      "volume_ratio": 0.87
     },
     {
       "ticker": "HSBC",
@@ -9415,7 +9467,7 @@
       "risk_reward_ratio": null,
       "entry_quality": null,
       "breakout_price": null,
-      "rs_slope": -0.007,
+      "rs_slope": -0.006,
       "volume_ratio": 0.96
     },
     {
@@ -9441,7 +9493,7 @@
       "risk_reward_ratio": null,
       "entry_quality": null,
       "breakout_price": null,
-      "rs_slope": -0.597,
+      "rs_slope": -0.596,
       "volume_ratio": 1.17
     },
     {
@@ -9454,8 +9506,8 @@
       "risk_reward_ratio": null,
       "entry_quality": null,
       "breakout_price": null,
-      "rs_slope": 0.241,
-      "volume_ratio": 0.62
+      "rs_slope": 0.242,
+      "volume_ratio": 0.73
     },
     {
       "ticker": "IP",
@@ -9467,7 +9519,7 @@
       "risk_reward_ratio": null,
       "entry_quality": null,
       "breakout_price": null,
-      "rs_slope": -0.625,
+      "rs_slope": -0.624,
       "volume_ratio": 0.99
     },
     {
@@ -9480,8 +9532,8 @@
       "risk_reward_ratio": null,
       "entry_quality": null,
       "breakout_price": null,
-      "rs_slope": -0.304,
-      "volume_ratio": 0.66
+      "rs_slope": -0.303,
+      "volume_ratio": 0.7
     },
     {
       "ticker": "IRTC",
@@ -9493,7 +9545,7 @@
       "risk_reward_ratio": null,
       "entry_quality": null,
       "breakout_price": null,
-      "rs_slope": 0.135,
+      "rs_slope": 0.136,
       "volume_ratio": 0.7
     },
     {
@@ -9532,7 +9584,7 @@
       "risk_reward_ratio": null,
       "entry_quality": null,
       "breakout_price": null,
-      "rs_slope": 0.447,
+      "rs_slope": 0.448,
       "volume_ratio": 0.58
     },
     {
@@ -9571,34 +9623,8 @@
       "risk_reward_ratio": null,
       "entry_quality": null,
       "breakout_price": null,
-      "rs_slope": -0.235,
+      "rs_slope": -0.234,
       "volume_ratio": 0.52
-    },
-    {
-      "ticker": "MCRI",
-      "score": 70,
-      "phase": 4,
-      "current_price": 104.84,
-      "stop_loss": null,
-      "target_price": null,
-      "risk_reward_ratio": null,
-      "entry_quality": null,
-      "breakout_price": null,
-      "rs_slope": 0.045,
-      "volume_ratio": 0.57
-    },
-    {
-      "ticker": "MCY",
-      "score": 70,
-      "phase": 4,
-      "current_price": 82.49,
-      "stop_loss": null,
-      "target_price": null,
-      "risk_reward_ratio": null,
-      "entry_quality": null,
-      "breakout_price": null,
-      "rs_slope": 0.239,
-      "volume_ratio": 0.94
     },
     {
       "ticker": "MFA",
@@ -9624,7 +9650,7 @@
       "entry_quality": null,
       "breakout_price": null,
       "rs_slope": 0.257,
-      "volume_ratio": 0.96
+      "volume_ratio": 0.98
     },
     {
       "ticker": "MRCY",
@@ -9637,7 +9663,7 @@
       "entry_quality": null,
       "breakout_price": null,
       "rs_slope": 0.1,
-      "volume_ratio": 0.57
+      "volume_ratio": 0.7
     },
     {
       "ticker": "MYRG",
@@ -9662,7 +9688,7 @@
       "risk_reward_ratio": null,
       "entry_quality": null,
       "breakout_price": null,
-      "rs_slope": 0.054,
+      "rs_slope": 0.055,
       "volume_ratio": 0.78
     },
     {
@@ -9675,7 +9701,7 @@
       "risk_reward_ratio": null,
       "entry_quality": null,
       "breakout_price": null,
-      "rs_slope": 0.445,
+      "rs_slope": 0.446,
       "volume_ratio": 0.9
     },
     {
@@ -9688,7 +9714,7 @@
       "risk_reward_ratio": null,
       "entry_quality": null,
       "breakout_price": null,
-      "rs_slope": -0.717,
+      "rs_slope": -0.716,
       "volume_ratio": 0.84
     },
     {
@@ -9701,8 +9727,8 @@
       "risk_reward_ratio": null,
       "entry_quality": null,
       "breakout_price": null,
-      "rs_slope": 0.18,
-      "volume_ratio": 0.88
+      "rs_slope": 0.181,
+      "volume_ratio": 0.92
     },
     {
       "ticker": "NRG",
@@ -9714,7 +9740,7 @@
       "risk_reward_ratio": null,
       "entry_quality": null,
       "breakout_price": null,
-      "rs_slope": 0.534,
+      "rs_slope": 0.535,
       "volume_ratio": 0.78
     },
     {
@@ -9792,8 +9818,8 @@
       "risk_reward_ratio": null,
       "entry_quality": null,
       "breakout_price": null,
-      "rs_slope": -0.05,
-      "volume_ratio": 1.16
+      "rs_slope": -0.049,
+      "volume_ratio": 1.17
     },
     {
       "ticker": "OXM",
@@ -9818,7 +9844,7 @@
       "risk_reward_ratio": null,
       "entry_quality": null,
       "breakout_price": null,
-      "rs_slope": 0.231,
+      "rs_slope": 0.24,
       "volume_ratio": 0.72
     },
     {
@@ -9831,7 +9857,7 @@
       "risk_reward_ratio": null,
       "entry_quality": null,
       "breakout_price": null,
-      "rs_slope": 0.045,
+      "rs_slope": 0.046,
       "volume_ratio": 1.05
     },
     {
@@ -9845,7 +9871,7 @@
       "entry_quality": null,
       "breakout_price": null,
       "rs_slope": -0.325,
-      "volume_ratio": 1.29
+      "volume_ratio": 1.3
     },
     {
       "ticker": "POWL",
@@ -9857,7 +9883,7 @@
       "risk_reward_ratio": null,
       "entry_quality": null,
       "breakout_price": null,
-      "rs_slope": 1.745,
+      "rs_slope": 1.746,
       "volume_ratio": 0.65
     },
     {
@@ -9885,6 +9911,19 @@
       "breakout_price": null,
       "rs_slope": 1.05,
       "volume_ratio": 0.6
+    },
+    {
+      "ticker": "RF",
+      "score": 70,
+      "phase": 4,
+      "current_price": 27.78,
+      "stop_loss": null,
+      "target_price": null,
+      "risk_reward_ratio": null,
+      "entry_quality": null,
+      "breakout_price": null,
+      "rs_slope": -0.009,
+      "volume_ratio": 1.11
     },
     {
       "ticker": "RFIL",
@@ -9948,7 +9987,7 @@
       "risk_reward_ratio": null,
       "entry_quality": null,
       "breakout_price": null,
-      "rs_slope": -0.353,
+      "rs_slope": -0.352,
       "volume_ratio": 1.2
     },
     {
@@ -9961,7 +10000,7 @@
       "risk_reward_ratio": null,
       "entry_quality": null,
       "breakout_price": null,
-      "rs_slope": 0.128,
+      "rs_slope": 0.129,
       "volume_ratio": 1.02
     },
     {
@@ -9975,7 +10014,7 @@
       "entry_quality": null,
       "breakout_price": null,
       "rs_slope": 0.008,
-      "volume_ratio": 0.55
+      "volume_ratio": 0.67
     },
     {
       "ticker": "SVCO",
@@ -10026,7 +10065,7 @@
       "risk_reward_ratio": null,
       "entry_quality": null,
       "breakout_price": null,
-      "rs_slope": 0.257,
+      "rs_slope": 0.258,
       "volume_ratio": 0.57
     },
     {
@@ -10040,7 +10079,7 @@
       "entry_quality": null,
       "breakout_price": null,
       "rs_slope": 0.221,
-      "volume_ratio": 0.95
+      "volume_ratio": 0.97
     },
     {
       "ticker": "TTMI",
@@ -10065,8 +10104,8 @@
       "risk_reward_ratio": null,
       "entry_quality": null,
       "breakout_price": null,
-      "rs_slope": 0.107,
-      "volume_ratio": 0.36
+      "rs_slope": 0.108,
+      "volume_ratio": 0.37
     },
     {
       "ticker": "VCYT",
@@ -10078,7 +10117,7 @@
       "risk_reward_ratio": null,
       "entry_quality": null,
       "breakout_price": null,
-      "rs_slope": 0.894,
+      "rs_slope": 0.895,
       "volume_ratio": 0.7
     },
     {
@@ -10091,7 +10130,7 @@
       "risk_reward_ratio": null,
       "entry_quality": null,
       "breakout_price": null,
-      "rs_slope": 0.024,
+      "rs_slope": 0.025,
       "volume_ratio": 0.7
     },
     {
@@ -10105,7 +10144,7 @@
       "entry_quality": null,
       "breakout_price": null,
       "rs_slope": 0.287,
-      "volume_ratio": 0.81
+      "volume_ratio": 0.82
     },
     {
       "ticker": "WLDN",
@@ -10117,8 +10156,21 @@
       "risk_reward_ratio": null,
       "entry_quality": null,
       "breakout_price": null,
-      "rs_slope": 0.452,
+      "rs_slope": 0.453,
       "volume_ratio": 0.98
+    },
+    {
+      "ticker": "WLK",
+      "score": 70,
+      "phase": 4,
+      "current_price": 62.59,
+      "stop_loss": null,
+      "target_price": null,
+      "risk_reward_ratio": null,
+      "entry_quality": null,
+      "breakout_price": null,
+      "rs_slope": -0.22,
+      "volume_ratio": 1.12
     },
     {
       "ticker": "WMB",
@@ -10130,7 +10182,7 @@
       "risk_reward_ratio": null,
       "entry_quality": null,
       "breakout_price": null,
-      "rs_slope": 0.37,
+      "rs_slope": 0.371,
       "volume_ratio": 0.86
     },
     {
@@ -10169,8 +10221,8 @@
       "risk_reward_ratio": null,
       "entry_quality": null,
       "breakout_price": null,
-      "rs_slope": -1.73,
-      "volume_ratio": 1.0
+      "rs_slope": -1.729,
+      "volume_ratio": 1.01
     },
     {
       "ticker": "EIKN",
@@ -10196,7 +10248,7 @@
       "entry_quality": null,
       "breakout_price": null,
       "rs_slope": -1.359,
-      "volume_ratio": 0.53
+      "volume_ratio": 0.54
     },
     {
       "ticker": "INTT",
@@ -10222,7 +10274,7 @@
       "entry_quality": null,
       "breakout_price": null,
       "rs_slope": -1.161,
-      "volume_ratio": 1.09
+      "volume_ratio": 1.1
     },
     {
       "ticker": "PL",
@@ -10234,7 +10286,7 @@
       "risk_reward_ratio": null,
       "entry_quality": null,
       "breakout_price": null,
-      "rs_slope": -1.359,
+      "rs_slope": -1.358,
       "volume_ratio": 0.9
     },
     {
@@ -10273,8 +10325,21 @@
       "risk_reward_ratio": null,
       "entry_quality": null,
       "breakout_price": null,
-      "rs_slope": -1.378,
+      "rs_slope": -1.377,
       "volume_ratio": 0.61
+    },
+    {
+      "ticker": "ABCB",
+      "score": 65,
+      "phase": 4,
+      "current_price": 81.22,
+      "stop_loss": null,
+      "target_price": null,
+      "risk_reward_ratio": null,
+      "entry_quality": null,
+      "breakout_price": null,
+      "rs_slope": 0.229,
+      "volume_ratio": 1.24
     },
     {
       "ticker": "ACLS",
@@ -10312,7 +10377,7 @@
       "risk_reward_ratio": null,
       "entry_quality": null,
       "breakout_price": null,
-      "rs_slope": 0.734,
+      "rs_slope": 0.735,
       "volume_ratio": 0.7
     },
     {
@@ -10325,8 +10390,8 @@
       "risk_reward_ratio": null,
       "entry_quality": null,
       "breakout_price": null,
-      "rs_slope": 0.452,
-      "volume_ratio": 0.29
+      "rs_slope": 0.453,
+      "volume_ratio": 0.32
     },
     {
       "ticker": "APAM",
@@ -10351,7 +10416,7 @@
       "risk_reward_ratio": null,
       "entry_quality": null,
       "breakout_price": null,
-      "rs_slope": 0.985,
+      "rs_slope": 0.986,
       "volume_ratio": 0.41
     },
     {
@@ -10390,7 +10455,7 @@
       "risk_reward_ratio": null,
       "entry_quality": null,
       "breakout_price": null,
-      "rs_slope": -0.271,
+      "rs_slope": -0.27,
       "volume_ratio": 0.78
     },
     {
@@ -10404,7 +10469,7 @@
       "entry_quality": null,
       "breakout_price": null,
       "rs_slope": -0.036,
-      "volume_ratio": 0.67
+      "volume_ratio": 0.77
     },
     {
       "ticker": "BA",
@@ -10417,7 +10482,7 @@
       "entry_quality": null,
       "breakout_price": null,
       "rs_slope": -0.249,
-      "volume_ratio": 0.68
+      "volume_ratio": 0.7
     },
     {
       "ticker": "BBSI",
@@ -10429,8 +10494,8 @@
       "risk_reward_ratio": null,
       "entry_quality": null,
       "breakout_price": null,
-      "rs_slope": 0.496,
-      "volume_ratio": 0.65
+      "rs_slope": 0.497,
+      "volume_ratio": 1.03
     },
     {
       "ticker": "BHF",
@@ -10495,7 +10560,7 @@
       "entry_quality": null,
       "breakout_price": null,
       "rs_slope": -0.269,
-      "volume_ratio": 0.84
+      "volume_ratio": 0.88
     },
     {
       "ticker": "CBAN",
@@ -10507,7 +10572,7 @@
       "risk_reward_ratio": null,
       "entry_quality": null,
       "breakout_price": null,
-      "rs_slope": 0.044,
+      "rs_slope": 0.045,
       "volume_ratio": 0.8
     },
     {
@@ -10546,8 +10611,8 @@
       "risk_reward_ratio": null,
       "entry_quality": null,
       "breakout_price": null,
-      "rs_slope": -0.253,
-      "volume_ratio": 1.01
+      "rs_slope": -0.252,
+      "volume_ratio": 1.02
     },
     {
       "ticker": "CRS",
@@ -10559,7 +10624,7 @@
       "risk_reward_ratio": null,
       "entry_quality": null,
       "breakout_price": null,
-      "rs_slope": -0.573,
+      "rs_slope": -0.572,
       "volume_ratio": 0.86
     },
     {
@@ -10598,7 +10663,7 @@
       "risk_reward_ratio": null,
       "entry_quality": null,
       "breakout_price": null,
-      "rs_slope": -0.546,
+      "rs_slope": -0.545,
       "volume_ratio": 0.43
     },
     {
@@ -10638,7 +10703,7 @@
       "entry_quality": null,
       "breakout_price": null,
       "rs_slope": -0.01,
-      "volume_ratio": 0.74
+      "volume_ratio": 0.75
     },
     {
       "ticker": "DRVN",
@@ -10650,7 +10715,7 @@
       "risk_reward_ratio": null,
       "entry_quality": null,
       "breakout_price": null,
-      "rs_slope": -0.426,
+      "rs_slope": -0.425,
       "volume_ratio": 0.79
     },
     {
@@ -10663,7 +10728,7 @@
       "risk_reward_ratio": null,
       "entry_quality": null,
       "breakout_price": null,
-      "rs_slope": 0.257,
+      "rs_slope": 0.258,
       "volume_ratio": 0.65
     },
     {
@@ -10676,8 +10741,8 @@
       "risk_reward_ratio": null,
       "entry_quality": null,
       "breakout_price": null,
-      "rs_slope": -0.595,
-      "volume_ratio": 0.9
+      "rs_slope": -0.594,
+      "volume_ratio": 1.0
     },
     {
       "ticker": "ENVA",
@@ -10781,7 +10846,7 @@
       "entry_quality": null,
       "breakout_price": null,
       "rs_slope": -0.379,
-      "volume_ratio": 0.98
+      "volume_ratio": 1.0
     },
     {
       "ticker": "FPS",
@@ -10794,7 +10859,7 @@
       "entry_quality": null,
       "breakout_price": null,
       "rs_slope": -0.278,
-      "volume_ratio": 0.79
+      "volume_ratio": 0.8
     },
     {
       "ticker": "FRPH",
@@ -10806,7 +10871,7 @@
       "risk_reward_ratio": null,
       "entry_quality": null,
       "breakout_price": null,
-      "rs_slope": 0.018,
+      "rs_slope": 0.019,
       "volume_ratio": 0.68
     },
     {
@@ -10820,7 +10885,7 @@
       "entry_quality": null,
       "breakout_price": null,
       "rs_slope": -0.025,
-      "volume_ratio": 0.85
+      "volume_ratio": 0.86
     },
     {
       "ticker": "GBFH",
@@ -10845,21 +10910,8 @@
       "risk_reward_ratio": null,
       "entry_quality": null,
       "breakout_price": null,
-      "rs_slope": -0.47,
+      "rs_slope": -0.469,
       "volume_ratio": 0.67
-    },
-    {
-      "ticker": "GNTX",
-      "score": 65,
-      "phase": 4,
-      "current_price": 19.66,
-      "stop_loss": null,
-      "target_price": null,
-      "risk_reward_ratio": null,
-      "entry_quality": null,
-      "breakout_price": null,
-      "rs_slope": 0.204,
-      "volume_ratio": 1.1
     },
     {
       "ticker": "GOOG",
@@ -10872,7 +10924,7 @@
       "entry_quality": null,
       "breakout_price": null,
       "rs_slope": -0.039,
-      "volume_ratio": 0.89
+      "volume_ratio": 0.92
     },
     {
       "ticker": "GOOGL",
@@ -10885,7 +10937,7 @@
       "entry_quality": null,
       "breakout_price": null,
       "rs_slope": -0.021,
-      "volume_ratio": 0.87
+      "volume_ratio": 0.89
     },
     {
       "ticker": "HAL",
@@ -10898,7 +10950,7 @@
       "entry_quality": null,
       "breakout_price": null,
       "rs_slope": 0.085,
-      "volume_ratio": 0.86
+      "volume_ratio": 1.05
     },
     {
       "ticker": "HCC",
@@ -10910,7 +10962,7 @@
       "risk_reward_ratio": null,
       "entry_quality": null,
       "breakout_price": null,
-      "rs_slope": 0.063,
+      "rs_slope": 0.064,
       "volume_ratio": 1.26
     },
     {
@@ -10937,7 +10989,7 @@
       "entry_quality": null,
       "breakout_price": null,
       "rs_slope": 0.468,
-      "volume_ratio": 0.47
+      "volume_ratio": 0.56
     },
     {
       "ticker": "IMMX",
@@ -11014,7 +11066,7 @@
       "risk_reward_ratio": null,
       "entry_quality": null,
       "breakout_price": null,
-      "rs_slope": 0.958,
+      "rs_slope": 0.959,
       "volume_ratio": 0.51
     },
     {
@@ -11028,7 +11080,7 @@
       "entry_quality": null,
       "breakout_price": null,
       "rs_slope": 0.22,
-      "volume_ratio": 0.87
+      "volume_ratio": 1.01
     },
     {
       "ticker": "MLI",
@@ -11041,7 +11093,7 @@
       "entry_quality": null,
       "breakout_price": null,
       "rs_slope": 0.166,
-      "volume_ratio": 1.18
+      "volume_ratio": 1.27
     },
     {
       "ticker": "MOS",
@@ -11053,8 +11105,8 @@
       "risk_reward_ratio": null,
       "entry_quality": null,
       "breakout_price": null,
-      "rs_slope": -0.865,
-      "volume_ratio": 0.58
+      "rs_slope": -0.864,
+      "volume_ratio": 0.59
     },
     {
       "ticker": "MPLT",
@@ -11066,8 +11118,8 @@
       "risk_reward_ratio": null,
       "entry_quality": null,
       "breakout_price": null,
-      "rs_slope": -0.159,
-      "volume_ratio": 0.65
+      "rs_slope": -0.158,
+      "volume_ratio": 0.85
     },
     {
       "ticker": "MTSI",
@@ -11079,8 +11131,8 @@
       "risk_reward_ratio": null,
       "entry_quality": null,
       "breakout_price": null,
-      "rs_slope": -0.038,
-      "volume_ratio": 0.9
+      "rs_slope": -0.037,
+      "volume_ratio": 0.91
     },
     {
       "ticker": "NBHC",
@@ -11105,7 +11157,7 @@
       "risk_reward_ratio": null,
       "entry_quality": null,
       "breakout_price": null,
-      "rs_slope": 0.364,
+      "rs_slope": 0.365,
       "volume_ratio": 0.88
     },
     {
@@ -11118,7 +11170,7 @@
       "risk_reward_ratio": null,
       "entry_quality": null,
       "breakout_price": null,
-      "rs_slope": -0.093,
+      "rs_slope": -0.092,
       "volume_ratio": 0.78
     },
     {
@@ -11132,7 +11184,7 @@
       "entry_quality": null,
       "breakout_price": null,
       "rs_slope": 0.157,
-      "volume_ratio": 1.21
+      "volume_ratio": 1.25
     },
     {
       "ticker": "OSIS",
@@ -11170,7 +11222,7 @@
       "risk_reward_ratio": null,
       "entry_quality": null,
       "breakout_price": null,
-      "rs_slope": -0.407,
+      "rs_slope": -0.406,
       "volume_ratio": 0.81
     },
     {
@@ -11184,7 +11236,7 @@
       "entry_quality": null,
       "breakout_price": null,
       "rs_slope": 0.067,
-      "volume_ratio": 0.72
+      "volume_ratio": 0.73
     },
     {
       "ticker": "PNC",
@@ -11222,7 +11274,7 @@
       "risk_reward_ratio": null,
       "entry_quality": null,
       "breakout_price": null,
-      "rs_slope": 0.251,
+      "rs_slope": 0.252,
       "volume_ratio": 0.92
     },
     {
@@ -11248,21 +11300,8 @@
       "risk_reward_ratio": null,
       "entry_quality": null,
       "breakout_price": null,
-      "rs_slope": -0.034,
+      "rs_slope": -0.033,
       "volume_ratio": 0.94
-    },
-    {
-      "ticker": "RF",
-      "score": 65,
-      "phase": 4,
-      "current_price": 27.78,
-      "stop_loss": null,
-      "target_price": null,
-      "risk_reward_ratio": null,
-      "entry_quality": null,
-      "breakout_price": null,
-      "rs_slope": -0.01,
-      "volume_ratio": 1.1
     },
     {
       "ticker": "RIO",
@@ -11275,7 +11314,7 @@
       "entry_quality": null,
       "breakout_price": null,
       "rs_slope": -0.847,
-      "volume_ratio": 0.77
+      "volume_ratio": 0.79
     },
     {
       "ticker": "RSI",
@@ -11287,7 +11326,7 @@
       "risk_reward_ratio": null,
       "entry_quality": null,
       "breakout_price": null,
-      "rs_slope": -0.132,
+      "rs_slope": -0.131,
       "volume_ratio": 0.44
     },
     {
@@ -11300,7 +11339,7 @@
       "risk_reward_ratio": null,
       "entry_quality": null,
       "breakout_price": null,
-      "rs_slope": -0.531,
+      "rs_slope": -0.53,
       "volume_ratio": 0.8
     },
     {
@@ -11313,8 +11352,8 @@
       "risk_reward_ratio": null,
       "entry_quality": null,
       "breakout_price": null,
-      "rs_slope": -0.119,
-      "volume_ratio": 0.75
+      "rs_slope": -0.118,
+      "volume_ratio": 0.78
     },
     {
       "ticker": "SITM",
@@ -11326,8 +11365,8 @@
       "risk_reward_ratio": null,
       "entry_quality": null,
       "breakout_price": null,
-      "rs_slope": -0.26,
-      "volume_ratio": 0.84
+      "rs_slope": -0.259,
+      "volume_ratio": 0.85
     },
     {
       "ticker": "SPH",
@@ -11352,7 +11391,7 @@
       "risk_reward_ratio": null,
       "entry_quality": null,
       "breakout_price": null,
-      "rs_slope": -0.286,
+      "rs_slope": -0.285,
       "volume_ratio": 0.46
     },
     {
@@ -11366,7 +11405,7 @@
       "entry_quality": null,
       "breakout_price": null,
       "rs_slope": 0.193,
-      "volume_ratio": 1.03
+      "volume_ratio": 1.04
     },
     {
       "ticker": "UCTT",
@@ -11378,7 +11417,7 @@
       "risk_reward_ratio": null,
       "entry_quality": null,
       "breakout_price": null,
-      "rs_slope": -0.783,
+      "rs_slope": -0.782,
       "volume_ratio": 0.97
     },
     {
@@ -11391,7 +11430,7 @@
       "risk_reward_ratio": null,
       "entry_quality": null,
       "breakout_price": null,
-      "rs_slope": 0.106,
+      "rs_slope": 0.107,
       "volume_ratio": 0.71
     },
     {
@@ -11405,7 +11444,7 @@
       "entry_quality": null,
       "breakout_price": null,
       "rs_slope": 0.737,
-      "volume_ratio": 0.7
+      "volume_ratio": 0.71
     },
     {
       "ticker": "VIAV",
@@ -11417,7 +11456,7 @@
       "risk_reward_ratio": null,
       "entry_quality": null,
       "breakout_price": null,
-      "rs_slope": -0.204,
+      "rs_slope": -0.203,
       "volume_ratio": 1.08
     },
     {
@@ -11430,7 +11469,7 @@
       "risk_reward_ratio": null,
       "entry_quality": null,
       "breakout_price": null,
-      "rs_slope": 0.269,
+      "rs_slope": 0.27,
       "volume_ratio": 1.12
     },
     {
@@ -11443,7 +11482,7 @@
       "risk_reward_ratio": null,
       "entry_quality": null,
       "breakout_price": null,
-      "rs_slope": 0.424,
+      "rs_slope": 0.425,
       "volume_ratio": 0.56
     },
     {
@@ -11469,21 +11508,8 @@
       "risk_reward_ratio": null,
       "entry_quality": null,
       "breakout_price": null,
-      "rs_slope": -0.09,
+      "rs_slope": -0.089,
       "volume_ratio": 0.63
-    },
-    {
-      "ticker": "WLK",
-      "score": 65,
-      "phase": 4,
-      "current_price": 62.59,
-      "stop_loss": null,
-      "target_price": null,
-      "risk_reward_ratio": null,
-      "entry_quality": null,
-      "breakout_price": null,
-      "rs_slope": -0.221,
-      "volume_ratio": 1.1
     },
     {
       "ticker": "XPO",
@@ -11495,7 +11521,7 @@
       "risk_reward_ratio": null,
       "entry_quality": null,
       "breakout_price": null,
-      "rs_slope": 0.055,
+      "rs_slope": 0.056,
       "volume_ratio": 0.74
     },
     {
@@ -11508,7 +11534,7 @@
       "risk_reward_ratio": null,
       "entry_quality": null,
       "breakout_price": null,
-      "rs_slope": 0.199,
+      "rs_slope": 0.2,
       "volume_ratio": 0.75
     },
     {
@@ -11521,7 +11547,7 @@
       "risk_reward_ratio": null,
       "entry_quality": null,
       "breakout_price": null,
-      "rs_slope": -0.221,
+      "rs_slope": -0.22,
       "volume_ratio": 0.77
     },
     {
@@ -11560,21 +11586,8 @@
       "risk_reward_ratio": null,
       "entry_quality": null,
       "breakout_price": null,
-      "rs_slope": 2.084,
+      "rs_slope": 2.088,
       "volume_ratio": 0.73
-    },
-    {
-      "ticker": "ABCB",
-      "score": 60,
-      "phase": 4,
-      "current_price": 81.21,
-      "stop_loss": null,
-      "target_price": null,
-      "risk_reward_ratio": null,
-      "entry_quality": null,
-      "breakout_price": null,
-      "rs_slope": 0.228,
-      "volume_ratio": 0.95
     },
     {
       "ticker": "ALNY",
@@ -11586,8 +11599,8 @@
       "risk_reward_ratio": null,
       "entry_quality": null,
       "breakout_price": null,
-      "rs_slope": 0.431,
-      "volume_ratio": 0.84
+      "rs_slope": 0.432,
+      "volume_ratio": 0.86
     },
     {
       "ticker": "ARLO",
@@ -11599,7 +11612,7 @@
       "risk_reward_ratio": null,
       "entry_quality": null,
       "breakout_price": null,
-      "rs_slope": 0.052,
+      "rs_slope": 0.053,
       "volume_ratio": 0.48
     },
     {
@@ -11612,7 +11625,7 @@
       "risk_reward_ratio": null,
       "entry_quality": null,
       "breakout_price": null,
-      "rs_slope": 0.739,
+      "rs_slope": 0.74,
       "volume_ratio": 0.81
     },
     {
@@ -11690,7 +11703,7 @@
       "risk_reward_ratio": null,
       "entry_quality": null,
       "breakout_price": null,
-      "rs_slope": 0.393,
+      "rs_slope": 0.394,
       "volume_ratio": 0.82
     },
     {
@@ -11703,8 +11716,8 @@
       "risk_reward_ratio": null,
       "entry_quality": null,
       "breakout_price": null,
-      "rs_slope": -0.233,
-      "volume_ratio": 1.05
+      "rs_slope": -0.232,
+      "volume_ratio": 1.06
     },
     {
       "ticker": "CECO",
@@ -11729,7 +11742,7 @@
       "risk_reward_ratio": null,
       "entry_quality": null,
       "breakout_price": null,
-      "rs_slope": 0.153,
+      "rs_slope": 0.154,
       "volume_ratio": 0.92
     },
     {
@@ -11743,7 +11756,7 @@
       "entry_quality": null,
       "breakout_price": null,
       "rs_slope": 0.462,
-      "volume_ratio": 0.65
+      "volume_ratio": 0.66
     },
     {
       "ticker": "DAN",
@@ -11768,7 +11781,7 @@
       "risk_reward_ratio": null,
       "entry_quality": null,
       "breakout_price": null,
-      "rs_slope": -0.553,
+      "rs_slope": -0.552,
       "volume_ratio": 0.81
     },
     {
@@ -11795,7 +11808,7 @@
       "entry_quality": null,
       "breakout_price": null,
       "rs_slope": 0.156,
-      "volume_ratio": 0.81
+      "volume_ratio": 0.82
     },
     {
       "ticker": "FIX",
@@ -11833,7 +11846,7 @@
       "risk_reward_ratio": null,
       "entry_quality": null,
       "breakout_price": null,
-      "rs_slope": 0.691,
+      "rs_slope": 0.692,
       "volume_ratio": 0.81
     },
     {
@@ -11859,7 +11872,7 @@
       "risk_reward_ratio": null,
       "entry_quality": null,
       "breakout_price": null,
-      "rs_slope": 0.037,
+      "rs_slope": 0.038,
       "volume_ratio": 0.78
     },
     {
@@ -11885,7 +11898,7 @@
       "risk_reward_ratio": null,
       "entry_quality": null,
       "breakout_price": null,
-      "rs_slope": 0.074,
+      "rs_slope": 0.075,
       "volume_ratio": 0.56
     },
     {
@@ -11912,7 +11925,7 @@
       "entry_quality": null,
       "breakout_price": null,
       "rs_slope": 0.568,
-      "volume_ratio": 0.51
+      "volume_ratio": 0.53
     },
     {
       "ticker": "LGN",
@@ -11924,7 +11937,7 @@
       "risk_reward_ratio": null,
       "entry_quality": null,
       "breakout_price": null,
-      "rs_slope": 1.542,
+      "rs_slope": 1.543,
       "volume_ratio": 0.66
     },
     {
@@ -11950,7 +11963,7 @@
       "risk_reward_ratio": null,
       "entry_quality": null,
       "breakout_price": null,
-      "rs_slope": 0.258,
+      "rs_slope": 0.259,
       "volume_ratio": 0.66
     },
     {
@@ -11963,8 +11976,8 @@
       "risk_reward_ratio": null,
       "entry_quality": null,
       "breakout_price": null,
-      "rs_slope": 3.084,
-      "volume_ratio": 0.53
+      "rs_slope": 3.085,
+      "volume_ratio": 0.56
     },
     {
       "ticker": "MRTN",
@@ -11976,7 +11989,7 @@
       "risk_reward_ratio": null,
       "entry_quality": null,
       "breakout_price": null,
-      "rs_slope": 0.194,
+      "rs_slope": 0.196,
       "volume_ratio": 0.69
     },
     {
@@ -11989,8 +12002,8 @@
       "risk_reward_ratio": null,
       "entry_quality": null,
       "breakout_price": null,
-      "rs_slope": 0.067,
-      "volume_ratio": 0.98
+      "rs_slope": 0.068,
+      "volume_ratio": 1.04
     },
     {
       "ticker": "MUSA",
@@ -12028,7 +12041,7 @@
       "risk_reward_ratio": null,
       "entry_quality": null,
       "breakout_price": null,
-      "rs_slope": 0.225,
+      "rs_slope": 0.226,
       "volume_ratio": 0.84
     },
     {
@@ -12081,7 +12094,7 @@
       "entry_quality": null,
       "breakout_price": null,
       "rs_slope": 0.198,
-      "volume_ratio": 1.04
+      "volume_ratio": 1.06
     },
     {
       "ticker": "PUMP",
@@ -12093,7 +12106,7 @@
       "risk_reward_ratio": null,
       "entry_quality": null,
       "breakout_price": null,
-      "rs_slope": 0.159,
+      "rs_slope": 0.16,
       "volume_ratio": 0.85
     },
     {
@@ -12119,7 +12132,7 @@
       "risk_reward_ratio": null,
       "entry_quality": null,
       "breakout_price": null,
-      "rs_slope": 0.272,
+      "rs_slope": 0.273,
       "volume_ratio": 0.95
     },
     {
@@ -12145,7 +12158,7 @@
       "risk_reward_ratio": null,
       "entry_quality": null,
       "breakout_price": null,
-      "rs_slope": 0.408,
+      "rs_slope": 0.409,
       "volume_ratio": 0.93
     },
     {
@@ -12158,7 +12171,7 @@
       "risk_reward_ratio": null,
       "entry_quality": null,
       "breakout_price": null,
-      "rs_slope": 0.536,
+      "rs_slope": 0.537,
       "volume_ratio": 0.7
     },
     {
@@ -12171,7 +12184,7 @@
       "risk_reward_ratio": null,
       "entry_quality": null,
       "breakout_price": null,
-      "rs_slope": 0.0,
+      "rs_slope": 0.001,
       "volume_ratio": 0.79
     },
     {
@@ -12184,7 +12197,7 @@
       "risk_reward_ratio": null,
       "entry_quality": null,
       "breakout_price": null,
-      "rs_slope": 0.117,
+      "rs_slope": 0.118,
       "volume_ratio": 0.63
     },
     {
@@ -12210,7 +12223,7 @@
       "risk_reward_ratio": null,
       "entry_quality": null,
       "breakout_price": null,
-      "rs_slope": 0.277,
+      "rs_slope": 0.278,
       "volume_ratio": 0.66
     },
     {
@@ -12224,7 +12237,7 @@
       "entry_quality": null,
       "breakout_price": null,
       "rs_slope": 0.132,
-      "volume_ratio": 0.7
+      "volume_ratio": 0.71
     },
     {
       "ticker": "STRL",
@@ -12236,7 +12249,7 @@
       "risk_reward_ratio": null,
       "entry_quality": null,
       "breakout_price": null,
-      "rs_slope": 0.07,
+      "rs_slope": 0.071,
       "volume_ratio": 0.74
     },
     {
@@ -12262,7 +12275,7 @@
       "risk_reward_ratio": null,
       "entry_quality": null,
       "breakout_price": null,
-      "rs_slope": 0.21,
+      "rs_slope": 0.211,
       "volume_ratio": 0.76
     },
     {
@@ -12276,7 +12289,7 @@
       "entry_quality": null,
       "breakout_price": null,
       "rs_slope": -0.434,
-      "volume_ratio": 0.89
+      "volume_ratio": 0.96
     },
     {
       "ticker": "VECO",
@@ -12288,7 +12301,7 @@
       "risk_reward_ratio": null,
       "entry_quality": null,
       "breakout_price": null,
-      "rs_slope": 0.035,
+      "rs_slope": 0.036,
       "volume_ratio": 0.78
     }
   ]
